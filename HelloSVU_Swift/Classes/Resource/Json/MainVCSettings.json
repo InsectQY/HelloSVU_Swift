@@ -1,0 +1,26 @@
+[
+ {
+    "vcName": "HomeViewController",
+    "title": "首页",
+    "normalImg": "icon_zx_nomal_pgall",
+    "selImg": "icon_zx_pressed_pgall"
+ },
+ {
+     "vcName": "FriendCircleViewController",
+     "title": "空间",
+     "normalImg": "icon_jx_nomal_pgall",
+     "selImg": "icon_jx_pressed_pgall"
+ },
+ {
+     "vcName": "MapViewController",
+     "title": "地图",
+     "normalImg": "icon_sq_nomal_pgall",
+     "selImg": "icon_sq_pressed_pgall"
+ },
+ {
+     "vcName": "ProfileViewController",
+     "title": "我的",
+     "normalImg": "icon_w_nomal_pgall",
+     "selImg": "icon_w_pressed_pgall"
+ }
+ ]

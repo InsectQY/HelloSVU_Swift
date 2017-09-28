@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImgVerticalCell" customModule="HelloSVU_Swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="133" height="228"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="133" height="228"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dNL-Hg-vVb">
+                        <rect key="frame" x="0.0" y="0.0" width="133" height="228"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="dNL-Hg-vVb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HQf-Sg-8gn"/>
+                <constraint firstAttribute="bottom" secondItem="dNL-Hg-vVb" secondAttribute="bottom" id="LqB-oe-dR9"/>
+                <constraint firstItem="dNL-Hg-vVb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ams-bG-bA3"/>
+                <constraint firstAttribute="trailing" secondItem="dNL-Hg-vVb" secondAttribute="trailing" id="pDs-7c-Grj"/>
+            </constraints>
+            <size key="customSize" width="133" height="228"/>
+            <connections>
+                <outlet property="imageView" destination="dNL-Hg-vVb" id="jdc-PM-5x0"/>
+            </connections>
+            <point key="canvasLocation" x="66.5" y="141"/>
+        </collectionViewCell>
+    </objects>
+</document>

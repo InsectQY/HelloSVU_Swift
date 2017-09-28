@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QYCycleView" customModule="HelloSVU_Swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="285"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="78f-jZ-7tS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="285"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1cV-C9-8Hh">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="AK4-Fb-RCP"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="WFb-5G-i5t"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="wDM-qt-k6b">
+                    <rect key="frame" x="168" y="251" width="39" height="37"/>
+                </pageControl>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="78f-jZ-7tS" secondAttribute="trailing" id="3Tb-f3-XCh"/>
+                <constraint firstAttribute="bottom" secondItem="78f-jZ-7tS" secondAttribute="bottom" id="4M9-uW-bXH"/>
+                <constraint firstItem="78f-jZ-7tS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Xch-7h-pae"/>
+                <constraint firstAttribute="bottom" secondItem="wDM-qt-k6b" secondAttribute="bottom" constant="-3" id="lVm-Il-H5H"/>
+                <constraint firstItem="wDM-qt-k6b" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="u1l-jA-NdV"/>
+                <constraint firstItem="78f-jZ-7tS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yGR-hn-EKX"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="78f-jZ-7tS" id="Nsk-fq-aa4"/>
+                <outlet property="flowLayout" destination="1cV-C9-8Hh" id="7ly-x4-UO1"/>
+                <outlet property="pageControl" destination="wDM-qt-k6b" id="bKt-CX-6nu"/>
+            </connections>
+            <point key="canvasLocation" x="178" y="-171"/>
+        </view>
+    </objects>
+</document>
