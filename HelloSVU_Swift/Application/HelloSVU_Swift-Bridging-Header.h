@@ -4,3 +4,4 @@
 
 #import "SVURefreshHeader.h"
 #import "SVURefreshFooter.h"
+#import "JhtNewsChannelSDK.h"

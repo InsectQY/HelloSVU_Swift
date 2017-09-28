@@ -108,6 +108,7 @@ extension WallPaperDetailViewController {
         
         view.backgroundColor = .white
         view.addSubview(imageView)
+        /// 添加第一次试用指引
         showTip()
     }
     

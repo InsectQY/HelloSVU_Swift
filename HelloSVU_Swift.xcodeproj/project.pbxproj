@@ -37,6 +37,10 @@
 		E57002B21F7CCB19006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002AF1F7CCB17006FC640 /* .gitignore */; };
 		E57002B31F7CCB1C006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002B11F7CCB17006FC640 /* .gitignore */; };
 		E57002B91F7CD1B2006FC640 /* SVUHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57002B81F7CD1B2006FC640 /* SVUHUD.swift */; };
+		E57002F11F7CE6D6006FC640 /* JhtNewsChannelImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E57002E71F7CE6BB006FC640 /* JhtNewsChannelImages.bundle */; };
+		E57002F21F7CE6D9006FC640 /* JhtNewsChannelSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E57002EE1F7CE6BB006FC640 /* JhtNewsChannelSDK.a */; };
+		E57002FB1F7CFD8A006FC640 /* NewsPartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57002FA1F7CFD8A006FC640 /* NewsPartsViewController.swift */; };
+		E57002FC1F7D0322006FC640 /* News.plist in Resources */ = {isa = PBXBuildFile; fileRef = E57002E01F7CDDCD006FC640 /* News.plist */; };
 		E572F0961ED4493D001556B4 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E572F0951ED4493D001556B4 /* NewsViewController.swift */; };
 		E5762CF51EC404FE00B422C7 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5762CF41EC404FE00B422C7 /* UIBarButtonItem-Extension.swift */; };
 		E57FCCA81ED423C000FE5184 /* Home.plist in Resources */ = {isa = PBXBuildFile; fileRef = E57FCCA71ED423C000FE5184 /* Home.plist */; };
@@ -116,6 +120,25 @@
 		E57002AF1F7CCB17006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E57002B11F7CCB17006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E57002B81F7CD1B2006FC640 /* SVUHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVUHUD.swift; sourceTree = "<group>"; };
+		E57002E01F7CDDCD006FC640 /* News.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = News.plist; sourceTree = "<group>"; };
+		E57002E21F7CE6BB006FC640 /* JhtChannelBarAndSlideViewConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarAndSlideViewConnect.h; sourceTree = "<group>"; };
+		E57002E31F7CE6BB006FC640 /* JhtChannelBarAndSlideViewConnectParamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarAndSlideViewConnectParamModel.h; sourceTree = "<group>"; };
+		E57002E41F7CE6BB006FC640 /* JhtChannelBarAndSlideViewSpaceAndFrameModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarAndSlideViewSpaceAndFrameModel.h; sourceTree = "<group>"; };
+		E57002E51F7CE6BB006FC640 /* JhtChannelBarColorAndFontModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarColorAndFontModel.h; sourceTree = "<group>"; };
+		E57002E61F7CE6BB006FC640 /* JhtChannelBarTailBtnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarTailBtnModel.h; sourceTree = "<group>"; };
+		E57002E71F7CE6BB006FC640 /* JhtNewsChannelImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JhtNewsChannelImages.bundle; sourceTree = "<group>"; };
+		E57002E81F7CE6BB006FC640 /* JhtNewsChannelItemEditBackgroundColorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditBackgroundColorModel.h; sourceTree = "<group>"; };
+		E57002E91F7CE6BB006FC640 /* JhtNewsChannelItemEditDistanceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditDistanceModel.h; sourceTree = "<group>"; };
+		E57002EA1F7CE6BB006FC640 /* JhtNewsChannelItemEditParamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditParamModel.h; sourceTree = "<group>"; };
+		E57002EB1F7CE6BB006FC640 /* JhtNewsChannelItemEditTextColorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditTextColorModel.h; sourceTree = "<group>"; };
+		E57002EC1F7CE6BB006FC640 /* JhtNewsChannelItemEditTextModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditTextModel.h; sourceTree = "<group>"; };
+		E57002ED1F7CE6BB006FC640 /* JhtNewsChannelItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemModel.h; sourceTree = "<group>"; };
+		E57002EE1F7CE6BB006FC640 /* JhtNewsChannelSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JhtNewsChannelSDK.a; sourceTree = "<group>"; };
+		E57002EF1F7CE6BB006FC640 /* JhtNewsChannelSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelSDK.h; sourceTree = "<group>"; };
+		E57002F01F7CE6BB006FC640 /* JhtTotalSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtTotalSlideView.h; sourceTree = "<group>"; };
+		E57002F71F7CFD67006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E57002F91F7CFD67006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E57002FA1F7CFD8A006FC640 /* NewsPartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPartsViewController.swift; sourceTree = "<group>"; };
 		E572F0951ED4493D001556B4 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		E5762CF41EC404FE00B422C7 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		E57FCCA71ED423C000FE5184 /* Home.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Home.plist; sourceTree = "<group>"; };
@@ -174,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E57002F21F7CE6D9006FC640 /* JhtNewsChannelSDK.a in Frameworks */,
 				C5ED06F964BE6FD7CA4D89F3 /* Pods_HelloSVU_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,10 +419,68 @@
 			path = SVUHUD;
 			sourceTree = "<group>";
 		};
+		E57002E11F7CE6BB006FC640 /* JhtNewsChannelSDK */ = {
+			isa = PBXGroup;
+			children = (
+				E57002E21F7CE6BB006FC640 /* JhtChannelBarAndSlideViewConnect.h */,
+				E57002E31F7CE6BB006FC640 /* JhtChannelBarAndSlideViewConnectParamModel.h */,
+				E57002E41F7CE6BB006FC640 /* JhtChannelBarAndSlideViewSpaceAndFrameModel.h */,
+				E57002E51F7CE6BB006FC640 /* JhtChannelBarColorAndFontModel.h */,
+				E57002E61F7CE6BB006FC640 /* JhtChannelBarTailBtnModel.h */,
+				E57002E71F7CE6BB006FC640 /* JhtNewsChannelImages.bundle */,
+				E57002E81F7CE6BB006FC640 /* JhtNewsChannelItemEditBackgroundColorModel.h */,
+				E57002E91F7CE6BB006FC640 /* JhtNewsChannelItemEditDistanceModel.h */,
+				E57002EA1F7CE6BB006FC640 /* JhtNewsChannelItemEditParamModel.h */,
+				E57002EB1F7CE6BB006FC640 /* JhtNewsChannelItemEditTextColorModel.h */,
+				E57002EC1F7CE6BB006FC640 /* JhtNewsChannelItemEditTextModel.h */,
+				E57002ED1F7CE6BB006FC640 /* JhtNewsChannelItemModel.h */,
+				E57002EE1F7CE6BB006FC640 /* JhtNewsChannelSDK.a */,
+				E57002EF1F7CE6BB006FC640 /* JhtNewsChannelSDK.h */,
+				E57002F01F7CE6BB006FC640 /* JhtTotalSlideView.h */,
+			);
+			name = JhtNewsChannelSDK;
+			path = "../../../../../Jssvc/掌上职大/掌上职大/Classes/Extend(扩展)/Vender(第三方)/JhtNewsChannelSDK";
+			sourceTree = "<group>";
+		};
+		E57002F31F7CFD67006FC640 /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				E57002F41F7CFD67006FC640 /* Controller */,
+				E57002F61F7CFD67006FC640 /* Model */,
+				E57002F81F7CFD67006FC640 /* View */,
+			);
+			path = Parts;
+			sourceTree = "<group>";
+		};
+		E57002F41F7CFD67006FC640 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E57002FA1F7CFD8A006FC640 /* NewsPartsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E57002F61F7CFD67006FC640 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E57002F71F7CFD67006FC640 /* .gitignore */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E57002F81F7CFD67006FC640 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E57002F91F7CFD67006FC640 /* .gitignore */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E572F08A1ED44928001556B4 /* News */ = {
 			isa = PBXGroup;
 			children = (
 				E572F08B1ED44928001556B4 /* Main */,
+				E57002F31F7CFD67006FC640 /* Parts */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -532,6 +614,7 @@
 		E5D3B0DA1EBF3E03003F6C14 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				E57002E11F7CE6BB006FC640 /* JhtNewsChannelSDK */,
 				E5FAECC21F7BC4E5006CC525 /* JFContextSheet */,
 			);
 			path = Vendors;
@@ -712,49 +795,18 @@
 			isa = PBXGroup;
 			children = (
 				E5D3B1811EBF41D0003F6C14 /* Json */,
-				E5D3B13F1EBF3E03003F6C14 /* Fonts */,
-				E5D3B1401EBF3E03003F6C14 /* Images */,
 				E5D3B1411EBF3E03003F6C14 /* Plist */,
-				E5D3B1421EBF3E03003F6C14 /* Sound */,
-				E5D3B1431EBF3E03003F6C14 /* Videos */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		E5D3B13F1EBF3E03003F6C14 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		E5D3B1401EBF3E03003F6C14 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		E5D3B1411EBF3E03003F6C14 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				E57002E01F7CDDCD006FC640 /* News.plist */,
 				E57FCCA71ED423C000FE5184 /* Home.plist */,
 			);
 			path = Plist;
-			sourceTree = "<group>";
-		};
-		E5D3B1421EBF3E03003F6C14 /* Sound */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sound;
-			sourceTree = "<group>";
-		};
-		E5D3B1431EBF3E03003F6C14 /* Videos */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Videos;
 			sourceTree = "<group>";
 		};
 		E5D3B16B1EBF3EF7003F6C14 /* Main */ = {
@@ -1009,9 +1061,11 @@
 				E5FAECB11F7BC2A1006CC525 /* ImgVerticalCell.xib in Resources */,
 				E57002881F7CCA46006FC640 /* .gitignore in Resources */,
 				E57002981F7CCABC006FC640 /* .gitignore in Resources */,
+				E57002F11F7CE6D6006FC640 /* JhtNewsChannelImages.bundle in Resources */,
 				E57002AB1F7CCAF1006FC640 /* .gitignore in Resources */,
 				E52B24EC1EBF4A3A00183DA6 /* QYCycleCell.xib in Resources */,
 				E57002891F7CCA4A006FC640 /* .gitignore in Resources */,
+				E57002FC1F7D0322006FC640 /* News.plist in Resources */,
 				E57FCCC01ED43CBA00FE5184 /* HomeToolCell.xib in Resources */,
 				E57FCCBC1ED43C1A00FE5184 /* HomeToolContentCell.xib in Resources */,
 				E5D3B0C61EBF3DB8003F6C14 /* Assets.xcassets in Resources */,
@@ -1108,6 +1162,7 @@
 				E5FAEC541F7BBFA0006CC525 /* WallPaperCategoryViewController.swift in Sources */,
 				E5BA14081EC42C8A002F4FF9 /* SVURefreshFooter.m in Sources */,
 				E5FFF28F1EDAC83B00594C03 /* Astro.swift in Sources */,
+				E57002FB1F7CFD8A006FC640 /* NewsPartsViewController.swift in Sources */,
 				E56007F41ED7CE4400C82460 /* Cond.swift in Sources */,
 				E5FFF28D1EDAC7DC00594C03 /* Tmp.swift in Sources */,
 				E5762CF51EC404FE00B422C7 /* UIBarButtonItem-Extension.swift in Sources */,
@@ -1272,6 +1327,10 @@
 				INFOPLIST_FILE = HelloSVU_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HelloSVU_Swift/Classes/Expand/Vendors/JhtNewsChannelSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Insect.HelloSVU-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloSVU_Swift/Application/HelloSVU_Swift-Bridging-Header.h";
@@ -1291,6 +1350,10 @@
 				INFOPLIST_FILE = HelloSVU_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HelloSVU_Swift/Classes/Expand/Vendors/JhtNewsChannelSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Insect.HelloSVU-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloSVU_Swift/Application/HelloSVU_Swift-Bridging-Header.h";
