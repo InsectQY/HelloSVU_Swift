@@ -76,6 +76,7 @@ extension WallPaperCategoryViewController {
             
             let data = [ImgCategory].deserialize(from: JSON["res"]["category"].description)
             if let data = data {
+                
                 self?.categoryData = data
                 self?.collectionView.reloadData()
                 self?.collectionView.mj_header.endRefreshing()

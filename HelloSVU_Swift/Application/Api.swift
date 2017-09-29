@@ -24,3 +24,7 @@ let suggestionWeatherURL = "\(Weather_BASE_URL)suggestion"
 
 /// 图片分类
 let imgCategoryURL = "http://service.picasso.adesk.com/v1/lightwp/category"
+
+/// 新闻
+let newsNormalURL = "http://api.3g.ifeng.com/clientChannelNewsSearch"
+let newsChannelIDURL = "http://api.iclient.ifeng.com/ClientNews"

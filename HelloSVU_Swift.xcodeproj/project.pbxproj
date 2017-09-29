@@ -15,6 +15,17 @@
 		E52B24ED1EBF4A3A00183DA6 /* QYCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24E91EBF4A3A00183DA6 /* QYCycleView.swift */; };
 		E52B24EE1EBF4A3A00183DA6 /* QYCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52B24EA1EBF4A3A00183DA6 /* QYCycleView.xib */; };
 		E52B24F11EBF4AF800183DA6 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24F01EBF4AF800183DA6 /* KingfisherExtension.swift */; };
+		E5539F411F7E6C3400139E17 /* NoPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5539F401F7E6C3100139E17 /* NoPictureCell.xib */; };
+		E5539F431F7E6C4300139E17 /* NoPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5539F421F7E6C4300139E17 /* NoPictureCell.swift */; };
+		E5539F461F7E6D1E00139E17 /* OnePictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5539F451F7E6D1E00139E17 /* OnePictureCell.swift */; };
+		E5539F491F7E6DDF00139E17 /* MultiPicutresCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5539F481F7E6DDF00139E17 /* MultiPicutresCell.swift */; };
+		E5539F4C1F7E6E7600139E17 /* BigImgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5539F4B1F7E6E7600139E17 /* BigImgCell.swift */; };
+		E5539F501F7E710D00139E17 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5539F4F1F7E710D00139E17 /* Link.swift */; };
+		E5539F521F7E711900139E17 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5539F511F7E711900139E17 /* Style.swift */; };
+		E5539F541F7E715500139E17 /* SingleNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5539F531F7E715500139E17 /* SingleNews.swift */; };
+		E5539F551F7E7C0C00139E17 /* OnePictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5539F441F7E6CD300139E17 /* OnePictureCell.xib */; };
+		E5539F561F7E7C0F00139E17 /* MultiPicutresCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5539F471F7E6DCB00139E17 /* MultiPicutresCell.xib */; };
+		E5539F571F7E7C1100139E17 /* BigImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5539F4A1F7E6E6C00139E17 /* BigImgCell.xib */; };
 		E56007F41ED7CE4400C82460 /* Cond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F31ED7CE4400C82460 /* Cond.swift */; };
 		E56007F61ED7CE5200C82460 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F51ED7CE5200C82460 /* DailyForecast.swift */; };
 		E56007F81ED7CE5F00C82460 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F71ED7CE5F00C82460 /* Forecast.swift */; };
@@ -98,6 +109,17 @@
 		E52B24E91EBF4A3A00183DA6 /* QYCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYCycleView.swift; sourceTree = "<group>"; };
 		E52B24EA1EBF4A3A00183DA6 /* QYCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QYCycleView.xib; sourceTree = "<group>"; };
 		E52B24F01EBF4AF800183DA6 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
+		E5539F401F7E6C3100139E17 /* NoPictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoPictureCell.xib; sourceTree = "<group>"; };
+		E5539F421F7E6C4300139E17 /* NoPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPictureCell.swift; sourceTree = "<group>"; };
+		E5539F441F7E6CD300139E17 /* OnePictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnePictureCell.xib; sourceTree = "<group>"; };
+		E5539F451F7E6D1E00139E17 /* OnePictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePictureCell.swift; sourceTree = "<group>"; };
+		E5539F471F7E6DCB00139E17 /* MultiPicutresCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiPicutresCell.xib; sourceTree = "<group>"; };
+		E5539F481F7E6DDF00139E17 /* MultiPicutresCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPicutresCell.swift; sourceTree = "<group>"; };
+		E5539F4A1F7E6E6C00139E17 /* BigImgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigImgCell.xib; sourceTree = "<group>"; };
+		E5539F4B1F7E6E7600139E17 /* BigImgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigImgCell.swift; sourceTree = "<group>"; };
+		E5539F4F1F7E710D00139E17 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		E5539F511F7E711900139E17 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		E5539F531F7E715500139E17 /* SingleNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleNews.swift; sourceTree = "<group>"; };
 		E56007F31ED7CE4400C82460 /* Cond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cond.swift; sourceTree = "<group>"; };
 		E56007F51ED7CE5200C82460 /* DailyForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
 		E56007F71ED7CE5F00C82460 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
@@ -136,8 +158,6 @@
 		E57002EE1F7CE6BB006FC640 /* JhtNewsChannelSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JhtNewsChannelSDK.a; sourceTree = "<group>"; };
 		E57002EF1F7CE6BB006FC640 /* JhtNewsChannelSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelSDK.h; sourceTree = "<group>"; };
 		E57002F01F7CE6BB006FC640 /* JhtTotalSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtTotalSlideView.h; sourceTree = "<group>"; };
-		E57002F71F7CFD67006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		E57002F91F7CFD67006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E57002FA1F7CFD8A006FC640 /* NewsPartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPartsViewController.swift; sourceTree = "<group>"; };
 		E572F0951ED4493D001556B4 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		E5762CF41EC404FE00B422C7 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
@@ -259,6 +279,42 @@
 				E52B24F01EBF4AF800183DA6 /* KingfisherExtension.swift */,
 			);
 			path = KingfisherExtension;
+			sourceTree = "<group>";
+		};
+		E5539F3C1F7E6AD900139E17 /* BigImgCell */ = {
+			isa = PBXGroup;
+			children = (
+				E5539F4B1F7E6E7600139E17 /* BigImgCell.swift */,
+				E5539F4A1F7E6E6C00139E17 /* BigImgCell.xib */,
+			);
+			path = BigImgCell;
+			sourceTree = "<group>";
+		};
+		E5539F3D1F7E6AF300139E17 /* MultiImgCell */ = {
+			isa = PBXGroup;
+			children = (
+				E5539F481F7E6DDF00139E17 /* MultiPicutresCell.swift */,
+				E5539F471F7E6DCB00139E17 /* MultiPicutresCell.xib */,
+			);
+			path = MultiImgCell;
+			sourceTree = "<group>";
+		};
+		E5539F3E1F7E6B0800139E17 /* OneImgCell */ = {
+			isa = PBXGroup;
+			children = (
+				E5539F451F7E6D1E00139E17 /* OnePictureCell.swift */,
+				E5539F441F7E6CD300139E17 /* OnePictureCell.xib */,
+			);
+			path = OneImgCell;
+			sourceTree = "<group>";
+		};
+		E5539F3F1F7E6B1500139E17 /* NoImgCell */ = {
+			isa = PBXGroup;
+			children = (
+				E5539F421F7E6C4300139E17 /* NoPictureCell.swift */,
+				E5539F401F7E6C3100139E17 /* NoPictureCell.xib */,
+			);
+			path = NoImgCell;
 			sourceTree = "<group>";
 		};
 		E57002841F7CCA3B006FC640 /* Model */ = {
@@ -463,7 +519,9 @@
 		E57002F61F7CFD67006FC640 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E57002F71F7CFD67006FC640 /* .gitignore */,
+				E5539F531F7E715500139E17 /* SingleNews.swift */,
+				E5539F4F1F7E710D00139E17 /* Link.swift */,
+				E5539F511F7E711900139E17 /* Style.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -471,7 +529,10 @@
 		E57002F81F7CFD67006FC640 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E57002F91F7CFD67006FC640 /* .gitignore */,
+				E5539F3F1F7E6B1500139E17 /* NoImgCell */,
+				E5539F3E1F7E6B0800139E17 /* OneImgCell */,
+				E5539F3D1F7E6AF300139E17 /* MultiImgCell */,
+				E5539F3C1F7E6AD900139E17 /* BigImgCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1043,6 +1104,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E57002991F7CCAC0006FC640 /* .gitignore in Resources */,
+				E5539F551F7E7C0C00139E17 /* OnePictureCell.xib in Resources */,
+				E5539F411F7E6C3400139E17 /* NoPictureCell.xib in Resources */,
 				E57002A81F7CCAE2006FC640 /* .gitignore in Resources */,
 				E570028E1F7CCA63006FC640 /* .gitignore in Resources */,
 				E57FCCC41ED43D5800FE5184 /* NotificationCell.xib in Resources */,
@@ -1052,10 +1115,12 @@
 				E57002B21F7CCB19006FC640 /* .gitignore in Resources */,
 				E57002B31F7CCB1C006FC640 /* .gitignore in Resources */,
 				E5D3B1831EBF41D0003F6C14 /* MainVCSettings.json in Resources */,
+				E5539F571F7E7C1100139E17 /* BigImgCell.xib in Resources */,
 				E570028F1F7CCA66006FC640 /* .gitignore in Resources */,
 				E5BD15A21ED442CA00F06039 /* ForecastCell.xib in Resources */,
 				E57002AC1F7CCAF3006FC640 /* .gitignore in Resources */,
 				E5BD15A61ED4432300F06039 /* TodayWeatherView.xib in Resources */,
+				E5539F561F7E7C0F00139E17 /* MultiPicutresCell.xib in Resources */,
 				E5D3B0C91EBF3DB8003F6C14 /* LaunchScreen.storyboard in Resources */,
 				E52B24EE1EBF4A3A00183DA6 /* QYCycleView.xib in Resources */,
 				E5FAECB11F7BC2A1006CC525 /* ImgVerticalCell.xib in Resources */,
@@ -1149,16 +1214,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5CCB76B1ED6CAC300195C0D /* UINavigationBar-Awesome.swift in Sources */,
+				E5539F501F7E710D00139E17 /* Link.swift in Sources */,
 				E5FAECC61F7BC4ED006CC525 /* JFContextSheet.swift in Sources */,
 				E52B24EB1EBF4A3A00183DA6 /* QYCycleCell.swift in Sources */,
 				E5BD15AA1ED4442800F06039 /* WeatherViewController.swift in Sources */,
 				E57FCCC61ED43E6400FE5184 /* TabBarController.swift in Sources */,
+				E5539F521F7E711900139E17 /* Style.swift in Sources */,
 				E52B24F11EBF4AF800183DA6 /* KingfisherExtension.swift in Sources */,
 				E57FCCC81ED43E9900FE5184 /* NavigationController.swift in Sources */,
+				E5539F431F7E6C4300139E17 /* NoPictureCell.swift in Sources */,
 				E57FCCC21ED43D4C00FE5184 /* NotificationCell.swift in Sources */,
 				E5FAEC571F7BC075006CC525 /* ImgCategory.swift in Sources */,
 				E5FAECC51F7BC4EB006CC525 /* JFContextItem.swift in Sources */,
 				E57FCCBA1ED43BF100FE5184 /* HomeToolContentCell.swift in Sources */,
+				E5539F491F7E6DDF00139E17 /* MultiPicutresCell.swift in Sources */,
 				E5FAEC541F7BBFA0006CC525 /* WallPaperCategoryViewController.swift in Sources */,
 				E5BA14081EC42C8A002F4FF9 /* SVURefreshFooter.m in Sources */,
 				E5FFF28F1EDAC83B00594C03 /* Astro.swift in Sources */,
@@ -1176,9 +1245,11 @@
 				E57FCCD01ED43FA600FE5184 /* Common.swift in Sources */,
 				E52B24E51EBF49AE00183DA6 /* NibLoadable.swift in Sources */,
 				E572F0961ED4493D001556B4 /* NewsViewController.swift in Sources */,
+				E5539F541F7E715500139E17 /* SingleNews.swift in Sources */,
 				E57FCCB61ED43AC900FE5184 /* HomeViewController.swift in Sources */,
 				E57002B91F7CD1B2006FC640 /* SVUHUD.swift in Sources */,
 				E5FAECAD1F7BC26A006CC525 /* ImgVertical.swift in Sources */,
+				E5539F4C1F7E6E7600139E17 /* BigImgCell.swift in Sources */,
 				E57FCCBE1ED43C9A00FE5184 /* HomeToolCell.swift in Sources */,
 				E5D3B0BF1EBF3DB8003F6C14 /* AppDelegate.swift in Sources */,
 				E56007FA1ED7CE6D00C82460 /* Wind.swift in Sources */,
@@ -1190,6 +1261,7 @@
 				E5FAECBC1F7BC3E0006CC525 /* TipView.swift in Sources */,
 				E5BD15A01ED442C400F06039 /* ForecastCell.swift in Sources */,
 				E57FCCB81ED43B3200FE5184 /* Home.swift in Sources */,
+				E5539F461F7E6D1E00139E17 /* OnePictureCell.swift in Sources */,
 				E56007F81ED7CE5F00C82460 /* Forecast.swift in Sources */,
 				E56007FE1ED7D58300C82460 /* Suggestion.swift in Sources */,
 				E57FCCCC1ED43F4500FE5184 /* MapViewController.swift in Sources */,

@@ -13,9 +13,10 @@ fileprivate let NewsCurrentChannels = "newsCurrentChannels"
 
 class NewsViewController: UIViewController {
     
-    lazy var channelsID: [String : Any] = {
+    var currentIndex = 0
+    lazy var channelsID: [String : String] = {
         
-        if let path = Bundle.main.path(forResource: "News.plist", ofType: nil), let news = NSDictionary(contentsOfFile: path) as? [String: Any] {
+        if let path = Bundle.main.path(forResource: "News.plist", ofType: nil), let news = NSDictionary(contentsOfFile: path) as? [String: String] {
             return news
         }
         return ["头条" : "SYLB10,SYDT10"]
@@ -48,12 +49,6 @@ class NewsViewController: UIViewController {
             let model = JhtNewsChannelItemModel()
             model.titleName = channel
             tmpCurrentChannels.append(model)
-            for (index ,item) in tmpCurrentChannels.enumerated() {
-                print(item.titleName)
-            }
-        }
-        for item in tmpCurrentChannels {
-            print(item.titleName)
         }
         return tmpCurrentChannels
     }()
@@ -163,7 +158,7 @@ extension NewsViewController {
     
     // MARK: - 数据持久化抽取
     fileprivate func updateCurrentChannels(content : [String],key : String) {
-        
+    
         UserDefaults.standard.set(content, forKey: key)
         UserDefaults.standard.synchronize()
     }
@@ -178,15 +173,31 @@ extension NewsViewController : JhtTotalSlideViewDelegate{
     
     func jhtTotalSlideView(_ sender: JhtTotalSlideView!, controllerAt index: Int) -> UIViewController! {
         
+        let model = JhtCurrentChannels[index]
+        let name = model.titleName ?? ""
         let vc = NewsPartsViewController()
+        vc.titleName = name
+        vc.channelID = channelsID[name] ?? ""
         return vc
     }
     
     func jhtTotalSlideView(_ sender: JhtTotalSlideView!, didSelectedAt index: Int) {
         
+//        let model = JhtCurrentChannels[index]
+//        let cache = slideView.cache as AnyObject
+//        let vc = cache.object(forKey: "\(index)") as AnyObject
+//        if vc.isKind(of: NewsPartsViewController.self) {
+//            
+//            let partsVc : NewsPartsViewController = vc as! NewsPartsViewController
+//            let name = model.titleName ?? ""
+//            partsVc.channelID = channelsID[name] ?? ""
+//        }
     }
     
     func jhtTotalSlideView(withSortModelArr modelArr: [Any]!, withNameArray nameArray: [Any]!, withSelect selectedIndex: Int) {
         
+        JhtCurrentChannels.removeAll()
+        JhtCurrentChannels += modelArr as! [JhtNewsChannelItemModel]
+        updateCurrentChannels(content: nameArray as! [String], key: NewsCurrentChannels)
     }
 }
