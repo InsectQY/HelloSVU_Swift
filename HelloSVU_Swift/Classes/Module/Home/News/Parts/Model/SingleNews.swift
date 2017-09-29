@@ -27,11 +27,38 @@ class SingleNews:  HandyJSON{
     /// 更新时间
     var updateTime = ""
     /// cell 类型
-    var infoType : infoType = .NoImg
+    var infoType : infoType {
+        
+        get {
+            if style.view == "slideimg" {
+                return .MultiImg
+            }else if style.view == "bigimg" {
+                return .BigImg
+            }else if style.view == "titleimg" {
+                return .SignalImg
+            }else if style.view == "singletitle"{
+                return .NoImg
+            }else {
+                return .SignalImg
+            }
+        }
+    }
     /// cell的高度
     var rowHeight : CGFloat {
+        
         get {
-            return 200
+            
+            let titleFont = PFR18Font
+            if self.infoType == .SignalImg {
+                return 131
+            }else if self.infoType == .NoImg {
+                return title.heightWithConstrainedWidth(ScreenW - 20, titleFont)
+            }else if self.infoType == .MultiImg {
+                
+                let imageH = (ScreenW - 40) / 3 * 0.75
+                return title.heightWithConstrainedWidth(ScreenW - 20, titleFont) + imageH + 56
+            }
+            return 120
         }
     }
     /// 新闻类型(一张图三张图)

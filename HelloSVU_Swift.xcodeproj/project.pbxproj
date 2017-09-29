@@ -68,6 +68,7 @@
 		E57FCCCA1ED43F2700FE5184 /* FriendCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57FCCC91ED43F2700FE5184 /* FriendCircleViewController.swift */; };
 		E57FCCCC1ED43F4500FE5184 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57FCCCB1ED43F4500FE5184 /* MapViewController.swift */; };
 		E57FCCD01ED43FA600FE5184 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57FCCCF1ED43FA600FE5184 /* Common.swift */; };
+		E5A40CEE1F7E8A8C0091C407 /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A40CED1F7E8A8C0091C407 /* String-Extension.swift */; };
 		E5BA14081EC42C8A002F4FF9 /* SVURefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA14071EC42C8A002F4FF9 /* SVURefreshFooter.m */; };
 		E5BA140B1EC42D42002F4FF9 /* SVURefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA140A1EC42D42002F4FF9 /* SVURefreshHeader.m */; };
 		E5BD15A01ED442C400F06039 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BD159F1ED442C400F06039 /* ForecastCell.swift */; };
@@ -175,6 +176,7 @@
 		E57FCCC91ED43F2700FE5184 /* FriendCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCircleViewController.swift; sourceTree = "<group>"; };
 		E57FCCCB1ED43F4500FE5184 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E57FCCCF1ED43FA600FE5184 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		E5A40CED1F7E8A8C0091C407 /* String-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
 		E5BA14061EC42C8A002F4FF9 /* SVURefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVURefreshFooter.h; sourceTree = "<group>"; };
 		E5BA14071EC42C8A002F4FF9 /* SVURefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVURefreshFooter.m; sourceTree = "<group>"; };
 		E5BA14091EC42D42002F4FF9 /* SVURefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVURefreshHeader.h; sourceTree = "<group>"; };
@@ -569,6 +571,7 @@
 			children = (
 				E5762CF41EC404FE00B422C7 /* UIBarButtonItem-Extension.swift */,
 				E5CCB76A1ED6CAC300195C0D /* UINavigationBar-Awesome.swift */,
+				E5A40CED1F7E8A8C0091C407 /* String-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1242,6 +1245,7 @@
 				E5FFF2911EDAD99500594C03 /* SuggestionDetail.swift in Sources */,
 				E5FAEC431F7BBDE0006CC525 /* Api.swift in Sources */,
 				E56007FC1ED7D4AE00C82460 /* WeatherData.swift in Sources */,
+				E5A40CEE1F7E8A8C0091C407 /* String-Extension.swift in Sources */,
 				E57FCCD01ED43FA600FE5184 /* Common.swift in Sources */,
 				E52B24E51EBF49AE00183DA6 /* NibLoadable.swift in Sources */,
 				E572F0961ED4493D001556B4 /* NewsViewController.swift in Sources */,

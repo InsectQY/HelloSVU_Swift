@@ -101,8 +101,21 @@ extension NewsPartsViewController : UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: OnePictureCellID, for: indexPath) as! OnePictureCell
-        return cell
+        if allNews[indexPath.row]?.infoType == .SignalImg {
+            let cell = tableView.dequeueReusableCell(withIdentifier: OnePictureCellID, for: indexPath) as! OnePictureCell
+            return cell
+        }else if allNews[indexPath.row]?.infoType == .MultiImg {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: MultiPicutresCellID, for: indexPath) as! MultiPicutresCell
+            return cell
+        }else if allNews[indexPath.row]?.infoType == .BigImg {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: BigImgCellID, for: indexPath) as! BigImgCell
+            return cell
+        }else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: NoPictureCellID, for: indexPath) as! NoPictureCell
+            return cell
+        }
     }
 }
 
