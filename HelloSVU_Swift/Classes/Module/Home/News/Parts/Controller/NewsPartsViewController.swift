@@ -43,7 +43,7 @@ class NewsPartsViewController: UIViewController {
         super.viewDidLoad()
 
         setUpUI()
-        loadNewInfosData()
+        setUpRefresh()
     }
 }
 
@@ -54,6 +54,13 @@ extension NewsPartsViewController {
         
         view.backgroundColor = .white
         view.addSubview(tableView)
+    }
+    
+    fileprivate func setUpRefresh() {
+        
+        tableView.mj_header = SVURefreshHeader.init(refreshingTarget: self, refreshingAction: #selector(loadNewInfosData))
+        tableView.mj_footer = SVURefreshFooter.init(refreshingTarget: self, refreshingAction: #selector(loadMoreInfosData))
+        tableView.mj_header.beginRefreshing()
     }
 }
 
@@ -73,9 +80,11 @@ extension NewsPartsViewController {
         return parameters
     }
     
-    fileprivate func loadNewInfosData() {
+    @objc fileprivate func loadNewInfosData() {
         
+        tableView.mj_footer.endRefreshing()
         var parameters = getParameters()
+        nowPage = 1
         parameters["page"] = nowPage
         let NewsURL = channelID == "就是名字" ? newsNormalURL : newsChannelIDURL
         QYRequestTool.requestData(method: .GET, URL: NewsURL, parameters: parameters, successComplete: {[weak self] (JSON) in
@@ -83,11 +92,46 @@ extension NewsPartsViewController {
             let data = [SingleNews].deserialize(from: JSON[0]["item"].description)
             if let data = data {
                 
+                let total = JSON[0]["totalPage"].description
+                if self?.nowPage == Int(total) {
+                    self?.tableView.mj_footer.endRefreshingWithNoMoreData()
+                }else {
+                    self?.tableView.mj_footer.endRefreshing()
+                }
                 self?.allNews = data
                 self?.tableView.reloadData()
+                self?.tableView.mj_header.endRefreshing()
             }
-        }) { (Error) in
+        }) {[weak self] (Error) in
+            self?.tableView.mj_header.endRefreshing()
+            self?.tableView.mj_footer.endRefreshing()
+        }
+    }
+    
+    @objc fileprivate func loadMoreInfosData() {
+        
+        tableView.mj_header.endRefreshing()
+        var parameters = getParameters()
+        nowPage += 1
+        parameters["page"] = nowPage
+        let NewsURL = channelID == "就是名字" ? newsNormalURL : newsChannelIDURL
+        QYRequestTool.requestData(method: .GET, URL: NewsURL, parameters: parameters, successComplete: {[weak self] (JSON) in
             
+            let data = [SingleNews].deserialize(from: JSON[0]["item"].description)
+            if let data = data {
+                
+                let total = JSON[0]["totalPage"].description
+                if self?.nowPage == Int(total) {
+                    self?.tableView.mj_footer.endRefreshingWithNoMoreData()
+                }else {
+                    self?.tableView.mj_footer.endRefreshing()
+                }
+                self?.allNews += data
+                self?.tableView.reloadData()
+            }
+        }) {[weak self] (Error) in
+            self?.tableView.mj_header.endRefreshing()
+            self?.tableView.mj_footer.endRefreshing()
         }
     }
 }
@@ -102,7 +146,9 @@ extension NewsPartsViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if allNews[indexPath.row]?.infoType == .SignalImg {
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: OnePictureCellID, for: indexPath) as! OnePictureCell
+            cell.news = allNews[indexPath.row]
             return cell
         }else if allNews[indexPath.row]?.infoType == .MultiImg {
             
@@ -111,9 +157,11 @@ extension NewsPartsViewController : UITableViewDataSource {
         }else if allNews[indexPath.row]?.infoType == .BigImg {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: BigImgCellID, for: indexPath) as! BigImgCell
+            cell.news = allNews[indexPath.row]
             return cell
         }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: NoPictureCellID, for: indexPath) as! NoPictureCell
+            cell.news = allNews[indexPath.row]
             return cell
         }
     }

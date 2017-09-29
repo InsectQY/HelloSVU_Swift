@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -51,13 +52,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="凤凰新闻" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y59-Sm-78o">
-                        <rect key="frame" x="10" y="105" width="48" height="17"/>
+                        <rect key="frame" x="10" y="110" width="48" height="17"/>
                         <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一小时前" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqK-uH-t4b">
-                        <rect key="frame" x="68" y="105" width="48" height="17"/>
+                        <rect key="frame" x="68" y="110" width="48" height="17"/>
                         <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -66,7 +67,6 @@
                 <constraints>
                     <constraint firstItem="YOn-GG-NyU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="1ru-gI-kYx"/>
                     <constraint firstItem="4tI-z8-tdN" firstAttribute="top" secondItem="YOn-GG-NyU" secondAttribute="top" id="2rw-aX-B6z"/>
-                    <constraint firstItem="AqK-uH-t4b" firstAttribute="top" secondItem="YOn-GG-NyU" secondAttribute="bottom" id="39Z-Xg-Wr5"/>
                     <constraint firstItem="YOn-GG-NyU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="H1B-3e-LbR"/>
                     <constraint firstItem="4tI-z8-tdN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="L4C-Cx-Sid"/>
                     <constraint firstItem="y59-Sm-78o" firstAttribute="leading" secondItem="4tI-z8-tdN" secondAttribute="leading" priority="100" id="MgW-kW-lcS"/>
@@ -75,9 +75,10 @@
                     <constraint firstAttribute="bottomMargin" secondItem="YOn-GG-NyU" secondAttribute="bottom" constant="10" id="Sgw-yy-0Bd"/>
                     <constraint firstItem="AqK-uH-t4b" firstAttribute="leading" secondItem="y59-Sm-78o" secondAttribute="trailing" constant="10" id="UoZ-6r-kYR"/>
                     <constraint firstAttribute="trailingMargin" secondItem="8CP-ca-Ae0" secondAttribute="trailing" id="VGj-Bl-5NW"/>
+                    <constraint firstItem="AqK-uH-t4b" firstAttribute="top" secondItem="y59-Sm-78o" secondAttribute="top" id="Xdn-2e-i0c"/>
                     <constraint firstItem="8CP-ca-Ae0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bvt-SK-Ogo"/>
                     <constraint firstItem="YOn-GG-NyU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mey-vt-24u"/>
-                    <constraint firstItem="y59-Sm-78o" firstAttribute="top" secondItem="YOn-GG-NyU" secondAttribute="bottom" id="ng3-zX-ixj"/>
+                    <constraint firstItem="y59-Sm-78o" firstAttribute="top" secondItem="YOn-GG-NyU" secondAttribute="bottom" constant="5" id="ng3-zX-ixj"/>
                     <constraint firstAttribute="bottom" secondItem="8CP-ca-Ae0" secondAttribute="bottom" id="ty5-Kg-0vI"/>
                     <constraint firstItem="8CP-ca-Ae0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="uL1-n6-hta"/>
                     <constraint firstAttribute="trailing" secondItem="8CP-ca-Ae0" secondAttribute="trailing" constant="10" id="v6L-uI-ahB"/>
@@ -102,6 +103,12 @@
                     <exclude reference="FSJ-w4-JVW"/>
                 </mask>
             </variation>
+            <connections>
+                <outlet property="sourceLabel" destination="y59-Sm-78o" id="WPt-Z2-6zX"/>
+                <outlet property="thumbNailImg" destination="YOn-GG-NyU" id="dzX-pb-KJ6"/>
+                <outlet property="timeLabel" destination="AqK-uH-t4b" id="648-PD-532"/>
+                <outlet property="titleLabel" destination="4tI-z8-tdN" id="nNL-50-neb"/>
+            </connections>
             <point key="canvasLocation" x="8" y="45"/>
         </tableViewCell>
     </objects>

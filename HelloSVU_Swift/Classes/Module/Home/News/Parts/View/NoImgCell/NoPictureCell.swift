@@ -14,10 +14,11 @@ class NoPictureCell: UITableViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
+    var news : SingleNews? {
+        didSet {
+            
+            titleLabel.text = news?.title
+            sourceLabel.text = news?.source
+        }
     }
-
-
 }

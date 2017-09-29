@@ -50,7 +50,7 @@ class SingleNews:  HandyJSON{
             
             let titleFont = PFR18Font
             if self.infoType == .SignalImg {
-                return 131
+                return 136
             }else if self.infoType == .NoImg {
                 return title.heightWithConstrainedWidth(ScreenW - 20, titleFont)
             }else if self.infoType == .MultiImg {

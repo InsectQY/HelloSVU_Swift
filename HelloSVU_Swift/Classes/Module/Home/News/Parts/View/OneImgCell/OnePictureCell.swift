@@ -15,6 +15,15 @@ class OnePictureCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var sourceLabel: UILabel!
     
+    var news : SingleNews? {
+        didSet {
+            
+            thumbNailImg.setImage(news?.thumbnail, "placeholder")
+            titleLabel.text = news?.title
+            sourceLabel.text = news?.source
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

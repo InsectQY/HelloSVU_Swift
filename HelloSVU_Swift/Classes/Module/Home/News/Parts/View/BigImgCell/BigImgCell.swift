@@ -14,9 +14,12 @@ class BigImgCell: UITableViewCell {
     @IBOutlet var thumbNailImg: UIImageView!
     @IBOutlet var sourceLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var news : SingleNews? {
+        didSet {
+            
+            thumbNailImg.setImage(news?.thumbnail, "placeholder")
+            titleLabel.text = news?.title
+            sourceLabel.text = news?.source
+        }
     }
-
 }

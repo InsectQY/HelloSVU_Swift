@@ -33,4 +33,9 @@ extension UIImageView {
             completionHandler?(image, error, cacheType, imageURL)
         }
     }
+    
+    func setImage(_ URLString : String?, _ placeHolderName : String? = nil) {
+        
+       setImage(URLString, placeHolderName, progress: nil, completionHandler: nil)
+    }
 }
