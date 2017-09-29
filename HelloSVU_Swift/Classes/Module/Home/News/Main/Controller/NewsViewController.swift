@@ -12,8 +12,7 @@ fileprivate let NewsAllChannels = "newsAllChannels"
 fileprivate let NewsCurrentChannels = "newsCurrentChannels"
 
 class NewsViewController: UIViewController {
-    
-    var currentIndex = 0
+
     lazy var channelsID: [String : String] = {
         
         if let path = Bundle.main.path(forResource: "News.plist", ofType: nil), let news = NSDictionary(contentsOfFile: path) as? [String: String] {
