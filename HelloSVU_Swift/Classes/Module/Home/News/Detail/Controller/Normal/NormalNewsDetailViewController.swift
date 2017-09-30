@@ -38,8 +38,15 @@ extension NormalNewsDetailViewController {
     
     fileprivate func setUpUI() {
         
+        setUpBrowserOptions()
         view.backgroundColor = .white
         view.addSubview(webView)
+    }
+    
+    fileprivate func setUpBrowserOptions() {
+        
+        SKPhotoBrowserOptions.enableSingleTapDismiss = true
+        SKPhotoBrowserOptions.bounceAnimation = true
     }
 }
 
@@ -93,10 +100,11 @@ extension NormalNewsDetailViewController: UIWebViewDelegate {
         webView.stringByEvaluatingJavaScript(from: getImages)
         let urlResult = webView.stringByEvaluatingJavaScript(from: "getImages();")
         if let images = urlResult?.components(separatedBy: "+") {
-            for item in images {
+            for (index,item) in images.enumerated() {
                 
                 if item.count == 0 {return}
                 let photo = SKPhoto.photoWithImageURL(item)
+                photo.caption = "\(index + 1)/\(images.count - 1)"
                 allImages.append(photo)
             }
         }
@@ -120,6 +128,7 @@ extension NormalNewsDetailViewController: UIWebViewDelegate {
         for (index,item) in allImages.enumerated() {
             if imageUrl == item.photoURL {
                 
+                SKPhotoBrowserOptions.displayAction = true
                 let browser = SKPhotoBrowser(photos: allImages)
                 browser.initializePageIndex(index)
                 present(browser, animated: true, completion: nil)
