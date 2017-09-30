@@ -170,11 +170,18 @@ extension NewsPartsViewController : UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension NewsPartsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("")
+        
+        let news = allNews[indexPath.row]
+        if news?.type == "doc" {
+            
+            let vc = NormalNewsDetailViewController()
+            vc.url = news?.link.url ?? ""
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return allNews[indexPath.row]?.rowHeight ?? 5
+        return allNews[indexPath.row]?.rowHeight ?? 0
     }
 }
 
