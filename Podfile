@@ -12,5 +12,6 @@ pod 'Kingfisher'
 pod 'EZSwiftExtensions'
 pod 'MJRefresh'
 pod 'SVProgressHUD'
+pod 'SKPhotoBrowser'
 
 end

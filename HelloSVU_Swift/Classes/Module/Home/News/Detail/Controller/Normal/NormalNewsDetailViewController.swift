@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import SKPhotoBrowser
+
+fileprivate let clickInfo = "myweb:imageClick:"
 
 class NormalNewsDetailViewController: UIViewController {
     
     var url = ""
+    fileprivate lazy var allImages = [SKPhoto]()
     
     // MARK: - LazyLoad
-    lazy var webView: UIWebView = {
+    fileprivate lazy var webView: UIWebView = {
         
         let webView = UIWebView(frame: UIScreen.main.bounds)
         webView.delegate = self
@@ -42,7 +46,8 @@ extension NormalNewsDetailViewController {
 // MARK: - 加载详情新闻数据
 extension NormalNewsDetailViewController {
     
-    func loadDetailNews() {
+    fileprivate func loadDetailNews() {
+        
         QYRequestTool.requestData(method: .GET, URL: url, successComplete: {[weak self] (JSON) in
             
             var html = ""
@@ -69,24 +74,57 @@ extension NormalNewsDetailViewController {
 extension NormalNewsDetailViewController: UIWebViewDelegate {
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        /// 缩放图片大小
-//        let script = """
-//        var script = document.createElement('script');
-//        script.type = 'text/javascript';
-//        script.text = \"function ResizeImages() {
-//        var myimg;
-//        var maxwidth = \(ScreenW - 20);
-//        for(i = 0;i < document.images.length; i++){
-//        myimg = document.images[i];
-//        myimg.height = maxwidth / (myimg.width / myimg.height);
-//        myimg.width = maxwidth;
-//        }
-//        }\";
-//        document.getElementsByTagName('p')[0].appendChild(script);
-//        """
-//        print(script)
-//        webView.stringByEvaluatingJavaScript(from: script)
-//        webView.stringByEvaluatingJavaScript(from: "ResizeImages();")
+        /// 获取网页中所有图片 URL，并添加点击事件
+        let getImages = """
+        function getImages() {\
+
+            var objs = document.getElementsByTagName(\"img\");\
+            var imgData = '';\
+            for(var i = 0;i < objs.length; i++){\
+
+                imgData = imgData + objs[i].src + '+';\
+                objs[i].onclick = function() {\
+                window.location.href = \"myweb:imageClick:\" + this.src;\
+            };\
+        };\
+            return imgData;\
+            };
+        """
+        webView.stringByEvaluatingJavaScript(from: getImages)
+        let urlResult = webView.stringByEvaluatingJavaScript(from: "getImages();")
+        if let images = urlResult?.components(separatedBy: "+") {
+            for item in images {
+                
+                if item.count == 0 {return}
+                let photo = SKPhoto.photoWithImageURL(item)
+                allImages.append(photo)
+            }
+        }
+    }
+    
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        
+        let requestString = request.url?.absoluteString ?? ""
+        if  requestString.hasPrefix(clickInfo) {
+            
+            let imageURL = (requestString as NSString).substring(from: clickInfo.length)
+            showImage(imageURL)
+            return false
+        }
+        return true
+    }
+    
+    // MARK: - 展示图片
+    fileprivate func showImage(_ imageUrl : String) {
+        
+        for (index,item) in allImages.enumerated() {
+            if imageUrl == item.photoURL {
+                
+                let browser = SKPhotoBrowser(photos: allImages)
+                browser.initializePageIndex(index)
+                present(browser, animated: true, completion: nil)
+            }
+        }
     }
     
 }
