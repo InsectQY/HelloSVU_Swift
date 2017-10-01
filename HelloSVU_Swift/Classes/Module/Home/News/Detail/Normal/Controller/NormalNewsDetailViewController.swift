@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SKPhotoBrowser
 
 fileprivate let clickInfo = "myweb:imageClick:"
 

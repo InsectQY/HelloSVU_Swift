@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SKPhotoBrowser
 import EZSwiftExtensions
 
 fileprivate let kScrollViewH : CGFloat = ScreenH - 200
@@ -16,7 +15,8 @@ class SlideNewsDetailViewController: UIViewController {
     
     var url = ""
     
-    fileprivate var slideNews = [SlideNews?]()
+    fileprivate lazy var slideNews = [SlideNews?]()
+    fileprivate lazy var allImages = [String]()
     
     // MARK: - LazyLoad
     fileprivate lazy var scrollView: UIScrollView = {
@@ -106,11 +106,21 @@ extension SlideNewsDetailViewController {
             let index = CGFloat(index)
             let image = UIImageView(frame: CGRect(x: index * ScreenW, y: 64, w: ScreenW, h: kScrollViewH))
             image.contentMode = UIViewContentMode.scaleAspectFit
+            image.isUserInteractionEnabled = true
+            image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showImage)))
+            allImages.append(item?.image ?? "")
             scrollView.addSubview(image)
         }
         
         setImageContent(0)
         setNewsContent(0)
+    }
+    
+    // MARK: - 预览图片
+    @objc fileprivate func showImage() {
+        
+        let index = Int(scrollView.contentOffset.x / ScreenW)
+        present(SVUPhotoBrowser.browser(index, allImages), animated: true, completion: nil)
     }
     
     // MARK: - 返回
