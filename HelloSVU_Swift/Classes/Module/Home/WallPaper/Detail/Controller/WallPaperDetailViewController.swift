@@ -59,10 +59,6 @@ class WallPaperDetailViewController: UIViewController {
     }()
     
     // MARK: - LifeCycle
-    override var prefersStatusBarHidden: Bool{
-        return true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -110,6 +106,11 @@ extension WallPaperDetailViewController {
         view.addSubview(imageView)
         /// 添加第一次试用指引
         showTip()
+    }
+    
+    // MARK: - 隐藏状态栏
+    override var prefersStatusBarHidden: Bool{
+        return true
     }
     
     // MARK: - 显示提示
