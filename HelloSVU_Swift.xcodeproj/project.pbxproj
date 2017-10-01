@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C5ED06F964BE6FD7CA4D89F3 /* Pods_HelloSVU_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F5DAFD7A62578FB3CD3CD3 /* Pods_HelloSVU_Swift.framework */; };
 		E514B38A1F80C2D6002431CE /* SlideNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514B3891F80C2D6002431CE /* SlideNewsDetailViewController.swift */; };
+		E514B38D1F80DB04002431CE /* SVUPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514B38C1F80DB04002431CE /* SVUPhotoBrowser.swift */; };
 		E52B24E21EBF46B500183DA6 /* QYRequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24E11EBF46B500183DA6 /* QYRequestTool.swift */; };
 		E52B24E51EBF49AE00183DA6 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24E41EBF49AE00183DA6 /* NibLoadable.swift */; };
 		E52B24EB1EBF4A3A00183DA6 /* QYCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24E71EBF4A3A00183DA6 /* QYCycleCell.swift */; };
@@ -108,6 +109,7 @@
 		8F0D10180EDFA12A4689FD7E /* Pods-HelloSVU_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloSVU_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloSVU_Swift/Pods-HelloSVU_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		E4F5DAFD7A62578FB3CD3CD3 /* Pods_HelloSVU_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloSVU_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E514B3891F80C2D6002431CE /* SlideNewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideNewsDetailViewController.swift; sourceTree = "<group>"; };
+		E514B38C1F80DB04002431CE /* SVUPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVUPhotoBrowser.swift; sourceTree = "<group>"; };
 		E52B24E11EBF46B500183DA6 /* QYRequestTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYRequestTool.swift; sourceTree = "<group>"; };
 		E52B24E41EBF49AE00183DA6 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		E52B24E71EBF4A3A00183DA6 /* QYCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYCycleCell.swift; sourceTree = "<group>"; };
@@ -270,9 +272,18 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E514B38B1F80DAD6002431CE /* SVUPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				E514B38C1F80DB04002431CE /* SVUPhotoBrowser.swift */,
+			);
+			path = SVUPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		E52B24DF1EBF46B500183DA6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				E514B38B1F80DAD6002431CE /* SVUPhotoBrowser */,
 				E57002B41F7CD191006FC640 /* SVUHUD */,
 				E57FCCB21ED4326800FE5184 /* GetVc */,
 				E5BA14001EC42BE6002F4FF9 /* Refresh */,
@@ -1329,6 +1340,7 @@
 				E57FCCD01ED43FA600FE5184 /* Common.swift in Sources */,
 				E52B24E51EBF49AE00183DA6 /* NibLoadable.swift in Sources */,
 				E572F0961ED4493D001556B4 /* NewsViewController.swift in Sources */,
+				E514B38D1F80DB04002431CE /* SVUPhotoBrowser.swift in Sources */,
 				E5539F541F7E715500139E17 /* SingleNews.swift in Sources */,
 				E57FCCB61ED43AC900FE5184 /* HomeViewController.swift in Sources */,
 				E57002B91F7CD1B2006FC640 /* SVUHUD.swift in Sources */,

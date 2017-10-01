@@ -153,6 +153,7 @@ extension NewsPartsViewController : UITableViewDataSource {
         }else if allNews[indexPath.row]?.infoType == .MultiImg {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: MultiPicutresCellID, for: indexPath) as! MultiPicutresCell
+            cell.news = allNews[indexPath.row]
             return cell
         }else if allNews[indexPath.row]?.infoType == .BigImg {
             
@@ -172,11 +173,21 @@ extension NewsPartsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let news = allNews[indexPath.row]
-        if news?.type == "doc" {
+        switch news?.type {
+        case "doc"?:
             
             let vc = NormalNewsDetailViewController()
             vc.url = news?.link.url ?? ""
             navigationController?.pushViewController(vc, animated: true)
+            break
+        case "slide"?:
+            
+            let vc = SlideNewsDetailViewController()
+            vc.url = news?.link.url ?? ""
+            navigationController?.pushViewController(vc, animated: true)
+            break
+        default:
+            break
         }
     }
     

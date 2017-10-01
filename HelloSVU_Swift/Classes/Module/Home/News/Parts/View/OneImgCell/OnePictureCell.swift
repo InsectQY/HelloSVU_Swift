@@ -23,11 +23,5 @@ class OnePictureCell: UITableViewCell {
             sourceLabel.text = news?.source
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
 
 }

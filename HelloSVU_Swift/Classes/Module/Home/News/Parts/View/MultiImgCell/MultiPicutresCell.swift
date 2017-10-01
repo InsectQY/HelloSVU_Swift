@@ -17,10 +17,31 @@ class MultiPicutresCell: UITableViewCell {
     @IBOutlet var secondImg: UIImageView!
     @IBOutlet var thirdImg: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var news : SingleNews? {
+        didSet {
+            
+            titleLabel.text = news?.title
+            sourceLabel.text = news?.source
+            
+            if let images = news?.style.images {
+                
+                for i in 0 ..< images.count {
+                    
+                    switch i {
+                    case 0:
+                        firstImg.setImage(news?.style.images[i], "placeholder")
+                        break
+                    case 1:
+                        secondImg.setImage(news?.style.images[i], "placeholder")
+                        break
+                    case 2:
+                        thirdImg.setImage(news?.style.images[i], "placeholder")
+                        break
+                    default:
+                        break
+                    }
+                }
+            }
+        }
     }
-
-
 }
