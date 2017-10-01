@@ -141,4 +141,3 @@ extension WallperVerticalViewController : UICollectionViewDelegate {
         presentVC(vc)
     }
 }
-

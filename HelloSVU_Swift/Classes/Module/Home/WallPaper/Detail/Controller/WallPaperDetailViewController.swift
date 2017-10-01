@@ -157,7 +157,7 @@ extension WallPaperDetailViewController : JFContextSheetDelegate {
         if error != nil {
             SVUHUD.showInfoWithStatus("保存失败")
         } else {
-            SVUHUD.showInfoWithStatus("保存成功")
+            SVUHUD.showSuccessWithStatus("保存成功")
         }
     }
 }
