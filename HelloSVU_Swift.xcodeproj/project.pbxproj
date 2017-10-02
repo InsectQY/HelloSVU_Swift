@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C5ED06F964BE6FD7CA4D89F3 /* Pods_HelloSVU_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F5DAFD7A62578FB3CD3CD3 /* Pods_HelloSVU_Swift.framework */; };
+		E50971F81F829A32004BD522 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50971F71F829A32004BD522 /* ProfileViewController.swift */; };
 		E514B38A1F80C2D6002431CE /* SlideNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514B3891F80C2D6002431CE /* SlideNewsDetailViewController.swift */; };
 		E514B38D1F80DB04002431CE /* SVUPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514B38C1F80DB04002431CE /* SVUPhotoBrowser.swift */; };
 		E52B24E21EBF46B500183DA6 /* QYRequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24E11EBF46B500183DA6 /* QYRequestTool.swift */; };
@@ -28,6 +29,7 @@
 		E5539F551F7E7C0C00139E17 /* OnePictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5539F441F7E6CD300139E17 /* OnePictureCell.xib */; };
 		E5539F561F7E7C0F00139E17 /* MultiPicutresCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5539F471F7E6DCB00139E17 /* MultiPicutresCell.xib */; };
 		E5539F571F7E7C1100139E17 /* BigImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5539F4A1F7E6E6C00139E17 /* BigImgCell.xib */; };
+		E55B28AB1F8237C800C4191A /* MapToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55B28AA1F8237C800C4191A /* MapToolView.swift */; };
 		E56007F41ED7CE4400C82460 /* Cond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F31ED7CE4400C82460 /* Cond.swift */; };
 		E56007F61ED7CE5200C82460 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F51ED7CE5200C82460 /* DailyForecast.swift */; };
 		E56007F81ED7CE5F00C82460 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F71ED7CE5F00C82460 /* Forecast.swift */; };
@@ -48,7 +50,6 @@
 		E57002AC1F7CCAF3006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E570029E1F7CCACB006FC640 /* .gitignore */; };
 		E57002AD1F7CCAF6006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002A01F7CCACB006FC640 /* .gitignore */; };
 		E57002B21F7CCB19006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002AF1F7CCB17006FC640 /* .gitignore */; };
-		E57002B31F7CCB1C006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002B11F7CCB17006FC640 /* .gitignore */; };
 		E57002B91F7CD1B2006FC640 /* SVUHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57002B81F7CD1B2006FC640 /* SVUHUD.swift */; };
 		E57002F11F7CE6D6006FC640 /* JhtNewsChannelImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E57002E71F7CE6BB006FC640 /* JhtNewsChannelImages.bundle */; };
 		E57002F21F7CE6D9006FC640 /* JhtNewsChannelSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E57002EE1F7CE6BB006FC640 /* JhtNewsChannelSDK.a */; };
@@ -108,6 +109,9 @@
 /* Begin PBXFileReference section */
 		8F0D10180EDFA12A4689FD7E /* Pods-HelloSVU_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloSVU_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloSVU_Swift/Pods-HelloSVU_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		E4F5DAFD7A62578FB3CD3CD3 /* Pods_HelloSVU_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloSVU_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50971F41F8299E5004BD522 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E50971F61F8299E5004BD522 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E50971F71F829A32004BD522 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E514B3891F80C2D6002431CE /* SlideNewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideNewsDetailViewController.swift; sourceTree = "<group>"; };
 		E514B38C1F80DB04002431CE /* SVUPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVUPhotoBrowser.swift; sourceTree = "<group>"; };
 		E52B24E11EBF46B500183DA6 /* QYRequestTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYRequestTool.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 		E5539F4F1F7E710D00139E17 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		E5539F511F7E711900139E17 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		E5539F531F7E715500139E17 /* SingleNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleNews.swift; sourceTree = "<group>"; };
+		E55B28AA1F8237C800C4191A /* MapToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToolView.swift; sourceTree = "<group>"; };
 		E56007F31ED7CE4400C82460 /* Cond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cond.swift; sourceTree = "<group>"; };
 		E56007F51ED7CE5200C82460 /* DailyForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
 		E56007F71ED7CE5F00C82460 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
@@ -148,7 +153,6 @@
 		E57002A51F7CCADA006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E57002A71F7CCADA006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E57002AF1F7CCB17006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		E57002B11F7CCB17006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E57002B81F7CD1B2006FC640 /* SVUHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVUHUD.swift; sourceTree = "<group>"; };
 		E57002E01F7CDDCD006FC640 /* News.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = News.plist; sourceTree = "<group>"; };
 		E57002E21F7CE6BB006FC640 /* JhtChannelBarAndSlideViewConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarAndSlideViewConnect.h; sourceTree = "<group>"; };
@@ -244,6 +248,40 @@
 				F7DD3F39BA49625A24EA4913 /* Pods-HelloSVU_Swift.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E50971F01F8299E5004BD522 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E50971F11F8299E5004BD522 /* Controller */,
+				E50971F31F8299E5004BD522 /* Model */,
+				E50971F51F8299E5004BD522 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E50971F11F8299E5004BD522 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E50971F71F829A32004BD522 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E50971F31F8299E5004BD522 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E50971F41F8299E5004BD522 /* .gitignore */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E50971F51F8299E5004BD522 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E50971F61F8299E5004BD522 /* .gitignore */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E514B3841F80C226002431CE /* Normal */ = {
@@ -509,7 +547,7 @@
 		E57002B01F7CCB17006FC640 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E57002B11F7CCB17006FC640 /* .gitignore */,
+				E55B28AA1F8237C800C4191A /* MapToolView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -990,8 +1028,9 @@
 			children = (
 				E5D3B16B1EBF3EF7003F6C14 /* Main */,
 				E5D3B0E31EBF3E03003F6C14 /* Home */,
-				E5D3B0DB1EBF3E03003F6C14 /* FBAA(同学圈) */,
 				E5D3B11C1EBF3E03003F6C14 /* Map */,
+				E5D3B0DB1EBF3E03003F6C14 /* FBAA(同学圈) */,
+				E50971F01F8299E5004BD522 /* Profile */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -1209,7 +1248,6 @@
 				E57002AA1F7CCAE7006FC640 /* .gitignore in Resources */,
 				E57FCCA81ED423C000FE5184 /* Home.plist in Resources */,
 				E57002B21F7CCB19006FC640 /* .gitignore in Resources */,
-				E57002B31F7CCB1C006FC640 /* .gitignore in Resources */,
 				E5D3B1831EBF41D0003F6C14 /* MainVCSettings.json in Resources */,
 				E5539F571F7E7C1100139E17 /* BigImgCell.xib in Resources */,
 				E570028F1F7CCA66006FC640 /* .gitignore in Resources */,
@@ -1336,6 +1374,7 @@
 				E5FFF28F1EDAC83B00594C03 /* Astro.swift in Sources */,
 				E57002FB1F7CFD8A006FC640 /* NewsPartsViewController.swift in Sources */,
 				E56007F41ED7CE4400C82460 /* Cond.swift in Sources */,
+				E50971F81F829A32004BD522 /* ProfileViewController.swift in Sources */,
 				E5FFF28D1EDAC7DC00594C03 /* Tmp.swift in Sources */,
 				E5762CF51EC404FE00B422C7 /* UIBarButtonItem-Extension.swift in Sources */,
 				E5BD15A41ED4430000F06039 /* TodayWeatherView.swift in Sources */,
@@ -1374,6 +1413,7 @@
 				E52B24E21EBF46B500183DA6 /* QYRequestTool.swift in Sources */,
 				E514B38A1F80C2D6002431CE /* SlideNewsDetailViewController.swift in Sources */,
 				E5FAECBA1F7BC35E006CC525 /* WallPaperDetailViewController.swift in Sources */,
+				E55B28AB1F8237C800C4191A /* MapToolView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1510,7 +1550,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HelloSVU_Swift/Classes/Expand/Vendors/JhtNewsChannelSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jssvc.cqy.cdd.HelloSVU;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jssvc.cqy.HelloSVU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloSVU_Swift/Application/HelloSVU_Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1533,7 +1573,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HelloSVU_Swift/Classes/Expand/Vendors/JhtNewsChannelSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jssvc.cqy.cdd.HelloSVU;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jssvc.cqy.HelloSVU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloSVU_Swift/Application/HelloSVU_Swift-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;

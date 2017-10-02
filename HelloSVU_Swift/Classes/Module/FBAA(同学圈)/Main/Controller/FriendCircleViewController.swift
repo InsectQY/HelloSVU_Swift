@@ -26,6 +26,6 @@ extension FriendCircleViewController {
     
     fileprivate func setUpUI() {
         
-        view.backgroundColor = .blue
+        view.backgroundColor = UIColor.random()
     }
 }

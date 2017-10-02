@@ -10,6 +10,8 @@ import UIKit
 
 class MapViewController: UIViewController {
     
+    var coordinate : CLLocationCoordinate2D?
+    
     // MARK: - LazyLoad
     fileprivate lazy var mapView: MAMapView = {
         
@@ -20,7 +22,24 @@ class MapViewController: UIViewController {
         mapView.userTrackingMode = .followWithHeading
         mapView.compassOrigin = CGPoint(x: mapView.compassOrigin.x, y: 22)
         mapView.scaleOrigin = CGPoint(x: mapView.scaleOrigin.x, y: 22)
+        mapView.delegate = self
         return mapView
+    }()
+    
+    fileprivate lazy var toolView: MapToolView = {
+        
+        let toolView = MapToolView(CGRect(x: 0, y: ScreenH - 93, width: ScreenW, height: 44), ["线路站点","路线规划","一键返校"])
+        return toolView
+    }()
+    
+    fileprivate lazy var locationBtn: UIButton = {
+        
+        let locationBtn = UIButton(type: .custom)
+        locationBtn.frame = CGRect(x: 8, y: toolView.y - 46 , w: 36, h: 36)
+        locationBtn.setBackgroundColor(.white, forState: .normal)
+        locationBtn.setImage(UIImage(named: "location"), for: .normal)
+        locationBtn.addTarget(self, action: #selector(locateBtnDidClick), for: .touchUpInside)
+        return locationBtn
     }()
     
     // MARK: - LifeCycle
@@ -28,6 +47,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         setUpUI()
+        toolViewClick()
     }
 }
 
@@ -39,6 +59,57 @@ extension MapViewController {
         navigationController?.delegate = self
         view.backgroundColor = .white
         view.addSubview(mapView)
+        view.addSubview(toolView)
+        view.addSubview(locationBtn)
+    }
+}
+
+// MARK: - 点击事件
+extension MapViewController {
+    
+    // MARK: - toolView 点击事件
+    fileprivate func toolViewClick() {
+        
+        toolView.didClick = { (selInex : Int) in
+            
+            switch selInex {
+            case 0:
+                print(selInex)
+                break
+            case 1:
+                print(selInex)
+                break
+            case 2:
+                print(selInex)
+                break
+            default:
+                break
+            }
+        }
+    }
+    
+    // MARK: - 定位按钮点击事件
+    @objc fileprivate func locateBtnDidClick() {
+        
+        mapView.setZoomLevel(16.5, animated: true)
+        if let coordinate = coordinate {
+            mapView.setCenter(coordinate, animated: true)
+        }
+    }
+}
+
+// MARK: - MAMapViewDelegate
+extension MapViewController : MAMapViewDelegate{
+    
+    func mapView(_ mapView: MAMapView!, didUpdate userLocation: MAUserLocation!, updatingLocation: Bool) {
+        
+        if updatingLocation == true {
+            coordinate = userLocation.coordinate
+        }
+    }
+    
+    func mapInitComplete(_ mapView: MAMapView!) {
+        locateBtnDidClick()
     }
 }
 
