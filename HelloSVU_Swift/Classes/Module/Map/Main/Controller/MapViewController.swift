@@ -70,14 +70,16 @@ extension MapViewController {
     // MARK: - toolView 点击事件
     fileprivate func toolViewClick() {
         
-        toolView.didClick = { (selInex : Int) in
+        toolView.didClick = {[weak self] (selInex : Int) in
             
             switch selInex {
             case 0:
                 print(selInex)
                 break
             case 1:
-                print(selInex)
+                
+                let vc = RoutePageViewController()
+                self?.navigationController?.pushViewController(vc, animated: true)
                 break
             case 2:
                 print(selInex)
@@ -120,5 +122,9 @@ extension MapViewController : UINavigationControllerDelegate {
         
         let isShowNav = viewController.isKind(of: MapViewController.self)
         navigationController.setNavigationBarHidden(isShowNav, animated: false)
+        let disappearingVc = navigationController.viewControllers.last
+        if let disappearingVc = disappearingVc {
+            disappearingVc.navigationController?.setNavigationBarHidden(true, animated: false)
+        }
     }
 }

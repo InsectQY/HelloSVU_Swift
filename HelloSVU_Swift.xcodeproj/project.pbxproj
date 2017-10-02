@@ -74,6 +74,12 @@
 		E5A40CEE1F7E8A8C0091C407 /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A40CED1F7E8A8C0091C407 /* String-Extension.swift */; };
 		E5BA14081EC42C8A002F4FF9 /* SVURefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA14071EC42C8A002F4FF9 /* SVURefreshFooter.m */; };
 		E5BA140B1EC42D42002F4FF9 /* SVURefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA140A1EC42D42002F4FF9 /* SVURefreshHeader.m */; };
+		E5BC27091F82A2F5005BE425 /* RoutePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5BC27081F82A2E9005BE425 /* RoutePageViewController.xib */; };
+		E5BC270B1F82A300005BE425 /* RoutePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BC270A1F82A300005BE425 /* RoutePageViewController.swift */; };
+		E5BC27121F82AC17005BE425 /* QYPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BC270E1F82AC03005BE425 /* QYPageStyle.swift */; };
+		E5BC27131F82AC19005BE425 /* QYContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BC270D1F82AC03005BE425 /* QYContentView.swift */; };
+		E5BC27141F82AC1B005BE425 /* QYPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BC270F1F82AC03005BE425 /* QYPageView.swift */; };
+		E5BC27151F82AC1E005BE425 /* QYTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BC27101F82AC03005BE425 /* QYTitleView.swift */; };
 		E5BD15A01ED442C400F06039 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BD159F1ED442C400F06039 /* ForecastCell.swift */; };
 		E5BD15A21ED442CA00F06039 /* ForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5BD15A11ED442CA00F06039 /* ForecastCell.xib */; };
 		E5BD15A41ED4430000F06039 /* TodayWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BD15A31ED4430000F06039 /* TodayWeatherView.swift */; };
@@ -112,6 +118,8 @@
 		E50971F41F8299E5004BD522 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E50971F61F8299E5004BD522 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E50971F71F829A32004BD522 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E50971FE1F829DAB004BD522 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E50972001F829DAB004BD522 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E514B3891F80C2D6002431CE /* SlideNewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideNewsDetailViewController.swift; sourceTree = "<group>"; };
 		E514B38C1F80DB04002431CE /* SVUPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVUPhotoBrowser.swift; sourceTree = "<group>"; };
 		E52B24E11EBF46B500183DA6 /* QYRequestTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYRequestTool.swift; sourceTree = "<group>"; };
@@ -193,6 +201,12 @@
 		E5BA14091EC42D42002F4FF9 /* SVURefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVURefreshHeader.h; sourceTree = "<group>"; };
 		E5BA140A1EC42D42002F4FF9 /* SVURefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVURefreshHeader.m; sourceTree = "<group>"; };
 		E5BA140C1EC42EAA002F4FF9 /* HelloSVU_Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HelloSVU_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		E5BC27081F82A2E9005BE425 /* RoutePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoutePageViewController.xib; sourceTree = "<group>"; };
+		E5BC270A1F82A300005BE425 /* RoutePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePageViewController.swift; sourceTree = "<group>"; };
+		E5BC270D1F82AC03005BE425 /* QYContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYContentView.swift; sourceTree = "<group>"; };
+		E5BC270E1F82AC03005BE425 /* QYPageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYPageStyle.swift; sourceTree = "<group>"; };
+		E5BC270F1F82AC03005BE425 /* QYPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYPageView.swift; sourceTree = "<group>"; };
+		E5BC27101F82AC03005BE425 /* QYTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYTitleView.swift; sourceTree = "<group>"; };
 		E5BD159F1ED442C400F06039 /* ForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		E5BD15A11ED442CA00F06039 /* ForecastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForecastCell.xib; sourceTree = "<group>"; };
 		E5BD15A31ED4430000F06039 /* TodayWeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayWeatherView.swift; sourceTree = "<group>"; };
@@ -284,6 +298,51 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E50971F91F829D80004BD522 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E57002AE1F7CCB17006FC640 /* Model */,
+				E57002B01F7CCB17006FC640 /* View */,
+				E5D3B1271EBF3E03003F6C14 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E50971FA1F829DAB004BD522 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				E50971FB1F829DAB004BD522 /* Controller */,
+				E50971FD1F829DAB004BD522 /* Model */,
+				E50971FF1F829DAB004BD522 /* View */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		E50971FB1F829DAB004BD522 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E5BC270A1F82A300005BE425 /* RoutePageViewController.swift */,
+				E5BC27081F82A2E9005BE425 /* RoutePageViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E50971FD1F829DAB004BD522 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E50971FE1F829DAB004BD522 /* .gitignore */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E50971FF1F829DAB004BD522 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E50972001F829DAB004BD522 /* .gitignore */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E514B3841F80C226002431CE /* Normal */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +380,7 @@
 		E52B24DF1EBF46B500183DA6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				E5BC270C1F82AC03005BE425 /* QYPageView */,
 				E514B38B1F80DAD6002431CE /* SVUPhotoBrowser */,
 				E57002B41F7CD191006FC640 /* SVUHUD */,
 				E57FCCB21ED4326800FE5184 /* GetVc */,
@@ -679,6 +739,17 @@
 			path = Refresh;
 			sourceTree = "<group>";
 		};
+		E5BC270C1F82AC03005BE425 /* QYPageView */ = {
+			isa = PBXGroup;
+			children = (
+				E5BC270D1F82AC03005BE425 /* QYContentView.swift */,
+				E5BC270E1F82AC03005BE425 /* QYPageStyle.swift */,
+				E5BC270F1F82AC03005BE425 /* QYPageView.swift */,
+				E5BC27101F82AC03005BE425 /* QYTitleView.swift */,
+			);
+			path = QYPageView;
+			sourceTree = "<group>";
+		};
 		E5CA61391EC2AFDF001ABDC7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -908,27 +979,10 @@
 		E5D3B11C1EBF3E03003F6C14 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				E5D3B1251EBF3E03003F6C14 /* Main */,
+				E50971F91F829D80004BD522 /* Main */,
+				E50971FA1F829DAB004BD522 /* Route */,
 			);
 			path = Map;
-			sourceTree = "<group>";
-		};
-		E5D3B1251EBF3E03003F6C14 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				E5D3B1261EBF3E03003F6C14 /* Main */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		E5D3B1261EBF3E03003F6C14 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				E57002AE1F7CCB17006FC640 /* Model */,
-				E57002B01F7CCB17006FC640 /* View */,
-				E5D3B1271EBF3E03003F6C14 /* Controller */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		E5D3B1271EBF3E03003F6C14 /* Controller */ = {
@@ -1251,6 +1305,7 @@
 				E5D3B1831EBF41D0003F6C14 /* MainVCSettings.json in Resources */,
 				E5539F571F7E7C1100139E17 /* BigImgCell.xib in Resources */,
 				E570028F1F7CCA66006FC640 /* .gitignore in Resources */,
+				E5BC27091F82A2F5005BE425 /* RoutePageViewController.xib in Resources */,
 				E5BD15A21ED442CA00F06039 /* ForecastCell.xib in Resources */,
 				E57002AC1F7CCAF3006FC640 /* .gitignore in Resources */,
 				E5BD15A61ED4432300F06039 /* TodayWeatherView.xib in Resources */,
@@ -1367,9 +1422,11 @@
 				E57FCCC21ED43D4C00FE5184 /* NotificationCell.swift in Sources */,
 				E5FAEC571F7BC075006CC525 /* ImgCategory.swift in Sources */,
 				E5FAECC51F7BC4EB006CC525 /* JFContextItem.swift in Sources */,
+				E5BC27131F82AC19005BE425 /* QYContentView.swift in Sources */,
 				E57FCCBA1ED43BF100FE5184 /* HomeToolContentCell.swift in Sources */,
 				E5539F491F7E6DDF00139E17 /* MultiPicutresCell.swift in Sources */,
 				E5FAEC541F7BBFA0006CC525 /* WallPaperCategoryViewController.swift in Sources */,
+				E5BC270B1F82A300005BE425 /* RoutePageViewController.swift in Sources */,
 				E5BA14081EC42C8A002F4FF9 /* SVURefreshFooter.m in Sources */,
 				E5FFF28F1EDAC83B00594C03 /* Astro.swift in Sources */,
 				E57002FB1F7CFD8A006FC640 /* NewsPartsViewController.swift in Sources */,
@@ -1385,6 +1442,7 @@
 				E5FAEC431F7BBDE0006CC525 /* Api.swift in Sources */,
 				E56007FC1ED7D4AE00C82460 /* WeatherData.swift in Sources */,
 				E5A40CEE1F7E8A8C0091C407 /* String-Extension.swift in Sources */,
+				E5BC27141F82AC1B005BE425 /* QYPageView.swift in Sources */,
 				E57FCCD01ED43FA600FE5184 /* Common.swift in Sources */,
 				E52B24E51EBF49AE00183DA6 /* NibLoadable.swift in Sources */,
 				E572F0961ED4493D001556B4 /* NewsViewController.swift in Sources */,
@@ -1406,8 +1464,10 @@
 				E5E85E951F7F6CD60073AC02 /* NormalNewsDetailViewController.swift in Sources */,
 				E5BD15A01ED442C400F06039 /* ForecastCell.swift in Sources */,
 				E57FCCB81ED43B3200FE5184 /* Home.swift in Sources */,
+				E5BC27121F82AC17005BE425 /* QYPageStyle.swift in Sources */,
 				E5539F461F7E6D1E00139E17 /* OnePictureCell.swift in Sources */,
 				E56007F81ED7CE5F00C82460 /* Forecast.swift in Sources */,
+				E5BC27151F82AC1E005BE425 /* QYTitleView.swift in Sources */,
 				E56007FE1ED7D58300C82460 /* Suggestion.swift in Sources */,
 				E57FCCCC1ED43F4500FE5184 /* MapViewController.swift in Sources */,
 				E52B24E21EBF46B500183DA6 /* QYRequestTool.swift in Sources */,

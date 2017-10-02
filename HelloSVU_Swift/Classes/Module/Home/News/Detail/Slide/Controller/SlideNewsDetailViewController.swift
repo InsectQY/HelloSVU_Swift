@@ -196,5 +196,9 @@ extension SlideNewsDetailViewController : UINavigationControllerDelegate {
         
         let isShowNav = viewController.isKind(of: SlideNewsDetailViewController.self)
         navigationController.setNavigationBarHidden(isShowNav, animated: false)
+        let disappearingVc = navigationController.viewControllers.last
+        if let disappearingVc = disappearingVc {
+            disappearingVc.navigationController?.setNavigationBarHidden(true, animated: false)
+        }
     }
 }
