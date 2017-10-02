@@ -1167,6 +1167,11 @@
 						DevelopmentTeam = 2BU7DGY6CY;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1240,9 +1245,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HelloSVU_Swift/Pods-HelloSVU_Swift-resources.sh",
+				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/AMapNavi/AMapNaviKit.framework/AMapNavi.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1501,7 +1510,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HelloSVU_Swift/Classes/Expand/Vendors/JhtNewsChannelSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Insect.HelloSVU-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jssvc.cqy.cdd.HelloSVU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloSVU_Swift/Application/HelloSVU_Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1524,7 +1533,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/HelloSVU_Swift/Classes/Expand/Vendors/JhtNewsChannelSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Insect.HelloSVU-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jssvc.cqy.cdd.HelloSVU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloSVU_Swift/Application/HelloSVU_Swift-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;

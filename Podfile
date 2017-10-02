@@ -13,5 +13,7 @@ pod 'EZSwiftExtensions'
 pod 'MJRefresh'
 pod 'SVProgressHUD'
 pod 'SKPhotoBrowser'
+pod 'AMapNavi'
+pod 'AMapSearch'
 
 end

@@ -5,3 +5,7 @@
 #import "SVURefreshHeader.h"
 #import "SVURefreshFooter.h"
 #import "JhtNewsChannelSDK.h"
+
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#import <MAMapKit/MAMapKit.h>
