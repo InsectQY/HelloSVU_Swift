@@ -25,7 +25,6 @@ class QYPageView: UIView {
         self.titleStyle = titleStyle
         
         super.init(frame: frame)
-        
         setupUI()
     }
     

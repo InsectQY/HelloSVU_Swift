@@ -63,6 +63,7 @@ class QYTitleView: UIView {
 
 // MARK:- 设置UI界面
 extension QYTitleView {
+    
     fileprivate func setupUI() {
         // 1.添加滚动view
         addSubview(scrollView)
@@ -81,6 +82,7 @@ extension QYTitleView {
     }
     
     private func setupTitleLabels() {
+        
         for (i, title) in titles.enumerated() {
             // 1.创建Label
             let titleLabel = UILabel()
@@ -109,6 +111,7 @@ extension QYTitleView {
         let count = titles.count
         
         for (i, label) in titleLabels.enumerated() {
+            
             var w : CGFloat = 0
             let h : CGFloat = bounds.height
             var x : CGFloat = 0
@@ -214,6 +217,7 @@ extension QYTitleView {
     }
 }
 
+// MARK: - QYContentViewDelegate
 extension QYTitleView : QYContentViewDelegate {
     
     func contentView(_ contentView: QYContentView, endScroll inIndex: Int) {

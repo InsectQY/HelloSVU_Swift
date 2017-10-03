@@ -80,6 +80,7 @@
 		E5BC27131F82AC19005BE425 /* QYContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BC270D1F82AC03005BE425 /* QYContentView.swift */; };
 		E5BC27141F82AC1B005BE425 /* QYPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BC270F1F82AC03005BE425 /* QYPageView.swift */; };
 		E5BC27151F82AC1E005BE425 /* QYTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BC27101F82AC03005BE425 /* QYTitleView.swift */; };
+		E5BC27201F82AF96005BE425 /* BusRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BC271F1F82AF96005BE425 /* BusRouteViewController.swift */; };
 		E5BD15A01ED442C400F06039 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BD159F1ED442C400F06039 /* ForecastCell.swift */; };
 		E5BD15A21ED442CA00F06039 /* ForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5BD15A11ED442CA00F06039 /* ForecastCell.xib */; };
 		E5BD15A41ED4430000F06039 /* TodayWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BD15A31ED4430000F06039 /* TodayWeatherView.swift */; };
@@ -207,6 +208,9 @@
 		E5BC270E1F82AC03005BE425 /* QYPageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYPageStyle.swift; sourceTree = "<group>"; };
 		E5BC270F1F82AC03005BE425 /* QYPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYPageView.swift; sourceTree = "<group>"; };
 		E5BC27101F82AC03005BE425 /* QYTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYTitleView.swift; sourceTree = "<group>"; };
+		E5BC271C1F82AF2F005BE425 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E5BC271E1F82AF2F005BE425 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E5BC271F1F82AF96005BE425 /* BusRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteViewController.swift; sourceTree = "<group>"; };
 		E5BD159F1ED442C400F06039 /* ForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		E5BD15A11ED442CA00F06039 /* ForecastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForecastCell.xib; sourceTree = "<group>"; };
 		E5BD15A31ED4430000F06039 /* TodayWeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayWeatherView.swift; sourceTree = "<group>"; };
@@ -311,9 +315,8 @@
 		E50971FA1F829DAB004BD522 /* Route */ = {
 			isa = PBXGroup;
 			children = (
-				E50971FB1F829DAB004BD522 /* Controller */,
-				E50971FD1F829DAB004BD522 /* Model */,
-				E50971FF1F829DAB004BD522 /* View */,
+				E5BC27171F82AF1C005BE425 /* Main */,
+				E5BC27181F82AF2F005BE425 /* Bus */,
 			);
 			path = Route;
 			sourceTree = "<group>";
@@ -748,6 +751,50 @@
 				E5BC27101F82AC03005BE425 /* QYTitleView.swift */,
 			);
 			path = QYPageView;
+			sourceTree = "<group>";
+		};
+		E5BC27171F82AF1C005BE425 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E50971FB1F829DAB004BD522 /* Controller */,
+				E50971FD1F829DAB004BD522 /* Model */,
+				E50971FF1F829DAB004BD522 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E5BC27181F82AF2F005BE425 /* Bus */ = {
+			isa = PBXGroup;
+			children = (
+				E5BC27191F82AF2F005BE425 /* Controller */,
+				E5BC271B1F82AF2F005BE425 /* Model */,
+				E5BC271D1F82AF2F005BE425 /* View */,
+			);
+			path = Bus;
+			sourceTree = "<group>";
+		};
+		E5BC27191F82AF2F005BE425 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E5BC271F1F82AF96005BE425 /* BusRouteViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E5BC271B1F82AF2F005BE425 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5BC271C1F82AF2F005BE425 /* .gitignore */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E5BC271D1F82AF2F005BE425 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5BC271E1F82AF2F005BE425 /* .gitignore */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E5CA61391EC2AFDF001ABDC7 /* Common */ = {
@@ -1456,6 +1503,7 @@
 				E5D3B0BF1EBF3DB8003F6C14 /* AppDelegate.swift in Sources */,
 				E56007FA1ED7CE6D00C82460 /* Wind.swift in Sources */,
 				E5FAECB01F7BC2A1006CC525 /* ImgVerticalCell.swift in Sources */,
+				E5BC27201F82AF96005BE425 /* BusRouteViewController.swift in Sources */,
 				E5FAECAB1F7BC239006CC525 /* WallperVerticalViewController.swift in Sources */,
 				E5BA140B1EC42D42002F4FF9 /* SVURefreshHeader.m in Sources */,
 				E52B24ED1EBF4A3A00183DA6 /* QYCycleView.swift in Sources */,

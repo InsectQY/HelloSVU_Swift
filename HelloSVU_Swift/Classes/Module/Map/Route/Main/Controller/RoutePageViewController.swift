@@ -10,8 +10,23 @@ import UIKit
 
 class RoutePageViewController: UIViewController {
     
-    // MARK: - LazyLoad
+    @IBOutlet weak var pageContentView: UIView!
     
+    // MARK: - LazyLoad
+    lazy var pageView: QYPageView = {
+        
+        let style = QYPageStyle()
+        style.normalColor = .white
+        style.selectColor = .white
+        let vc1 = BusRouteViewController()
+        let vc2 = BusRouteViewController()
+        let vc3 = BusRouteViewController()
+        let vc4 = BusRouteViewController()
+        
+        let pageView = QYPageView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 27), titles: ["公交","步行","骑行","驾车"], titleStyle: style, childVcs: [vc1,vc2,vc3,vc4], parentVc: self)
+        pageView.backgroundColor = .purple
+        return pageView
+    }()
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -28,6 +43,13 @@ extension RoutePageViewController {
         
         view.backgroundColor = .white
         navigationController?.delegate = self
+        automaticallyAdjustsScrollViewInsets = false
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        pageContentView.addSubview(pageView)
     }
 }
 

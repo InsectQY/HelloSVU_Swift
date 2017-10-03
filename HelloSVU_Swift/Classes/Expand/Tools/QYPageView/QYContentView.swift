@@ -76,7 +76,7 @@ extension QYContentView {
 }
 
 
-// MARK:- 遵守UICollectionViewDataSource协议
+// MARK:- UICollectionViewDataSource
 extension QYContentView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return childVcs.count
@@ -98,7 +98,7 @@ extension QYContentView : UICollectionViewDataSource {
 }
 
 
-// MARK:- 遵守UICollectionViewDelegate协议
+// MARK:- UICollectionViewDelegate
 extension QYContentView : UICollectionViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         collectionViewEndScroll()
@@ -155,7 +155,7 @@ extension QYContentView : UICollectionViewDelegate {
     }
 }
 
-// MARK:- 遵守QYTitleViewDelegate协议
+// MARK:- QYTitleViewDelegate
 extension QYContentView : QYTitleViewDeleate {
     func titleView(_ titleView: QYTitleView, didSelected currentIndex: Int) {
         
