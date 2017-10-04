@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C5ED06F964BE6FD7CA4D89F3 /* Pods_HelloSVU_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F5DAFD7A62578FB3CD3CD3 /* Pods_HelloSVU_Swift.framework */; };
-		E50971F81F829A32004BD522 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50971F71F829A32004BD522 /* ProfileViewController.swift */; };
 		E514B38A1F80C2D6002431CE /* SlideNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514B3891F80C2D6002431CE /* SlideNewsDetailViewController.swift */; };
 		E514B38D1F80DB04002431CE /* SVUPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514B38C1F80DB04002431CE /* SVUPhotoBrowser.swift */; };
+		E523DCA81F84D8F60088FFD6 /* JhtNewsChannelImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E523DC9E1F84D8F20088FFD6 /* JhtNewsChannelImages.bundle */; };
+		E523DCA91F84D9000088FFD6 /* JhtNewsChannelSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E523DCA51F84D8F20088FFD6 /* JhtNewsChannelSDK.a */; };
 		E52B24E21EBF46B500183DA6 /* QYRequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24E11EBF46B500183DA6 /* QYRequestTool.swift */; };
 		E52B24E51EBF49AE00183DA6 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24E41EBF49AE00183DA6 /* NibLoadable.swift */; };
 		E52B24EB1EBF4A3A00183DA6 /* QYCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24E71EBF4A3A00183DA6 /* QYCycleCell.swift */; };
@@ -51,8 +52,6 @@
 		E57002AD1F7CCAF6006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002A01F7CCACB006FC640 /* .gitignore */; };
 		E57002B21F7CCB19006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002AF1F7CCB17006FC640 /* .gitignore */; };
 		E57002B91F7CD1B2006FC640 /* SVUHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57002B81F7CD1B2006FC640 /* SVUHUD.swift */; };
-		E57002F11F7CE6D6006FC640 /* JhtNewsChannelImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E57002E71F7CE6BB006FC640 /* JhtNewsChannelImages.bundle */; };
-		E57002F21F7CE6D9006FC640 /* JhtNewsChannelSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E57002EE1F7CE6BB006FC640 /* JhtNewsChannelSDK.a */; };
 		E57002FB1F7CFD8A006FC640 /* NewsPartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57002FA1F7CFD8A006FC640 /* NewsPartsViewController.swift */; };
 		E57002FC1F7D0322006FC640 /* News.plist in Resources */ = {isa = PBXBuildFile; fileRef = E57002E01F7CDDCD006FC640 /* News.plist */; };
 		E572F0961ED4493D001556B4 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E572F0951ED4493D001556B4 /* NewsViewController.swift */; };
@@ -116,13 +115,25 @@
 /* Begin PBXFileReference section */
 		8F0D10180EDFA12A4689FD7E /* Pods-HelloSVU_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloSVU_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloSVU_Swift/Pods-HelloSVU_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		E4F5DAFD7A62578FB3CD3CD3 /* Pods_HelloSVU_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloSVU_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E50971F41F8299E5004BD522 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		E50971F61F8299E5004BD522 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		E50971F71F829A32004BD522 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E50971FE1F829DAB004BD522 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E50972001F829DAB004BD522 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E514B3891F80C2D6002431CE /* SlideNewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideNewsDetailViewController.swift; sourceTree = "<group>"; };
 		E514B38C1F80DB04002431CE /* SVUPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVUPhotoBrowser.swift; sourceTree = "<group>"; };
+		E523DC991F84D8F20088FFD6 /* JhtChannelBarAndSlideViewConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarAndSlideViewConnect.h; sourceTree = "<group>"; };
+		E523DC9A1F84D8F20088FFD6 /* JhtChannelBarAndSlideViewConnectParamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarAndSlideViewConnectParamModel.h; sourceTree = "<group>"; };
+		E523DC9B1F84D8F20088FFD6 /* JhtChannelBarAndSlideViewSpaceAndFrameModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarAndSlideViewSpaceAndFrameModel.h; sourceTree = "<group>"; };
+		E523DC9C1F84D8F20088FFD6 /* JhtChannelBarColorAndFontModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarColorAndFontModel.h; sourceTree = "<group>"; };
+		E523DC9D1F84D8F20088FFD6 /* JhtChannelBarTailBtnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarTailBtnModel.h; sourceTree = "<group>"; };
+		E523DC9E1F84D8F20088FFD6 /* JhtNewsChannelImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JhtNewsChannelImages.bundle; sourceTree = "<group>"; };
+		E523DC9F1F84D8F20088FFD6 /* JhtNewsChannelItemEditBackgroundColorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditBackgroundColorModel.h; sourceTree = "<group>"; };
+		E523DCA01F84D8F20088FFD6 /* JhtNewsChannelItemEditDistanceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditDistanceModel.h; sourceTree = "<group>"; };
+		E523DCA11F84D8F20088FFD6 /* JhtNewsChannelItemEditParamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditParamModel.h; sourceTree = "<group>"; };
+		E523DCA21F84D8F20088FFD6 /* JhtNewsChannelItemEditTextColorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditTextColorModel.h; sourceTree = "<group>"; };
+		E523DCA31F84D8F20088FFD6 /* JhtNewsChannelItemEditTextModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditTextModel.h; sourceTree = "<group>"; };
+		E523DCA41F84D8F20088FFD6 /* JhtNewsChannelItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemModel.h; sourceTree = "<group>"; };
+		E523DCA51F84D8F20088FFD6 /* JhtNewsChannelSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JhtNewsChannelSDK.a; sourceTree = "<group>"; };
+		E523DCA61F84D8F20088FFD6 /* JhtNewsChannelSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelSDK.h; sourceTree = "<group>"; };
+		E523DCA71F84D8F20088FFD6 /* JhtTotalSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtTotalSlideView.h; sourceTree = "<group>"; };
 		E52B24E11EBF46B500183DA6 /* QYRequestTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYRequestTool.swift; sourceTree = "<group>"; };
 		E52B24E41EBF49AE00183DA6 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		E52B24E71EBF4A3A00183DA6 /* QYCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYCycleCell.swift; sourceTree = "<group>"; };
@@ -164,21 +175,6 @@
 		E57002AF1F7CCB17006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E57002B81F7CD1B2006FC640 /* SVUHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVUHUD.swift; sourceTree = "<group>"; };
 		E57002E01F7CDDCD006FC640 /* News.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = News.plist; sourceTree = "<group>"; };
-		E57002E21F7CE6BB006FC640 /* JhtChannelBarAndSlideViewConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarAndSlideViewConnect.h; sourceTree = "<group>"; };
-		E57002E31F7CE6BB006FC640 /* JhtChannelBarAndSlideViewConnectParamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarAndSlideViewConnectParamModel.h; sourceTree = "<group>"; };
-		E57002E41F7CE6BB006FC640 /* JhtChannelBarAndSlideViewSpaceAndFrameModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarAndSlideViewSpaceAndFrameModel.h; sourceTree = "<group>"; };
-		E57002E51F7CE6BB006FC640 /* JhtChannelBarColorAndFontModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarColorAndFontModel.h; sourceTree = "<group>"; };
-		E57002E61F7CE6BB006FC640 /* JhtChannelBarTailBtnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtChannelBarTailBtnModel.h; sourceTree = "<group>"; };
-		E57002E71F7CE6BB006FC640 /* JhtNewsChannelImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JhtNewsChannelImages.bundle; sourceTree = "<group>"; };
-		E57002E81F7CE6BB006FC640 /* JhtNewsChannelItemEditBackgroundColorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditBackgroundColorModel.h; sourceTree = "<group>"; };
-		E57002E91F7CE6BB006FC640 /* JhtNewsChannelItemEditDistanceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditDistanceModel.h; sourceTree = "<group>"; };
-		E57002EA1F7CE6BB006FC640 /* JhtNewsChannelItemEditParamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditParamModel.h; sourceTree = "<group>"; };
-		E57002EB1F7CE6BB006FC640 /* JhtNewsChannelItemEditTextColorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditTextColorModel.h; sourceTree = "<group>"; };
-		E57002EC1F7CE6BB006FC640 /* JhtNewsChannelItemEditTextModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemEditTextModel.h; sourceTree = "<group>"; };
-		E57002ED1F7CE6BB006FC640 /* JhtNewsChannelItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelItemModel.h; sourceTree = "<group>"; };
-		E57002EE1F7CE6BB006FC640 /* JhtNewsChannelSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JhtNewsChannelSDK.a; sourceTree = "<group>"; };
-		E57002EF1F7CE6BB006FC640 /* JhtNewsChannelSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtNewsChannelSDK.h; sourceTree = "<group>"; };
-		E57002F01F7CE6BB006FC640 /* JhtTotalSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JhtTotalSlideView.h; sourceTree = "<group>"; };
 		E57002FA1F7CFD8A006FC640 /* NewsPartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPartsViewController.swift; sourceTree = "<group>"; };
 		E572F0951ED4493D001556B4 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		E5762CF41EC404FE00B422C7 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
@@ -251,7 +247,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E57002F21F7CE6D9006FC640 /* JhtNewsChannelSDK.a in Frameworks */,
+				E523DCA91F84D9000088FFD6 /* JhtNewsChannelSDK.a in Frameworks */,
 				C5ED06F964BE6FD7CA4D89F3 /* Pods_HelloSVU_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,40 +262,6 @@
 				F7DD3F39BA49625A24EA4913 /* Pods-HelloSVU_Swift.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		E50971F01F8299E5004BD522 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				E50971F11F8299E5004BD522 /* Controller */,
-				E50971F31F8299E5004BD522 /* Model */,
-				E50971F51F8299E5004BD522 /* View */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		E50971F11F8299E5004BD522 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				E50971F71F829A32004BD522 /* ProfileViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		E50971F31F8299E5004BD522 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				E50971F41F8299E5004BD522 /* .gitignore */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E50971F51F8299E5004BD522 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E50971F61F8299E5004BD522 /* .gitignore */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E50971F91F829D80004BD522 /* Main */ = {
@@ -378,6 +340,28 @@
 				E514B38C1F80DB04002431CE /* SVUPhotoBrowser.swift */,
 			);
 			path = SVUPhotoBrowser;
+			sourceTree = "<group>";
+		};
+		E523DC981F84D8F20088FFD6 /* JhtNewsChannelSDK */ = {
+			isa = PBXGroup;
+			children = (
+				E523DC991F84D8F20088FFD6 /* JhtChannelBarAndSlideViewConnect.h */,
+				E523DC9A1F84D8F20088FFD6 /* JhtChannelBarAndSlideViewConnectParamModel.h */,
+				E523DC9B1F84D8F20088FFD6 /* JhtChannelBarAndSlideViewSpaceAndFrameModel.h */,
+				E523DC9C1F84D8F20088FFD6 /* JhtChannelBarColorAndFontModel.h */,
+				E523DC9D1F84D8F20088FFD6 /* JhtChannelBarTailBtnModel.h */,
+				E523DC9E1F84D8F20088FFD6 /* JhtNewsChannelImages.bundle */,
+				E523DC9F1F84D8F20088FFD6 /* JhtNewsChannelItemEditBackgroundColorModel.h */,
+				E523DCA01F84D8F20088FFD6 /* JhtNewsChannelItemEditDistanceModel.h */,
+				E523DCA11F84D8F20088FFD6 /* JhtNewsChannelItemEditParamModel.h */,
+				E523DCA21F84D8F20088FFD6 /* JhtNewsChannelItemEditTextColorModel.h */,
+				E523DCA31F84D8F20088FFD6 /* JhtNewsChannelItemEditTextModel.h */,
+				E523DCA41F84D8F20088FFD6 /* JhtNewsChannelItemModel.h */,
+				E523DCA51F84D8F20088FFD6 /* JhtNewsChannelSDK.a */,
+				E523DCA61F84D8F20088FFD6 /* JhtNewsChannelSDK.h */,
+				E523DCA71F84D8F20088FFD6 /* JhtTotalSlideView.h */,
+			);
+			path = JhtNewsChannelSDK;
 			sourceTree = "<group>";
 		};
 		E52B24DF1EBF46B500183DA6 /* Tools */ = {
@@ -623,29 +607,6 @@
 			path = SVUHUD;
 			sourceTree = "<group>";
 		};
-		E57002E11F7CE6BB006FC640 /* JhtNewsChannelSDK */ = {
-			isa = PBXGroup;
-			children = (
-				E57002E21F7CE6BB006FC640 /* JhtChannelBarAndSlideViewConnect.h */,
-				E57002E31F7CE6BB006FC640 /* JhtChannelBarAndSlideViewConnectParamModel.h */,
-				E57002E41F7CE6BB006FC640 /* JhtChannelBarAndSlideViewSpaceAndFrameModel.h */,
-				E57002E51F7CE6BB006FC640 /* JhtChannelBarColorAndFontModel.h */,
-				E57002E61F7CE6BB006FC640 /* JhtChannelBarTailBtnModel.h */,
-				E57002E71F7CE6BB006FC640 /* JhtNewsChannelImages.bundle */,
-				E57002E81F7CE6BB006FC640 /* JhtNewsChannelItemEditBackgroundColorModel.h */,
-				E57002E91F7CE6BB006FC640 /* JhtNewsChannelItemEditDistanceModel.h */,
-				E57002EA1F7CE6BB006FC640 /* JhtNewsChannelItemEditParamModel.h */,
-				E57002EB1F7CE6BB006FC640 /* JhtNewsChannelItemEditTextColorModel.h */,
-				E57002EC1F7CE6BB006FC640 /* JhtNewsChannelItemEditTextModel.h */,
-				E57002ED1F7CE6BB006FC640 /* JhtNewsChannelItemModel.h */,
-				E57002EE1F7CE6BB006FC640 /* JhtNewsChannelSDK.a */,
-				E57002EF1F7CE6BB006FC640 /* JhtNewsChannelSDK.h */,
-				E57002F01F7CE6BB006FC640 /* JhtTotalSlideView.h */,
-			);
-			name = JhtNewsChannelSDK;
-			path = "../../../../../Jssvc/掌上职大/掌上职大/Classes/Extend(扩展)/Vender(第三方)/JhtNewsChannelSDK";
-			sourceTree = "<group>";
-		};
 		E57002F31F7CFD67006FC640 /* Parts */ = {
 			isa = PBXGroup;
 			children = (
@@ -880,7 +841,7 @@
 		E5D3B0DA1EBF3E03003F6C14 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				E57002E11F7CE6BB006FC640 /* JhtNewsChannelSDK */,
+				E523DC981F84D8F20088FFD6 /* JhtNewsChannelSDK */,
 				E5FAECC21F7BC4E5006CC525 /* JFContextSheet */,
 			);
 			path = Vendors;
@@ -1131,7 +1092,6 @@
 				E5D3B0E31EBF3E03003F6C14 /* Home */,
 				E5D3B11C1EBF3E03003F6C14 /* Map */,
 				E5D3B0DB1EBF3E03003F6C14 /* FBAA(同学圈) */,
-				E50971F01F8299E5004BD522 /* Profile */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -1347,6 +1307,7 @@
 				E57FCCC41ED43D5800FE5184 /* NotificationCell.xib in Resources */,
 				E57002A91F7CCAE4006FC640 /* .gitignore in Resources */,
 				E57002AA1F7CCAE7006FC640 /* .gitignore in Resources */,
+				E523DCA81F84D8F60088FFD6 /* JhtNewsChannelImages.bundle in Resources */,
 				E57FCCA81ED423C000FE5184 /* Home.plist in Resources */,
 				E57002B21F7CCB19006FC640 /* .gitignore in Resources */,
 				E5D3B1831EBF41D0003F6C14 /* MainVCSettings.json in Resources */,
@@ -1362,7 +1323,6 @@
 				E5FAECB11F7BC2A1006CC525 /* ImgVerticalCell.xib in Resources */,
 				E57002881F7CCA46006FC640 /* .gitignore in Resources */,
 				E57002981F7CCABC006FC640 /* .gitignore in Resources */,
-				E57002F11F7CE6D6006FC640 /* JhtNewsChannelImages.bundle in Resources */,
 				E57002AB1F7CCAF1006FC640 /* .gitignore in Resources */,
 				E52B24EC1EBF4A3A00183DA6 /* QYCycleCell.xib in Resources */,
 				E57002891F7CCA4A006FC640 /* .gitignore in Resources */,
@@ -1413,7 +1373,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B59D74738F8F5FA0A338039F /* [CP] Embed Pods Frameworks */ = {
@@ -1478,7 +1438,6 @@
 				E5FFF28F1EDAC83B00594C03 /* Astro.swift in Sources */,
 				E57002FB1F7CFD8A006FC640 /* NewsPartsViewController.swift in Sources */,
 				E56007F41ED7CE4400C82460 /* Cond.swift in Sources */,
-				E50971F81F829A32004BD522 /* ProfileViewController.swift in Sources */,
 				E5FFF28D1EDAC7DC00594C03 /* Tmp.swift in Sources */,
 				E5762CF51EC404FE00B422C7 /* UIBarButtonItem-Extension.swift in Sources */,
 				E5BD15A41ED4430000F06039 /* TodayWeatherView.swift in Sources */,
@@ -1674,6 +1633,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2BU7DGY6CY;
+				GCC_OPTIMIZATION_LEVEL = 1;
 				INFOPLIST_FILE = HelloSVU_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
