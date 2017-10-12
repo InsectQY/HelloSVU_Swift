@@ -15,5 +15,6 @@ pod 'SVProgressHUD'
 pod 'SKPhotoBrowser'
 pod 'AMapNavi'
 pod 'AMapSearch'
+pod 'SnapKit'
 
 end
