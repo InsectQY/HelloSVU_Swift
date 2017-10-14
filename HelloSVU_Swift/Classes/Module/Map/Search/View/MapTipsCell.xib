@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="MapTipsCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="MapTipsCell" customModule="HelloSVU_Swift">
             <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -59,7 +60,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="khG-YM-F5K"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vss-Kq-NhC" customClass="SVUCustomFlowLayout">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vss-Kq-NhC">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -85,9 +86,12 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="collectionView" destination="UuV-pL-BeX" id="4FM-9e-Q5J"/>
-                <outlet property="flowLayout" destination="vss-Kq-NhC" id="TYt-bp-32G"/>
-                <outlet property="typeImage" destination="yfb-lI-cVb" id="me9-uW-bCQ"/>
+                <outlet property="collectionView" destination="UuV-pL-BeX" id="QoR-ht-r1g"/>
+                <outlet property="distanceLabel" destination="fzK-V1-8zK" id="XKY-J5-mev"/>
+                <outlet property="flowLayout" destination="vss-Kq-NhC" id="ecB-Uj-zgS"/>
+                <outlet property="lineLabel" destination="M1c-6h-I8u" id="d7e-ng-KsA"/>
+                <outlet property="nameLabel" destination="Lmo-bI-fcI" id="PVI-vQ-DMF"/>
+                <outlet property="stopLabel" destination="WOg-AX-F5L" id="9Or-fR-pFO"/>
             </connections>
             <point key="canvasLocation" x="-1" y="178"/>
         </tableViewCell>

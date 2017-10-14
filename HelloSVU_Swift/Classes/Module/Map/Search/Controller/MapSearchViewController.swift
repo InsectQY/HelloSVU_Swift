@@ -20,6 +20,8 @@ class MapSearchViewController: UIViewController {
         let tableView = UITableView(frame: UIScreen.main.bounds)
         tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
         tableView.rowHeight = 70
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.register(UINib(nibName: "MapTipsCell", bundle: nil), forCellReuseIdentifier: MapTipsCellID)
         return tableView
     }()
@@ -73,7 +75,13 @@ extension MapSearchViewController {
     
     fileprivate func setUpUI() {
         
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        }else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
         view.backgroundColor = .white
+        view.addSubview(tableView)
         setUpNav()
     }
     
@@ -98,6 +106,16 @@ extension MapSearchViewController {
 extension MapSearchViewController : UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if let key = searchBar.text {
+            
+            if key.count > 0 {
+               search.aMapPOIKeywordsSearch(request)
+            }else {
+                poisResponse.removeAll()
+            }
+        }
+        
         tableView.reloadData()
     }
     
@@ -108,17 +126,35 @@ extension MapSearchViewController : UISearchBarDelegate {
 
 extension MapSearchViewController : AMapSearchDelegate {
     
+    func onPOISearchDone(_ request: AMapPOISearchBaseRequest!, response: AMapPOISearchResponse!) {
+        
+        guard response.pois.count > 0 else {
+            return
+        }
+        poisResponse = response.pois
+        tableView.reloadData()
+    }
 }
 
 // MARK: - UITableViewDataSource
-//extension MapSearchViewController : UITableViewDataSource {
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return <#code#>
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        return <#code#>
-//    }
-//}
+extension MapSearchViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return poisResponse.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: MapTipsCellID, for: indexPath) as! MapTipsCell
+        cell.mapPoi = poisResponse[indexPath.row]
+        return cell
+    }
+}
 
+// MARK: - UITableViewDelegate
+extension MapSearchViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}

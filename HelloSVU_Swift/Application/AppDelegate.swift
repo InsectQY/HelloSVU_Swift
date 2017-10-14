@@ -36,7 +36,7 @@ extension AppDelegate {
     // MARK: - 设置根控制器
     fileprivate func setUpAmapKey() {
         
-        AMapServices.shared().apiKey = "c450c1752c0eaa15b1e0fb60a50560c4"
+        AMapServices.shared().apiKey = "d9aa67c1ca9645f044bc2842e5fa1464"
         AMapServices.shared().enableHTTPS = true
     }
 }

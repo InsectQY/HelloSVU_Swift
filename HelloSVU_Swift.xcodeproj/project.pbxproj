@@ -40,6 +40,7 @@
 		E56007FE1ED7D58300C82460 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007FD1ED7D58300C82460 /* Suggestion.swift */; };
 		E56680551F91EB7500D4224F /* MapTipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56680541F91EB6A00D4224F /* MapTipsCell.xib */; };
 		E56680571F91EBA400D4224F /* MapTipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56680561F91EBA400D4224F /* MapTipsCell.swift */; };
+		E56680591F91F94500D4224F /* MaxInteritemSpacingFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56680581F91F94500D4224F /* MaxInteritemSpacingFlowLayout.swift */; };
 		E57002881F7CCA46006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002851F7CCA3B006FC640 /* .gitignore */; };
 		E57002891F7CCA4A006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002871F7CCA3B006FC640 /* .gitignore */; };
 		E570028E1F7CCA63006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E570028B1F7CCA60006FC640 /* .gitignore */; };
@@ -165,6 +166,7 @@
 		E56007FD1ED7D58300C82460 /* Suggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 		E56680541F91EB6A00D4224F /* MapTipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTipsCell.xib; sourceTree = "<group>"; };
 		E56680561F91EBA400D4224F /* MapTipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTipsCell.swift; sourceTree = "<group>"; };
+		E56680581F91F94500D4224F /* MaxInteritemSpacingFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxInteritemSpacingFlowLayout.swift; sourceTree = "<group>"; };
 		E57002851F7CCA3B006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E57002871F7CCA3B006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E570028B1F7CCA60006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 			children = (
 				E56680561F91EBA400D4224F /* MapTipsCell.swift */,
 				E56680541F91EB6A00D4224F /* MapTipsCell.xib */,
+				E56680581F91F94500D4224F /* MaxInteritemSpacingFlowLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1504,6 +1507,7 @@
 				E572F0961ED4493D001556B4 /* NewsViewController.swift in Sources */,
 				E514B38D1F80DB04002431CE /* SVUPhotoBrowser.swift in Sources */,
 				E5539F541F7E715500139E17 /* SingleNews.swift in Sources */,
+				E56680591F91F94500D4224F /* MaxInteritemSpacingFlowLayout.swift in Sources */,
 				E57FCCB61ED43AC900FE5184 /* HomeViewController.swift in Sources */,
 				E57002B91F7CD1B2006FC640 /* SVUHUD.swift in Sources */,
 				E5FAECAD1F7BC26A006CC525 /* ImgVertical.swift in Sources */,
