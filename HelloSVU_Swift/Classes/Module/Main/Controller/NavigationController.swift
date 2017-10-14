@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import FDFullscreenPopGesture
 
 class NavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fd_fullscreenPopGestureRecognizer.isEnabled = true
+    }
+    
+    // MARK: - 全屏滑动返回
+    fileprivate func pop() {
         
         // 1.获取系统的Pop手势
         guard let systemGes = interactivePopGestureRecognizer else { return }

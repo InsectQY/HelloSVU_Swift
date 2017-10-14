@@ -19,6 +19,7 @@
 		E52B24ED1EBF4A3A00183DA6 /* QYCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24E91EBF4A3A00183DA6 /* QYCycleView.swift */; };
 		E52B24EE1EBF4A3A00183DA6 /* QYCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52B24EA1EBF4A3A00183DA6 /* QYCycleView.xib */; };
 		E52B24F11EBF4AF800183DA6 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24F01EBF4AF800183DA6 /* KingfisherExtension.swift */; };
+		E53E47BB1F906FE7006C7B81 /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E47BA1F906FE7006C7B81 /* MapSearchViewController.swift */; };
 		E5539F411F7E6C3400139E17 /* NoPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5539F401F7E6C3100139E17 /* NoPictureCell.xib */; };
 		E5539F431F7E6C4300139E17 /* NoPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5539F421F7E6C4300139E17 /* NoPictureCell.swift */; };
 		E5539F461F7E6D1E00139E17 /* OnePictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5539F451F7E6D1E00139E17 /* OnePictureCell.swift */; };
@@ -141,6 +142,7 @@
 		E52B24E91EBF4A3A00183DA6 /* QYCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYCycleView.swift; sourceTree = "<group>"; };
 		E52B24EA1EBF4A3A00183DA6 /* QYCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QYCycleView.xib; sourceTree = "<group>"; };
 		E52B24F01EBF4AF800183DA6 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
+		E53E47BA1F906FE7006C7B81 /* MapSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewController.swift; sourceTree = "<group>"; };
 		E5539F401F7E6C3100139E17 /* NoPictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoPictureCell.xib; sourceTree = "<group>"; };
 		E5539F421F7E6C4300139E17 /* NoPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPictureCell.swift; sourceTree = "<group>"; };
 		E5539F441F7E6CD300139E17 /* OnePictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnePictureCell.xib; sourceTree = "<group>"; };
@@ -411,6 +413,38 @@
 				E52B24F01EBF4AF800183DA6 /* KingfisherExtension.swift */,
 			);
 			path = KingfisherExtension;
+			sourceTree = "<group>";
+		};
+		E53E47B61F906FA4006C7B81 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E53E47B91F906FCD006C7B81 /* View */,
+				E53E47B81F906FC5006C7B81 /* Model */,
+				E53E47B71F906FB6006C7B81 /* Controller */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E53E47B71F906FB6006C7B81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E53E47BA1F906FE7006C7B81 /* MapSearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E53E47B81F906FC5006C7B81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E53E47B91F906FCD006C7B81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E5539F3C1F7E6AD900139E17 /* BigImgCell */ = {
@@ -989,6 +1023,7 @@
 			children = (
 				E50971F91F829D80004BD522 /* Main */,
 				E50971FA1F829DAB004BD522 /* Route */,
+				E53E47B61F906FA4006C7B81 /* Search */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -1385,6 +1420,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HelloSVU_Swift/Pods-HelloSVU_Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/EZSwiftExtensions/EZSwiftExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -1397,6 +1433,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZSwiftExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -1462,6 +1499,7 @@
 				E5539F4C1F7E6E7600139E17 /* BigImgCell.swift in Sources */,
 				E57FCCBE1ED43C9A00FE5184 /* HomeToolCell.swift in Sources */,
 				E5D3B0BF1EBF3DB8003F6C14 /* AppDelegate.swift in Sources */,
+				E53E47BB1F906FE7006C7B81 /* MapSearchViewController.swift in Sources */,
 				E56007FA1ED7CE6D00C82460 /* Wind.swift in Sources */,
 				E5FAECB01F7BC2A1006CC525 /* ImgVerticalCell.swift in Sources */,
 				E5BC27201F82AF96005BE425 /* BusRouteViewController.swift in Sources */,

@@ -16,5 +16,6 @@ pod 'SKPhotoBrowser'
 pod 'AMapNavi'
 pod 'AMapSearch'
 pod 'SnapKit'
+pod 'FDFullscreenPopGesture'
 
 end

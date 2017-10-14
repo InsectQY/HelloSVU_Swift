@@ -11,6 +11,8 @@ import UIKit
 class RoutePageViewController: UIViewController {
     
     @IBOutlet weak var pageContentView: UIView!
+    @IBOutlet weak var originField: UITextField!
+    @IBOutlet weak var destinationField: UITextField!
     
     // MARK: - LazyLoad
     lazy var pageView: QYPageView = {
@@ -43,9 +45,7 @@ extension RoutePageViewController {
     fileprivate func setUpUI() {
         
         view.backgroundColor = .white
-        navigationController?.delegate = self
-        automaticallyAdjustsScrollViewInsets = false
-        
+        fd_prefersNavigationBarHidden = true
     }
     
     override func viewDidLayoutSubviews() {
@@ -54,16 +54,13 @@ extension RoutePageViewController {
     }
 }
 
-// MARK: - UINavigationControllerDelegate
-extension RoutePageViewController : UINavigationControllerDelegate {
+// MARK: - UITextFieldDelegate
+extension RoutePageViewController : UITextFieldDelegate {
     
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         
-        let isShowNav = viewController.isKind(of: RoutePageViewController.self)
-        navigationController.setNavigationBarHidden(isShowNav, animated: false)
-        let disappearingVc = navigationController.viewControllers.last
-        if let disappearingVc = disappearingVc {
-           disappearingVc.navigationController?.setNavigationBarHidden(true, animated: false)
-        }
+        let searchVc = MapSearchViewController()
+        navigationController?.pushViewController(searchVc, animated: true)
     }
 }
+

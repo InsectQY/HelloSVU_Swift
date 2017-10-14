@@ -56,8 +56,8 @@ extension MapViewController {
     
     fileprivate func setUpUI() {
         
-        navigationController?.delegate = self
         view.backgroundColor = .white
+        fd_prefersNavigationBarHidden = true
         view.addSubview(mapView)
         view.addSubview(toolView)
         view.addSubview(locationBtn)
@@ -115,16 +115,3 @@ extension MapViewController : MAMapViewDelegate{
     }
 }
 
-// MARK: - UINavigationControllerDelegate
-extension MapViewController : UINavigationControllerDelegate {
-    
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        
-        let isShowNav = viewController.isKind(of: MapViewController.self)
-        navigationController.setNavigationBarHidden(isShowNav, animated: false)
-        let disappearingVc = navigationController.viewControllers.last
-        if let disappearingVc = disappearingVc {
-            disappearingVc.navigationController?.setNavigationBarHidden(true, animated: false)
-        }
-    }
-}

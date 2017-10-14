@@ -7,7 +7,9 @@
 //
 
 import UIKit
+
 import EZSwiftExtensions
+import FDFullscreenPopGesture
 
 fileprivate let kScrollViewH : CGFloat = ScreenH - 200
 
@@ -90,12 +92,12 @@ extension SlideNewsDetailViewController {
     fileprivate func setUpUI() {
         
         view.backgroundColor = .black
+        fd_prefersNavigationBarHidden = true
         view.addSubview(backBtn)
         view.addSubview(scrollView)
         view.addSubview(titleLabel)
         view.addSubview(countLabel)
         view.addSubview(contentTextView)
-        navigationController?.delegate = self
     }
     
     // MARK: - 设置轮播图片
@@ -189,16 +191,3 @@ extension SlideNewsDetailViewController {
     }
 }
 
-// MARK: - UINavigationControllerDelegate
-extension SlideNewsDetailViewController : UINavigationControllerDelegate {
-    
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        
-        let isShowNav = viewController.isKind(of: SlideNewsDetailViewController.self)
-        navigationController.setNavigationBarHidden(isShowNav, animated: false)
-        let disappearingVc = navigationController.viewControllers.last
-        if let disappearingVc = disappearingVc {
-            disappearingVc.navigationController?.setNavigationBarHidden(true, animated: false)
-        }
-    }
-}
