@@ -41,7 +41,6 @@ class QYContentView: UIView {
         collectionView.scrollsToTop = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.bounces = false
-        
         return collectionView
     }()
     
@@ -64,6 +63,7 @@ class QYContentView: UIView {
 
 // MARK:- 设置UI界面
 extension QYContentView {
+    
     fileprivate func setupUI() {
         // 1.将childVc添加到父控制器中
         for vc in childVcs {
@@ -75,9 +75,9 @@ extension QYContentView {
     }
 }
 
-
 // MARK:- UICollectionViewDataSource
 extension QYContentView : UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return childVcs.count
     }
@@ -97,9 +97,9 @@ extension QYContentView : UICollectionViewDataSource {
     }
 }
 
-
 // MARK:- UICollectionViewDelegate
 extension QYContentView : UICollectionViewDelegate {
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         collectionViewEndScroll()
     }

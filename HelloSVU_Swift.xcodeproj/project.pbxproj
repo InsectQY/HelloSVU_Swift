@@ -275,9 +275,9 @@
 		E50971F91F829D80004BD522 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E5D3B1271EBF3E03003F6C14 /* Controller */,
 				E57002AE1F7CCB17006FC640 /* Model */,
 				E57002B01F7CCB17006FC640 /* View */,
-				E5D3B1271EBF3E03003F6C14 /* Controller */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1429,6 +1429,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HelloSVU_Swift/Pods-HelloSVU_Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DOPDropDownMenu-Enhanced/DOPDropDownMenu_Enhanced.framework",
 				"${BUILT_PRODUCTS_DIR}/EZSwiftExtensions/EZSwiftExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
@@ -1444,6 +1445,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DOPDropDownMenu_Enhanced.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZSwiftExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",

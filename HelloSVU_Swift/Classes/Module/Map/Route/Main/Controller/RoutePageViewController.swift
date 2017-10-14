@@ -10,7 +10,6 @@ import UIKit
 
 class RoutePageViewController: UIViewController {
     
-    @IBOutlet weak var pageContentView: UIView!
     @IBOutlet weak var originField: UITextField!
     @IBOutlet weak var destinationField: UITextField!
     
@@ -18,16 +17,17 @@ class RoutePageViewController: UIViewController {
     lazy var pageView: QYPageView = {
         
         let style = QYPageStyle()
-        style.normalColor = .white
-        style.selectColor = .white
-        style.titleViewHeight = 27
+        style.normalColor = UIColor(r: 255, g: 255, b: 255)
+        style.selectColor = UIColor(r: 255, g: 255, b: 255)
+        style.titleViewHeight = 30
         style.bottomLineHeight = 2
         let vc1 = BusRouteViewController()
         let vc2 = BusRouteViewController()
         let vc3 = BusRouteViewController()
         let vc4 = BusRouteViewController()
         
-        let pageView = QYPageView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 27), titles: ["公交","步行","骑行","驾车"], titleStyle: style, childVcs: [vc1,vc2,vc3,vc4], parentVc: self)
+        let pageView = QYPageView(frame: CGRect(x: 0, y: 115, width: ScreenW, height: ScreenH - 115), titles: ["公交","步行","骑行","驾车"], titleStyle: style, childVcs: [vc1,vc2,vc3,vc4], parentVc: self)
+        pageView.backgroundColor = UIColor(r: 74, g: 137, b: 255)
         return pageView
     }()
     
@@ -46,11 +46,11 @@ extension RoutePageViewController {
         
         view.backgroundColor = .white
         fd_prefersNavigationBarHidden = true
+        view.addSubview(pageView)
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        pageContentView.addSubview(pageView)
+    @IBAction func backBtnDidClick(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
 }
 

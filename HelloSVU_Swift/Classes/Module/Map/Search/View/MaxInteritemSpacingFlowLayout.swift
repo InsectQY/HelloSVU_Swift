@@ -35,7 +35,6 @@ class MaxInteritemSpacingFlowLayout: UICollectionViewFlowLayout {
                         curAttr.frame = frame
                     }
                 }
-                
             }
         }
         return attributes

@@ -60,7 +60,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="khG-YM-F5K"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vss-Kq-NhC">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vss-Kq-NhC" customClass="MaxInteritemSpacingFlowLayout" customModule="HelloSVU_Swift" customModuleProvider="target">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>

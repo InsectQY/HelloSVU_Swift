@@ -19,7 +19,6 @@
             <connections>
                 <outlet property="destinationField" destination="5jk-uO-fLB" id="T9L-IM-tZP"/>
                 <outlet property="originField" destination="gcN-9B-4he" id="4dw-ry-ALs"/>
-                <outlet property="pageContentView" destination="GfS-Q0-6YB" id="d93-10-l1X"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3R0-fT-vF0">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lu-sY-rU6" userLabel="输入框">
                             <rect key="frame" x="40" y="30" width="250" height="88"/>
@@ -132,9 +131,6 @@
                                 <constraint firstAttribute="height" constant="18" id="bgU-o3-zFY"/>
                             </constraints>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GfS-Q0-6YB">
-                            <rect key="frame" x="0.0" y="123" width="320" height="27"/>
-                        </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bg-Hq-xsQ">
                             <rect key="frame" x="10" y="35.5" width="22" height="24"/>
                             <constraints>
@@ -143,7 +139,7 @@
                             </constraints>
                             <state key="normal" backgroundImage="nav_back"/>
                             <connections>
-                                <action selector="backBtnClick:" destination="-1" eventType="touchUpInside" id="UE2-49-FG9"/>
+                                <action selector="backBtnDidClick:" destination="-1" eventType="touchUpInside" id="o2E-Xd-pKd"/>
                             </connections>
                         </button>
                     </subviews>
@@ -152,15 +148,11 @@
                         <constraint firstItem="LuY-6s-ewP" firstAttribute="centerY" secondItem="2lu-sY-rU6" secondAttribute="centerY" id="3Rw-t1-EPJ"/>
                         <constraint firstItem="2lu-sY-rU6" firstAttribute="leading" secondItem="3R0-fT-vF0" secondAttribute="leading" constant="40" id="Eut-bU-lSM"/>
                         <constraint firstItem="2bg-Hq-xsQ" firstAttribute="centerY" secondItem="n4t-kR-Hwn" secondAttribute="centerY" id="IIS-sD-kC5"/>
-                        <constraint firstItem="GfS-Q0-6YB" firstAttribute="leading" secondItem="3R0-fT-vF0" secondAttribute="leading" id="JEb-tO-Q2R"/>
-                        <constraint firstAttribute="height" constant="150" id="VMr-ee-uHH"/>
-                        <constraint firstAttribute="trailing" secondItem="GfS-Q0-6YB" secondAttribute="trailing" id="Z6K-L5-4Fs"/>
+                        <constraint firstAttribute="height" constant="115" id="VMr-ee-uHH"/>
                         <constraint firstItem="2bg-Hq-xsQ" firstAttribute="leading" secondItem="3R0-fT-vF0" secondAttribute="leading" constant="10" id="aYF-AA-54X"/>
                         <constraint firstAttribute="trailing" secondItem="2lu-sY-rU6" secondAttribute="trailing" constant="30" id="iF8-PP-5cv"/>
                         <constraint firstItem="2lu-sY-rU6" firstAttribute="top" secondItem="3R0-fT-vF0" secondAttribute="top" constant="30" id="oFp-nT-thR"/>
-                        <constraint firstItem="GfS-Q0-6YB" firstAttribute="top" secondItem="2lu-sY-rU6" secondAttribute="bottom" constant="5" id="pOU-rT-BgV"/>
                         <constraint firstItem="LuY-6s-ewP" firstAttribute="leading" secondItem="2lu-sY-rU6" secondAttribute="trailing" constant="5" id="rcs-aP-Dho"/>
-                        <constraint firstAttribute="bottom" secondItem="GfS-Q0-6YB" secondAttribute="bottom" id="sKB-8W-voX"/>
                     </constraints>
                 </view>
             </subviews>

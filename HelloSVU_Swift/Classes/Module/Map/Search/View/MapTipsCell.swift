@@ -15,7 +15,7 @@ class MapTipsCell: UITableViewCell {
     @IBOutlet weak var lineLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var flowLayout: MaxInteritemSpacingFlowLayout!
     
     var mapPoi: AMapPOI? {
         
@@ -23,5 +23,13 @@ class MapTipsCell: UITableViewCell {
             
             stopLabel.text = mapPoi?.address
         }
+    }
+}
+
+// MARK: - 设置 UI
+extension MapTipsCell {
+    
+    func setUpCollectionView() {
+        
     }
 }
