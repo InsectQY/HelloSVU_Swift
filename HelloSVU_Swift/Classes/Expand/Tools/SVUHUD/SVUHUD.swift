@@ -11,6 +11,17 @@ import SVProgressHUD
 
 class SVUHUD: NSObject {
 
+    class func show(_ maskType: SVProgressHUDMaskType) {
+        
+        SVProgressHUD.setDefaultMaskType(maskType)
+        SVProgressHUD.show()
+    }
+    
+    class func dismiss() {
+        
+        SVProgressHUD.dismiss()
+    }
+    
     class func showInfoWithStatus(_ status: String, minimumDismissTimeInterval: TimeInterval = 1.0) {
         
         SVProgressHUD.showInfo(withStatus: status)

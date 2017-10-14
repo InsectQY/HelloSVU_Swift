@@ -18,6 +18,9 @@ class BusRouteViewController: UIViewController {
     let strategy = ["最快捷" , "最经济" , "最少换乘" , "最少步行" , "最舒适" , "不乘地铁"]
     let time = ["现在出发"]
     
+    /// 公交路径规划方案
+    var route : AMapRoute?
+    
     lazy var menu: DOPDropDownMenu = {
         
         let menu = DOPDropDownMenu(origin: CGPoint(x: 0, y: 0), andHeight: kMapsDropDownMenuH)
@@ -35,6 +38,21 @@ class BusRouteViewController: UIViewController {
         return tableView
     }()
     
+    lazy var search: AMapSearchAPI = {
+        
+        let search = AMapSearchAPI()
+        search?.delegate = self
+        return search!
+    }()
+    
+    lazy var busRouteRequest: AMapTransitRouteSearchRequest = {
+        
+        let busRouteRequest = AMapTransitRouteSearchRequest()
+        busRouteRequest.requireExtension = true
+        busRouteRequest.city = "南京"
+        return busRouteRequest
+    }()
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +68,31 @@ extension BusRouteViewController {
         
         view.backgroundColor = .white
         view.addSubview(menu)
+    }
+}
+
+// MARK: - 公交路径规划
+extension BusRouteViewController {
+    
+    func searchRoutePlanningBus(strategy : Int,originPoint : AMapGeoPoint, destinationPoint : AMapGeoPoint) {
+        
+        SVUHUD.show(.black)
+        search.aMapTransitRouteSearch(busRouteRequest)
+    }
+}
+
+// MARK: - AMapSearchDelegate
+extension BusRouteViewController : AMapSearchDelegate {
+    
+    func aMapSearchRequest(_ request: Any!, didFailWithError error: Error!) {
+        SVUHUD.dismiss()
+    }
+    
+    func onRouteSearchDone(_ request: AMapRouteSearchBaseRequest!, response: AMapRouteSearchResponse!) {
+        
+        SVUHUD.dismiss()
+        if response.route == nil {return}
+        tableView.reloadData()
     }
 }
 

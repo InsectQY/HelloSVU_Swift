@@ -41,6 +41,7 @@
 		E56680551F91EB7500D4224F /* MapTipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56680541F91EB6A00D4224F /* MapTipsCell.xib */; };
 		E56680571F91EBA400D4224F /* MapTipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56680561F91EBA400D4224F /* MapTipsCell.swift */; };
 		E56680591F91F94500D4224F /* MaxInteritemSpacingFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56680581F91F94500D4224F /* MaxInteritemSpacingFlowLayout.swift */; };
+		E566805B1F927A9300D4224F /* BusRouteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E566805A1F927A8D00D4224F /* BusRouteCell.xib */; };
 		E57002881F7CCA46006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002851F7CCA3B006FC640 /* .gitignore */; };
 		E57002891F7CCA4A006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002871F7CCA3B006FC640 /* .gitignore */; };
 		E570028E1F7CCA63006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E570028B1F7CCA60006FC640 /* .gitignore */; };
@@ -167,6 +168,7 @@
 		E56680541F91EB6A00D4224F /* MapTipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTipsCell.xib; sourceTree = "<group>"; };
 		E56680561F91EBA400D4224F /* MapTipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTipsCell.swift; sourceTree = "<group>"; };
 		E56680581F91F94500D4224F /* MaxInteritemSpacingFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxInteritemSpacingFlowLayout.swift; sourceTree = "<group>"; };
+		E566805A1F927A8D00D4224F /* BusRouteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteCell.xib; sourceTree = "<group>"; };
 		E57002851F7CCA3B006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E57002871F7CCA3B006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E570028B1F7CCA60006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -213,7 +215,6 @@
 		E5BC270F1F82AC03005BE425 /* QYPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYPageView.swift; sourceTree = "<group>"; };
 		E5BC27101F82AC03005BE425 /* QYTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYTitleView.swift; sourceTree = "<group>"; };
 		E5BC271C1F82AF2F005BE425 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		E5BC271E1F82AF2F005BE425 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E5BC271F1F82AF96005BE425 /* BusRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteViewController.swift; sourceTree = "<group>"; };
 		E5BD159F1ED442C400F06039 /* ForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		E5BD15A11ED442CA00F06039 /* ForecastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForecastCell.xib; sourceTree = "<group>"; };
@@ -796,7 +797,7 @@
 		E5BC271D1F82AF2F005BE425 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E5BC271E1F82AF2F005BE425 /* .gitignore */,
+				E566805A1F927A8D00D4224F /* BusRouteCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1352,6 +1353,7 @@
 				E57002A91F7CCAE4006FC640 /* .gitignore in Resources */,
 				E57002AA1F7CCAE7006FC640 /* .gitignore in Resources */,
 				E523DCA81F84D8F60088FFD6 /* JhtNewsChannelImages.bundle in Resources */,
+				E566805B1F927A9300D4224F /* BusRouteCell.xib in Resources */,
 				E57FCCA81ED423C000FE5184 /* Home.plist in Resources */,
 				E57002B21F7CCB19006FC640 /* .gitignore in Resources */,
 				E5D3B1831EBF41D0003F6C14 /* MainVCSettings.json in Resources */,
