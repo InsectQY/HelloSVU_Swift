@@ -38,6 +38,8 @@
 		E56007FA1ED7CE6D00C82460 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F91ED7CE6D00C82460 /* Wind.swift */; };
 		E56007FC1ED7D4AE00C82460 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007FB1ED7D4AE00C82460 /* WeatherData.swift */; };
 		E56007FE1ED7D58300C82460 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007FD1ED7D58300C82460 /* Suggestion.swift */; };
+		E56680551F91EB7500D4224F /* MapTipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56680541F91EB6A00D4224F /* MapTipsCell.xib */; };
+		E56680571F91EBA400D4224F /* MapTipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56680561F91EBA400D4224F /* MapTipsCell.swift */; };
 		E57002881F7CCA46006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002851F7CCA3B006FC640 /* .gitignore */; };
 		E57002891F7CCA4A006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E57002871F7CCA3B006FC640 /* .gitignore */; };
 		E570028E1F7CCA63006FC640 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E570028B1F7CCA60006FC640 /* .gitignore */; };
@@ -161,6 +163,8 @@
 		E56007F91ED7CE6D00C82460 /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		E56007FB1ED7D4AE00C82460 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		E56007FD1ED7D58300C82460 /* Suggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
+		E56680541F91EB6A00D4224F /* MapTipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTipsCell.xib; sourceTree = "<group>"; };
+		E56680561F91EBA400D4224F /* MapTipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTipsCell.swift; sourceTree = "<group>"; };
 		E57002851F7CCA3B006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E57002871F7CCA3B006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E570028B1F7CCA60006FC640 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -418,9 +422,9 @@
 		E53E47B61F906FA4006C7B81 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				E53E47B71F906FB6006C7B81 /* Controller */,
 				E53E47B91F906FCD006C7B81 /* View */,
 				E53E47B81F906FC5006C7B81 /* Model */,
-				E53E47B71F906FB6006C7B81 /* Controller */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -443,6 +447,8 @@
 		E53E47B91F906FCD006C7B81 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E56680561F91EBA400D4224F /* MapTipsCell.swift */,
+				E56680541F91EB6A00D4224F /* MapTipsCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1351,6 +1357,7 @@
 				E5BC27091F82A2F5005BE425 /* RoutePageViewController.xib in Resources */,
 				E5BD15A21ED442CA00F06039 /* ForecastCell.xib in Resources */,
 				E57002AC1F7CCAF3006FC640 /* .gitignore in Resources */,
+				E56680551F91EB7500D4224F /* MapTipsCell.xib in Resources */,
 				E5BD15A61ED4432300F06039 /* TodayWeatherView.xib in Resources */,
 				E5539F561F7E7C0F00139E17 /* MultiPicutresCell.xib in Resources */,
 				E5D3B0C91EBF3DB8003F6C14 /* LaunchScreen.storyboard in Resources */,
@@ -1424,8 +1431,10 @@
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Presentr/Presentr.framework",
 				"${BUILT_PRODUCTS_DIR}/SKPhotoBrowser/SKPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Siren/Siren.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -1437,8 +1446,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Presentr.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siren.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -1512,6 +1523,7 @@
 				E5BD15A01ED442C400F06039 /* ForecastCell.swift in Sources */,
 				E57FCCB81ED43B3200FE5184 /* Home.swift in Sources */,
 				E5BC27121F82AC17005BE425 /* QYPageStyle.swift in Sources */,
+				E56680571F91EBA400D4224F /* MapTipsCell.swift in Sources */,
 				E5539F461F7E6D1E00139E17 /* OnePictureCell.swift in Sources */,
 				E56007F81ED7CE5F00C82460 /* Forecast.swift in Sources */,
 				E5BC27151F82AC1E005BE425 /* QYTitleView.swift in Sources */,

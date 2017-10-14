@@ -60,7 +60,13 @@ extension RoutePageViewController : UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
         let searchVc = MapSearchViewController()
+        
+        if textField == originField {
+           searchVc.searchBarText = "请输入起点"
+        }else {
+           searchVc.searchBarText = "请输入终点"
+        }
+        
         navigationController?.pushViewController(searchVc, animated: true)
     }
 }
-

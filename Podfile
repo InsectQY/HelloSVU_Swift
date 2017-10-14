@@ -17,5 +17,7 @@ pod 'AMapNavi'
 pod 'AMapSearch'
 pod 'SnapKit'
 pod 'FDFullscreenPopGesture'
+pod 'Presentr'
+pod 'Siren'
 
 end
