@@ -8,14 +8,18 @@
 
 import UIKit
 
+import CDAlertView
+
 fileprivate let MapTipsCellID = "MapTipsCellID"
 
 class MapSearchViewController: UIViewController {
     
     var searchBarText = ""
     
+    var poiSuggestion : ((AMapPOI) -> ())?
+    
     // MARK: - LazyLoad
-    lazy var tableView: UITableView = {
+    fileprivate lazy var tableView: UITableView = {
         
         let tableView = UITableView(frame: UIScreen.main.bounds)
         tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
@@ -26,7 +30,7 @@ class MapSearchViewController: UIViewController {
         return tableView
     }()
     
-    lazy var searchBar: UISearchBar = {
+    fileprivate lazy var searchBar: UISearchBar = {
         
         let searchBar = UISearchBar()
         searchBar.backgroundImage = UIImage(named: "clearImage")
@@ -38,14 +42,14 @@ class MapSearchViewController: UIViewController {
         return searchBar
     }()
     
-    lazy var search: AMapSearchAPI = {
+    fileprivate lazy var search: AMapSearchAPI = {
         
         let search = AMapSearchAPI()
         search?.delegate = self
         return search!
     }()
     
-    lazy var request: AMapPOIKeywordsSearchRequest = {
+    fileprivate lazy var request: AMapPOIKeywordsSearchRequest = {
         
         let request = AMapPOIKeywordsSearchRequest()
         request.cityLimit = true
@@ -55,7 +59,7 @@ class MapSearchViewController: UIViewController {
         return request
     }()
     
-    lazy var poisResponse = [AMapPOI]()
+    fileprivate lazy var poisResponse = [AMapPOI]()
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -110,7 +114,9 @@ extension MapSearchViewController : UISearchBarDelegate {
         if let key = searchBar.text {
             
             if key.count > 0 {
-               search.aMapPOIKeywordsSearch(request)
+                
+                request.keywords = searchText
+                search.aMapPOIKeywordsSearch(request)
             }else {
                 poisResponse.removeAll()
             }
@@ -128,6 +134,7 @@ extension MapSearchViewController : AMapSearchDelegate {
     
     func onPOISearchDone(_ request: AMapPOISearchBaseRequest!, response: AMapPOISearchResponse!) {
         
+        poisResponse.removeAll()
         guard response.pois.count > 0 else {
             return
         }
@@ -146,6 +153,9 @@ extension MapSearchViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MapTipsCellID, for: indexPath) as! MapTipsCell
+        if let key = searchBar.text {
+            cell.keyWords = key
+        }
         cell.mapPoi = poisResponse[indexPath.row]
         return cell
     }
@@ -156,5 +166,7 @@ extension MapSearchViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        poiSuggestion?(poisResponse[indexPath.row])
+        navigationController?.popViewController(animated: true)
     }
 }

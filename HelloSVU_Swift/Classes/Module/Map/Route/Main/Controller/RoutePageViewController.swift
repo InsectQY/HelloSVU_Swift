@@ -13,6 +13,9 @@ class RoutePageViewController: UIViewController {
     @IBOutlet weak var originField: UITextField!
     @IBOutlet weak var destinationField: UITextField!
     
+    var originPoint : AMapGeoPoint?
+    var destinationPoint : AMapGeoPoint?
+    
     // MARK: - LazyLoad
     lazy var pageView: QYPageView = {
         
@@ -62,11 +65,42 @@ extension RoutePageViewController : UITextFieldDelegate {
         let searchVc = MapSearchViewController()
         
         if textField == originField {
-           searchVc.searchBarText = "请输入起点"
+            
+            searchVc.searchBarText = "请输入起点"
+            searchVc.poiSuggestion = {[weak self] (poi) in
+                
+                self?.originField.text = poi.name
+                self?.originPoint = poi.location
+                self?.chooseNavType()
+            }
         }else {
-           searchVc.searchBarText = "请输入终点"
+            
+            searchVc.searchBarText = "请输入终点"
+            searchVc.poiSuggestion = {[weak self] (poi) in
+                
+                self?.destinationField.text = poi.name
+                self?.destinationPoint = poi.location
+                self?.chooseNavType()
+            }
         }
         
         navigationController?.pushViewController(searchVc, animated: true)
+    }
+}
+
+// MARK: - 事件处理
+extension RoutePageViewController {
+    
+    fileprivate func chooseNavType() {
+        
+        if destinationField.text == "请输入终点" {return}
+        startBusRoute()
+    }
+    
+    fileprivate func startBusRoute() {
+        
+        let vc = BusRouteViewController()
+        
+        
     }
 }

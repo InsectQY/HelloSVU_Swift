@@ -17,8 +17,8 @@ pod 'AMapNavi'
 pod 'AMapSearch'
 pod 'SnapKit'
 pod 'FDFullscreenPopGesture'
-pod 'Presentr'
 pod 'Siren'
 pod 'DOPDropDownMenu-Enhanced'
+pod 'CDAlertView'
 
 end

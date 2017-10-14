@@ -8,6 +8,8 @@
 
 import UIKit
 
+import EZSwiftExtensions
+
 class MapTipsCell: UITableViewCell {
 
     @IBOutlet weak var stopLabel: UILabel!
@@ -17,11 +19,14 @@ class MapTipsCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: MaxInteritemSpacingFlowLayout!
     
+    var keyWords = ""
+    
     var mapPoi: AMapPOI? {
         
         didSet {
             
             stopLabel.text = mapPoi?.address
+            nameLabel.attributedText = mapPoi?.name.colorSubString(keyWords, color: UIColor(r: 70, g: 135, b: 249))
         }
     }
 }

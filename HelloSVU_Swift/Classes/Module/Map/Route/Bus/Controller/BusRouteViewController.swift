@@ -10,6 +10,8 @@ import UIKit
 
 import DOPDropDownMenu_Enhanced
 
+fileprivate let kMapsDropDownMenuH : CGFloat = 40
+
 class BusRouteViewController: UIViewController {
     
     // MARK: - LazyLoad
@@ -18,12 +20,19 @@ class BusRouteViewController: UIViewController {
     
     lazy var menu: DOPDropDownMenu = {
         
-        let menu = DOPDropDownMenu(origin: CGPoint(x: 0, y: 0), andHeight: 40)
+        let menu = DOPDropDownMenu(origin: CGPoint(x: 0, y: 0), andHeight: kMapsDropDownMenuH)
         // 创建menu 第一次显示 不会调用点击代理，可以用这个手动调用
         menu?.selectDefalutIndexPath()
         menu?.delegate = self
         menu?.dataSource = self
         return menu!
+    }()
+    
+    lazy var tableView: UITableView = {
+        
+        let tableView = UITableView(frame: CGRect(x: 0, y: kMapsDropDownMenuH, w: ScreenW, h: view.frame.height - kMapsDropDownMenuH), style: .grouped)
+        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, w: ScreenW, h: .leastNormalMagnitude))
+        return tableView
     }()
     
     // MARK: - LifeCycle
