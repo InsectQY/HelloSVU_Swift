@@ -40,4 +40,3 @@ extension AppDelegate {
         AMapServices.shared().enableHTTPS = true
     }
 }
-

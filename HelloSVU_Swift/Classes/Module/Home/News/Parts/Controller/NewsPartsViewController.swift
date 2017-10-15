@@ -87,7 +87,7 @@ extension NewsPartsViewController {
         nowPage = 1
         parameters["page"] = nowPage
         let NewsURL = channelID == "就是名字" ? newsNormalURL : newsChannelIDURL
-        QYRequestTool.requestData(method: .GET, URL: NewsURL, parameters: parameters, successComplete: {[weak self] (JSON) in
+        QYRequestTool.requestData(.GET, NewsURL, parameters, successComplete: {[weak self] (JSON) in
             
             let data = [SingleNews].deserialize(from: JSON[0]["item"].description)
             if let data = data {
@@ -115,7 +115,7 @@ extension NewsPartsViewController {
         nowPage += 1
         parameters["page"] = nowPage
         let NewsURL = channelID == "就是名字" ? newsNormalURL : newsChannelIDURL
-        QYRequestTool.requestData(method: .GET, URL: NewsURL, parameters: parameters, successComplete: {[weak self] (JSON) in
+        QYRequestTool.requestData(.GET, NewsURL, parameters, successComplete: {[weak self] (JSON) in
             
             let data = [SingleNews].deserialize(from: JSON[0]["item"].description)
             if let data = data {

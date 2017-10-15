@@ -61,7 +61,7 @@ extension TabBarController {
     
     fileprivate func addChildVc(childVcName : String, title : String, normalImg : String, selImg : String) {
         
-        let childVc = GetVc.getVcFromString(vcName: childVcName)
+        let childVc = GetVc.getVcFromString(childVcName)
         
         childVc.title = title
         childVc.tabBarItem.image = UIImage(named: normalImg)

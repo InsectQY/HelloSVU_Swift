@@ -47,7 +47,7 @@ extension NormalNewsDetailViewController {
     
     fileprivate func loadDetailNews() {
         
-        QYRequestTool.requestData(method: .GET, URL: url, successComplete: {[weak self] (JSON) in
+        QYRequestTool.requestData(.GET, url, successComplete: {[weak self] (JSON) in
             
             var html = ""
             if let path = Bundle.main.path(forResource: "SVUNews.css", ofType: nil) {

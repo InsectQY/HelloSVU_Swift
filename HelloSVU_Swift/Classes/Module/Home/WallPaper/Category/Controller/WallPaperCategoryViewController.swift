@@ -72,7 +72,7 @@ extension WallPaperCategoryViewController {
     
     @objc fileprivate func loadCategoryData() {
         
-        QYRequestTool.requestData(method: .GET, URL: imgCategoryURL, successComplete: {[weak self] (JSON) in
+        QYRequestTool.requestData(.GET, imgCategoryURL, successComplete: {[weak self] (JSON) in
             
             let data = [ImgCategory].deserialize(from: JSON["res"]["category"].description)
             if let data = data {

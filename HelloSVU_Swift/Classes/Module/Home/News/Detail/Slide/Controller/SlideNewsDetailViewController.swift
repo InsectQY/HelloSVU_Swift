@@ -137,7 +137,7 @@ extension SlideNewsDetailViewController {
     
     fileprivate func loadNewsData() {
         
-        QYRequestTool.requestData(method: .GET, URL: url, successComplete: {[weak self] (JSON) in
+        QYRequestTool.requestData(.GET, url, successComplete: {[weak self] (JSON) in
             
             let data = [SlideNews].deserialize(from: JSON["body"]["slides"].description)
             if let data = data {

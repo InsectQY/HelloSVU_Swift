@@ -70,7 +70,7 @@ extension HomeToolContentCell : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let vc = GetVc.getVcFromString(vcName: homeData[indexPath.item].vcName)
+        let vc = GetVc.getVcFromString(homeData[indexPath.item].vcName)
         vc.title = homeData[indexPath.item].title
         ez.topMostVC?.pushVC(vc)
     }

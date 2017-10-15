@@ -79,7 +79,7 @@ extension WallperVerticalViewController {
         collectionView.mj_footer.endRefreshing()
         let parameters : [String : Any] = ["limit" : 15,
                                            "skip" : 0]
-        QYRequestTool.requestData(method: .GET, URL: "\(imgCategoryURL)/\(id)/vertical", parameters:parameters, successComplete: {[weak self] (JSON) in
+        QYRequestTool.requestData(.GET, "\(imgCategoryURL)/\(id)/vertical", parameters, successComplete: {[weak self] (JSON) in
             
             let data = [ImgVertical].deserialize(from:JSON["res"]["vertical"].description)
             if let data = data {
@@ -99,7 +99,7 @@ extension WallperVerticalViewController {
         collectionView.mj_header.endRefreshing()
         let parameters : [String : Any] = ["limit" : 15,
                                            "skip" : verticalData.count]
-        QYRequestTool.requestData(method: .GET, URL: "\(imgCategoryURL)/\(id)/vertical", parameters:parameters, successComplete: {[weak self] (JSON) in
+        QYRequestTool.requestData(.GET, "\(imgCategoryURL)/\(id)/vertical", parameters, successComplete: {[weak self] (JSON) in
             
             let data = [ImgVertical].deserialize(from:JSON["res"]["vertical"].description)
             if let data = data {

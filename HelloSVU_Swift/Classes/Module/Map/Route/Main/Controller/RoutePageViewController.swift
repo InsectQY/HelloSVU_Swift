@@ -101,7 +101,7 @@ extension RoutePageViewController {
         
         let vc = BusRouteViewController()
         if let originPoint = originPoint,let destinationPoint = destinationPoint {
-            vc.searchRoutePlanningBus(strategy: 0, originPoint: originPoint, destinationPoint: destinationPoint)
+            vc.searchRoutePlanningBus(0, originPoint, destinationPoint)
         }
     }
 }

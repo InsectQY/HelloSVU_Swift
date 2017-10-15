@@ -19,7 +19,7 @@ enum MethodType {
 
 class QYRequestTool {
     
-    class func requestData(method: MethodType, URL: String, parameters: [String: Any]? = nil, successComplete: ((_ result: JSON) -> ())?, failureComplete: ((_ error : Error) -> ())?) {
+    class func requestData(_ method: MethodType, _ URL: String, _ parameters: [String: Any]? = nil, successComplete: ((_ result: JSON) -> ())?, failureComplete: ((_ error : Error) -> ())?) {
         
         let requestType = method == .GET ? HTTPMethod.get : HTTPMethod.post
         
