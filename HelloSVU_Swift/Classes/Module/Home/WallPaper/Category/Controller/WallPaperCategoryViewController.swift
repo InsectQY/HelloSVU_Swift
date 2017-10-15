@@ -114,4 +114,3 @@ extension WallPaperCategoryViewController : UICollectionViewDelegate {
         navigationController?.pushViewController(vc, animated: true)
     }
 }
-

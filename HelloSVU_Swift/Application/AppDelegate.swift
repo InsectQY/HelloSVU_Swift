@@ -33,7 +33,7 @@ extension AppDelegate {
         window?.makeKeyAndVisible()
     }
     
-    // MARK: - 设置根控制器
+    // MARK: - 设置高德地图 Key
     fileprivate func setUpAmapKey() {
         
         AMapServices.shared().apiKey = "d9aa67c1ca9645f044bc2842e5fa1464"
