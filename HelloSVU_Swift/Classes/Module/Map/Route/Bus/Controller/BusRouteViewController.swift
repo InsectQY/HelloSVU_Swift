@@ -10,18 +10,19 @@ import UIKit
 
 import DOPDropDownMenu_Enhanced
 
+fileprivate let BusRouteCellID = "BusRouteCellID"
 fileprivate let kMapsDropDownMenuH : CGFloat = 40
 
 class BusRouteViewController: UIViewController {
     
     // MARK: - LazyLoad
-    let strategy = ["最快捷" , "最经济" , "最少换乘" , "最少步行" , "最舒适" , "不乘地铁"]
-    let time = ["现在出发"]
+    fileprivate let strategy = ["最快捷" , "最经济" , "最少换乘" , "最少步行" , "最舒适" , "不乘地铁"]
+    fileprivate let time = ["现在出发"]
     
     /// 公交路径规划方案
-    var route : AMapRoute?
+    fileprivate var route : AMapRoute?
     
-    lazy var menu: DOPDropDownMenu = {
+    fileprivate lazy var menu: DOPDropDownMenu = {
         
         let menu = DOPDropDownMenu(origin: CGPoint(x: 0, y: 0), andHeight: kMapsDropDownMenuH)
         // 创建menu 第一次显示 不会调用点击代理，可以用这个手动调用
@@ -31,21 +32,22 @@ class BusRouteViewController: UIViewController {
         return menu!
     }()
     
-    lazy var tableView: UITableView = {
+    fileprivate lazy var tableView: UITableView = {
         
         let tableView = UITableView(frame: CGRect(x: 0, y: kMapsDropDownMenuH, w: ScreenW, h: view.frame.height - kMapsDropDownMenuH), style: .grouped)
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, w: ScreenW, h: .leastNormalMagnitude))
+        tableView.register(UINib(nibName: "BusRouteCell", bundle: nil), forCellReuseIdentifier: BusRouteCellID)
         return tableView
     }()
     
-    lazy var search: AMapSearchAPI = {
+    fileprivate lazy var search: AMapSearchAPI = {
         
         let search = AMapSearchAPI()
         search?.delegate = self
         return search!
     }()
     
-    lazy var busRouteRequest: AMapTransitRouteSearchRequest = {
+    fileprivate lazy var busRouteRequest: AMapTransitRouteSearchRequest = {
         
         let busRouteRequest = AMapTransitRouteSearchRequest()
         busRouteRequest.requireExtension = true
@@ -77,6 +79,9 @@ extension BusRouteViewController {
     func searchRoutePlanningBus(strategy : Int,originPoint : AMapGeoPoint, destinationPoint : AMapGeoPoint) {
         
         SVUHUD.show(.black)
+        busRouteRequest.strategy = strategy
+        busRouteRequest.origin = originPoint
+        busRouteRequest.destination = destinationPoint
         search.aMapTransitRouteSearch(busRouteRequest)
     }
 }
@@ -92,7 +97,23 @@ extension BusRouteViewController : AMapSearchDelegate {
         
         SVUHUD.dismiss()
         if response.route == nil {return}
+        route = response.route
         tableView.reloadData()
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension BusRouteViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return route?.transits.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: BusRouteCellID, for: indexPath) as! BusRouteCell
+        cell.transit = route?.transits[indexPath.row]
+        return cell
     }
 }
 

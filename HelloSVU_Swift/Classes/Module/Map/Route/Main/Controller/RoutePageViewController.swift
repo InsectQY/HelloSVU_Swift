@@ -13,11 +13,11 @@ class RoutePageViewController: UIViewController {
     @IBOutlet weak var originField: UITextField!
     @IBOutlet weak var destinationField: UITextField!
     
-    var originPoint : AMapGeoPoint?
-    var destinationPoint : AMapGeoPoint?
+    fileprivate var originPoint : AMapGeoPoint?
+    fileprivate var destinationPoint : AMapGeoPoint?
     
     // MARK: - LazyLoad
-    lazy var pageView: QYPageView = {
+    fileprivate lazy var pageView: QYPageView = {
         
         let style = QYPageStyle()
         style.normalColor = UIColor(r: 255, g: 255, b: 255)
@@ -100,7 +100,8 @@ extension RoutePageViewController {
     fileprivate func startBusRoute() {
         
         let vc = BusRouteViewController()
-        
-        
+        if let originPoint = originPoint,let destinationPoint = destinationPoint {
+            vc.searchRoutePlanningBus(strategy: 0, originPoint: originPoint, destinationPoint: destinationPoint)
+        }
     }
 }

@@ -18,7 +18,6 @@ class SVUHUD: NSObject {
     }
     
     class func dismiss() {
-        
         SVProgressHUD.dismiss()
     }
     

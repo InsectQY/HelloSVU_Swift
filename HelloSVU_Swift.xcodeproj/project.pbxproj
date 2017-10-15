@@ -78,6 +78,7 @@
 		E5A40CEE1F7E8A8C0091C407 /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A40CED1F7E8A8C0091C407 /* String-Extension.swift */; };
 		E5BA14081EC42C8A002F4FF9 /* SVURefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA14071EC42C8A002F4FF9 /* SVURefreshFooter.m */; };
 		E5BA140B1EC42D42002F4FF9 /* SVURefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA140A1EC42D42002F4FF9 /* SVURefreshHeader.m */; };
+		E5BAC1301F932F4F00F733F4 /* BusRouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAC12F1F932F4F00F733F4 /* BusRouteCell.swift */; };
 		E5BC27091F82A2F5005BE425 /* RoutePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5BC27081F82A2E9005BE425 /* RoutePageViewController.xib */; };
 		E5BC270B1F82A300005BE425 /* RoutePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BC270A1F82A300005BE425 /* RoutePageViewController.swift */; };
 		E5BC27121F82AC17005BE425 /* QYPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BC270E1F82AC03005BE425 /* QYPageStyle.swift */; };
@@ -208,6 +209,7 @@
 		E5BA14091EC42D42002F4FF9 /* SVURefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVURefreshHeader.h; sourceTree = "<group>"; };
 		E5BA140A1EC42D42002F4FF9 /* SVURefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVURefreshHeader.m; sourceTree = "<group>"; };
 		E5BA140C1EC42EAA002F4FF9 /* HelloSVU_Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HelloSVU_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		E5BAC12F1F932F4F00F733F4 /* BusRouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteCell.swift; sourceTree = "<group>"; };
 		E5BC27081F82A2E9005BE425 /* RoutePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoutePageViewController.xib; sourceTree = "<group>"; };
 		E5BC270A1F82A300005BE425 /* RoutePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePageViewController.swift; sourceTree = "<group>"; };
 		E5BC270D1F82AC03005BE425 /* QYContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QYContentView.swift; sourceTree = "<group>"; };
@@ -797,6 +799,7 @@
 		E5BC271D1F82AF2F005BE425 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E5BAC12F1F932F4F00F733F4 /* BusRouteCell.swift */,
 				E566805A1F927A8D00D4224F /* BusRouteCell.xib */,
 			);
 			path = View;
@@ -1520,6 +1523,7 @@
 				E5D3B0BF1EBF3DB8003F6C14 /* AppDelegate.swift in Sources */,
 				E53E47BB1F906FE7006C7B81 /* MapSearchViewController.swift in Sources */,
 				E56007FA1ED7CE6D00C82460 /* Wind.swift in Sources */,
+				E5BAC1301F932F4F00F733F4 /* BusRouteCell.swift in Sources */,
 				E5FAECB01F7BC2A1006CC525 /* ImgVerticalCell.swift in Sources */,
 				E5BC27201F82AF96005BE425 /* BusRouteViewController.swift in Sources */,
 				E5FAECAB1F7BC239006CC525 /* WallperVerticalViewController.swift in Sources */,

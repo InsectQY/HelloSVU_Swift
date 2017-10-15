@@ -114,4 +114,3 @@ extension MapViewController : MAMapViewDelegate{
         locateBtnDidClick()
     }
 }
-
