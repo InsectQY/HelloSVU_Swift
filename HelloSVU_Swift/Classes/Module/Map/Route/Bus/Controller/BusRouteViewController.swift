@@ -37,7 +37,7 @@ class BusRouteViewController: UIViewController {
     
     fileprivate lazy var tableView: UITableView = {
         
-        let tableView = UITableView(frame: CGRect(x: 0, y: kMapsDropDownMenuH, w: ScreenW, h: view.frame.height - kMapsDropDownMenuH), style: .grouped)
+        let tableView = UITableView(frame: CGRect(x: 0, y: kMapsDropDownMenuH, w: ScreenW, h: view.frame.height - 115 - kMapsDropDownMenuH - kTitleViewH), style: .grouped)
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, w: ScreenW, h: .leastNormalMagnitude))
         tableView.dataSource = self
         tableView.delegate = self

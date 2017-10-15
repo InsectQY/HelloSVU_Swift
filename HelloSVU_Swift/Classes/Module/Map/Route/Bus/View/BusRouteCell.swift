@@ -15,6 +15,18 @@ class BusRouteCell: UITableViewCell {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
     
+    //重写frame
+    override var frame : CGRect{
+        
+        didSet {
+            
+            var newFrame = frame
+            newFrame.origin.y += 5
+            newFrame.size.height -= 5
+            super.frame = newFrame
+        }
+    }
+    
     var transit : AMapTransit? {
         
         didSet {

@@ -8,6 +8,8 @@
 
 import UIKit
 
+let kTitleViewH : CGFloat = 30
+
 class RoutePageViewController: UIViewController {
     
     @IBOutlet weak var originField: UITextField!
@@ -22,7 +24,7 @@ class RoutePageViewController: UIViewController {
         let style = QYPageStyle()
         style.normalColor = UIColor(r: 255, g: 255, b: 255)
         style.selectColor = UIColor(r: 255, g: 255, b: 255)
-        style.titleViewHeight = 30
+        style.titleViewHeight = kTitleViewH
         style.bottomLineHeight = 2
         let vc1 = BusRouteViewController()
         let vc2 = BusRouteViewController()
