@@ -41,6 +41,7 @@ class BusRouteViewController: UIViewController {
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, w: ScreenW, h: .leastNormalMagnitude))
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 120
         tableView.register(UINib(nibName: "BusRouteCell", bundle: nil), forCellReuseIdentifier: BusRouteCellID)
         return tableView
     }()
@@ -73,6 +74,11 @@ extension BusRouteViewController {
     
     fileprivate func setUpUI() {
         
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        }else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
         view.backgroundColor = .white
         view.addSubview(menu)
         view.addSubview(tableView)
