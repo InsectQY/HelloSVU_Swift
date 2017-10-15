@@ -13,8 +13,8 @@ class RoutePageViewController: UIViewController {
     @IBOutlet weak var originField: UITextField!
     @IBOutlet weak var destinationField: UITextField!
     
-    fileprivate var originPoint : AMapGeoPoint?
-    fileprivate var destinationPoint : AMapGeoPoint?
+    fileprivate lazy var originPoint = AMapGeoPoint()
+    fileprivate lazy var destinationPoint = AMapGeoPoint()
     
     // MARK: - LazyLoad
     fileprivate lazy var pageView: QYPageView = {
@@ -52,6 +52,7 @@ extension RoutePageViewController {
         view.addSubview(pageView)
     }
     
+    // MARK: - 返回按钮点击事件
     @IBAction func backBtnDidClick(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -70,7 +71,9 @@ extension RoutePageViewController : UITextFieldDelegate {
             searchVc.poiSuggestion = {[weak self] (poi) in
                 
                 self?.originField.text = poi.name
-                self?.originPoint = poi.location
+                if let originPoint = poi.location {
+                    self?.originPoint = originPoint
+                }
                 self?.chooseNavType()
             }
         }else {
@@ -79,7 +82,9 @@ extension RoutePageViewController : UITextFieldDelegate {
             searchVc.poiSuggestion = {[weak self] (poi) in
                 
                 self?.destinationField.text = poi.name
-                self?.destinationPoint = poi.location
+                if let destinationPoint = poi.location {
+                    self?.destinationPoint = destinationPoint
+                }
                 self?.chooseNavType()
             }
         }
@@ -99,9 +104,7 @@ extension RoutePageViewController {
     
     fileprivate func startBusRoute() {
         
-        let vc = BusRouteViewController()
-        if let originPoint = originPoint,let destinationPoint = destinationPoint {
-            vc.searchRoutePlanningBus(0, originPoint, destinationPoint)
-        }
+        let vc = childViewControllers[0] as! BusRouteViewController
+        vc.searchRoutePlanningBus(0, originPoint, destinationPoint)
     }
 }

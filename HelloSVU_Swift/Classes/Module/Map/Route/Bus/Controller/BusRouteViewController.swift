@@ -39,6 +39,8 @@ class BusRouteViewController: UIViewController {
         
         let tableView = UITableView(frame: CGRect(x: 0, y: kMapsDropDownMenuH, w: ScreenW, h: view.frame.height - kMapsDropDownMenuH), style: .grouped)
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, w: ScreenW, h: .leastNormalMagnitude))
+        tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(UINib(nibName: "BusRouteCell", bundle: nil), forCellReuseIdentifier: BusRouteCellID)
         return tableView
     }()
@@ -73,6 +75,7 @@ extension BusRouteViewController {
         
         view.backgroundColor = .white
         view.addSubview(menu)
+        view.addSubview(tableView)
     }
 }
 
@@ -81,7 +84,9 @@ extension BusRouteViewController {
     
     func searchRoutePlanningBus(_ strategy : Int,_ originPoint : AMapGeoPoint, _ destinationPoint : AMapGeoPoint) {
         
-//        SVUHUD.show(.black)
+        SVUHUD.show(.black)
+        self.originPoint = originPoint
+        self.destinationPoint = destinationPoint
         busRouteRequest.strategy = strategy
         busRouteRequest.origin = originPoint
         busRouteRequest.destination = destinationPoint
@@ -120,6 +125,14 @@ extension BusRouteViewController : UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
+extension BusRouteViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
+
 // MARK: - DOPDropDownMenuDataSource
 extension BusRouteViewController : DOPDropDownMenuDataSource {
 
@@ -144,8 +157,6 @@ extension BusRouteViewController : DOPDropDownMenuDelegate {
         /// 公交换乘策略：0-最快捷模式；1-最经济模式；2-最少换乘模式；3-最少步行模式；4-最舒适模式；5-不乘地铁模式
         if indexPath.column == 0 {
             searchRoutePlanningBus(indexPath.row, originPoint, destinationPoint)
-        } else {
-            
         }
     }
 }

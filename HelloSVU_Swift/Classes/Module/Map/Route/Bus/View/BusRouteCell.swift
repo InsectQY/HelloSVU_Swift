@@ -19,7 +19,7 @@ class BusRouteCell: UITableViewCell {
         
         didSet {
             
-            costLabel.text = String(format: "%.1f", transit?.cost ?? 0)
+            costLabel.text = String(format: "%.1f元", transit?.cost ?? 0)
         }
     }
 }
