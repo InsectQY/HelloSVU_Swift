@@ -56,10 +56,18 @@ extension BusRouteDetailViewController {
     // MARK: - 设置 collecitonView
     fileprivate func setUpCollectionView() {
         
+        pageControl.numberOfPages = route.transits.count
+        pageControl.currentPage = selIndex
+        
         flowLayout.itemSize = CGSize(width: ScreenW, height: 100)
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
         collectionView.register(UINib(nibName: "BusRouteDetailLineCell", bundle: nil), forCellWithReuseIdentifier: BusRouteDetailLineCellID)
+        collectionView.reloadData()
+        
+        var offset = collectionView.contentOffset
+        offset.x = CGFloat(selIndex) * ScreenW
+        collectionView.setContentOffset(offset, animated: false)
     }
 }
 
@@ -73,6 +81,20 @@ extension BusRouteDetailViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BusRouteDetailLineCellID, for: indexPath) as! BusRouteDetailLineCell
+        cell.transit = route.transits[indexPath.item]
         return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension BusRouteDetailViewController : UICollectionViewDelegate {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        if scrollView == collectionView {
+            
+            selIndex = Int(collectionView.contentOffset.x / ScreenW)
+            pageControl.currentPage = selIndex
+        }
     }
 }

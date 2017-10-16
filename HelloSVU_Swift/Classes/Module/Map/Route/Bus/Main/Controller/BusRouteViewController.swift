@@ -19,6 +19,9 @@ class BusRouteViewController: UIViewController {
     fileprivate lazy var originPoint = AMapGeoPoint()
     fileprivate lazy var destinationPoint = AMapGeoPoint()
     
+    fileprivate lazy var originLoc = ""
+    fileprivate lazy var destinationLoc = ""
+    
     fileprivate let strategy = ["最快捷" , "最经济" , "最少换乘" , "最少步行" , "最舒适" , "不乘地铁"]
     fileprivate let time = ["现在出发"]
     
@@ -100,11 +103,13 @@ extension BusRouteViewController {
 // MARK: - 公交路径规划
 extension BusRouteViewController {
     
-    func searchRoutePlanningBus(_ strategy : Int,_ originPoint : AMapGeoPoint, _ destinationPoint : AMapGeoPoint) {
+    func searchRoutePlanningBus(_ strategy : Int,_ originPoint : AMapGeoPoint, _ destinationPoint : AMapGeoPoint,_ originLoc : String,_ destinationLoc : String) {
         
         SVUHUD.show(.black)
         self.originPoint = originPoint
         self.destinationPoint = destinationPoint
+        self.originLoc = originLoc
+        self.destinationLoc = destinationLoc
         busRouteRequest.strategy = strategy
         busRouteRequest.origin = originPoint
         busRouteRequest.destination = destinationPoint
@@ -150,6 +155,11 @@ extension BusRouteViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let vc = BusRouteDetailViewController()
+        vc.route = route!
+        vc.selIndex = indexPath.row
+        vc.originLoc = originLoc
+        vc.destinationLoc = destinationLoc
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -183,7 +193,7 @@ extension BusRouteViewController : DOPDropDownMenuDelegate {
         
         /// 公交换乘策略：0-最快捷模式；1-最经济模式；2-最少换乘模式；3-最少步行模式；4-最舒适模式；5-不乘地铁模式
         if indexPath.column == 0 {
-            searchRoutePlanningBus(indexPath.row, originPoint, destinationPoint)
+            searchRoutePlanningBus(indexPath.row, originPoint, destinationPoint,originLoc,destinationLoc)
         }
     }
 }

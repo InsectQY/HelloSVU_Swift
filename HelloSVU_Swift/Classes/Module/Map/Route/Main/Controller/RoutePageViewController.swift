@@ -107,6 +107,6 @@ extension RoutePageViewController {
     fileprivate func startBusRoute() {
         
         let vc = childViewControllers[0] as! BusRouteViewController
-        vc.searchRoutePlanningBus(0, originPoint, destinationPoint)
+        vc.searchRoutePlanningBus(0, originPoint, destinationPoint,(originField.text ?? ""),(destinationField.text ?? ""))
     }
 }
