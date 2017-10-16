@@ -41,8 +41,9 @@ class BusRouteViewController: UIViewController {
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, w: ScreenW, h: .leastNormalMagnitude))
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 120
         tableView.register(UINib(nibName: "BusRouteCell", bundle: nil), forCellReuseIdentifier: BusRouteCellID)
+        tableView.showsVerticalScrollIndicator = false
+        tableView.rowHeight = 120
         return tableView
     }()
     
@@ -137,6 +138,12 @@ extension BusRouteViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//
+//        let cell = tableView.dequeueReusableCell(withIdentifier: BusRouteCellID, for: indexPath)
+//        return cell.cellHeight ?? 0
+//    }
 }
 
 // MARK: - DOPDropDownMenuDataSource

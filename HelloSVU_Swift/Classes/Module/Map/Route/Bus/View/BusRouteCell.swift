@@ -8,6 +8,8 @@
 
 import UIKit
 
+import EZSwiftExtensions
+
 class BusRouteCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
@@ -32,7 +34,7 @@ class BusRouteCell: UITableViewCell {
         didSet {
             
             /// 站点换乘
-            nameLabel.text = normalBusName
+            nameLabel.attributedText = (normalBusName ?? "").colorSubString("→", color: .lightGray)
             
             /// 价格
             costLabel.text = String(format: "%.1f元", transit?.cost ?? 0)
@@ -105,4 +107,15 @@ class BusRouteCell: UITableViewCell {
             return ""
         }
     }
+    
+    /// cell 高度
+    var cellHeight : CGFloat? {
+        
+        get {
+            
+            let height = normalBusName?.heightWithConstrainedWidth(ScreenW - 20, PFR16Font) ?? 0
+            return (height + 35) * 2
+        }
+    }
+    
 }
