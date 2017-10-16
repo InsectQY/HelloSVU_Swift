@@ -38,6 +38,20 @@
 		E55DDDA81F94C24F0057FCBD /* BusRouteDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDA71F94C2180057FCBD /* BusRouteDetailViewController.xib */; };
 		E55DDDAA1F94C64C0057FCBD /* BusRouteDetailLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDA91F94C6440057FCBD /* BusRouteDetailLineCell.xib */; };
 		E55DDDAC1F94C6680057FCBD /* BusRouteDetailLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDAB1F94C6680057FCBD /* BusRouteDetailLineCell.swift */; };
+		E55DDDB51F94D1E80057FCBD /* BusRouteDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDB41F94D1E20057FCBD /* BusRouteDetailHeaderView.xib */; };
+		E55DDDB71F94D2140057FCBD /* BusRouteDetailFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDB61F94D2080057FCBD /* BusRouteDetailFooterView.xib */; };
+		E55DDDBA1F94D2560057FCBD /* AllBusLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDB81F94D2460057FCBD /* AllBusLineCell.xib */; };
+		E55DDDBB1F94D2590057FCBD /* BusRouteDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDB91F94D24B0057FCBD /* BusRouteDetailCell.xib */; };
+		E55DDDBE1F94D2D10057FCBD /* BusRouteDetailCellHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDBD1F94D2B40057FCBD /* BusRouteDetailCellHeader.xib */; };
+		E55DDDBF1F94D2D30057FCBD /* BusLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDBC1F94D2B40057FCBD /* BusLineCell.xib */; };
+		E55DDDC11F94D2F70057FCBD /* BusRouteDetailCellFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDC01F94D2EC0057FCBD /* BusRouteDetailCellFooter.xib */; };
+		E55DDDC31F94D3350057FCBD /* BusRouteDetailCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDC21F94D3350057FCBD /* BusRouteDetailCellHeader.swift */; };
+		E55DDDC51F94D3720057FCBD /* BusLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDC41F94D3720057FCBD /* BusLineCell.swift */; };
+		E55DDDC71F94D3A50057FCBD /* BusRouteDetailCellFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDC61F94D3A50057FCBD /* BusRouteDetailCellFooter.swift */; };
+		E55DDDC91F94D3BF0057FCBD /* BusRouteDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDC81F94D3BF0057FCBD /* BusRouteDetailCell.swift */; };
+		E55DDDCB1F94D3CC0057FCBD /* AllBusLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDCA1F94D3CC0057FCBD /* AllBusLineCell.swift */; };
+		E55DDDCD1F94D4170057FCBD /* BusRouteDetailFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDCC1F94D4170057FCBD /* BusRouteDetailFooterView.swift */; };
+		E55DDDCF1F94D4230057FCBD /* BusRouteDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDCE1F94D4230057FCBD /* BusRouteDetailHeaderView.swift */; };
 		E56007F41ED7CE4400C82460 /* Cond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F31ED7CE4400C82460 /* Cond.swift */; };
 		E56007F61ED7CE5200C82460 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F51ED7CE5200C82460 /* DailyForecast.swift */; };
 		E56007F81ED7CE5F00C82460 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F71ED7CE5F00C82460 /* Forecast.swift */; };
@@ -172,6 +186,20 @@
 		E55DDDA71F94C2180057FCBD /* BusRouteDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteDetailViewController.xib; sourceTree = "<group>"; };
 		E55DDDA91F94C6440057FCBD /* BusRouteDetailLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteDetailLineCell.xib; sourceTree = "<group>"; };
 		E55DDDAB1F94C6680057FCBD /* BusRouteDetailLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteDetailLineCell.swift; sourceTree = "<group>"; };
+		E55DDDB41F94D1E20057FCBD /* BusRouteDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteDetailHeaderView.xib; sourceTree = "<group>"; };
+		E55DDDB61F94D2080057FCBD /* BusRouteDetailFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteDetailFooterView.xib; sourceTree = "<group>"; };
+		E55DDDB81F94D2460057FCBD /* AllBusLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllBusLineCell.xib; sourceTree = "<group>"; };
+		E55DDDB91F94D24B0057FCBD /* BusRouteDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteDetailCell.xib; sourceTree = "<group>"; };
+		E55DDDBC1F94D2B40057FCBD /* BusLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusLineCell.xib; sourceTree = "<group>"; };
+		E55DDDBD1F94D2B40057FCBD /* BusRouteDetailCellHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteDetailCellHeader.xib; sourceTree = "<group>"; };
+		E55DDDC01F94D2EC0057FCBD /* BusRouteDetailCellFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteDetailCellFooter.xib; sourceTree = "<group>"; };
+		E55DDDC21F94D3350057FCBD /* BusRouteDetailCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteDetailCellHeader.swift; sourceTree = "<group>"; };
+		E55DDDC41F94D3720057FCBD /* BusLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLineCell.swift; sourceTree = "<group>"; };
+		E55DDDC61F94D3A50057FCBD /* BusRouteDetailCellFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteDetailCellFooter.swift; sourceTree = "<group>"; };
+		E55DDDC81F94D3BF0057FCBD /* BusRouteDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteDetailCell.swift; sourceTree = "<group>"; };
+		E55DDDCA1F94D3CC0057FCBD /* AllBusLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBusLineCell.swift; sourceTree = "<group>"; };
+		E55DDDCC1F94D4170057FCBD /* BusRouteDetailFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteDetailFooterView.swift; sourceTree = "<group>"; };
+		E55DDDCE1F94D4230057FCBD /* BusRouteDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteDetailHeaderView.swift; sourceTree = "<group>"; };
 		E56007F31ED7CE4400C82460 /* Cond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cond.swift; sourceTree = "<group>"; };
 		E56007F51ED7CE5200C82460 /* DailyForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
 		E56007F71ED7CE5F00C82460 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
@@ -536,8 +564,8 @@
 		E55DDDA31F94C1D10057FCBD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E55DDDAB1F94C6680057FCBD /* BusRouteDetailLineCell.swift */,
-				E55DDDA91F94C6440057FCBD /* BusRouteDetailLineCell.xib */,
+				E55DDDAE1F94D1610057FCBD /* TableView */,
+				E55DDDAD1F94D1400057FCBD /* CollectionView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -549,6 +577,76 @@
 				E55DDDA71F94C2180057FCBD /* BusRouteDetailViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E55DDDAD1F94D1400057FCBD /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E55DDDAB1F94C6680057FCBD /* BusRouteDetailLineCell.swift */,
+				E55DDDA91F94C6440057FCBD /* BusRouteDetailLineCell.xib */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		E55DDDAE1F94D1610057FCBD /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				E55DDDB21F94D1B70057FCBD /* SectionHeader */,
+				E55DDDB31F94D1C10057FCBD /* SectionFooter */,
+				E55DDDB11F94D1B30057FCBD /* Cell */,
+				E55DDDB01F94D1A60057FCBD /* TableFooter */,
+				E55DDDAF1F94D1980057FCBD /* TableHeader */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		E55DDDAF1F94D1980057FCBD /* TableHeader */ = {
+			isa = PBXGroup;
+			children = (
+				E55DDDCE1F94D4230057FCBD /* BusRouteDetailHeaderView.swift */,
+				E55DDDB41F94D1E20057FCBD /* BusRouteDetailHeaderView.xib */,
+			);
+			path = TableHeader;
+			sourceTree = "<group>";
+		};
+		E55DDDB01F94D1A60057FCBD /* TableFooter */ = {
+			isa = PBXGroup;
+			children = (
+				E55DDDCC1F94D4170057FCBD /* BusRouteDetailFooterView.swift */,
+				E55DDDB61F94D2080057FCBD /* BusRouteDetailFooterView.xib */,
+			);
+			path = TableFooter;
+			sourceTree = "<group>";
+		};
+		E55DDDB11F94D1B30057FCBD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E55DDDC81F94D3BF0057FCBD /* BusRouteDetailCell.swift */,
+				E55DDDB91F94D24B0057FCBD /* BusRouteDetailCell.xib */,
+				E55DDDCA1F94D3CC0057FCBD /* AllBusLineCell.swift */,
+				E55DDDB81F94D2460057FCBD /* AllBusLineCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E55DDDB21F94D1B70057FCBD /* SectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				E55DDDC21F94D3350057FCBD /* BusRouteDetailCellHeader.swift */,
+				E55DDDBD1F94D2B40057FCBD /* BusRouteDetailCellHeader.xib */,
+				E55DDDC41F94D3720057FCBD /* BusLineCell.swift */,
+				E55DDDBC1F94D2B40057FCBD /* BusLineCell.xib */,
+			);
+			path = SectionHeader;
+			sourceTree = "<group>";
+		};
+		E55DDDB31F94D1C10057FCBD /* SectionFooter */ = {
+			isa = PBXGroup;
+			children = (
+				E55DDDC61F94D3A50057FCBD /* BusRouteDetailCellFooter.swift */,
+				E55DDDC01F94D2EC0057FCBD /* BusRouteDetailCellFooter.xib */,
+			);
+			path = SectionFooter;
 			sourceTree = "<group>";
 		};
 		E57002841F7CCA3B006FC640 /* Model */ = {
@@ -1408,6 +1506,7 @@
 				E5539F411F7E6C3400139E17 /* NoPictureCell.xib in Resources */,
 				E57002A81F7CCAE2006FC640 /* .gitignore in Resources */,
 				E570028E1F7CCA63006FC640 /* .gitignore in Resources */,
+				E55DDDBE1F94D2D10057FCBD /* BusRouteDetailCellHeader.xib in Resources */,
 				E57FCCC41ED43D5800FE5184 /* NotificationCell.xib in Resources */,
 				E57002A91F7CCAE4006FC640 /* .gitignore in Resources */,
 				E57002AA1F7CCAE7006FC640 /* .gitignore in Resources */,
@@ -1416,24 +1515,30 @@
 				E57FCCA81ED423C000FE5184 /* Home.plist in Resources */,
 				E57002B21F7CCB19006FC640 /* .gitignore in Resources */,
 				E5D3B1831EBF41D0003F6C14 /* MainVCSettings.json in Resources */,
+				E55DDDC11F94D2F70057FCBD /* BusRouteDetailCellFooter.xib in Resources */,
 				E5539F571F7E7C1100139E17 /* BigImgCell.xib in Resources */,
 				E570028F1F7CCA66006FC640 /* .gitignore in Resources */,
 				E5BC27091F82A2F5005BE425 /* RoutePageViewController.xib in Resources */,
 				E5BD15A21ED442CA00F06039 /* ForecastCell.xib in Resources */,
 				E57002AC1F7CCAF3006FC640 /* .gitignore in Resources */,
+				E55DDDB51F94D1E80057FCBD /* BusRouteDetailHeaderView.xib in Resources */,
 				E56680551F91EB7500D4224F /* MapTipsCell.xib in Resources */,
 				E5BD15A61ED4432300F06039 /* TodayWeatherView.xib in Resources */,
 				E5539F561F7E7C0F00139E17 /* MultiPicutresCell.xib in Resources */,
 				E5D3B0C91EBF3DB8003F6C14 /* LaunchScreen.storyboard in Resources */,
 				E52B24EE1EBF4A3A00183DA6 /* QYCycleView.xib in Resources */,
+				E55DDDB71F94D2140057FCBD /* BusRouteDetailFooterView.xib in Resources */,
 				E5FAECB11F7BC2A1006CC525 /* ImgVerticalCell.xib in Resources */,
 				E55DDDA81F94C24F0057FCBD /* BusRouteDetailViewController.xib in Resources */,
 				E57002881F7CCA46006FC640 /* .gitignore in Resources */,
 				E57002981F7CCABC006FC640 /* .gitignore in Resources */,
 				E57002AB1F7CCAF1006FC640 /* .gitignore in Resources */,
+				E55DDDBB1F94D2590057FCBD /* BusRouteDetailCell.xib in Resources */,
 				E52B24EC1EBF4A3A00183DA6 /* QYCycleCell.xib in Resources */,
+				E55DDDBF1F94D2D30057FCBD /* BusLineCell.xib in Resources */,
 				E57002891F7CCA4A006FC640 /* .gitignore in Resources */,
 				E55DDDAA1F94C64C0057FCBD /* BusRouteDetailLineCell.xib in Resources */,
+				E55DDDBA1F94D2560057FCBD /* AllBusLineCell.xib in Resources */,
 				E57002FC1F7D0322006FC640 /* News.plist in Resources */,
 				E57FCCC01ED43CBA00FE5184 /* HomeToolCell.xib in Resources */,
 				E57FCCBC1ED43C1A00FE5184 /* HomeToolContentCell.xib in Resources */,
@@ -1543,11 +1648,15 @@
 				E5539F521F7E711900139E17 /* Style.swift in Sources */,
 				E52B24F11EBF4AF800183DA6 /* KingfisherExtension.swift in Sources */,
 				E5E85E921F7F6AA20073AC02 /* SlideNews.swift in Sources */,
+				E55DDDCF1F94D4230057FCBD /* BusRouteDetailHeaderView.swift in Sources */,
 				E57FCCC81ED43E9900FE5184 /* NavigationController.swift in Sources */,
 				E5539F431F7E6C4300139E17 /* NoPictureCell.swift in Sources */,
 				E57FCCC21ED43D4C00FE5184 /* NotificationCell.swift in Sources */,
 				E5FAEC571F7BC075006CC525 /* ImgCategory.swift in Sources */,
+				E55DDDC51F94D3720057FCBD /* BusLineCell.swift in Sources */,
 				E5FAECC51F7BC4EB006CC525 /* JFContextItem.swift in Sources */,
+				E55DDDC91F94D3BF0057FCBD /* BusRouteDetailCell.swift in Sources */,
+				E55DDDC31F94D3350057FCBD /* BusRouteDetailCellHeader.swift in Sources */,
 				E55DDD9E1F94BA470057FCBD /* BusRouteFooterView.swift in Sources */,
 				E5BC27131F82AC19005BE425 /* QYContentView.swift in Sources */,
 				E57FCCBA1ED43BF100FE5184 /* HomeToolContentCell.swift in Sources */,
@@ -1575,8 +1684,10 @@
 				E514B38D1F80DB04002431CE /* SVUPhotoBrowser.swift in Sources */,
 				E5539F541F7E715500139E17 /* SingleNews.swift in Sources */,
 				E55DDDAC1F94C6680057FCBD /* BusRouteDetailLineCell.swift in Sources */,
+				E55DDDCD1F94D4170057FCBD /* BusRouteDetailFooterView.swift in Sources */,
 				E55DDDA61F94C2130057FCBD /* BusRouteDetailViewController.swift in Sources */,
 				E56680591F91F94500D4224F /* MaxInteritemSpacingFlowLayout.swift in Sources */,
+				E55DDDCB1F94D3CC0057FCBD /* AllBusLineCell.swift in Sources */,
 				E57FCCB61ED43AC900FE5184 /* HomeViewController.swift in Sources */,
 				E57002B91F7CD1B2006FC640 /* SVUHUD.swift in Sources */,
 				E5FAECAD1F7BC26A006CC525 /* ImgVertical.swift in Sources */,
@@ -1604,6 +1715,7 @@
 				E56007FE1ED7D58300C82460 /* Suggestion.swift in Sources */,
 				E57FCCCC1ED43F4500FE5184 /* MapViewController.swift in Sources */,
 				E52B24E21EBF46B500183DA6 /* QYRequestTool.swift in Sources */,
+				E55DDDC71F94D3A50057FCBD /* BusRouteDetailCellFooter.swift in Sources */,
 				E514B38A1F80C2D6002431CE /* SlideNewsDetailViewController.swift in Sources */,
 				E5FAECBA1F7BC35E006CC525 /* WallPaperDetailViewController.swift in Sources */,
 				E55B28AB1F8237C800C4191A /* MapToolView.swift in Sources */,
