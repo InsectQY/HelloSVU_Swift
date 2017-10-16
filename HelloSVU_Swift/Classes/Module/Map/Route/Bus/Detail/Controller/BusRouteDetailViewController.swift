@@ -9,6 +9,7 @@
 import UIKit
 
 fileprivate let BusRouteDetailLineCellID = "BusRouteDetailLineCellID"
+fileprivate let BusRouteDetailCellID = "BusRouteDetailCellID"
 
 class BusRouteDetailViewController: UIViewController {
     
@@ -25,9 +26,19 @@ class BusRouteDetailViewController: UIViewController {
     var originLoc = ""
     /// 终点
     var destinationLoc = ""
+    /// 当前选择的公交线路
+    fileprivate var selBusLineIndex = 0
+    
     
     // MARK: - LazyLoad
-    
+    fileprivate lazy var busSegment: [BusSegment] = {
+        
+        var busSegment = [BusSegment]()
+        for _ in 0 ..< route.transits[self.selIndex].segments.count {
+            busSegment.append(BusSegment())
+        }
+        return busSegment
+    }()
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -96,5 +107,27 @@ extension BusRouteDetailViewController : UICollectionViewDelegate {
             selIndex = Int(collectionView.contentOffset.x / ScreenW)
             pageControl.currentPage = selIndex
         }
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension BusRouteDetailViewController : UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return route.transits[self.selIndex].segments.count - 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if busSegment[section].isOpen {
+            return route.transits[selIndex].segments[section].buslines[selBusLineIndex].viaBusStops.count
+        }
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: BusRouteDetailCellID, for: indexPath) as! BusRouteDetailCell
+        return cell
     }
 }

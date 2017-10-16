@@ -65,6 +65,10 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="483"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="ENA-WL-4dk"/>
+                                <outlet property="delegate" destination="-1" id="hVT-PU-8ne"/>
+                            </connections>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

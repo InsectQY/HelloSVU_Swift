@@ -52,6 +52,7 @@
 		E55DDDCB1F94D3CC0057FCBD /* AllBusLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDCA1F94D3CC0057FCBD /* AllBusLineCell.swift */; };
 		E55DDDCD1F94D4170057FCBD /* BusRouteDetailFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDCC1F94D4170057FCBD /* BusRouteDetailFooterView.swift */; };
 		E55DDDCF1F94D4230057FCBD /* BusRouteDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDCE1F94D4230057FCBD /* BusRouteDetailHeaderView.swift */; };
+		E55DDDD11F94D51B0057FCBD /* BusSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDD01F94D51B0057FCBD /* BusSegment.swift */; };
 		E56007F41ED7CE4400C82460 /* Cond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F31ED7CE4400C82460 /* Cond.swift */; };
 		E56007F61ED7CE5200C82460 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F51ED7CE5200C82460 /* DailyForecast.swift */; };
 		E56007F81ED7CE5F00C82460 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F71ED7CE5F00C82460 /* Forecast.swift */; };
@@ -200,6 +201,7 @@
 		E55DDDCA1F94D3CC0057FCBD /* AllBusLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBusLineCell.swift; sourceTree = "<group>"; };
 		E55DDDCC1F94D4170057FCBD /* BusRouteDetailFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteDetailFooterView.swift; sourceTree = "<group>"; };
 		E55DDDCE1F94D4230057FCBD /* BusRouteDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteDetailHeaderView.swift; sourceTree = "<group>"; };
+		E55DDDD01F94D51B0057FCBD /* BusSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusSegment.swift; sourceTree = "<group>"; };
 		E56007F31ED7CE4400C82460 /* Cond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cond.swift; sourceTree = "<group>"; };
 		E56007F51ED7CE5200C82460 /* DailyForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
 		E56007F71ED7CE5F00C82460 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 		E55DDDA21F94C1CA0057FCBD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E55DDDD01F94D51B0057FCBD /* BusSegment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1719,6 +1722,7 @@
 				E514B38A1F80C2D6002431CE /* SlideNewsDetailViewController.swift in Sources */,
 				E5FAECBA1F7BC35E006CC525 /* WallPaperDetailViewController.swift in Sources */,
 				E55B28AB1F8237C800C4191A /* MapToolView.swift in Sources */,
+				E55DDDD11F94D51B0057FCBD /* BusSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
