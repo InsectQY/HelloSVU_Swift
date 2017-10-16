@@ -84,6 +84,17 @@ extension BusRouteViewController {
         view.addSubview(menu)
         view.addSubview(tableView)
     }
+    
+    // MARK: - 设置底部
+    fileprivate func setUpFooterView() {
+        
+        let contentView = UIView(frame: CGRect(x: 0, y: 0, w: ScreenW, h: 40))
+        let footer = BusRouteFooterView.loadFromNib()
+        footer.frame = contentView.bounds
+        footer.route = route
+        contentView.addSubview(footer)
+        tableView.tableFooterView = contentView
+    }
 }
 
 // MARK: - 公交路径规划
@@ -113,6 +124,7 @@ extension BusRouteViewController : AMapSearchDelegate {
         SVUHUD.dismiss()
         if response.route == nil {return}
         route = response.route
+        setUpFooterView()
         tableView.reloadData()
     }
 }

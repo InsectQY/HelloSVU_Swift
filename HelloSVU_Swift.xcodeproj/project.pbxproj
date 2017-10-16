@@ -32,6 +32,8 @@
 		E5539F561F7E7C0F00139E17 /* MultiPicutresCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5539F471F7E6DCB00139E17 /* MultiPicutresCell.xib */; };
 		E5539F571F7E7C1100139E17 /* BigImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5539F4A1F7E6E6C00139E17 /* BigImgCell.xib */; };
 		E55B28AB1F8237C800C4191A /* MapToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55B28AA1F8237C800C4191A /* MapToolView.swift */; };
+		E55DDD9E1F94BA470057FCBD /* BusRouteFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDD9D1F94BA470057FCBD /* BusRouteFooterView.swift */; };
+		E55DDD9F1F94BB3B0057FCBD /* BusRouteFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDD9C1F94BA3C0057FCBD /* BusRouteFooterView.xib */; };
 		E56007F41ED7CE4400C82460 /* Cond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F31ED7CE4400C82460 /* Cond.swift */; };
 		E56007F61ED7CE5200C82460 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F51ED7CE5200C82460 /* DailyForecast.swift */; };
 		E56007F81ED7CE5F00C82460 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56007F71ED7CE5F00C82460 /* Forecast.swift */; };
@@ -160,6 +162,8 @@
 		E5539F511F7E711900139E17 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		E5539F531F7E715500139E17 /* SingleNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleNews.swift; sourceTree = "<group>"; };
 		E55B28AA1F8237C800C4191A /* MapToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapToolView.swift; sourceTree = "<group>"; };
+		E55DDD9C1F94BA3C0057FCBD /* BusRouteFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteFooterView.xib; sourceTree = "<group>"; };
+		E55DDD9D1F94BA470057FCBD /* BusRouteFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteFooterView.swift; sourceTree = "<group>"; };
 		E56007F31ED7CE4400C82460 /* Cond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cond.swift; sourceTree = "<group>"; };
 		E56007F51ED7CE5200C82460 /* DailyForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
 		E56007F71ED7CE5F00C82460 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
@@ -797,6 +801,8 @@
 		E5BC271D1F82AF2F005BE425 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E55DDD9D1F94BA470057FCBD /* BusRouteFooterView.swift */,
+				E55DDD9C1F94BA3C0057FCBD /* BusRouteFooterView.xib */,
 				E5BAC12F1F932F4F00F733F4 /* BusRouteCell.swift */,
 				E566805A1F927A8D00D4224F /* BusRouteCell.xib */,
 			);
@@ -1378,6 +1384,7 @@
 				E57FCCC01ED43CBA00FE5184 /* HomeToolCell.xib in Resources */,
 				E57FCCBC1ED43C1A00FE5184 /* HomeToolContentCell.xib in Resources */,
 				E5D3B0C61EBF3DB8003F6C14 /* Assets.xcassets in Resources */,
+				E55DDD9F1F94BB3B0057FCBD /* BusRouteFooterView.xib in Resources */,
 				E57002971F7CCABA006FC640 /* .gitignore in Resources */,
 				E57002AD1F7CCAF6006FC640 /* .gitignore in Resources */,
 				E5FAEC5D1F7BC126006CC525 /* ImgCategoryCell.xib in Resources */,
@@ -1487,6 +1494,7 @@
 				E57FCCC21ED43D4C00FE5184 /* NotificationCell.swift in Sources */,
 				E5FAEC571F7BC075006CC525 /* ImgCategory.swift in Sources */,
 				E5FAECC51F7BC4EB006CC525 /* JFContextItem.swift in Sources */,
+				E55DDD9E1F94BA470057FCBD /* BusRouteFooterView.swift in Sources */,
 				E5BC27131F82AC19005BE425 /* QYContentView.swift in Sources */,
 				E57FCCBA1ED43BF100FE5184 /* HomeToolContentCell.swift in Sources */,
 				E5539F491F7E6DDF00139E17 /* MultiPicutresCell.swift in Sources */,
