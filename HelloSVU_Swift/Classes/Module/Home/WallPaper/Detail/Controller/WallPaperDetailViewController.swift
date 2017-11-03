@@ -46,11 +46,11 @@ class WallPaperDetailViewController: BaseViewController {
         scrollView.contentSize = CGSize(width: ScreenW * 2, height: ScreenH)
         
         // 第一张背景
-        let previewImage1 = UIImageView(image: UIImage(named: "preview_cover_clock"))
+        let previewImage1 = UIImageView(image: #imageLiteral(resourceName: "preview_cover_clock"))
         previewImage1.frame = UIScreen.main.bounds
         
         // 第二张背景
-        let previewImage2 = UIImageView(image: UIImage(named: "preview_cover_home"))
+        let previewImage2 = UIImageView(image: #imageLiteral(resourceName: "preview_cover_home"))
         previewImage2.frame = CGRect(x: ScreenW, y: 0, width: ScreenW, height: ScreenH)
         
         scrollView.addSubview(previewImage1)

@@ -33,7 +33,7 @@ class MapSearchViewController: BaseViewController {
     fileprivate lazy var searchBar: UISearchBar = {
         
         let searchBar = UISearchBar()
-        searchBar.backgroundImage = UIImage(named: "clearImage")
+        searchBar.backgroundImage = #imageLiteral(resourceName: "clearImage")
         searchBar.becomeFirstResponder()
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         searchBar.autoresizingMask = .flexibleWidth
@@ -94,7 +94,7 @@ extension MapSearchViewController {
         searchBar.frame = titleView.bounds
         titleView.addSubview(searchBar)
         navigationItem.titleView = titleView
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "voice"), style: .plain, target: self, action: #selector(speechRecognition))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "voice"), style: .plain, target: self, action: #selector(speechRecognition))
     }
     
     // MARK: - 语音识别

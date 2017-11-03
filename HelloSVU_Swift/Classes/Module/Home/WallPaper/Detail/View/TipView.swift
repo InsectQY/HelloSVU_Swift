@@ -23,7 +23,7 @@ class TipView: UIView {
     lazy var swipeImageView: UIImageView = {
         
         let swipeImageView = UIImageView(frame: CGRect(x: 100, y: ScreenH - 200, width: 50, height: 50))
-        swipeImageView.image = UIImage(named: "swipe_down")
+        swipeImageView.image = #imageLiteral(resourceName: "swipe_down")
         return swipeImageView
     }()
     

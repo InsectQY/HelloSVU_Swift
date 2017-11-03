@@ -42,7 +42,7 @@ class NavigationController: UINavigationController {
         
         // 导航栏背景和文字设置
         let naviBar : UINavigationBar = UINavigationBar.appearance()
-        naviBar.setBackgroundImage(UIImage(named: "navigationbarBackgroundWhite"), for: .default)
+        naviBar.setBackgroundImage(#imageLiteral(resourceName: "navigationbarBackgroundWhite"), for: .default)
         naviBar.titleTextAttributes = {[
             NSAttributedStringKey.foregroundColor: UIColor.black,
             NSAttributedStringKey.font: PFM18Font

@@ -37,7 +37,7 @@ class SlideNewsDetailViewController: BaseViewController {
         
         let backBtn = UIButton(type: .custom)
         backBtn.frame = CGRect(x: 10, y: 20, width: 54, height: 44)
-        backBtn.setBackgroundImage(UIImage(named: "night_icon_back"), for: .normal)
+        backBtn.setBackgroundImage(#imageLiteral(resourceName: "night_icon_back"), for: .normal)
         backBtn.addTarget(self, action: #selector(back), for: .touchUpInside)
         return backBtn
     }()
@@ -92,6 +92,7 @@ extension SlideNewsDetailViewController {
     fileprivate func setUpUI() {
         
         fd_prefersNavigationBarHidden = true
+        view.backgroundColor = .black
         view.addSubview(backBtn)
         view.addSubview(scrollView)
         view.addSubview(titleLabel)
