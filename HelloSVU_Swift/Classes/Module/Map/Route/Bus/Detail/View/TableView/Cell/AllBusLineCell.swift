@@ -10,10 +10,6 @@ import UIKit
 
 class AllBusLineCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
 
 }

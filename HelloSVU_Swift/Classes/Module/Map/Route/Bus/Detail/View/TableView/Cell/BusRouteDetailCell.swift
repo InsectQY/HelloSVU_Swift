@@ -10,10 +10,12 @@ import UIKit
 
 class BusRouteDetailCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var viaStopLabel: UILabel!
+
+    var busStop : AMapBusStop? {
+        
+        didSet {
+            viaStopLabel.text = busStop?.name
+        }
     }
-
-
 }

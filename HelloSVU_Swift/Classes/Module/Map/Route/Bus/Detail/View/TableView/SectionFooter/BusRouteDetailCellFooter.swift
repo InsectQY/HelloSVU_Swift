@@ -10,6 +10,10 @@ import UIKit
 
 class BusRouteDetailCellFooter: UITableViewHeaderFooterView {
 
-
-
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var arrivalStopLabel: UILabel!
+    @IBOutlet weak var exitNameBtn: UIButton!
+    @IBOutlet weak var walkNaviBtn: UIButton!
+    @IBOutlet weak var durationLabel: UILabel!
+    
 }

@@ -140,6 +140,7 @@ extension BusRouteDetailViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BusRouteDetailCellID, for: indexPath) as! BusRouteDetailCell
+        cell.busStop = route.transits[selIndex].segments[indexPath.section].buslines[selBusLineIndex].viaBusStops[indexPath.row]
         return cell
     }
 }
@@ -177,6 +178,8 @@ extension BusRouteDetailViewController {
         headerView.frame = contentHeader.bounds
         contentHeader.addSubview(headerView)
         tableView.tableHeaderView = contentHeader
+        
+        headerView.walking = route.transits[selIndex].segments[0].walking
     }
     
     fileprivate func setUpTableViewFooter() {

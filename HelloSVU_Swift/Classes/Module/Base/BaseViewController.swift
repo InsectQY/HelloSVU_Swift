@@ -10,10 +10,10 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.theme_backgroundColor = GlobalPicker.backgroundColor
     }
-
 }

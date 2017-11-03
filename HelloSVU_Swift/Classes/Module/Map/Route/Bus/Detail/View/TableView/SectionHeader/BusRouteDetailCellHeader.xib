@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -14,7 +15,18 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
+            <connections>
+                <outlet property="busLineLabel" destination="6qB-3r-NmT" id="JJr-tQ-LbN"/>
+                <outlet property="collectionView" destination="eVE-MV-fuf" id="TRX-7u-GPx"/>
+                <outlet property="departureStopLabel" destination="v7w-zf-yve" id="7ur-yt-yjW"/>
+                <outlet property="endTimeLabel" destination="xLI-yc-vBn" id="wJO-mf-KDo"/>
+                <outlet property="enterNameBtn" destination="WSg-FU-0oA" id="vFb-wb-lff"/>
+                <outlet property="flowLayout" destination="f7c-lh-HqE" id="ix8-e8-73M"/>
+                <outlet property="startTimeLabel" destination="q03-tg-stg" id="PVe-Tk-xkT"/>
+                <outlet property="viaBusStopsBtn" destination="d12-Os-7qF" id="xFv-mY-A64"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BusRouteDetailCellHeader" customModule="HelloSVU_Swift">
             <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
@@ -161,7 +173,7 @@
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eVE-MV-fuf">
                                     <rect key="frame" x="17" y="0.0" width="155" height="35"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f7c-lh-HqE" customClass="SVUCustomFlowLayout">
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f7c-lh-HqE" customClass="MaxInteritemSpacingFlowLayout" customModule="HelloSVU_Swift" customModuleProvider="target">
                                         <size key="itemSize" width="50" height="50"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>

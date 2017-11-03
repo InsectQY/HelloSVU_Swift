@@ -18,11 +18,14 @@ class BusRouteDetailHeaderView: UIView,NibLoadable {
         
         didSet {
             
-            if let duration = walking?.duration {
-                
+            if walking?.duration == 0 {
+                distanceLabel.text = "同站换乘"
+            }else {
+                durationLabel.text = CalculateTool.getDuration(walking?.duration ?? 0)
             }
+            durationLabel.isHidden = (walking?.duration == 0)
+            walkNaviBtn.isHidden = (walking?.duration == 0)
+            distanceLabel.text = CalculateTool.getWalkDistance(CGFloat(walking?.distance ?? 0))
         }
     }
-    
-
 }
