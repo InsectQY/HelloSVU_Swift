@@ -10,6 +10,7 @@ import UIKit
 
 class BusRouteDetailFooterView: UIView , NibLoadable {
 
+    @IBOutlet weak var destionLabel: UILabel!
     
 
 }

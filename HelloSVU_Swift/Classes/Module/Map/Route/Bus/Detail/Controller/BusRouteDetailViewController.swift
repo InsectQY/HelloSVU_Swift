@@ -74,6 +74,9 @@ extension BusRouteDetailViewController {
             automaticallyAdjustsScrollViewInsets = false
         }
         setUpCollectionView()
+        setUpTableView()
+        setUpTableViewHeader()
+        setUpTableViewFooter()
     }
     
     // MARK: - 设置 collecitonView
@@ -91,6 +94,15 @@ extension BusRouteDetailViewController {
         var offset = collectionView.contentOffset
         offset.x = CGFloat(selIndex) * ScreenW
         collectionView.setContentOffset(offset, animated: false)
+    }
+    
+    fileprivate func setUpTableView() {
+        
+        tableView.register(UINib(nibName: "BusRouteDetailCell", bundle: nil), forCellReuseIdentifier: BusRouteDetailCellID)
+        tableView.register(UINib(nibName: "BusRouteDetailCellHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: BusRouteDetailCellHeaderID)
+        tableView.register(UINib(nibName: "BusRouteDetailCellFooter", bundle: nil), forHeaderFooterViewReuseIdentifier: BusRouteDetailCellFooterID)
+        tableView.rowHeight = 25
+        tableView.reloadData()
     }
 }
 

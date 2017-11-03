@@ -10,10 +10,5 @@ import UIKit
 
 class BusLineCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
 
 }
