@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftTheme
 
 let kStatusBarH : CGFloat = 20
 let kNaviBarH : CGFloat = 44
@@ -38,3 +39,14 @@ let PFR13Font : UIFont = UIFont(name: "PingFangSC-Regular", size: 13)!
 let PFR12Font : UIFont = UIFont(name: "PingFangSC-Regular", size: 12)!
 let PFR11Font : UIFont = UIFont(name: "PingFangSC-Regular", size: 11)!
 let PFR10Font : UIFont = UIFont(name: "PingFangSC-Regular", size: 10)!
+
+// MARK: - 主题颜色
+enum GlobalPicker {
+    
+    static let backgroundColor: ThemeColorPicker = ["#fff", "#fff", "#fff", "#292b38"]
+    static let textColor: ThemeColorPicker = ["#000", "#000", "#000", "#ECF0F1"]
+    
+    static let barTextColors = ["#FFF", "#000", "#FFF", "#FFF"]
+    static let barTextColor = ThemeColorPicker.pickerWithColors(barTextColors)
+    static let barTintColor: ThemeColorPicker = ["#EB4F38", "#F4C600", "#56ABE4", "#01040D"]
+}

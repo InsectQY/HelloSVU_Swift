@@ -20,5 +20,6 @@ pod 'FDFullscreenPopGesture'
 pod 'Siren'
 pod 'DOPDropDownMenu-Enhanced'
 pod 'CDAlertView'
+pod 'SwiftTheme'
 
 end

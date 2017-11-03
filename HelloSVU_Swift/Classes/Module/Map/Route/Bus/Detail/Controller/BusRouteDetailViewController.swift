@@ -34,7 +34,7 @@ class BusRouteDetailViewController: UIViewController {
     fileprivate lazy var busSegment: [BusSegment] = {
         
         var busSegment = [BusSegment]()
-        for _ in 0 ..< route.transits[self.selIndex].segments.count {
+        for _ in 0 ..< route.transits[selIndex].segments.count {
             busSegment.append(BusSegment())
         }
         return busSegment
