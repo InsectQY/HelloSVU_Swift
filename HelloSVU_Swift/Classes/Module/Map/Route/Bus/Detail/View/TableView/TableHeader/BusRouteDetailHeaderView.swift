@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusRouteDetailHeaderView: UIView {
+class BusRouteDetailHeaderView: UIView,NibLoadable {
 
    
 

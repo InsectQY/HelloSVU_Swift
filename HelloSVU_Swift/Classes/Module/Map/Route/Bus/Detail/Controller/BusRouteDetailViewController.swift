@@ -10,6 +10,8 @@ import UIKit
 
 fileprivate let BusRouteDetailLineCellID = "BusRouteDetailLineCellID"
 fileprivate let BusRouteDetailCellID = "BusRouteDetailCellID"
+fileprivate let BusRouteDetailCellHeaderID = "BusRouteDetailCellHeaderID"
+fileprivate let BusRouteDetailCellFooterID = "BusRouteDetailCellFooterID"
 
 class BusRouteDetailViewController: UIViewController {
     
@@ -29,7 +31,6 @@ class BusRouteDetailViewController: UIViewController {
     /// 当前选择的公交线路
     fileprivate var selBusLineIndex = 0
     
-    
     // MARK: - LazyLoad
     fileprivate lazy var busSegment: [BusSegment] = {
         
@@ -38,6 +39,18 @@ class BusRouteDetailViewController: UIViewController {
             busSegment.append(BusSegment())
         }
         return busSegment
+    }()
+    
+    fileprivate lazy var headerView: BusRouteDetailHeaderView = {
+        
+        var headerView = BusRouteDetailHeaderView.loadFromNib()
+        return headerView
+    }()
+    
+    fileprivate lazy var footerView : BusRouteDetailFooterView = {
+        
+        var footerView = BusRouteDetailFooterView.loadFromNib()
+        return footerView
     }()
     
     // MARK: - LifeCycle
@@ -114,7 +127,7 @@ extension BusRouteDetailViewController : UICollectionViewDelegate {
 extension BusRouteDetailViewController : UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return route.transits[self.selIndex].segments.count - 1
+        return route.transits[selIndex].segments.count - 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -129,5 +142,71 @@ extension BusRouteDetailViewController : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BusRouteDetailCellID, for: indexPath) as! BusRouteDetailCell
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension BusRouteDetailViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 120
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BusRouteDetailCellHeaderID)
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BusRouteDetailCellFooterID)
+        return footerView
+    }
+}
+
+// MARK: - 设置UITableView头部尾部视图
+extension BusRouteDetailViewController {
+    
+    fileprivate func setUpTableViewHeader() {
+        
+        let contentHeader = UIView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 100))
+        headerView.frame = contentHeader.bounds
+        contentHeader.addSubview(headerView)
+        tableView.tableHeaderView = contentHeader
+    }
+    
+    fileprivate func setUpTableViewFooter() {
+        
+        let contentFooter = UIView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 40))
+        footerView.frame = contentFooter.bounds
+        contentFooter.addSubview(footerView)
+        tableView.tableFooterView = contentFooter
+    }
+}
+
+// MARK: - 展开关闭列表
+extension BusRouteDetailViewController {
+    
+    fileprivate func openSection(_ section : Int) {
+        tableView.insertRows(at: getIndexData(section), with: .fade)
+    }
+    
+    fileprivate func closeSection(_ section : Int) {
+        tableView.deleteRows(at: getIndexData(section), with: .fade)
+    }
+    
+    /// 获得需要展开的数据
+    fileprivate func getIndexData(_ section : Int) -> [IndexPath]{
+        
+        var indexArray = [IndexPath]()
+        for _ in 0 ..< route.transits[selIndex].segments[section].buslines[selBusLineIndex].viaBusStops.count {
+            indexArray.append(IndexPath(index: section))
+        }
+        return indexArray
     }
 }
