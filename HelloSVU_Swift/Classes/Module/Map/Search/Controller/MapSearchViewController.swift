@@ -12,7 +12,7 @@ import CDAlertView
 
 fileprivate let MapTipsCellID = "MapTipsCellID"
 
-class MapSearchViewController: UIViewController {
+class MapSearchViewController: BaseViewController {
     
     var searchBarText = ""
     
@@ -84,7 +84,6 @@ extension MapSearchViewController {
         }else {
             automaticallyAdjustsScrollViewInsets = false
         }
-        view.backgroundColor = .white
         view.addSubview(tableView)
         setUpNav()
     }

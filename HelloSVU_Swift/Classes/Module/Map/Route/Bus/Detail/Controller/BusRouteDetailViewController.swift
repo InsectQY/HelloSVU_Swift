@@ -13,7 +13,7 @@ fileprivate let BusRouteDetailCellID = "BusRouteDetailCellID"
 fileprivate let BusRouteDetailCellHeaderID = "BusRouteDetailCellHeaderID"
 fileprivate let BusRouteDetailCellFooterID = "BusRouteDetailCellFooterID"
 
-class BusRouteDetailViewController: UIViewController {
+class BusRouteDetailViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -73,7 +73,6 @@ extension BusRouteDetailViewController {
         }else {
             automaticallyAdjustsScrollViewInsets = false
         }
-        view.backgroundColor = .white
         setUpCollectionView()
     }
     

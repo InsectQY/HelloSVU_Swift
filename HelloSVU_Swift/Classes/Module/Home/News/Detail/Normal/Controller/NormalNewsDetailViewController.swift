@@ -10,7 +10,7 @@ import UIKit
 
 fileprivate let clickInfo = "myweb:imageClick:"
 
-class NormalNewsDetailViewController: UIViewController {
+class NormalNewsDetailViewController: BaseViewController {
     
     var url = ""
     fileprivate lazy var allImages = [String]()
@@ -37,7 +37,6 @@ extension NormalNewsDetailViewController {
     
     fileprivate func setUpUI() {
         
-        view.backgroundColor = .white
         view.addSubview(webView)
     }
 }

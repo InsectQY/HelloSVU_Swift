@@ -10,7 +10,7 @@ import UIKit
 
 let kTitleViewH : CGFloat = 30
 
-class RoutePageViewController: UIViewController {
+class RoutePageViewController: BaseViewController {
     
     @IBOutlet weak var originField: UITextField!
     @IBOutlet weak var destinationField: UITextField!
@@ -48,8 +48,7 @@ class RoutePageViewController: UIViewController {
 extension RoutePageViewController {
     
     fileprivate func setUpUI() {
-        
-        view.backgroundColor = .white
+
         fd_prefersNavigationBarHidden = true
         view.addSubview(pageView)
     }

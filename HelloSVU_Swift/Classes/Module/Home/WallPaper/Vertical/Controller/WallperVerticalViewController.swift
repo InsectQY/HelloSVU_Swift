@@ -16,7 +16,7 @@ fileprivate let kItemH = kItemW * 1.7
 
 fileprivate let ImgVerticalCellID = "ImgVerticalCellID"
 
-class WallperVerticalViewController: UIViewController {
+class WallperVerticalViewController: BaseViewController {
     
     var id = ""
     
@@ -54,7 +54,6 @@ extension WallperVerticalViewController {
     
     fileprivate func setUpUI() {
         
-        view.backgroundColor = .white
         view.addSubview(collectionView)
         if #available(iOS 11.0, *) {
             collectionView.contentInsetAdjustmentBehavior = .never

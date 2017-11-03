@@ -13,7 +13,7 @@ import FDFullscreenPopGesture
 
 fileprivate let kScrollViewH : CGFloat = ScreenH - 200
 
-class SlideNewsDetailViewController: UIViewController {
+class SlideNewsDetailViewController: BaseViewController {
     
     var url = ""
     
@@ -91,7 +91,6 @@ extension SlideNewsDetailViewController {
     
     fileprivate func setUpUI() {
         
-        view.backgroundColor = .black
         fd_prefersNavigationBarHidden = true
         view.addSubview(backBtn)
         view.addSubview(scrollView)

@@ -16,7 +16,7 @@ fileprivate let kItemH = kItemW * 1.618
 
 fileprivate let ImgCategoryCellID = "ImgCategoryCellID"
 
-class WallPaperCategoryViewController: UIViewController {
+class WallPaperCategoryViewController: BaseViewController {
     
     // MARK: - LazyLoad
     fileprivate lazy var categoryData = [ImgCategory?]()
@@ -51,7 +51,6 @@ extension WallPaperCategoryViewController {
     
     fileprivate func setUpUI() {
         
-        view.backgroundColor = .white
         view.addSubview(collectionView)
         if #available(iOS 11.0, *) {
             collectionView.contentInsetAdjustmentBehavior = .never

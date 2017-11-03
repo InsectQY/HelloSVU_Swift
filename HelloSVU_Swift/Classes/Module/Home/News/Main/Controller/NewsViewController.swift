@@ -11,7 +11,7 @@ import UIKit
 fileprivate let NewsAllChannels = "newsAllChannels"
 fileprivate let NewsCurrentChannels = "newsCurrentChannels"
 
-class NewsViewController: UIViewController {
+class NewsViewController: BaseViewController {
 
     lazy var channelsID: [String : String] = {
         
@@ -151,7 +151,6 @@ extension NewsViewController {
     
     fileprivate func setUpUI() {
         
-        view.backgroundColor = .white
         view.addSubview(slideView)
     }
     

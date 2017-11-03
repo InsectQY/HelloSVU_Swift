@@ -15,7 +15,7 @@ fileprivate let ForecastCellID = "ForecastCellID"
 fileprivate let WeatherCellH : CGFloat = 44
 fileprivate let WeatherNaviColor : UIColor = UIColor(r: 24, g: 51, b: 91)
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: BaseViewController {
     
     // MARK: - LazyLoad
     fileprivate lazy var locations : CLLocation = CLLocation()
@@ -107,7 +107,6 @@ extension WeatherViewController {
     fileprivate func setUpUI() {
         
         automaticallyAdjustsScrollViewInsets = false
-        view.backgroundColor = .white
         view.addSubview(bgView)
         bgView.addSubview(effectView)
         setUpRefresh()

@@ -13,7 +13,7 @@ fileprivate let OnePictureCellID = "OnePictureCellID"
 fileprivate let MultiPicutresCellID = "MultiPicutresCellID"
 fileprivate let BigImgCellID = "BigImgCellID"
 
-class NewsPartsViewController: UIViewController {
+class NewsPartsViewController: BaseViewController {
     
     var titleName = ""
     var channelID = ""
@@ -52,7 +52,6 @@ extension NewsPartsViewController {
     
     fileprivate func setUpUI() {
         
-        view.backgroundColor = .white
         view.addSubview(tableView)
     }
     

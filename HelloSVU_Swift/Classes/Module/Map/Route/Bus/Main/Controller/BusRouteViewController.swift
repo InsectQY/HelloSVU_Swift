@@ -13,7 +13,7 @@ import DOPDropDownMenu_Enhanced
 fileprivate let BusRouteCellID = "BusRouteCellID"
 fileprivate let kMapsDropDownMenuH : CGFloat = 40
 
-class BusRouteViewController: UIViewController {
+class BusRouteViewController: BaseViewController {
     
     // MARK: - LazyLoad
     fileprivate lazy var originPoint = AMapGeoPoint()
@@ -83,7 +83,6 @@ extension BusRouteViewController {
         }else {
             automaticallyAdjustsScrollViewInsets = false
         }
-        view.backgroundColor = .white
         view.addSubview(menu)
         view.addSubview(tableView)
     }

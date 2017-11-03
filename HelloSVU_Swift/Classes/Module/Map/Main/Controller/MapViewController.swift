@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MapViewController: UIViewController {
+class MapViewController: BaseViewController {
     
     var coordinate : CLLocationCoordinate2D?
     
@@ -56,7 +56,6 @@ extension MapViewController {
     
     fileprivate func setUpUI() {
         
-        view.backgroundColor = .white
         fd_prefersNavigationBarHidden = true
         view.addSubview(mapView)
         view.addSubview(toolView)

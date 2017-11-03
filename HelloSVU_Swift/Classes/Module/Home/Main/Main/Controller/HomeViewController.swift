@@ -15,7 +15,7 @@ fileprivate let notificationCellH : CGFloat = (ScreenH - 113) * 0.25
 
 let toolCellH : CGFloat = (ScreenH - 113) * 0.4
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     // MARK: - LazyLoad
     fileprivate lazy var homeData: [Home] = [Home]()
@@ -55,7 +55,6 @@ extension HomeViewController {
     
     fileprivate func setUpUI() {
         
-        view.backgroundColor = .white
         automaticallyAdjustsScrollViewInsets = false
         setUpTableHeaderView()
     }

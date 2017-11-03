@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WallPaperDetailViewController: UIViewController {
+class WallPaperDetailViewController: BaseViewController {
     
     var vertical: ImgVertical? {
         didSet {
@@ -102,7 +102,6 @@ extension WallPaperDetailViewController {
     
     fileprivate func setUpUI() {
         
-        view.backgroundColor = .white
         view.addSubview(imageView)
         /// 添加第一次试用指引
         showTip()
