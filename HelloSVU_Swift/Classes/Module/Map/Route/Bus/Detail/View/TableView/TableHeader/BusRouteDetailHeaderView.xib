@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -54,9 +54,6 @@
                         <constraint firstAttribute="height" constant="24" id="X7a-5p-yg9"/>
                     </constraints>
                     <state key="normal" image="man"/>
-                    <connections>
-                        <action selector="walkNaviBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="nlh-QL-US7"/>
-                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的位置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0I-0I-XTj">
                     <rect key="frame" x="55" y="17" width="64" height="22.5"/>
@@ -92,11 +89,9 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="distanceLabel" destination="Ujc-Ln-t9C" id="sRL-cl-yNj"/>
-                <outlet property="durationLabel" destination="TQ0-0o-Wpq" id="dIZ-Lm-KpZ"/>
-                <outlet property="myLocImage" destination="Lqw-ur-8LR" id="ccL-0z-vol"/>
-                <outlet property="originLabel" destination="j0I-0I-XTj" id="rGu-Km-THo"/>
-                <outlet property="walkNaviBtn" destination="9Uy-kh-4ea" id="jF9-Kj-MYf"/>
+                <outlet property="distanceLabel" destination="Ujc-Ln-t9C" id="4rV-9A-gmb"/>
+                <outlet property="durationLabel" destination="TQ0-0o-Wpq" id="veg-jy-IKk"/>
+                <outlet property="walkNaviBtn" destination="9Uy-kh-4ea" id="s1D-xI-Qjb"/>
             </connections>
             <point key="canvasLocation" x="16" y="-48"/>
         </view>
