@@ -11,6 +11,9 @@ import EZSwiftExtensions
 
 class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
 
+    /// 途径站点按钮点击回调
+    var viaBtnClick : (() -> ())?
+    
     @IBOutlet weak var busLineLabel: UILabel!
     @IBOutlet weak var departureStopLabel: UILabel!
     @IBOutlet weak var viaBusStopsBtn: UIButton!
@@ -25,15 +28,18 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
     lazy var busLines: [AMapBusLine] = {
         
         var busLines = [AMapBusLine]()
-        let s : NSString = ""
+        
         if let allLine = segment?.buslines {
             
             for line in allLine {
                 
-                if line.name.contains("(") {
-                    
+                let name = line.name as NSString
+                if name.contains("(") {
+                    name.substring(to: name.range(of: "(").location)
                 }
+                busLines.append(line)
             }
+            busLines.remove(at: info?.busLineIndex ?? 0)
         }
         return busLines
     }()
@@ -65,8 +71,17 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
                 viaBusStopsBtn.setTitle("\(String(describing: count))站", for: .normal)
                 viaBusStopsBtn.isEnabled = true
             } else {
+                
+                viaBusStopsBtn.setTitle("1站", for: .normal)
                 viaBusStopsBtn.isEnabled = false
             }
         }
+    }
+    
+    // MARK: - 途径站点点击事件
+    @IBAction func viaBtnDidClick(_ sender: UIButton) {
+        
+        sender.isSelected = !sender.isSelected
+        viaBtnClick?()
     }
 }

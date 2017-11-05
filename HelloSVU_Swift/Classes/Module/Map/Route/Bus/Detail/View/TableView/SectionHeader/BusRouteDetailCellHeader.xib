@@ -105,6 +105,9 @@
                             </state>
                             <state key="disabled" title="1站" image="clearImage"/>
                             <state key="selected" image="arrow_down"/>
+                            <connections>
+                                <action selector="viaBtnDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Qf0-GW-GFB"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSg-FU-0oA">
                             <rect key="frame" x="112" y="35" width="50" height="15"/>

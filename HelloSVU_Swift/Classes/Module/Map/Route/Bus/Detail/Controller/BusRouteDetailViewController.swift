@@ -173,6 +173,16 @@ extension BusRouteDetailViewController : UITableViewDelegate {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BusRouteDetailCellHeaderID) as! BusRouteDetailCellHeader
         headerView.info = busSegment[section]
         headerView.segment = route.transits[selIndex].segments[section]
+        
+        headerView.viaBtnClick = {[weak self] () in
+            
+            self?.busSegment[section].isOpen = !(self?.busSegment[section].isOpen ?? false)
+            if (self?.busSegment[section].isOpen ?? false) {
+                self?.openSection(section)
+            } else {
+                self?.closeSection(section)
+            }
+        }
         return headerView
     }
     
