@@ -170,13 +170,15 @@ extension BusRouteDetailViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BusRouteDetailCellHeaderID)
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BusRouteDetailCellHeaderID) as! BusRouteDetailCellHeader
+        headerView.info = busSegment[section]
+        headerView.segment = route.transits[selIndex].segments[section]
         return headerView
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
-        let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BusRouteDetailCellFooterID)
+        let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BusRouteDetailCellFooterID) as! BusRouteDetailCellFooter
         return footerView
     }
 }
