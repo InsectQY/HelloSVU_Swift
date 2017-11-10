@@ -72,6 +72,8 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
             } else {
                 viaBusStopsBtn.setTitle("1站", for: .normal)
             }
+            
+            checkEnterAndExitName()
         }
     }
     
@@ -80,5 +82,17 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
         
         sender.isSelected = !sender.isSelected
         viaBtnClick?()
+    }
+}
+
+extension BusRouteDetailCellHeader {
+    
+    // MARK: - 检查是否存在进站口和出站口
+    fileprivate func checkEnterAndExitName() {
+        
+        enterNameBtn.isHidden = (segment?.enterName.length != nil)
+        if segment?.enterName.length != nil {
+            enterNameBtn.setTitle("\(String(describing: segment?.enterName))出", for: .normal)
+        }
     }
 }
