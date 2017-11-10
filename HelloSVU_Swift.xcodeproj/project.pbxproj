@@ -1511,7 +1511,7 @@
 				TargetAttributes = {
 					E5D3B0BA1EBF3DB8003F6C14 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 2BU7DGY6CY;
+						DevelopmentTeam = F582B9KUG3;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1903,7 +1903,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 2BU7DGY6CY;
+				DEVELOPMENT_TEAM = F582B9KUG3;
 				INFOPLIST_FILE = HelloSVU_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1926,7 +1926,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 2BU7DGY6CY;
+				DEVELOPMENT_TEAM = F582B9KUG3;
 				GCC_OPTIMIZATION_LEVEL = 1;
 				INFOPLIST_FILE = HelloSVU_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
