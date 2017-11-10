@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setUpRootViewController()
         setUpAmapKey()
+        fitiOSEleven()
         return true
     }
 }
@@ -38,5 +39,12 @@ extension AppDelegate {
         
         AMapServices.shared().apiKey = "d9aa67c1ca9645f044bc2842e5fa1464"
         AMapServices.shared().enableHTTPS = true
+    }
+    
+    // MARK: - 适配 iOS 11
+    fileprivate func fitiOSEleven() {
+        if #available(iOS 11.0, *) {
+            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
+        }
     }
 }

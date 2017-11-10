@@ -59,11 +59,7 @@ extension WallperVerticalViewController {
     fileprivate func setUpUI() {
         
         view.addSubview(collectionView)
-        if #available(iOS 11.0, *) {
-            collectionView.contentInsetAdjustmentBehavior = .never
-        }else {
-            automaticallyAdjustsScrollViewInsets = false
-        }
+        automaticallyAdjustsScrollViewInsets = false
     }
     
     fileprivate func setUpRefresh() {

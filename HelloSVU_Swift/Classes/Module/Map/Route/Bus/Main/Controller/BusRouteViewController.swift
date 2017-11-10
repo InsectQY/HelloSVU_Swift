@@ -78,11 +78,7 @@ extension BusRouteViewController {
     
     fileprivate func setUpUI() {
         
-        if #available(iOS 11.0, *) {
-            tableView.contentInsetAdjustmentBehavior = .never
-        }else {
-            automaticallyAdjustsScrollViewInsets = false
-        }
+        automaticallyAdjustsScrollViewInsets = false
         view.addSubview(menu)
         view.addSubview(tableView)
     }

@@ -79,11 +79,7 @@ extension MapSearchViewController {
     
     fileprivate func setUpUI() {
         
-        if #available(iOS 11.0, *) {
-            tableView.contentInsetAdjustmentBehavior = .never
-        }else {
-            automaticallyAdjustsScrollViewInsets = false
-        }
+        automaticallyAdjustsScrollViewInsets = false
         view.addSubview(tableView)
         setUpNav()
     }

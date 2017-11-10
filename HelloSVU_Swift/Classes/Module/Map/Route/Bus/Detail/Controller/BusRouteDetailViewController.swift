@@ -66,13 +66,7 @@ extension BusRouteDetailViewController {
     
     fileprivate func setUpUI() {
         
-        if #available(iOS 11.0, *) {
-            
-            collectionView.contentInsetAdjustmentBehavior = .never
-            tableView.contentInsetAdjustmentBehavior = .never
-        }else {
-            automaticallyAdjustsScrollViewInsets = false
-        }
+        automaticallyAdjustsScrollViewInsets = false
         setUpCollectionView()
         setUpTableView()
         setUpTableViewHeader()
