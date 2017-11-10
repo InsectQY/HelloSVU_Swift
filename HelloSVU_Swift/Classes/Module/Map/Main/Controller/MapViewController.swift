@@ -8,6 +8,9 @@
 
 import UIKit
 
+fileprivate let kToolViewH : CGFloat = 44
+fileprivate let kLocateBtnH : CGFloat = 36
+
 class MapViewController: BaseViewController {
     
     var coordinate : CLLocationCoordinate2D?
@@ -28,14 +31,14 @@ class MapViewController: BaseViewController {
     
     fileprivate lazy var toolView: MapToolView = {
         
-        let toolView = MapToolView(CGRect(x: 0, y: ScreenH - 93, width: ScreenW, height: 44), ["线路站点","路线规划","一键返校"])
+        let toolView = MapToolView(CGRect(x: 0, y: ScreenH - kToolViewH - kTabBarH, width: ScreenW, height: kToolViewH), ["线路站点","路线规划","一键返校"])
         return toolView
     }()
     
     fileprivate lazy var locationBtn: UIButton = {
         
         let locationBtn = UIButton(type: .custom)
-        locationBtn.frame = CGRect(x: 8, y: toolView.y - 46 , w: 36, h: 36)
+        locationBtn.frame = CGRect(x: 8, y: toolView.y - kLocateBtnH - 10 , w: kLocateBtnH, h: kLocateBtnH)
         locationBtn.setBackgroundColor(.white, forState: .normal)
         locationBtn.setImage(UIImage(named: "location"), for: .normal)
         locationBtn.addTarget(self, action: #selector(locateBtnDidClick), for: .touchUpInside)
