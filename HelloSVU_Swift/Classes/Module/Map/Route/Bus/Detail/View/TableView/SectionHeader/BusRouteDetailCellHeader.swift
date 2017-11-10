@@ -66,14 +66,11 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
             
             // 设置途径站点
             let count = segment?.buslines[busLineIndex].viaBusStops.count ?? 0
+            viaBusStopsBtn.isEnabled = count > 0
             if count > 0 {
-                
                 viaBusStopsBtn.setTitle("\(String(describing: count))站", for: .normal)
-                viaBusStopsBtn.isEnabled = true
             } else {
-                
                 viaBusStopsBtn.setTitle("1站", for: .normal)
-                viaBusStopsBtn.isEnabled = false
             }
         }
     }

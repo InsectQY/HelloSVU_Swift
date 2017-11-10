@@ -104,6 +104,14 @@ extension BusRouteDetailViewController {
         tableView.rowHeight = 25
         tableView.reloadData()
     }
+    
+    // MARK: - 刷新界面所有数据
+    fileprivate func reloadAllData() {
+        
+        setUpTableViewHeader()
+        setUpTableViewFooter()
+        tableView.reloadData()
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -130,6 +138,11 @@ extension BusRouteDetailViewController : UICollectionViewDelegate {
             
             selIndex = Int(collectionView.contentOffset.x / ScreenW)
             pageControl.currentPage = selIndex
+            busSegment.removeAll()
+            for _ in 0 ..< route.transits[selIndex].segments.count {
+                busSegment.append(BusSegment())
+            }
+            reloadAllData()
         }
     }
 }
@@ -189,6 +202,10 @@ extension BusRouteDetailViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
         let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BusRouteDetailCellFooterID) as! BusRouteDetailCellFooter
+        footerView.info = busSegment[section];
+        footerView.segment = route.transits[selIndex].segments[section];
+        // 加一是为了加载到最后一组只有步行路线的数据(默认不取最后一组)
+        footerView.walking = route.transits[selIndex].segments[section + 1].walking;
         return footerView
     }
 }
