@@ -52,11 +52,11 @@ class SingleNews:  HandyJSON{
             if self.infoType == .SignalImg {
                 return 136
             }else if self.infoType == .NoImg {
-                return title.heightWithConstrainedWidth(ScreenW - 20, titleFont)
+                return title.sizeWithConstrainedWidth(ScreenW - 20, titleFont).height
             }else if self.infoType == .MultiImg {
                 
                 let imageH = (ScreenW - 40) / 3 * 0.75
-                return title.heightWithConstrainedWidth(ScreenW - 20, titleFont) + imageH + 56
+                return title.sizeWithConstrainedWidth(ScreenW - 20, titleFont).height + imageH + 56
             }
             return 120
         }

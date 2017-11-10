@@ -18,7 +18,7 @@ class SVUAnimation: NSObject {
     ///   - hidden: 是否隐藏
     ///   - animated: 是否需要动画
     ///   - completion: 加载完毕
-    func setBottomView(_ view:UIView,viewHeight:CGFloat,hidden:Bool,animated:Bool,completion:(() -> ())?) {
+    func setBottomView(_ view:UIView, viewHeight:CGFloat, hidden:Bool, animated:Bool, completion:(() -> ())?) {
         
         if view.isHidden == hidden {return}
         

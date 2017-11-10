@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00213DAA1FB57BCC003BCEC8 /* SVUAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00213DA91FB57BCC003BCEC8 /* SVUAnimation.swift */; };
+		00213DAD1FB57F0C003BCEC8 /* BusLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00213DAB1FB57F0C003BCEC8 /* BusLineCell.swift */; };
+		00213DAE1FB57F0C003BCEC8 /* BusLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00213DAC1FB57F0C003BCEC8 /* BusLineCell.xib */; };
 		C5ED06F964BE6FD7CA4D89F3 /* Pods_HelloSVU_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F5DAFD7A62578FB3CD3CD3 /* Pods_HelloSVU_Swift.framework */; };
 		E514B38A1F80C2D6002431CE /* SlideNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514B3891F80C2D6002431CE /* SlideNewsDetailViewController.swift */; };
 		E514B38D1F80DB04002431CE /* SVUPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514B38C1F80DB04002431CE /* SVUPhotoBrowser.swift */; };
@@ -44,10 +46,8 @@
 		E55DDDBA1F94D2560057FCBD /* AllBusLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDB81F94D2460057FCBD /* AllBusLineCell.xib */; };
 		E55DDDBB1F94D2590057FCBD /* BusRouteDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDB91F94D24B0057FCBD /* BusRouteDetailCell.xib */; };
 		E55DDDBE1F94D2D10057FCBD /* BusRouteDetailCellHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDBD1F94D2B40057FCBD /* BusRouteDetailCellHeader.xib */; };
-		E55DDDBF1F94D2D30057FCBD /* BusLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDBC1F94D2B40057FCBD /* BusLineCell.xib */; };
 		E55DDDC11F94D2F70057FCBD /* BusRouteDetailCellFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DDDC01F94D2EC0057FCBD /* BusRouteDetailCellFooter.xib */; };
 		E55DDDC31F94D3350057FCBD /* BusRouteDetailCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDC21F94D3350057FCBD /* BusRouteDetailCellHeader.swift */; };
-		E55DDDC51F94D3720057FCBD /* BusLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDC41F94D3720057FCBD /* BusLineCell.swift */; };
 		E55DDDC71F94D3A50057FCBD /* BusRouteDetailCellFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDC61F94D3A50057FCBD /* BusRouteDetailCellFooter.swift */; };
 		E55DDDC91F94D3BF0057FCBD /* BusRouteDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDC81F94D3BF0057FCBD /* BusRouteDetailCell.swift */; };
 		E55DDDCB1F94D3CC0057FCBD /* AllBusLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DDDCA1F94D3CC0057FCBD /* AllBusLineCell.swift */; };
@@ -148,6 +148,8 @@
 
 /* Begin PBXFileReference section */
 		00213DA91FB57BCC003BCEC8 /* SVUAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVUAnimation.swift; sourceTree = "<group>"; };
+		00213DAB1FB57F0C003BCEC8 /* BusLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLineCell.swift; sourceTree = "<group>"; };
+		00213DAC1FB57F0C003BCEC8 /* BusLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusLineCell.xib; sourceTree = "<group>"; };
 		8F0D10180EDFA12A4689FD7E /* Pods-HelloSVU_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloSVU_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloSVU_Swift/Pods-HelloSVU_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		E4F5DAFD7A62578FB3CD3CD3 /* Pods_HelloSVU_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloSVU_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50971FE1F829DAB004BD522 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -199,11 +201,9 @@
 		E55DDDB61F94D2080057FCBD /* BusRouteDetailFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteDetailFooterView.xib; sourceTree = "<group>"; };
 		E55DDDB81F94D2460057FCBD /* AllBusLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllBusLineCell.xib; sourceTree = "<group>"; };
 		E55DDDB91F94D24B0057FCBD /* BusRouteDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteDetailCell.xib; sourceTree = "<group>"; };
-		E55DDDBC1F94D2B40057FCBD /* BusLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusLineCell.xib; sourceTree = "<group>"; };
 		E55DDDBD1F94D2B40057FCBD /* BusRouteDetailCellHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteDetailCellHeader.xib; sourceTree = "<group>"; };
 		E55DDDC01F94D2EC0057FCBD /* BusRouteDetailCellFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusRouteDetailCellFooter.xib; sourceTree = "<group>"; };
 		E55DDDC21F94D3350057FCBD /* BusRouteDetailCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteDetailCellHeader.swift; sourceTree = "<group>"; };
-		E55DDDC41F94D3720057FCBD /* BusLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLineCell.swift; sourceTree = "<group>"; };
 		E55DDDC61F94D3A50057FCBD /* BusRouteDetailCellFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteDetailCellFooter.swift; sourceTree = "<group>"; };
 		E55DDDC81F94D3BF0057FCBD /* BusRouteDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteDetailCell.swift; sourceTree = "<group>"; };
 		E55DDDCA1F94D3CC0057FCBD /* AllBusLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBusLineCell.swift; sourceTree = "<group>"; };
@@ -661,8 +661,8 @@
 			children = (
 				E55DDDC21F94D3350057FCBD /* BusRouteDetailCellHeader.swift */,
 				E55DDDBD1F94D2B40057FCBD /* BusRouteDetailCellHeader.xib */,
-				E55DDDC41F94D3720057FCBD /* BusLineCell.swift */,
-				E55DDDBC1F94D2B40057FCBD /* BusLineCell.xib */,
+				00213DAB1FB57F0C003BCEC8 /* BusLineCell.swift */,
+				00213DAC1FB57F0C003BCEC8 /* BusLineCell.xib */,
 			);
 			path = SectionHeader;
 			sourceTree = "<group>";
@@ -1562,6 +1562,7 @@
 				E5539F411F7E6C3400139E17 /* NoPictureCell.xib in Resources */,
 				E57002A81F7CCAE2006FC640 /* .gitignore in Resources */,
 				E570028E1F7CCA63006FC640 /* .gitignore in Resources */,
+				00213DAE1FB57F0C003BCEC8 /* BusLineCell.xib in Resources */,
 				E55DDDBE1F94D2D10057FCBD /* BusRouteDetailCellHeader.xib in Resources */,
 				E57FCCC41ED43D5800FE5184 /* NotificationCell.xib in Resources */,
 				E57002A91F7CCAE4006FC640 /* .gitignore in Resources */,
@@ -1591,7 +1592,6 @@
 				E57002AB1F7CCAF1006FC640 /* .gitignore in Resources */,
 				E55DDDBB1F94D2590057FCBD /* BusRouteDetailCell.xib in Resources */,
 				E52B24EC1EBF4A3A00183DA6 /* QYCycleCell.xib in Resources */,
-				E55DDDBF1F94D2D30057FCBD /* BusLineCell.xib in Resources */,
 				E57002891F7CCA4A006FC640 /* .gitignore in Resources */,
 				E55DDDAA1F94C64C0057FCBD /* BusRouteDetailLineCell.xib in Resources */,
 				E55DDDBA1F94D2560057FCBD /* AllBusLineCell.xib in Resources */,
@@ -1705,6 +1705,7 @@
 				E52B24EB1EBF4A3A00183DA6 /* QYCycleCell.swift in Sources */,
 				E5BD15AA1ED4442800F06039 /* WeatherViewController.swift in Sources */,
 				E57FCCC61ED43E6400FE5184 /* TabBarController.swift in Sources */,
+				00213DAD1FB57F0C003BCEC8 /* BusLineCell.swift in Sources */,
 				E5539F521F7E711900139E17 /* Style.swift in Sources */,
 				E5889A321FAC90C300557639 /* SVUView.swift in Sources */,
 				E52B24F11EBF4AF800183DA6 /* KingfisherExtension.swift in Sources */,
@@ -1715,7 +1716,6 @@
 				E5539F431F7E6C4300139E17 /* NoPictureCell.swift in Sources */,
 				E57FCCC21ED43D4C00FE5184 /* NotificationCell.swift in Sources */,
 				E5FAEC571F7BC075006CC525 /* ImgCategory.swift in Sources */,
-				E55DDDC51F94D3720057FCBD /* BusLineCell.swift in Sources */,
 				E5FAECC51F7BC4EB006CC525 /* JFContextItem.swift in Sources */,
 				E55DDDC91F94D3BF0057FCBD /* BusRouteDetailCell.swift in Sources */,
 				E55DDDC31F94D3350057FCBD /* BusRouteDetailCellHeader.swift in Sources */,

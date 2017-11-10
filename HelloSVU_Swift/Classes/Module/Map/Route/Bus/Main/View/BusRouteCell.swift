@@ -100,7 +100,7 @@ class BusRouteCell: UITableViewCell {
         
         get {
             
-            let height = normalBusName?.heightWithConstrainedWidth(ScreenW - 20, PFR16Font) ?? 0
+            let height = normalBusName?.sizeWithConstrainedWidth(ScreenW - 20, PFR16Font).height ?? 0
             return (height + 35) * 2
         }
     }

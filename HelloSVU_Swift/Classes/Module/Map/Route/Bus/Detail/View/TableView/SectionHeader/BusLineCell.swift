@@ -2,13 +2,20 @@
 //  BusLineCell.swift
 //  HelloSVU_Swift
 //
-//  Created by Insect on 2017/10/16.
+//  Created by a on 2017/11/10.
 //  Copyright © 2017年 Insect. All rights reserved.
 //
 
 import UIKit
 
-class BusLineCell: UITableViewCell {
+class BusLineCell: UICollectionViewCell {
 
-
+    @IBOutlet weak var busLineLabel: UILabel!
+    
+    var busLine : String? {
+        
+        didSet {
+            busLineLabel.text = busLine
+        }
+    }
 }

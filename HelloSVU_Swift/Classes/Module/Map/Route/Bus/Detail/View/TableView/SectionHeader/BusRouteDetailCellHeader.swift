@@ -9,6 +9,8 @@
 import UIKit
 import EZSwiftExtensions
 
+fileprivate let BusLineCellID = "BusLineCellID"
+
 class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
 
     /// 途径站点按钮点击回调
@@ -22,7 +24,7 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
     @IBOutlet weak var startTimeLabel: UILabel!
     @IBOutlet weak var endTimeLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var flowLayout: MaxInteritemSpacingFlowLayout!
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var timeContentView: UIView!
     @IBOutlet weak var otherBusLineView: UIView!
     
@@ -106,6 +108,7 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
             }
             
             checkEnterAndExitName()
+            checkOtherBusLines()
         }
     }
     
@@ -126,5 +129,55 @@ extension BusRouteDetailCellHeader {
         if segment?.enterName.length != nil {
             enterNameBtn.setTitle("\(String(describing: segment?.enterName))出", for: .normal)
         }
+    }
+    
+    // MARK: - 检查是否存在其他线路
+    fileprivate func checkOtherBusLines() {
+        
+        otherBusLineView.isHidden = (segment?.buslines.count ?? 0) > 1
+        if (segment?.buslines.count ?? 0) > 1 {
+            setUpCollectionView()
+        }
+    }
+    
+    // MARK: - 设置 CollectionView
+    fileprivate func setUpCollectionView() {
+        
+        flowLayout.minimumLineSpacing = 3
+        collectionView.register(UINib(nibName: "BusLineCell", bundle: nil), forCellWithReuseIdentifier: BusLineCellID)
+        collectionView.reloadData()
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension BusRouteDetailCellHeader : UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return busLines.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BusLineCellID, for: indexPath) as! BusLineCell
+        cell.busLine = busLines[indexPath.item].name
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension BusRouteDetailCellHeader : UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let size = busLines[indexPath.item].name.sizeWithConstrainedWidth(150, PFR12Font)
+        return CGSize(width: size.width + 10, height: 15)
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension BusRouteDetailCellHeader : UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 }
