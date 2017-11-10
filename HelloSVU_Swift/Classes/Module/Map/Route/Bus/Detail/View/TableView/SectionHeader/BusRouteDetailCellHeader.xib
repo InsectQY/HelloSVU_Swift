@@ -238,6 +238,7 @@
                 <outlet property="enterNameBtn" destination="WSg-FU-0oA" id="ImR-Vp-nOI"/>
                 <outlet property="flowLayout" destination="f7c-lh-HqE" id="rm3-xk-nDd"/>
                 <outlet property="otherBusLineView" destination="TQQ-ma-tXI" id="gbH-An-HRN"/>
+                <outlet property="routeTypeImage" destination="JCt-kw-JU4" id="dlP-u8-Lcw"/>
                 <outlet property="startTimeLabel" destination="q03-tg-stg" id="FAe-ts-R82"/>
                 <outlet property="timeContentView" destination="APK-KE-ztd" id="BvC-cX-TFc"/>
                 <outlet property="viaBusStopsBtn" destination="d12-Os-7qF" id="xpi-5C-FYV"/>

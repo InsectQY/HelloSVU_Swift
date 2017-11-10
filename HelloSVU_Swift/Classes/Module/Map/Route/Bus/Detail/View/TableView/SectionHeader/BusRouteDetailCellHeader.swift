@@ -14,6 +14,7 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
     /// 途径站点按钮点击回调
     var viaBtnClick : (() -> ())?
     
+    @IBOutlet weak var routeTypeImage: UIImageView!
     @IBOutlet weak var busLineLabel: UILabel!
     @IBOutlet weak var departureStopLabel: UILabel!
     @IBOutlet weak var viaBusStopsBtn: UIButton!
@@ -71,6 +72,31 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
                 viaBusStopsBtn.setTitle("\(String(describing: count))站", for: .normal)
             } else {
                 viaBusStopsBtn.setTitle("1站", for: .normal)
+            }
+            
+            // 检查首末班车事件
+            if let startTime = segment?.buslines[busLineIndex].startTime {
+                
+                timeContentView.isHidden = !viaBusStopsBtn.isSelected
+                let startTime = startTime as NSString
+                let startHour = startTime.substring(to: 2)
+                let startMinute = startTime.substring(from: 2)
+                startTimeLabel.text = "首班   \(startHour):\(startMinute)"
+            }
+            
+            if let endTime = segment?.buslines[busLineIndex].endTime {
+                
+                timeContentView.isHidden = !viaBusStopsBtn.isSelected
+                let endTime = endTime as NSString
+                let endHour = endTime.substring(to: 2)
+                let endMinute = endTime.substring(from: 2)
+                endTimeLabel.text = "末班   \(endHour):\(endMinute)"
+            }
+            
+            // 设置交通工具类型图片
+            if let type = segment?.buslines[busLineIndex].type {
+                let type = type as NSString
+                routeTypeImage.image = type.contains("地铁") ? #imageLiteral(resourceName: "subway") : #imageLiteral(resourceName: "bus")
             }
             
             checkEnterAndExitName()
