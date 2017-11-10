@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00213DAA1FB57BCC003BCEC8 /* SVUAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00213DA91FB57BCC003BCEC8 /* SVUAnimation.swift */; };
 		C5ED06F964BE6FD7CA4D89F3 /* Pods_HelloSVU_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F5DAFD7A62578FB3CD3CD3 /* Pods_HelloSVU_Swift.framework */; };
 		E514B38A1F80C2D6002431CE /* SlideNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514B3891F80C2D6002431CE /* SlideNewsDetailViewController.swift */; };
 		E514B38D1F80DB04002431CE /* SVUPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514B38C1F80DB04002431CE /* SVUPhotoBrowser.swift */; };
@@ -146,6 +147,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00213DA91FB57BCC003BCEC8 /* SVUAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVUAnimation.swift; sourceTree = "<group>"; };
 		8F0D10180EDFA12A4689FD7E /* Pods-HelloSVU_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloSVU_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloSVU_Swift/Pods-HelloSVU_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		E4F5DAFD7A62578FB3CD3CD3 /* Pods_HelloSVU_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloSVU_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50971FE1F829DAB004BD522 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -319,6 +321,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00213DA81FB57B9E003BCEC8 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				00213DA91FB57BCC003BCEC8 /* SVUAnimation.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		3B0E85D4B610A4926438D1EA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,6 +441,7 @@
 		E52B24DF1EBF46B500183DA6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				00213DA81FB57B9E003BCEC8 /* Animation */,
 				E5889A371FAC9D3100557639 /* Calculate */,
 				E5BC270C1F82AC03005BE425 /* QYPageView */,
 				E514B38B1F80DAD6002431CE /* SVUPhotoBrowser */,
@@ -1771,6 +1782,7 @@
 				E52B24E21EBF46B500183DA6 /* QYRequestTool.swift in Sources */,
 				E55DDDC71F94D3A50057FCBD /* BusRouteDetailCellFooter.swift in Sources */,
 				E514B38A1F80C2D6002431CE /* SlideNewsDetailViewController.swift in Sources */,
+				00213DAA1FB57BCC003BCEC8 /* SVUAnimation.swift in Sources */,
 				E5FAECBA1F7BC35E006CC525 /* WallPaperDetailViewController.swift in Sources */,
 				E55B28AB1F8237C800C4191A /* MapToolView.swift in Sources */,
 				E55DDDD11F94D51B0057FCBD /* BusSegment.swift in Sources */,
