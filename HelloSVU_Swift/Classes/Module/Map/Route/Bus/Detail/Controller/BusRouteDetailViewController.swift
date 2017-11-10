@@ -230,8 +230,8 @@ extension BusRouteDetailViewController {
     fileprivate func getIndexData(_ section : Int) -> [IndexPath]{
         
         var indexArray = [IndexPath]()
-        for _ in 0 ..< route.transits[selIndex].segments[section].buslines[selBusLineIndex].viaBusStops.count {
-            indexArray.append(IndexPath(index: section))
+        for i in 0 ..< route.transits[selIndex].segments[section].buslines[selBusLineIndex].viaBusStops.count {
+            indexArray.append(IndexPath(row: i, section: section))
         }
         return indexArray
     }
