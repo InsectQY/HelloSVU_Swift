@@ -22,7 +22,7 @@ class MapSearchViewController: BaseViewController {
     fileprivate lazy var tableView: UITableView = {
         
         let tableView = UITableView(frame: UIScreen.main.bounds)
-        tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
+        tableView.contentInset = UIEdgeInsetsMake(kTopH, 0, 0, 0)
         tableView.rowHeight = 70
         tableView.delegate = self
         tableView.dataSource = self

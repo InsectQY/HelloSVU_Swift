@@ -9,8 +9,9 @@
 import UIKit
 import SwiftTheme
 
-let kStatusBarH : CGFloat = 20
+let kStatusBarH : CGFloat = UIApplication.shared.statusBarFrame.size.height
 let kNaviBarH : CGFloat = 44
+let kTopH = kStatusBarH + kNaviBarH
 let ScreenW : CGFloat = UIScreen.main.bounds.width
 let ScreenH : CGFloat = UIScreen.main.bounds.height
 

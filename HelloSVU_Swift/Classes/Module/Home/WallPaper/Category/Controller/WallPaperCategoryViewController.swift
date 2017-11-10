@@ -38,7 +38,7 @@ class WallPaperCategoryViewController: BaseViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "ImgCategoryCell", bundle: nil), forCellWithReuseIdentifier: ImgCategoryCellID)
-        collectionView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
+        collectionView.contentInset = UIEdgeInsetsMake(kTopH, 0, 0, 0)
         return collectionView
     }()
     

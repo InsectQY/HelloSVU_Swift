@@ -50,7 +50,6 @@ class TabBarController: UITabBarController {
 extension TabBarController {
     
     fileprivate func seUpTabBarAttr() {
-        
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.gray], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.darkGray], for: .selected)
     }

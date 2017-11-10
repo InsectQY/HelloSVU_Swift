@@ -40,7 +40,7 @@ class WallperVerticalViewController: BaseViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "ImgVerticalCell", bundle: nil), forCellWithReuseIdentifier: ImgVerticalCellID)
-        collectionView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
+        collectionView.contentInset = UIEdgeInsetsMake(kTopH, 0, 0, 0)
         return collectionView
     }()
     

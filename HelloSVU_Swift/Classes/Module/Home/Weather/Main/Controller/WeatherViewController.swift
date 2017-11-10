@@ -28,7 +28,7 @@ class WeatherViewController: BaseViewController {
         tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: "ForecastCell", bundle: nil), forCellReuseIdentifier: ForecastCellID)
-        tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
+        tableView.contentInset = UIEdgeInsetsMake(kTopH, 0, 0, 0)
         tableView.showsVerticalScrollIndicator = false
         tableView.backgroundColor = .clear
         tableView.rowHeight = WeatherCellH
