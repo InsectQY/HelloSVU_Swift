@@ -78,19 +78,25 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
             if let startTime = segment?.buslines[busLineIndex].startTime {
                 
                 timeContentView.isHidden = !viaBusStopsBtn.isSelected
-                let startTime = startTime as NSString
-                let startHour = startTime.substring(to: 2)
-                let startMinute = startTime.substring(from: 2)
-                startTimeLabel.text = "首班   \(startHour):\(startMinute)"
+                if startTime.length > 2 {
+                    
+                    let startTime = startTime as NSString
+                    let startHour = startTime.substring(to: 2)
+                    let startMinute = startTime.substring(from: 2)
+                    startTimeLabel.text = "首班   \(startHour):\(startMinute)"
+                }
             }
             
             if let endTime = segment?.buslines[busLineIndex].endTime {
                 
                 timeContentView.isHidden = !viaBusStopsBtn.isSelected
-                let endTime = endTime as NSString
-                let endHour = endTime.substring(to: 2)
-                let endMinute = endTime.substring(from: 2)
-                endTimeLabel.text = "末班   \(endHour):\(endMinute)"
+                if endTime.length > 2 {
+                    
+                    let endTime = endTime as NSString
+                    let endHour = endTime.substring(to: 2)
+                    let endMinute = endTime.substring(from: 2)
+                    endTimeLabel.text = "末班   \(endHour):\(endMinute)"
+                }
             }
             
             // 设置交通工具类型图片
