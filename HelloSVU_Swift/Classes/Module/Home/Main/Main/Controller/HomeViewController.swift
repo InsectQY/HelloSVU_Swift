@@ -10,8 +10,8 @@ import UIKit
 
 fileprivate let NotificationCellID = "NotificationCellID"
 fileprivate let HomeToolContentCellID = "HomeToolContentCellID"
-fileprivate let cycleViewH : CGFloat = (ScreenH - 113) * 0.35
-fileprivate let notificationCellH : CGFloat = (ScreenH - 113) * 0.25
+fileprivate let cycleViewH : CGFloat = (ScreenH - kTabBarH - kTabBarH) * 0.35
+fileprivate let notificationCellH : CGFloat = (ScreenH - kTabBarH - kTabBarH) * 0.25
 
 let toolCellH : CGFloat = (ScreenH - 113) * 0.4
 
@@ -28,7 +28,7 @@ class HomeViewController: BaseViewController {
     }()
     
     fileprivate lazy var tableView: UITableView = {
-        
+
         let tableView = UITableView(frame: UIScreen.main.bounds)
         tableView.dataSource = self
         tableView.delegate =  self

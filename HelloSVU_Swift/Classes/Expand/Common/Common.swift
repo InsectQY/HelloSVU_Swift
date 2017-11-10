@@ -11,6 +11,7 @@ import SwiftTheme
 
 let kStatusBarH : CGFloat = UIApplication.shared.statusBarFrame.size.height
 let kNaviBarH : CGFloat = 44
+let kTabBarH : CGFloat = AppDelegate.tabBarContoller.tabBar.size.height
 let kTopH = kStatusBarH + kNaviBarH
 let ScreenW : CGFloat = UIScreen.main.bounds.width
 let ScreenH : CGFloat = UIScreen.main.bounds.height

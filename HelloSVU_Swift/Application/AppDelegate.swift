@@ -13,7 +13,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    static let tabBarContoller = TabBarController()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         setUpRootViewController()
@@ -30,7 +31,7 @@ extension AppDelegate {
     fileprivate func setUpRootViewController() {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = TabBarController()
+        window?.rootViewController = AppDelegate.tabBarContoller
         window?.makeKeyAndVisible()
     }
     
