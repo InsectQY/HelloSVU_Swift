@@ -8,10 +8,15 @@
 
 import UIKit
 
+/// cell 之间间距
 fileprivate let kItemMargin : CGFloat = 5
+/// 左右间距
 fileprivate let kEdge : CGFloat = 4
+/// 每行最大列数
 fileprivate let kMaxCol : CGFloat = 3
+/// cell 宽度
 fileprivate let kItemW = (ScreenW - (2 * kEdge) - ((kMaxCol - 1) * kItemMargin)) / kMaxCol
+/// cell 高度
 fileprivate let kItemH = kItemW * 1.7
 
 fileprivate let ImgVerticalCellID = "ImgVerticalCellID"
@@ -21,7 +26,6 @@ class WallperVerticalViewController: BaseViewController {
     var id = ""
     
     // MARK: - LazyLoad
-    
     fileprivate lazy var verticalData = [ImgVertical?]()
     
     fileprivate lazy var collectionView: UICollectionView = {

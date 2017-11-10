@@ -8,10 +8,15 @@
 
 import UIKit
 
+/// cell 之间间距
 fileprivate let kItemMargin : CGFloat = 20
+/// 左右间距
 fileprivate let kEdge : CGFloat = 10
+/// 每行最大列数
 fileprivate let kMaxCol : CGFloat = 3
+/// cell 宽度
 fileprivate let kItemW = (ScreenW - (2 * kEdge) - ((kMaxCol - 1) * kItemMargin)) / kMaxCol
+/// cell 高度
 fileprivate let kItemH = kItemW * 1.618
 
 fileprivate let ImgCategoryCellID = "ImgCategoryCellID"
