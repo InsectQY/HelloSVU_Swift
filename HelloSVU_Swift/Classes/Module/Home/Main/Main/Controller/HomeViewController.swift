@@ -72,7 +72,7 @@ extension HomeViewController {
 // MARK: - 加载首页底部数据
 extension HomeViewController {
     
-    func loadHomeData() {
+    fileprivate func loadHomeData() {
         
         if let path = Bundle.main.path(forResource: "Home.plist", ofType: nil), let home = NSArray(contentsOfFile: path) as? [[String: Any]] {
             
