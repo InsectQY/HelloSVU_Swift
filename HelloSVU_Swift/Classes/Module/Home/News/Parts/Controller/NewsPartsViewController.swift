@@ -57,8 +57,8 @@ extension NewsPartsViewController {
     
     fileprivate func setUpRefresh() {
         
-        tableView.mj_header = SVURefreshHeader.init(refreshingTarget: self, refreshingAction: #selector(loadNewInfosData))
-        tableView.mj_footer = SVURefreshFooter.init(refreshingTarget: self, refreshingAction: #selector(loadMoreInfosData))
+        tableView.mj_header = SVURefreshHeader(refreshingTarget: self, refreshingAction: #selector(loadNewInfosData))
+        tableView.mj_footer = SVURefreshFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreInfosData))
         tableView.mj_header.beginRefreshing()
     }
 }
@@ -87,9 +87,8 @@ extension NewsPartsViewController {
         parameters["page"] = nowPage
         let NewsURL = channelID == "就是名字" ? News.normal : News.channelID
         QYRequestTool.requestData(.GET, NewsURL, parameters, successComplete: {[weak self] (JSON) in
-            
-            let data = [SingleNews].deserialize(from: JSON[0]["item"].description)
-            if let data = data {
+
+            if let data = [SingleNews].deserialize(from: JSON[0]["item"].description) {
                 
                 let total = JSON[0]["totalPage"].description
                 if self?.nowPage == Int(total) {
@@ -115,9 +114,8 @@ extension NewsPartsViewController {
         parameters["page"] = nowPage
         let NewsURL = channelID == "就是名字" ? News.normal : News.channelID
         QYRequestTool.requestData(.GET, NewsURL, parameters, successComplete: {[weak self] (JSON) in
-            
-            let data = [SingleNews].deserialize(from: JSON[0]["item"].description)
-            if let data = data {
+
+            if let data = [SingleNews].deserialize(from: JSON[0]["item"].description) {
                 
                 let total = JSON[0]["totalPage"].description
                 if self?.nowPage == Int(total) {

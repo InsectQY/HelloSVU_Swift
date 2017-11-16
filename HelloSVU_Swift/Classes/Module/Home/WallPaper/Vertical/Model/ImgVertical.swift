@@ -11,7 +11,6 @@ import HandyJSON
 
 class ImgVertical: HandyJSON {
     
-    
     /// 小图
     var thumb = ""
     /// 中图(也很大)

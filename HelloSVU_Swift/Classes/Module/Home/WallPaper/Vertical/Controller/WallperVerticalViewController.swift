@@ -64,8 +64,8 @@ extension WallperVerticalViewController {
     
     fileprivate func setUpRefresh() {
         
-        collectionView.mj_header = SVURefreshHeader.init(refreshingTarget: self, refreshingAction: #selector(loadNewVerticalData))
-        collectionView.mj_footer = SVURefreshFooter.init(refreshingTarget: self, refreshingAction: #selector(loadMoreVerticalData))
+        collectionView.mj_header = SVURefreshHeader(refreshingTarget: self, refreshingAction: #selector(loadNewVerticalData))
+        collectionView.mj_footer = SVURefreshFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreVerticalData))
         collectionView.mj_header.beginRefreshing()
     }
 }
@@ -80,8 +80,7 @@ extension WallperVerticalViewController {
                                            "skip" : 0]
         QYRequestTool.requestData(.GET, "\(imgCategoryURL)/\(id)/vertical", parameters, successComplete: {[weak self] (JSON) in
             
-            let data = [ImgVertical].deserialize(from:JSON["res"]["vertical"].description)
-            if let data = data {
+            if let data = [ImgVertical].deserialize(from:JSON["res"]["vertical"].description) {
                 self?.verticalData = data
                 self?.collectionView.reloadData()
                 self?.collectionView.mj_header.endRefreshing()
@@ -100,8 +99,7 @@ extension WallperVerticalViewController {
                                            "skip" : verticalData.count]
         QYRequestTool.requestData(.GET, "\(imgCategoryURL)/\(id)/vertical", parameters, successComplete: {[weak self] (JSON) in
             
-            let data = [ImgVertical].deserialize(from:JSON["res"]["vertical"].description)
-            if let data = data {
+            if let data = [ImgVertical].deserialize(from:JSON["res"]["vertical"].description) {
                 self?.verticalData += data
                 self?.collectionView.reloadData()
                 self?.collectionView.mj_header.endRefreshing()
@@ -118,7 +116,6 @@ extension WallperVerticalViewController {
 extension WallperVerticalViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return verticalData.count
     }
     

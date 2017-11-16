@@ -62,7 +62,7 @@ extension WallPaperCategoryViewController {
     
     fileprivate func setUpRefresh() {
         
-        collectionView.mj_header = SVURefreshHeader.init(refreshingTarget: self, refreshingAction: #selector(loadCategoryData))
+        collectionView.mj_header = SVURefreshHeader(refreshingTarget: self, refreshingAction: #selector(loadCategoryData))
         collectionView.mj_header.beginRefreshing()
     }
 }
@@ -74,8 +74,7 @@ extension WallPaperCategoryViewController {
         
         QYRequestTool.requestData(.GET, imgCategoryURL, successComplete: {[weak self] (JSON) in
             
-            let data = [ImgCategory].deserialize(from: JSON["res"]["category"].description)
-            if let data = data {
+            if let data = [ImgCategory].deserialize(from: JSON["res"]["category"].description) {
                 
                 self?.categoryData = data
                 self?.collectionView.reloadData()
