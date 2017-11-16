@@ -12,11 +12,12 @@ import HandyJSON
 class SingleNews:  HandyJSON{
 
     /// 图片类型
-    enum infoType {
-        case NoImg
-        case SignalImg
-        case MultiImg //图片大于等于三张
-        case BigImg
+    enum infoType : String {
+        
+        case NoImg = "singletitle"
+        case SignalImg = "titleimg"
+        case MultiImg = "slideimg" //图片大于等于三张
+        case BigImg = "bigimg"
     }
     /// 图片
     var thumbnail = ""
@@ -30,17 +31,7 @@ class SingleNews:  HandyJSON{
     var infoType : infoType {
         
         get {
-            if style.view == "slideimg" {
-                return .MultiImg
-            }else if style.view == "bigimg" {
-                return .BigImg
-            }else if style.view == "titleimg" {
-                return .SignalImg
-            }else if style.view == "singletitle"{
-                return .NoImg
-            }else {
-                return .SignalImg
-            }
+            return SingleNews.infoType(rawValue: style.view) ?? .NoImg
         }
     }
     /// cell的高度
