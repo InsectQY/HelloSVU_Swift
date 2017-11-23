@@ -84,6 +84,7 @@ extension BusRouteDetailViewController {
         flowLayout.minimumInteritemSpacing = 0
         collectionView.register(UINib(nibName: "BusRouteDetailLineCell", bundle: nil), forCellWithReuseIdentifier: BusRouteDetailLineCellID)
         collectionView.reloadData()
+        collectionView.layoutIfNeeded()
         
         var offset = collectionView.contentOffset
         offset.x = CGFloat(selIndex) * ScreenW

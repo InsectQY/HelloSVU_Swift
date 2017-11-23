@@ -37,8 +37,8 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
             for line in allLine {
                 
                 let name = line.name as NSString
-                if name.contains("(") {
-                    name.substring(to: name.range(of: "(").location)
+                if name.contains("(") { // 去除括号里的内容
+                    line.name = name.substring(to: name.range(of: "(").location)
                 }
                 busLines.append(line)
             }
@@ -134,7 +134,7 @@ extension BusRouteDetailCellHeader {
     // MARK: - 检查是否存在其他线路
     fileprivate func checkOtherBusLines() {
         
-        otherBusLineView.isHidden = (segment?.buslines.count ?? 0) > 1
+        otherBusLineView.isHidden = (segment?.buslines.count ?? 0) < 1
         if (segment?.buslines.count ?? 0) > 1 {
             setUpCollectionView()
         }
