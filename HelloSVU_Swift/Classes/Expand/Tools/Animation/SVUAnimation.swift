@@ -10,47 +10,56 @@ import UIKit
 
 class SVUAnimation: NSObject {
     
-    /// 只适用用于底部出现的view 其他不支持
-    ///
-    /// - Parameters:
-    ///   - view: 需要展示的 view
-    ///   - viewHeight: 显示 view 高度
-    ///   - hidden: 是否隐藏
-    ///   - animated: 是否需要动画
-    ///   - completion: 加载完毕
-    func setBottomView(_ view:UIView, viewHeight:CGFloat, hidden:Bool, animated:Bool, completion:(() -> ())?) {
+    static fileprivate var window = UIWindow()
+    
+    static fileprivate var hudWindow = UIWindow()
+    
+    /// 只适用用于底部出现的view
+    class func showBottomView(_ showVc:UIViewController, viewHeight:CGFloat,animateDuration : TimeInterval = 1, completion:(() -> ())?) {
         
-        if view.isHidden == hidden {return}
+        window.frame = CGRect(x: 0, y: ScreenH, width: ScreenW, height: viewHeight)
+        window.windowLevel = UIWindowLevelNormal
+        window.backgroundColor = .white
+        window.makeKeyAndVisible()
+        window.rootViewController = showVc
+        window.makeKeyAndVisible()
         
-        let animateDuration : TimeInterval = animated ? 1 : 0
+        hudWindow.frame = CGRect(x: 0, y: ScreenH, width: ScreenW, height: ScreenH - viewHeight)
+        hudWindow.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        hudWindow.windowLevel = UIWindowLevelAlert
+        hudWindow.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hudDidClick)))
+        hudWindow.makeKeyAndVisible()
         
-        let viewH:CGFloat = viewHeight
+        UIView.animate(withDuration: animateDuration, animations: { ()->() in
+            
+            window.frame = CGRect(x: 0, y: ScreenH - viewHeight, width: ScreenW, height: viewHeight)
+        }, completion: { (isOK) in
+            
+            hudWindow.frame = CGRect(x: 0, y: 0, width: ScreenW, height: ScreenH - viewHeight)
+            completion?()
+        })
+    }
+    
+    class func dismiss(animateDuration : TimeInterval = 1, completion:(() -> ())?) {
         
-        if hidden {
+        UIView.animate(withDuration: animateDuration, animations: { ()->() in
             
-            UIView.animate(withDuration: animateDuration, animations: { ()->() in
-                
-                view.frame = CGRect(x: 0, y: ScreenH, width: ScreenW, height: viewH)
-                
-            }, completion: { (isOK) in
-                
-                view.isHidden = hidden
-                
-                completion?()
-            })
+            hudWindow.alpha = 0
+            window.frame = CGRect(x: 0, y: ScreenH, width: ScreenW, height: 0)
+        }, completion: { (isOK) in
             
-        }else {
-            
-            view.isHidden = hidden
-            
-            UIView.animate(withDuration: animateDuration, animations: { ()->() in
-                
-                view.frame = CGRect(x: 0, y: ScreenH - viewH, width: ScreenW, height: viewH)
-                
-            }, completion: { (isOK) in
-                
-                completion?()
-            })
-        }
+            hudWindow.frame = CGRect(x: 0, y: ScreenH, width: ScreenW, height: 0)
+            window.resignKey()
+            hudWindow.resignKey()
+            completion?()
+        })
+    }
+}
+
+// MARK: - 点击事件
+extension SVUAnimation {
+    
+    @objc fileprivate func hudDidClick() {
+        print("132312313")
     }
 }

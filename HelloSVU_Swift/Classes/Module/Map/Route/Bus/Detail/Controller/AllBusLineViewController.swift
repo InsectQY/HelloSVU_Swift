@@ -72,5 +72,6 @@ extension AllBusLineViewController : UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath) as! AllBusLineCell
         cell.selImage.isHidden = false
         lastCell = cell
+        SVUAnimation.dismiss(completion: nil)
     }
 }

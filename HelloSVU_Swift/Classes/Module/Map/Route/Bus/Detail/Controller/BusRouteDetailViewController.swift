@@ -19,6 +19,10 @@ class BusRouteDetailViewController: BaseViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
+    /// 点击cell后底部弹出的位置信息窗口
+    fileprivate let window : UIWindow = UIWindow()
+    /// 窗口背后的黑色蒙版
+    fileprivate let hudWindow : UIWindow = UIWindow()
     
     /// 公交路径规划方案
     var route = AMapRoute()
@@ -178,10 +182,14 @@ extension BusRouteDetailViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BusRouteDetailCellHeaderID) as! BusRouteDetailCellHeader
-        headerView.info = busSegment[section]
-        headerView.segment = route.transits[selIndex].segments[section]
+        let segment = route.transits[selIndex].segments[section]
+        let info = busSegment[section]
         
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BusRouteDetailCellHeaderID) as! BusRouteDetailCellHeader
+        headerView.info = info
+        headerView.segment = segment
+        
+        // 途径站点按钮点击 (上下箭头)
         headerView.viaBtnClick = {[weak self] () in
             
             self?.busSegment[section].isOpen = !(self?.busSegment[section].isOpen ?? false)
@@ -190,6 +198,15 @@ extension BusRouteDetailViewController : UITableViewDelegate {
             } else {
                 self?.closeSection(section)
             }
+        }
+        
+        // 其他公交换乘线路点击
+        headerView.otherBusLineClick = {[weak self] () in
+            
+            let allLineVc = AllBusLineViewController()
+            allLineVc.segment = segment
+            allLineVc.selBusLineIndex = info.busLineIndex
+            self?.showBottomView(allLineVc, section)
         }
         return headerView
     }
@@ -247,4 +264,30 @@ extension BusRouteDetailViewController {
         }
         return indexArray
     }
+}
+
+// MARK: - 显示底部控制器
+extension BusRouteDetailViewController {
+
+//    fileprivate func showBottomView(_ viewController : AllBusLineViewController,_ selSegmentIndex : Int) {
+//
+//        var contentH =  CGFloat(route.transits[selIndex].segments[selSegmentIndex].buslines.count * 60 + 90)
+//        if contentH >= ScreenH {
+//            contentH = ScreenH;
+//        }
+//
+//        window.frame = CGRect(x: 0, y: 0, w: ScreenW, h: contentH)
+//        window.windowLevel = UIWindowLevelNormal
+//        window.backgroundColor
+//    }
+    fileprivate func showBottomView(_ viewController : AllBusLineViewController,_ selSegmentIndex : Int) {
+        
+        var contentH =  CGFloat(route.transits[selIndex].segments[selSegmentIndex].buslines.count * 60 + 90)
+        if contentH >= ScreenH {
+            contentH = ScreenH;
+        }
+        
+        SVUAnimation.showBottomView(viewController, viewHeight: contentH, animateDuration: 0.4, completion: nil)
+    }
+
 }

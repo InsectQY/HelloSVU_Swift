@@ -15,6 +15,8 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
 
     /// 途径站点按钮点击回调
     var viaBtnClick : (() -> ())?
+    /// 其他公交路线点击回调
+    var otherBusLineClick : (() -> ())?
     
     @IBOutlet weak var routeTypeImage: UIImageView!
     @IBOutlet weak var busLineLabel: UILabel!
@@ -181,6 +183,6 @@ extension BusRouteDetailCellHeader : UICollectionViewDelegateFlowLayout {
 extension BusRouteDetailCellHeader : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        otherBusLineClick?()
     }
 }
