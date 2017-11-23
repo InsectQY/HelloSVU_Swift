@@ -134,9 +134,12 @@ extension BusRouteDetailCellHeader {
     // MARK: - 检查是否存在其他线路
     fileprivate func checkOtherBusLines() {
         
-        otherBusLineView.isHidden = (segment?.buslines.count ?? 0) < 1
-        if (segment?.buslines.count ?? 0) > 1 {
-            setUpCollectionView()
+        if let count = segment?.buslines.count {
+            
+            otherBusLineView.isHidden = count <= 1
+            if count > 1 {
+                setUpCollectionView()
+            }
         }
     }
     
