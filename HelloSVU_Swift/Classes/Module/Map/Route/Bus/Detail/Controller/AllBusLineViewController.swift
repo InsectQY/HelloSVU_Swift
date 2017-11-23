@@ -46,6 +46,11 @@ extension AllBusLineViewController {
         tableView.rowHeight = 60
         tableView.reloadData()
     }
+    
+    // MARK: - 取消按钮点击事件
+    @IBAction func cancelBtnDidClick(_ sender: Any) {
+        SVUAnimation.dismiss(animateDuration: 0.2, completion: nil)
+    }
 }
 
 // MARK: - UITableViewDataSource
