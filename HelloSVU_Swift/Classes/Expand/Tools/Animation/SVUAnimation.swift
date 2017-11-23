@@ -45,10 +45,10 @@ class SVUAnimation: NSObject {
         UIView.animate(withDuration: animateDuration, animations: { ()->() in
             
             hudWindow.alpha = 0
-            window.frame = CGRect(x: 0, y: ScreenH, width: ScreenW, height: 0)
+            window.frame = CGRect(x: 0, y: ScreenH + 10, width: ScreenW, height: 100)
         }, completion: { (isOK) in
             
-            hudWindow.frame = CGRect(x: 0, y: ScreenH, width: ScreenW, height: 0)
+            hudWindow.frame = CGRect(x: 0, y: ScreenH + 10, width: ScreenW, height: 100)
             window.resignKey()
             hudWindow.resignKey()
             completion?()
