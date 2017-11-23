@@ -239,7 +239,7 @@ extension BusRouteDetailViewController {
     }
     
     /// 获得需要展开的数据
-    fileprivate func getIndexData(_ section : Int) -> [IndexPath]{
+    fileprivate func getIndexData(_ section : Int) -> [IndexPath] {
         
         var indexArray = [IndexPath]()
         for i in 0 ..< route.transits[selIndex].segments[section].buslines[selBusLineIndex].viaBusStops.count {
