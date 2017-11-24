@@ -150,6 +150,7 @@ extension BusRouteDetailViewController : UICollectionViewDelegate {
 extension BusRouteDetailViewController : UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        /// 最后一段 buslines 数组为空
         return route.transits[selIndex].segments.count - 1
     }
     

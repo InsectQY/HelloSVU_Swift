@@ -49,7 +49,7 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
         return busLines
     }()
     
-    /// 包含是否展开，是否有多条busline 以及选择的是第几组的信息
+    /// 包含是否展开，是否有多条 busline 以及选择的是第几组的信息
     var info : BusSegment?
     
     var segment : AMapSegment? {
@@ -71,7 +71,7 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
             
             // 设置途径站点
             let count = segment?.buslines[busLineIndex].viaBusStops.count ?? 0
-            viaBusStopsBtn.isEnabled = count > 0
+            viaBusStopsBtn.isUserInteractionEnabled = count > 0
             if count > 0 {
                 viaBusStopsBtn.setTitle("\(String(describing: count))站", for: .normal)
             } else {
