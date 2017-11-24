@@ -193,6 +193,7 @@ extension BusRouteDetailViewController : UITableViewDelegate {
         headerView.viaBtnClick = {[weak self] () in
             
             self?.busSegment[section].isOpen = !(self?.busSegment[section].isOpen ?? false)
+            
             if (self?.busSegment[section].isOpen ?? false) {
                 self?.openSection(section)
             } else {
@@ -207,6 +208,14 @@ extension BusRouteDetailViewController : UITableViewDelegate {
             allLineVc.segment = segment
             allLineVc.selBusLineIndex = info.busLineIndex
             self?.showBottomView(allLineVc, section)
+            
+            // 点击切换了其他公交线路
+            allLineVc.changeBusLine = {[weak self] (selLineIndex) in
+                
+                self?.busSegment[section].isSpecified = true
+                self?.busSegment[section].busLineIndex = selLineIndex
+                self?.reloadAllData()
+            }
         }
         return headerView
     }
@@ -269,25 +278,10 @@ extension BusRouteDetailViewController {
 // MARK: - 显示底部控制器
 extension BusRouteDetailViewController {
 
-//    fileprivate func showBottomView(_ viewController : AllBusLineViewController,_ selSegmentIndex : Int) {
-//
-//        var contentH =  CGFloat(route.transits[selIndex].segments[selSegmentIndex].buslines.count * 60 + 90)
-//        if contentH >= ScreenH {
-//            contentH = ScreenH;
-//        }
-//
-//        window.frame = CGRect(x: 0, y: 0, w: ScreenW, h: contentH)
-//        window.windowLevel = UIWindowLevelNormal
-//        window.backgroundColor
-//    }
     fileprivate func showBottomView(_ viewController : AllBusLineViewController,_ selSegmentIndex : Int) {
         
         var contentH =  CGFloat(route.transits[selIndex].segments[selSegmentIndex].buslines.count * 60 + 90)
-        if contentH >= ScreenH {
-            contentH = ScreenH;
-        }
-        
+        contentH = contentH >= ScreenH ? ScreenH : contentH
         SVUAnimation.showBottomView(viewController, viewHeight: contentH, animateDuration: 0.4, completion: nil)
     }
-
 }

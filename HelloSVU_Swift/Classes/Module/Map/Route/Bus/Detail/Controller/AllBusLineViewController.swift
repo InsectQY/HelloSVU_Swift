@@ -12,6 +12,9 @@ fileprivate let AllBusLineCellID = "AllBusLineCellID"
 
 class AllBusLineViewController: UIViewController {
     
+    /// 更换其他公交线路
+    var changeBusLine : ((_ selLineIndex : Int) -> ())?
+    
     /// 公交路径规划方案
     var segment : AMapSegment?
     /// 当前选择的公交线路
@@ -45,6 +48,7 @@ extension AllBusLineViewController {
         tableView.register(UINib(nibName: "AllBusLineCell", bundle: nil), forCellReuseIdentifier: AllBusLineCellID)
         tableView.rowHeight = 60
         tableView.reloadData()
+        tableView(tableView, didSelectRowAt: IndexPath(row: selBusLineIndex, section: 0))
     }
     
     // MARK: - 取消按钮点击事件
@@ -78,5 +82,6 @@ extension AllBusLineViewController : UITableViewDelegate {
         cell.selImage.isHidden = false
         lastCell = cell
         SVUAnimation.dismiss(animateDuration: 0.2, completion: nil)
+        changeBusLine?(indexPath.row)
     }
 }

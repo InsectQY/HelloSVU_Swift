@@ -27,7 +27,7 @@ class SVUAnimation: NSObject {
         hudWindow.frame = CGRect(x: 0, y: ScreenH, width: ScreenW, height: ScreenH - viewHeight)
         hudWindow.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         hudWindow.windowLevel = UIWindowLevelAlert
-        hudWindow.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hudDidClick)))
+//        hudWindow.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hudDidClick)))
         hudWindow.makeKeyAndVisible()
         
         UIView.animate(withDuration: animateDuration, animations: { ()->() in
@@ -35,6 +35,7 @@ class SVUAnimation: NSObject {
             window.frame = CGRect(x: 0, y: ScreenH - viewHeight, width: ScreenW, height: viewHeight)
         }, completion: { (isOK) in
             
+            hudWindow.alpha = 0.6
             hudWindow.frame = CGRect(x: 0, y: 0, width: ScreenW, height: ScreenH - viewHeight)
             completion?()
         })
