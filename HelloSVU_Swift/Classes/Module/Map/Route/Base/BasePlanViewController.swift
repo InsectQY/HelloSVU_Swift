@@ -70,14 +70,13 @@ class BasePlanViewController: BaseViewController {
         let locationBtn = UIButton(type: .custom)
         locationBtn.backgroundColor = .white
         locationBtn.setImage(#imageLiteral(resourceName: "location"), for: .normal)
-        locationBtn.frame = CGRect(x: 10, y: mapContentView.frame.size.height - 36 - 10, width: 36, height: 36)
+        locationBtn.frame = CGRect(x: 10, y: mapContentView.bottom - 46, width: 36, height: 36)
         locationBtn.addTarget(self, action: #selector(locatateNow), for: .touchUpInside)
         return locationBtn
     }()
     
     /// 定位到的经纬度
     fileprivate var nowCoordinate : CLLocationCoordinate2D?
-    
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -92,8 +91,7 @@ extension BasePlanViewController {
     
     fileprivate func setUpUI() {
         
-        view.addSubview(mapView)
-        view.addSubview(locationBtn)
+        mapContentView.addSubview(mapView)
     }
 }
 
@@ -102,7 +100,11 @@ extension BasePlanViewController : MAMapViewDelegate {
     
     func mapView(_ mapView: MAMapView!, didUpdate userLocation: MAUserLocation!, updatingLocation: Bool) {
         
-        nowCoordinate = userLocation.coordinate
+        if updatingLocation == true {
+            
+            nowCoordinate = userLocation.coordinate
+            mapView.addSubview(locationBtn)
+        }
     }
 }
 
@@ -124,5 +126,8 @@ extension BasePlanViewController {
     @objc fileprivate func locatateNow() {
         
         mapView.setZoomLevel(16.5, animated: true)
+        if let nowCoordinate = nowCoordinate {
+            mapView.setCenter(nowCoordinate, animated: true)
+        }
     }
 }

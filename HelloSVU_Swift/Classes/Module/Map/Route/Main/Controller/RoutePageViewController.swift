@@ -31,7 +31,7 @@ class RoutePageViewController: BaseViewController {
         let vc = BusRouteViewController()
         childVcs.append(vc)
         
-        let routeType = [routePlanType.Walking,routePlanType.Riding,routePlanType.Driving]
+        let routeType : [routePlanType] = [.Walking,.Riding,.Driving]
         for type in routeType {
             
             let vc = BasePlanViewController()
