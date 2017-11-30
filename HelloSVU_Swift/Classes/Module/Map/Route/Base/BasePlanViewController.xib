@@ -18,6 +18,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BasePlanViewController" customModule="HelloSVU_Swift" customModuleProvider="target">
             <connections>
+                <outlet property="bottomViewH" destination="M3w-Df-OOS" id="4KC-ht-nFb"/>
+                <outlet property="btnTopMargin" destination="I4M-jJ-qt1" id="Tvh-qr-VtY"/>
+                <outlet property="collectionContentViewH" destination="pQd-iR-VdV" id="gj1-m3-u09"/>
                 <outlet property="collectionView" destination="Kgg-aC-yN1" id="V38-9k-gxY"/>
                 <outlet property="distanceLabel" destination="tdk-YZ-i1R" id="km6-X7-qFc"/>
                 <outlet property="durationLabel" destination="O5E-uu-7Kd" id="DXq-Gh-e0j"/>
@@ -92,6 +95,9 @@
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="startNavBtnDidClick:" destination="-1" eventType="touchUpInside" id="7LM-nh-hTT"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安心出行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf9-KI-xmV">
                             <rect key="frame" x="20" y="75" width="56" height="20"/>

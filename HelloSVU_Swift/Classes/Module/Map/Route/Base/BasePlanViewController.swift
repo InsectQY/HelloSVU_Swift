@@ -27,6 +27,9 @@ class BasePlanViewController: BaseViewController {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var bottomViewH: NSLayoutConstraint!
+    @IBOutlet weak var collectionContentViewH: NSLayoutConstraint!
+    @IBOutlet weak var btnTopMargin: NSLayoutConstraint!
     
     public var routePlanType : routePlanType = .Riding
     
@@ -77,6 +80,8 @@ class BasePlanViewController: BaseViewController {
     
     /// 定位到的经纬度
     fileprivate var nowCoordinate : CLLocationCoordinate2D?
+    /// 路径规划方案
+    fileprivate var route : AMapRoute?
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -92,6 +97,20 @@ extension BasePlanViewController {
     fileprivate func setUpUI() {
         
         mapContentView.addSubview(mapView)
+        cheekIsDriveView()
+    }
+    
+    // MARK: - 驾车界面时改变底部View显示
+    fileprivate func cheekIsDriveView() {
+        
+        guard routePlanType == .Driving else {
+            return
+        }
+        
+        let priority = UILayoutPriority(rawValue: 100)
+        bottomViewH.priority = priority
+        btnTopMargin.priority = priority
+        collectionContentViewH.priority = priority
     }
 }
 
@@ -117,17 +136,32 @@ extension BasePlanViewController : AMapSearchDelegate {
     
     func onRouteSearchDone(_ request: AMapRouteSearchBaseRequest!, response: AMapRouteSearchResponse!) {
         
+        SVUHUD.dismiss()
+        route = response.route
+        if routePlanType == .Driving {
+            
+        }else {
+            
+            durationLabel.text =  CalculateTool.getDuration(route?.paths[0].duration ?? 0)
+            distanceLabel.text =  CalculateTool.getWalkDistance(CGFloat(route?.paths.first?.distance ?? 0))
+        }
     }
 }
 
-// MARK: - 按钮点击事件
+// MARK: - 事件处理
 extension BasePlanViewController {
 
+    // MARK: - 定位按钮点击
     @objc fileprivate func locatateNow() {
         
         mapView.setZoomLevel(16.5, animated: true)
         if let nowCoordinate = nowCoordinate {
             mapView.setCenter(nowCoordinate, animated: true)
         }
+    }
+    
+    // MARK: - 开始导航点击
+    @IBAction fileprivate func startNavBtnDidClick(_ sender: Any) {
+        print("点击了开始导航")
     }
 }
