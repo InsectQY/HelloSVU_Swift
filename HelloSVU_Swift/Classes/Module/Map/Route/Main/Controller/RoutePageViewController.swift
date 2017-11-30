@@ -26,12 +26,20 @@ class RoutePageViewController: BaseViewController {
         style.selectColor = UIColor(r: 255, g: 255, b: 255)
         style.titleViewHeight = kTitleViewH
         style.bottomLineHeight = 2
-        let vc1 = BusRouteViewController()
-        let vc2 = BusRouteViewController()
-        let vc3 = BusRouteViewController()
-        let vc4 = BusRouteViewController()
         
-        let pageView = QYPageView(frame: CGRect(x: 0, y: 115, width: ScreenW, height: ScreenH - 115), titles: ["公交","步行","骑行","驾车"], titleStyle: style, childVcs: [vc1,vc2,vc3,vc4], parentVc: self)
+        var childVcs  = [UIViewController]()
+        let vc = BusRouteViewController()
+        childVcs.append(vc)
+        
+        let routeType = [routePlanType.Walking,routePlanType.Riding,routePlanType.Driving]
+        for type in routeType {
+            
+            let vc = BasePlanViewController()
+            vc.routePlanType = type
+            childVcs.append(vc)
+        }
+        
+        let pageView = QYPageView(frame: CGRect(x: 0, y: 115, width: ScreenW, height: ScreenH - 115), titles: ["公交","步行","骑行","驾车"], titleStyle: style, childVcs: childVcs, parentVc: self)
         pageView.backgroundColor = UIColor(r: 74, g: 137, b: 255)
         return pageView
     }()

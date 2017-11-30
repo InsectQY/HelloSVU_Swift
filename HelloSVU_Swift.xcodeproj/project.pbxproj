@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000D0F891FCFD0870031C497 /* BasePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D0F871FCFD0860031C497 /* BasePlanViewController.swift */; };
+		000D0F8A1FCFD0870031C497 /* BasePlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 000D0F881FCFD0870031C497 /* BasePlanViewController.xib */; };
 		00213DAA1FB57BCC003BCEC8 /* SVUAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00213DA91FB57BCC003BCEC8 /* SVUAnimation.swift */; };
 		00213DAD1FB57F0C003BCEC8 /* BusLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00213DAB1FB57F0C003BCEC8 /* BusLineCell.swift */; };
 		00213DAE1FB57F0C003BCEC8 /* BusLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00213DAC1FB57F0C003BCEC8 /* BusLineCell.xib */; };
@@ -149,6 +151,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000D0F871FCFD0860031C497 /* BasePlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePlanViewController.swift; sourceTree = "<group>"; };
+		000D0F881FCFD0870031C497 /* BasePlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasePlanViewController.xib; sourceTree = "<group>"; };
 		00213DA91FB57BCC003BCEC8 /* SVUAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVUAnimation.swift; sourceTree = "<group>"; };
 		00213DAB1FB57F0C003BCEC8 /* BusLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLineCell.swift; sourceTree = "<group>"; };
 		00213DAC1FB57F0C003BCEC8 /* BusLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusLineCell.xib; sourceTree = "<group>"; };
@@ -325,6 +329,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000D0F861FCFD0480031C497 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				000D0F871FCFD0860031C497 /* BasePlanViewController.swift */,
+				000D0F881FCFD0870031C497 /* BasePlanViewController.xib */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		00213DA81FB57B9E003BCEC8 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				E5BC27171F82AF1C005BE425 /* Main */,
+				000D0F861FCFD0480031C497 /* Base */,
 				E5BC27181F82AF2F005BE425 /* Bus */,
 			);
 			path = Route;
@@ -1572,6 +1586,7 @@
 				00DB1B4B1FC6768300FEFF0B /* AllBusLineViewController.xib in Resources */,
 				E55DDDBE1F94D2D10057FCBD /* BusRouteDetailCellHeader.xib in Resources */,
 				E57FCCC41ED43D5800FE5184 /* NotificationCell.xib in Resources */,
+				000D0F8A1FCFD0870031C497 /* BasePlanViewController.xib in Resources */,
 				E57002A91F7CCAE4006FC640 /* .gitignore in Resources */,
 				E57002AA1F7CCAE7006FC640 /* .gitignore in Resources */,
 				E523DCA81F84D8F60088FFD6 /* JhtNewsChannelImages.bundle in Resources */,
@@ -1758,6 +1773,7 @@
 				E55DDDAC1F94C6680057FCBD /* BusRouteDetailLineCell.swift in Sources */,
 				E55DDDCD1F94D4170057FCBD /* BusRouteDetailFooterView.swift in Sources */,
 				E55DDDA61F94C2130057FCBD /* BusRouteDetailViewController.swift in Sources */,
+				000D0F891FCFD0870031C497 /* BasePlanViewController.swift in Sources */,
 				E56680591F91F94500D4224F /* MaxInteritemSpacingFlowLayout.swift in Sources */,
 				E55DDDCB1F94D3CC0057FCBD /* AllBusLineCell.swift in Sources */,
 				E57FCCB61ED43AC900FE5184 /* HomeViewController.swift in Sources */,
