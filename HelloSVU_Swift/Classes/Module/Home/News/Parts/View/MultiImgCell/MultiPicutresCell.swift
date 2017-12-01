@@ -18,6 +18,7 @@ class MultiPicutresCell: UITableViewCell {
     @IBOutlet var thirdImg: UIImageView!
     
     var news : SingleNews? {
+        
         didSet {
             
             titleLabel.text = news?.title

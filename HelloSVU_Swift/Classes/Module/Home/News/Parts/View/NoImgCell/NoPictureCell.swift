@@ -15,6 +15,7 @@ class NoPictureCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     
     var news : SingleNews? {
+        
         didSet {
             
             titleLabel.text = news?.title

@@ -169,6 +169,7 @@ extension NewsPartsViewController : UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension NewsPartsViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let news = allNews[indexPath.row]

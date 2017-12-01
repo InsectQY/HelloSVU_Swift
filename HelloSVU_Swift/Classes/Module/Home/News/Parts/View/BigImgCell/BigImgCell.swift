@@ -15,6 +15,7 @@ class BigImgCell: UITableViewCell {
     @IBOutlet var sourceLabel: UILabel!
     
     var news : SingleNews? {
+        
         didSet {
             
             thumbNailImg.setImage(news?.thumbnail, "placeholder")
