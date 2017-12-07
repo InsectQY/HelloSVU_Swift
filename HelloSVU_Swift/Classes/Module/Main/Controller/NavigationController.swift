@@ -15,6 +15,14 @@ class NavigationController: UINavigationController {
         super.viewDidLoad()
         
         fd_fullscreenPopGestureRecognizer.isEnabled = true
+        
+        // 导航栏背景和文字设置
+        let naviBar : UINavigationBar = UINavigationBar.appearance()
+        naviBar.setBackgroundImage(#imageLiteral(resourceName: "navigationbarBackgroundWhite"), for: .default)
+        naviBar.titleTextAttributes = {[
+            NSAttributedStringKey.foregroundColor: UIColor.black,
+            NSAttributedStringKey.font: PFM18Font
+            ]}()
     }
     
     // MARK: - 全屏滑动返回
@@ -39,14 +47,6 @@ class NavigationController: UINavigationController {
         let panGes = UIPanGestureRecognizer()
         gesView.addGestureRecognizer(panGes)
         panGes.addTarget(target, action: action)
-        
-        // 导航栏背景和文字设置
-        let naviBar : UINavigationBar = UINavigationBar.appearance()
-        naviBar.setBackgroundImage(#imageLiteral(resourceName: "navigationbarBackgroundWhite"), for: .default)
-        naviBar.titleTextAttributes = {[
-            NSAttributedStringKey.foregroundColor: UIColor.black,
-            NSAttributedStringKey.font: PFM18Font
-            ]}()
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
