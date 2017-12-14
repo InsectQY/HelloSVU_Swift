@@ -10,10 +10,10 @@ import UIKit
 
 class OnePictureCell: UITableViewCell,ReuseInterface {
 
-    @IBOutlet var thumbNailImg: UIImageView!
-    @IBOutlet var timeLabel: UILabel!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var sourceLabel: UILabel!
+    @IBOutlet fileprivate weak var thumbNailImg: UIImageView!
+    @IBOutlet fileprivate weak var timeLabel: UILabel!
+    @IBOutlet fileprivate weak var titleLabel: UILabel!
+    @IBOutlet fileprivate weak var sourceLabel: UILabel!
     
     var news : SingleNews? {
         

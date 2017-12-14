@@ -10,7 +10,7 @@ import UIKit
 
 class ImgVerticalCell: UICollectionViewCell,ReuseInterface {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet fileprivate weak var imageView: UIImageView!
     // MARK: - LazyLoad
     var vertical : ImgVertical? {
         

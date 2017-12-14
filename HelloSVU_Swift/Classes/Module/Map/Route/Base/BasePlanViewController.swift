@@ -22,14 +22,14 @@ enum routePlanType {
 
 class BasePlanViewController: BaseViewController {
     
-    @IBOutlet weak var mapContentView: UIView!
-    @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var bottomViewH: NSLayoutConstraint!
-    @IBOutlet weak var collectionContentViewH: NSLayoutConstraint!
-    @IBOutlet weak var btnTopMargin: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var mapContentView: UIView!
+    @IBOutlet fileprivate weak var durationLabel: UILabel!
+    @IBOutlet fileprivate weak var distanceLabel: UILabel!
+    @IBOutlet fileprivate weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet fileprivate weak var collectionView: UICollectionView!
+    @IBOutlet fileprivate weak var bottomViewH: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var collectionContentViewH: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var btnTopMargin: NSLayoutConstraint!
     
     public var routePlanType : routePlanType = .Riding
     

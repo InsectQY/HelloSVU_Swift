@@ -11,8 +11,8 @@ import UIKit
 class ImgCategoryCell: UICollectionViewCell ,ReuseInterface {
     
     // MARK: - LazyLoad
-    @IBOutlet weak var coverImg: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet fileprivate weak var coverImg: UIImageView!
+    @IBOutlet fileprivate weak var nameLabel: UILabel!
     
     var category: ImgCategory? {
         

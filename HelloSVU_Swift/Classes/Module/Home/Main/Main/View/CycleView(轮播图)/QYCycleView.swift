@@ -12,9 +12,9 @@ fileprivate let cycleID = "cycleID"
 
 class QYCycleView: UIView {
 
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet fileprivate weak var collectionView: UICollectionView!
+    @IBOutlet fileprivate weak var pageControl: UIPageControl!
+    @IBOutlet fileprivate weak var flowLayout: UICollectionViewFlowLayout!
     
     var cycleTimer : Timer?
     var cycleData : [String]? {

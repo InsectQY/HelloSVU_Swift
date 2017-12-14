@@ -12,8 +12,8 @@ let kTitleViewH : CGFloat = 30
 
 class RoutePageViewController: BaseViewController {
     
-    @IBOutlet weak var originField: UITextField!
-    @IBOutlet weak var destinationField: UITextField!
+    @IBOutlet fileprivate weak var originField: UITextField!
+    @IBOutlet fileprivate weak var destinationField: UITextField!
     
     fileprivate lazy var originPoint = AMapGeoPoint()
     fileprivate lazy var destinationPoint = AMapGeoPoint()

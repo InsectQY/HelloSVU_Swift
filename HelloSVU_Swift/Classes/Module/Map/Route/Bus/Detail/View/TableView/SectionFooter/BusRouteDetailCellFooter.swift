@@ -10,11 +10,11 @@ import UIKit
 
 class BusRouteDetailCellFooter: UITableViewHeaderFooterView,ReuseInterface {
 
-    @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var arrivalStopLabel: UILabel!
-    @IBOutlet weak var exitNameBtn: UIButton!
-    @IBOutlet weak var walkNaviBtn: UIButton!
-    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet fileprivate weak var distanceLabel: UILabel!
+    @IBOutlet fileprivate weak var arrivalStopLabel: UILabel!
+    @IBOutlet fileprivate weak var exitNameBtn: UIButton!
+    @IBOutlet fileprivate weak var walkNaviBtn: UIButton!
+    @IBOutlet fileprivate weak var durationLabel: UILabel!
     
     /// 包含是否展开，是否有多条busline 以及选择的是第几组的信息
     var info : BusSegment?

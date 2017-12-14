@@ -10,9 +10,9 @@ import UIKit
 
 class BigImgCell: UITableViewCell,ReuseInterface {
 
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var thumbNailImg: UIImageView!
-    @IBOutlet var sourceLabel: UILabel!
+    @IBOutlet fileprivate weak var titleLabel: UILabel!
+    @IBOutlet fileprivate weak var thumbNailImg: UIImageView!
+    @IBOutlet fileprivate weak var sourceLabel: UILabel!
     
     var news : SingleNews? {
         

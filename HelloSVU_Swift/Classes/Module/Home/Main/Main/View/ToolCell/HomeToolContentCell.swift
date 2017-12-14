@@ -18,8 +18,8 @@ fileprivate let HomeToolCellW : CGFloat = ScreenW / maxCol
 
 class HomeToolContentCell: UITableViewCell,ReuseInterface {
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet fileprivate weak var collectionView: UICollectionView!
+    @IBOutlet fileprivate weak var flowLayout: UICollectionViewFlowLayout!
     
     fileprivate lazy var homeData: [Home] = [Home]()
     

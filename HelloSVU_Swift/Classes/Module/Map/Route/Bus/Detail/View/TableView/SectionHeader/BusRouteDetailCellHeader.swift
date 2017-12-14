@@ -18,17 +18,17 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView,ReuseInterface {
     /// 其他公交路线点击回调
     var otherBusLineClick : (() -> ())?
     
-    @IBOutlet weak var routeTypeImage: UIImageView!
-    @IBOutlet weak var busLineLabel: UILabel!
-    @IBOutlet weak var departureStopLabel: UILabel!
-    @IBOutlet weak var viaBusStopsBtn: UIButton!
-    @IBOutlet weak var enterNameBtn: UIButton!
-    @IBOutlet weak var startTimeLabel: UILabel!
-    @IBOutlet weak var endTimeLabel: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
-    @IBOutlet weak var timeContentView: UIView!
-    @IBOutlet weak var otherBusLineView: UIView!
+    @IBOutlet fileprivate weak var routeTypeImage: UIImageView!
+    @IBOutlet fileprivate weak var busLineLabel: UILabel!
+    @IBOutlet fileprivate weak var departureStopLabel: UILabel!
+    @IBOutlet fileprivate weak var viaBusStopsBtn: UIButton!
+    @IBOutlet fileprivate weak var enterNameBtn: UIButton!
+    @IBOutlet fileprivate weak var startTimeLabel: UILabel!
+    @IBOutlet fileprivate weak var endTimeLabel: UILabel!
+    @IBOutlet fileprivate weak var collectionView: UICollectionView!
+    @IBOutlet fileprivate weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet fileprivate weak var timeContentView: UIView!
+    @IBOutlet fileprivate weak var otherBusLineView: UIView!
     
     lazy var busLines: [AMapBusLine] = {
         

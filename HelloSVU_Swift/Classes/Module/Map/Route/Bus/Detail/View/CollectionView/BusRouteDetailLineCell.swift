@@ -10,10 +10,10 @@ import UIKit
 
 class BusRouteDetailLineCell: UICollectionViewCell,ReuseInterface {
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var costLabel: UILabel!
-    @IBOutlet weak var walkingDistanceLabel: UILabel!
+    @IBOutlet fileprivate weak var nameLabel: UILabel!
+    @IBOutlet fileprivate weak var durationLabel: UILabel!
+    @IBOutlet fileprivate weak var costLabel: UILabel!
+    @IBOutlet fileprivate weak var walkingDistanceLabel: UILabel!
     
     var transit : AMapTransit? {
         

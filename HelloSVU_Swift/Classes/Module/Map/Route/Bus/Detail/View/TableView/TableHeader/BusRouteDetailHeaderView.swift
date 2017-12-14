@@ -10,9 +10,9 @@ import UIKit
 
 class BusRouteDetailHeaderView: UIView,NibLoadable {
 
-    @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var walkNaviBtn: UIButton!
+    @IBOutlet fileprivate weak var distanceLabel: UILabel!
+    @IBOutlet fileprivate weak var durationLabel: UILabel!
+    @IBOutlet fileprivate weak var walkNaviBtn: UIButton!
     
     var walking : AMapWalking? {
         

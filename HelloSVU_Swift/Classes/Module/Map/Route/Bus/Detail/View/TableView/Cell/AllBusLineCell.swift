@@ -11,8 +11,8 @@ import UIKit
 class AllBusLineCell: UITableViewCell,ReuseInterface {
 
     @IBOutlet weak var selImage: UIImageView!
-    @IBOutlet weak var busLineNameLabel: UILabel!
-    @IBOutlet weak var busLineDetaiLabel: UILabel!
+    @IBOutlet fileprivate weak var busLineNameLabel: UILabel!
+    @IBOutlet fileprivate weak var busLineDetaiLabel: UILabel!
     
     var busLine : AMapBusLine? {
         
