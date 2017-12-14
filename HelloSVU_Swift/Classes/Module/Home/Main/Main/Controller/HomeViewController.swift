@@ -8,8 +8,6 @@
 
 import UIKit
 
-fileprivate let NotificationCellID = "NotificationCellID"
-fileprivate let HomeToolContentCellID = "HomeToolContentCellID"
 fileprivate let cycleViewH : CGFloat = (ScreenH - kTabBarH - kTabBarH) * 0.35
 fileprivate let notificationCellH : CGFloat = (ScreenH - kTabBarH - kTabBarH) * 0.25
 
@@ -33,8 +31,8 @@ class HomeViewController: BaseViewController {
         tableView.dataSource = self
         tableView.delegate =  self
         tableView.isScrollEnabled = false
-        tableView.register(UINib(nibName: "NotificationCell", bundle: nil), forCellReuseIdentifier: NotificationCellID)
-        tableView.register(UINib(nibName: "HomeToolContentCell", bundle: nil), forCellReuseIdentifier: HomeToolContentCellID)
+        tableView.register(NotificationCell.Nib, forCellReuseIdentifier: NotificationCell.ID)
+        tableView.register(HomeToolContentCell.Nib, forCellReuseIdentifier: HomeToolContentCell.ID)
         tableView.separatorStyle = .none
         tableView.contentInset = UIEdgeInsetsMake(kTopH, 0, 0, 0)
         self.view.addSubview(tableView)
@@ -95,11 +93,11 @@ extension HomeViewController : UITableViewDataSource {
         
         if indexPath.row == 0 {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: NotificationCellID, for: indexPath) as! NotificationCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: NotificationCell.ID, for: indexPath) as! NotificationCell
             return cell
         }else {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: HomeToolContentCellID, for: indexPath) as! HomeToolContentCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: HomeToolContentCell.ID, for: indexPath) as! HomeToolContentCell
             cell.home = homeData
             return cell
         }

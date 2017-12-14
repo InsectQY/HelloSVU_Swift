@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImgVerticalCell: UICollectionViewCell {
+class ImgVerticalCell: UICollectionViewCell,ReuseInterface {
 
     @IBOutlet weak var imageView: UIImageView!
     // MARK: - LazyLoad

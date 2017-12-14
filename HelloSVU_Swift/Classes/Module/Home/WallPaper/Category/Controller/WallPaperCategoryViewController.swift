@@ -19,8 +19,6 @@ fileprivate let kItemW = (ScreenW - (2 * kEdge) - ((kMaxCol - 1) * kItemMargin))
 /// cell 高度
 fileprivate let kItemH = kItemW * 1.618
 
-fileprivate let ImgCategoryCellID = "ImgCategoryCellID"
-
 class WallPaperCategoryViewController: BaseViewController {
     
     // MARK: - LazyLoad
@@ -37,7 +35,7 @@ class WallPaperCategoryViewController: BaseViewController {
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UINib(nibName: "ImgCategoryCell", bundle: nil), forCellWithReuseIdentifier: ImgCategoryCellID)
+        collectionView.register(ImgCategoryCell.Nib, forCellWithReuseIdentifier: ImgCategoryCell.ID)
         collectionView.contentInset = UIEdgeInsetsMake(kTopH, 0, 0, 0)
         return collectionView
     }()
@@ -96,7 +94,7 @@ extension WallPaperCategoryViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImgCategoryCellID, for: indexPath) as! ImgCategoryCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImgCategoryCell.ID, for: indexPath) as! ImgCategoryCell
         cell.category = categoryData[indexPath.item]
         return cell
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NoPictureCell: UITableViewCell {
+class NoPictureCell: UITableViewCell,ReuseInterface {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!

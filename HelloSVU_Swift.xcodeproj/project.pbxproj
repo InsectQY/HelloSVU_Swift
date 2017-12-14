@@ -12,6 +12,8 @@
 		00213DAA1FB57BCC003BCEC8 /* SVUAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00213DA91FB57BCC003BCEC8 /* SVUAnimation.swift */; };
 		00213DAD1FB57F0C003BCEC8 /* BusLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00213DAB1FB57F0C003BCEC8 /* BusLineCell.swift */; };
 		00213DAE1FB57F0C003BCEC8 /* BusLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00213DAC1FB57F0C003BCEC8 /* BusLineCell.xib */; };
+		0042D4BB1FDA349500025F7B /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0042D4BA1FDA349500025F7B /* KingfisherExtension.swift */; };
+		008D92E01FE254EB0087B364 /* ReuseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D92DF1FE254EB0087B364 /* ReuseInterface.swift */; };
 		00DB1B4A1FC6768300FEFF0B /* AllBusLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DB1B481FC6768300FEFF0B /* AllBusLineViewController.swift */; };
 		00DB1B4B1FC6768300FEFF0B /* AllBusLineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DB1B491FC6768300FEFF0B /* AllBusLineViewController.xib */; };
 		C5ED06F964BE6FD7CA4D89F3 /* Pods_HelloSVU_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F5DAFD7A62578FB3CD3CD3 /* Pods_HelloSVU_Swift.framework */; };
@@ -25,7 +27,6 @@
 		E52B24EC1EBF4A3A00183DA6 /* QYCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52B24E81EBF4A3A00183DA6 /* QYCycleCell.xib */; };
 		E52B24ED1EBF4A3A00183DA6 /* QYCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24E91EBF4A3A00183DA6 /* QYCycleView.swift */; };
 		E52B24EE1EBF4A3A00183DA6 /* QYCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52B24EA1EBF4A3A00183DA6 /* QYCycleView.xib */; };
-		E52B24F11EBF4AF800183DA6 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B24F01EBF4AF800183DA6 /* KingfisherExtension.swift */; };
 		E53E47BB1F906FE7006C7B81 /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E47BA1F906FE7006C7B81 /* MapSearchViewController.swift */; };
 		E5539F411F7E6C3400139E17 /* NoPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5539F401F7E6C3100139E17 /* NoPictureCell.xib */; };
 		E5539F431F7E6C4300139E17 /* NoPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5539F421F7E6C4300139E17 /* NoPictureCell.swift */; };
@@ -156,6 +157,8 @@
 		00213DA91FB57BCC003BCEC8 /* SVUAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVUAnimation.swift; sourceTree = "<group>"; };
 		00213DAB1FB57F0C003BCEC8 /* BusLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLineCell.swift; sourceTree = "<group>"; };
 		00213DAC1FB57F0C003BCEC8 /* BusLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusLineCell.xib; sourceTree = "<group>"; };
+		0042D4BA1FDA349500025F7B /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
+		008D92DF1FE254EB0087B364 /* ReuseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseInterface.swift; sourceTree = "<group>"; };
 		00DB1B481FC6768300FEFF0B /* AllBusLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBusLineViewController.swift; sourceTree = "<group>"; };
 		00DB1B491FC6768300FEFF0B /* AllBusLineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllBusLineViewController.xib; sourceTree = "<group>"; };
 		8F0D10180EDFA12A4689FD7E /* Pods-HelloSVU_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloSVU_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloSVU_Swift/Pods-HelloSVU_Swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,7 +188,6 @@
 		E52B24E81EBF4A3A00183DA6 /* QYCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QYCycleCell.xib; sourceTree = "<group>"; };
 		E52B24E91EBF4A3A00183DA6 /* QYCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYCycleView.swift; sourceTree = "<group>"; };
 		E52B24EA1EBF4A3A00183DA6 /* QYCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QYCycleView.xib; sourceTree = "<group>"; };
-		E52B24F01EBF4AF800183DA6 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
 		E53E47BA1F906FE7006C7B81 /* MapSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewController.swift; sourceTree = "<group>"; };
 		E5539F401F7E6C3100139E17 /* NoPictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoPictureCell.xib; sourceTree = "<group>"; };
 		E5539F421F7E6C4300139E17 /* NoPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPictureCell.swift; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				E52B24E41EBF49AE00183DA6 /* NibLoadable.swift */,
+				008D92DF1FE254EB0087B364 /* ReuseInterface.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -502,7 +505,7 @@
 		E52B24EF1EBF4AF800183DA6 /* KingfisherExtension */ = {
 			isa = PBXGroup;
 			children = (
-				E52B24F01EBF4AF800183DA6 /* KingfisherExtension.swift */,
+				0042D4BA1FDA349500025F7B /* KingfisherExtension.swift */,
 			);
 			path = KingfisherExtension;
 			sourceTree = "<group>";
@@ -1731,7 +1734,6 @@
 				00DB1B4A1FC6768300FEFF0B /* AllBusLineViewController.swift in Sources */,
 				E5539F521F7E711900139E17 /* Style.swift in Sources */,
 				E5889A321FAC90C300557639 /* SVUView.swift in Sources */,
-				E52B24F11EBF4AF800183DA6 /* KingfisherExtension.swift in Sources */,
 				E5E85E921F7F6AA20073AC02 /* SlideNews.swift in Sources */,
 				E5889A341FAC90F300557639 /* SVUTableView.swift in Sources */,
 				E55DDDCF1F94D4230057FCBD /* BusRouteDetailHeaderView.swift in Sources */,
@@ -1762,6 +1764,7 @@
 				E5FFF2911EDAD99500594C03 /* SuggestionDetail.swift in Sources */,
 				E5FAEC431F7BBDE0006CC525 /* Api.swift in Sources */,
 				E56007FC1ED7D4AE00C82460 /* WeatherData.swift in Sources */,
+				008D92E01FE254EB0087B364 /* ReuseInterface.swift in Sources */,
 				E5A40CEE1F7E8A8C0091C407 /* String-Extension.swift in Sources */,
 				E5889A301FAC8F4C00557639 /* SVUTableViewCell.swift in Sources */,
 				E5BC27141F82AC1B005BE425 /* QYPageView.swift in Sources */,
@@ -1803,6 +1806,7 @@
 				E5BC27151F82AC1E005BE425 /* QYTitleView.swift in Sources */,
 				E56007FE1ED7D58300C82460 /* Suggestion.swift in Sources */,
 				E57FCCCC1ED43F4500FE5184 /* MapViewController.swift in Sources */,
+				0042D4BB1FDA349500025F7B /* KingfisherExtension.swift in Sources */,
 				E52B24E21EBF46B500183DA6 /* QYRequestTool.swift in Sources */,
 				E55DDDC71F94D3A50057FCBD /* BusRouteDetailCellFooter.swift in Sources */,
 				E514B38A1F80C2D6002431CE /* SlideNewsDetailViewController.swift in Sources */,

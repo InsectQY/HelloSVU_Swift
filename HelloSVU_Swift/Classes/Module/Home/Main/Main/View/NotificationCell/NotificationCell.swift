@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationCell: UITableViewCell {
+class NotificationCell: UITableViewCell,ReuseInterface {
 
 
 

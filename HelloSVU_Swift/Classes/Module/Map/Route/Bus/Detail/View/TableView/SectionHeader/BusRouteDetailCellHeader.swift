@@ -11,7 +11,7 @@ import EZSwiftExtensions
 
 fileprivate let BusLineCellID = "BusLineCellID"
 
-class BusRouteDetailCellHeader: UITableViewHeaderFooterView {
+class BusRouteDetailCellHeader: UITableViewHeaderFooterView,ReuseInterface {
 
     /// 途径站点按钮点击回调
     var viaBtnClick : (() -> ())?

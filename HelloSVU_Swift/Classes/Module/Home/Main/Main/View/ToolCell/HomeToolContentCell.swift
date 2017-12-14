@@ -10,14 +10,13 @@ import UIKit
 
 import EZSwiftExtensions
 
-fileprivate let HomeToolCellID = "HomeToolCellID"
 fileprivate let HomeToolContentY : CGFloat = 15
 fileprivate let HomeToolContentX : CGFloat = 40
 fileprivate let maxCol : CGFloat = 3
 fileprivate let HomeToolCellH : CGFloat = (toolCellH - HomeToolContentY) * 0.5
 fileprivate let HomeToolCellW : CGFloat = ScreenW / maxCol
 
-class HomeToolContentCell: UITableViewCell {
+class HomeToolContentCell: UITableViewCell,ReuseInterface {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
@@ -44,7 +43,7 @@ class HomeToolContentCell: UITableViewCell {
         flowLayout.minimumLineSpacing = 0
         flowLayout.itemSize = CGSize(width: HomeToolCellW, height: HomeToolCellH)
         collectionView.contentInset = UIEdgeInsetsMake(HomeToolContentY, 0, 0, 0)
-        collectionView.register(UINib(nibName: "HomeToolCell", bundle: nil), forCellWithReuseIdentifier: HomeToolCellID)
+        collectionView.register(HomeToolCell.Nib, forCellWithReuseIdentifier: HomeToolCell.ID)
         collectionView.reloadData()
     }
 }
@@ -59,7 +58,7 @@ extension HomeToolContentCell : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeToolCellID, for: indexPath) as! HomeToolCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeToolCell.ID, for: indexPath) as! HomeToolCell
         cell.home = homeData[indexPath.item]
         return cell
     }

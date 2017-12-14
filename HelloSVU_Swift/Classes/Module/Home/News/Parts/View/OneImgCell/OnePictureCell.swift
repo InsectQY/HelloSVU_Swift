@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OnePictureCell: UITableViewCell {
+class OnePictureCell: UITableViewCell,ReuseInterface {
 
     @IBOutlet var thumbNailImg: UIImageView!
     @IBOutlet var timeLabel: UILabel!

@@ -8,11 +8,6 @@
 
 import UIKit
 
-fileprivate let NoPictureCellID = "NoPictureCellID"
-fileprivate let OnePictureCellID = "OnePictureCellID"
-fileprivate let MultiPicutresCellID = "MultiPicutresCellID"
-fileprivate let BigImgCellID = "BigImgCellID"
-
 class NewsPartsViewController: BaseViewController {
     
     var titleName = ""
@@ -28,10 +23,10 @@ class NewsPartsViewController: BaseViewController {
         let tableView = UITableView(frame: UIScreen.main.bounds)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "NoPictureCell", bundle: nil), forCellReuseIdentifier: NoPictureCellID)
-        tableView.register(UINib(nibName: "OnePictureCell", bundle: nil), forCellReuseIdentifier: OnePictureCellID)
-        tableView.register(UINib(nibName: "MultiPicutresCell", bundle: nil), forCellReuseIdentifier: MultiPicutresCellID)
-        tableView.register(UINib(nibName: "BigImgCell", bundle: nil), forCellReuseIdentifier: BigImgCellID)
+        tableView.register(NoPictureCell.Nib, forCellReuseIdentifier: NoPictureCell.ID)
+        tableView.register(OnePictureCell.Nib, forCellReuseIdentifier: OnePictureCell.ID)
+        tableView.register(MultiPicutresCell.Nib, forCellReuseIdentifier: MultiPicutresCell.ID)
+        tableView.register(BigImgCell.Nib, forCellReuseIdentifier: BigImgCell.ID)
         tableView.contentInset = UIEdgeInsetsMake(0, 0, 109, 0)
         tableView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 109, 0)
         tableView.separatorStyle = .none
@@ -145,22 +140,22 @@ extension NewsPartsViewController : UITableViewDataSource {
         let news = allNews[indexPath.row]
         if news?.infoType == .SignalImg {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: OnePictureCellID, for: indexPath) as! OnePictureCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: OnePictureCell.ID, for: indexPath) as! OnePictureCell
             cell.news = news
             return cell
         }else if news?.infoType == .MultiImg {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: MultiPicutresCellID, for: indexPath) as! MultiPicutresCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: MultiPicutresCell.ID, for: indexPath) as! MultiPicutresCell
             cell.news = news
             return cell
         }else if news?.infoType == .BigImg {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: BigImgCellID, for: indexPath) as! BigImgCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: BigImgCell.ID, for: indexPath) as! BigImgCell
             cell.news = news
             return cell
         }else {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: NoPictureCellID, for: indexPath) as! NoPictureCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: NoPictureCell.ID, for: indexPath) as! NoPictureCell
             cell.news = news
             return cell
         }

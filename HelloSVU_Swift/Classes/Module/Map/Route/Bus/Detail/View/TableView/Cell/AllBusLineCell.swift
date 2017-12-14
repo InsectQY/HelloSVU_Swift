@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllBusLineCell: UITableViewCell {
+class AllBusLineCell: UITableViewCell,ReuseInterface {
 
     @IBOutlet weak var selImage: UIImageView!
     @IBOutlet weak var busLineNameLabel: UILabel!

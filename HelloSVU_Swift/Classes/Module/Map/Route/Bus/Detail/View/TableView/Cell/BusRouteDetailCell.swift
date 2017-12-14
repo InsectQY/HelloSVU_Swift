@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusRouteDetailCell: UITableViewCell {
+class BusRouteDetailCell: UITableViewCell,ReuseInterface {
 
     @IBOutlet weak var viaStopLabel: UILabel!
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImgCategoryCell: UICollectionViewCell {
+class ImgCategoryCell: UICollectionViewCell ,ReuseInterface {
     
     // MARK: - LazyLoad
     @IBOutlet weak var coverImg: UIImageView!

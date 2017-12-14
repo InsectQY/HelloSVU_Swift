@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusRouteDetailLineCell: UICollectionViewCell {
+class BusRouteDetailLineCell: UICollectionViewCell,ReuseInterface {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!

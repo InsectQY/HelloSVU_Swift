@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusRouteDetailCellFooter: UITableViewHeaderFooterView {
+class BusRouteDetailCellFooter: UITableViewHeaderFooterView,ReuseInterface {
 
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var arrivalStopLabel: UILabel!
