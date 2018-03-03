@@ -8,8 +8,6 @@
 
 import UIKit
 
-import CDAlertView
-
 private let MapTipsCellID = "MapTipsCellID"
 
 class MapSearchViewController: BaseViewController {

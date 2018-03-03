@@ -10,14 +10,22 @@
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
+*.xccheckout
 profile
 *.moved-aside
 DerivedData
 .idea/
 *.hmap
+*.xccheckout
+
+Carthage
 
 CocoaPods
 Pods
 *.xcworkspace
 Podfile.lock
 
+# Swift Package Manager
+.build
+Packages
+Package.pins

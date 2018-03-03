@@ -1,0 +1,10 @@
+# 网络请求
+github "Alamofire/Alamofire"
+github "Moya/Moya"
+# 字典转模型
+github "SwiftyJSON/SwiftyJSON"
+github "alibaba/HandyJSON"
+# 图片缓存
+github "onevcat/Kingfisher"
+# 布局
+github "SnapKit/SnapKit"

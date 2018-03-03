@@ -5,22 +5,14 @@ target 'HelloSVU_Swift' do
 
 use_frameworks!
 
-pod 'Alamofire'
-pod 'HandyJSON'
-pod 'SwiftyJSON'
-pod 'Kingfisher'
 pod 'EZSwiftExtensions'
 pod 'MJRefresh'
 pod 'SVProgressHUD'
 pod 'SKPhotoBrowser'
 pod 'AMapNavi'
 pod 'AMapSearch'
-pod 'SnapKit'
 pod 'FDFullscreenPopGesture'
-pod 'Siren'
 pod 'DOPDropDownMenu-Enhanced'
-pod 'CDAlertView'
-pod 'SwiftTheme'
 pod 'StatefulViewController'
 
 end

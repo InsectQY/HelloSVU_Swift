@@ -14,6 +14,5 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.theme_backgroundColor = GlobalPicker.backgroundColor
     }
 }
