@@ -36,7 +36,7 @@
 
 
 /** 总的滚动View(频道栏+主View) */
-@interface JhtTotalSlideView : UIView
+@interface JhtTotalSlideView: UIView
 #pragma mark - property
 /** 频道栏与VC之间的距离 */
 @property (nonatomic, assign) float channelBarBottomSpace;

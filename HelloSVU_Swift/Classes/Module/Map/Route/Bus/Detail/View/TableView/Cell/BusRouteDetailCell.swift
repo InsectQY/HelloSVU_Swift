@@ -12,7 +12,7 @@ class BusRouteDetailCell: UITableViewCell,NibReusable {
 
     @IBOutlet private weak var viaStopLabel: UILabel!
 
-    var busStop : AMapBusStop? {
+    var busStop: AMapBusStop? {
         
         didSet {
             viaStopLabel.text = busStop?.name

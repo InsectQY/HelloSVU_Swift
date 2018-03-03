@@ -13,12 +13,12 @@ private let NewsCurrentChannels = "newsCurrentChannels"
 
 class NewsViewController: BaseViewController {
 
-    private lazy var channelsID: [String : String] = {
+    private lazy var channelsID: [String: String] = {
         
         if let path = Bundle.main.path(forResource: "News.plist", ofType: nil), let news = NSDictionary(contentsOfFile: path) as? [String: String] {
             return news
         }
-        return ["头条" : "SYLB10,SYDT10"]
+        return ["头条": "SYLB10,SYDT10"]
     }()
     
     // MARK: - 所有频道
@@ -106,10 +106,10 @@ class NewsViewController: BaseViewController {
         barAndSlideModel.channelColorAndFontModel = channelColorAndFontModel
         
         // 装有ChannelModel 待添加的数组
-        var array : NSMutableArray = NSMutableArray.init(array: JhtToAddChannels)
+        var array: NSMutableArray = NSMutableArray.init(array: JhtToAddChannels)
         barAndSlideModel.toAddItemArray = array
         // 不能移动删除频道的名字数组
-        var notMoveNameArray : NSMutableArray = ["头条"]
+        var notMoveNameArray: NSMutableArray = ["头条"]
         barAndSlideModel.notMoveNameArray = notMoveNameArray
         // 选中的索引值
         barAndSlideModel.selectedIndex = 0
@@ -119,7 +119,7 @@ class NewsViewController: BaseViewController {
     
     private lazy var slideView: JhtChannelBarAndSlideViewConnect = {
         
-        var array : NSMutableArray = NSMutableArray.init(array: JhtCurrentChannels)
+        var array: NSMutableArray = NSMutableArray.init(array: JhtCurrentChannels)
         let slideView = JhtChannelBarAndSlideViewConnect(slideViewAndItemEditViewWithBarAndSlideModel: barAndSlideModel, withNewsChannelItemEdit: itemEditModel, withIsExistNavOrTab: NT_IsExist.onlyHave_N, withChanelArray: array, withBaseViewController: self, withDelegte: self)
         if let slideView = slideView {
             slideView.backgroundColor = .white
@@ -155,7 +155,7 @@ extension NewsViewController {
     }
     
     // MARK: - 数据持久化抽取
-    private func updateCurrentChannels(content : [String],key : String) {
+    private func updateCurrentChannels(content: [String],key: String) {
     
         UserDefaults.standard.set(content, forKey: key)
         UserDefaults.standard.synchronize()
@@ -163,7 +163,7 @@ extension NewsViewController {
 }
 
 // MARK: - JhtTotalSlideViewDelegate
-extension NewsViewController : JhtTotalSlideViewDelegate{
+extension NewsViewController: JhtTotalSlideViewDelegate{
     
     func numberOfTabs(in sender: JhtTotalSlideView!) -> Int {
         return JhtCurrentChannels.count
@@ -186,7 +186,7 @@ extension NewsViewController : JhtTotalSlideViewDelegate{
 //        let vc = cache.object(forKey: "\(index)") as AnyObject
 //        if vc.isKind(of: NewsPartsViewController.self) {
 //            
-//            let partsVc : NewsPartsViewController = vc as! NewsPartsViewController
+//            let partsVc: NewsPartsViewController = vc as! NewsPartsViewController
 //            let name = model.titleName ?? ""
 //            partsVc.channelID = channelsID[name] ?? ""
 //        }

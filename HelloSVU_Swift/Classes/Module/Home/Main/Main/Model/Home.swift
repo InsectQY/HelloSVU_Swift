@@ -10,12 +10,12 @@ import UIKit
 
 class Home: NSObject {
     
-    @objc var vcName : String = ""
-    @objc var image : String = ""
-    @objc var title : String = ""
+    @objc var vcName: String = ""
+    @objc var image: String = ""
+    @objc var title: String = ""
     
     // MARK:- 自定义构造函数
-    init(dict : [String : Any]) {
+    init(dict: [String: Any]) {
         super.init()
         
         setValuesForKeys(dict)

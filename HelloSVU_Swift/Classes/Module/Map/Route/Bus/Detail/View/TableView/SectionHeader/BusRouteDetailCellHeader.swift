@@ -14,9 +14,9 @@ private let BusLineCellID = "BusLineCellID"
 class BusRouteDetailCellHeader: UITableViewHeaderFooterView,NibReusable {
 
     /// 途径站点按钮点击回调
-    var viaBtnClick : (() -> ())?
+    var viaBtnClick: (() -> ())?
     /// 其他公交路线点击回调
-    var otherBusLineClick : (() -> ())?
+    var otherBusLineClick: (() -> ())?
     
     @IBOutlet private weak var routeTypeImage: UIImageView!
     @IBOutlet private weak var busLineLabel: UILabel!
@@ -50,9 +50,9 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView,NibReusable {
     }()
     
     /// 包含是否展开，是否有多条 busline 以及选择的是第几组的信息
-    var info : BusSegment?
+    var info: BusSegment?
     
-    var segment : AMapSegment? {
+    var segment: AMapSegment? {
         
         didSet {
             
@@ -106,7 +106,7 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView,NibReusable {
             // 设置交通工具类型图片
             if let type = segment?.buslines[busLineIndex].type {
                 let type = type as NSString
-                routeTypeImage.image = type.contains("地铁") ? #imageLiteral(resourceName: "subway") : #imageLiteral(resourceName: "bus")
+                routeTypeImage.image = type.contains("地铁") ? #imageLiteral(resourceName: "subway"): #imageLiteral(resourceName: "bus")
             }
             
             checkEnterAndExitName()
@@ -155,7 +155,7 @@ extension BusRouteDetailCellHeader {
 }
 
 // MARK: - UICollectionViewDataSource
-extension BusRouteDetailCellHeader : UICollectionViewDataSource {
+extension BusRouteDetailCellHeader: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return busLines.count
@@ -170,7 +170,7 @@ extension BusRouteDetailCellHeader : UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
-extension BusRouteDetailCellHeader : UICollectionViewDelegateFlowLayout {
+extension BusRouteDetailCellHeader: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -180,7 +180,7 @@ extension BusRouteDetailCellHeader : UICollectionViewDelegateFlowLayout {
 }
 
 // MARK: - UICollectionViewDelegate
-extension BusRouteDetailCellHeader : UICollectionViewDelegate {
+extension BusRouteDetailCellHeader: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         otherBusLineClick?()

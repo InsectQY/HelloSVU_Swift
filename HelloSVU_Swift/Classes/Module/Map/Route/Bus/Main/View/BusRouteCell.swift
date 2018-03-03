@@ -18,7 +18,7 @@ class BusRouteCell: UITableViewCell {
     @IBOutlet weak var costLabel: UILabel!
     
     //重写frame
-    override var frame : CGRect{
+    override var frame: CGRect{
         
         didSet {
             
@@ -29,7 +29,7 @@ class BusRouteCell: UITableViewCell {
         }
     }
     
-    var transit : AMapTransit? {
+    var transit: AMapTransit? {
         
         didSet {
             
@@ -47,7 +47,7 @@ class BusRouteCell: UITableViewCell {
         }
     }
     
-    var normalBusName : String? {
+    var normalBusName: String? {
         
         get {
             
@@ -59,10 +59,10 @@ class BusRouteCell: UITableViewCell {
                     segment.removeLast()
                 }
                 
-                var allSeg : String = ""
+                var allSeg: String = ""
                 for i in 0 ..< segment.count { // 遍历所有换乘策略
                     
-                    var busLine : String = ""
+                    var busLine: String = ""
                     for k in 0 ..< segment[i].buslines.count { // 遍历同一换乘策略中的所有公交线路
                         
                         var tmpName = (segment[i].buslines[k].name ?? "") as NSString
@@ -96,7 +96,7 @@ class BusRouteCell: UITableViewCell {
     }
     
     /// cell 高度
-    var cellHeight : CGFloat? {
+    var cellHeight: CGFloat? {
         
         get {
             

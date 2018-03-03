@@ -17,7 +17,7 @@ class MultiPicutresCell: UITableViewCell, NibReusable {
     @IBOutlet private weak var secondImg: UIImageView!
     @IBOutlet private weak var thirdImg: UIImageView!
     
-    var news : SingleNews? {
+    var news: SingleNews? {
         
         didSet {
             

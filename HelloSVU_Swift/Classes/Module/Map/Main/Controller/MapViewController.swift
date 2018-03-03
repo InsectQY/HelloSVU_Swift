@@ -8,12 +8,12 @@
 
 import UIKit
 
-private let kToolViewH : CGFloat = 44
-private let kLocateBtnH : CGFloat = 36
+private let kToolViewH: CGFloat = 44
+private let kLocateBtnH: CGFloat = 36
 
 class MapViewController: BaseViewController {
     
-    var coordinate : CLLocationCoordinate2D?
+    var coordinate: CLLocationCoordinate2D?
     
     // MARK: - LazyLoad
     private lazy var mapView: MAMapView = {
@@ -72,7 +72,7 @@ extension MapViewController {
     // MARK: - toolView 点击事件
     private func toolViewClick() {
         
-        toolView.didClick = {[weak self] (selInex : Int) in
+        toolView.didClick = {[weak self] (selInex: Int) in
             
             switch selInex {
             case 0:
@@ -103,7 +103,7 @@ extension MapViewController {
 }
 
 // MARK: - MAMapViewDelegate
-extension MapViewController : MAMapViewDelegate{
+extension MapViewController: MAMapViewDelegate{
     
     func mapView(_ mapView: MAMapView!, didUpdate userLocation: MAUserLocation!, updatingLocation: Bool) {
         

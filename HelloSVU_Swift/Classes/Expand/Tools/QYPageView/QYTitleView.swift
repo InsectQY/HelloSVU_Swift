@@ -8,35 +8,35 @@
 
 import UIKit
 
-protocol QYTitleViewDeleate : class {
-    func titleView(_ titleView : QYTitleView, didSelected currentIndex : Int)
+protocol QYTitleViewDeleate: class {
+    func titleView(_ titleView: QYTitleView, didSelected currentIndex: Int)
 }
 
 class QYTitleView: UIView {
     
     // MARK: 定义属性
-    weak var delegate : QYTitleViewDeleate?
+    weak var delegate: QYTitleViewDeleate?
     
-    private var titles : [String]
-    private var style : QYPageStyle
+    private var titles: [String]
+    private var style: QYPageStyle
     
-    private lazy var currentIndex : Int = 0
-    private lazy var titleLabels : [UILabel] = [UILabel]()
-    private lazy var scrollView : UIScrollView = {
+    private lazy var currentIndex: Int = 0
+    private lazy var titleLabels: [UILabel] = [UILabel]()
+    private lazy var scrollView: UIScrollView = {
         
         let scrollView = UIScrollView(frame: self.bounds)
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.scrollsToTop = false
         return scrollView
     }()
-    private lazy var bottomLine : UIView = {
+    private lazy var bottomLine: UIView = {
         
         let bottomLine = UIView()
         bottomLine.backgroundColor = self.style.bottomLineColor
         bottomLine.frame.size.height = self.style.bottomLineHeight
         return bottomLine
     }()
-    private lazy var coverView : UIView = {
+    private lazy var coverView: UIView = {
         
         let coverView = UIView()
         coverView.backgroundColor = self.style.coverBgColor
@@ -45,7 +45,7 @@ class QYTitleView: UIView {
     }()
     
     // MARK: 构造函数
-    init(frame : CGRect, titles : [String], style : QYPageStyle) {
+    init(frame: CGRect, titles: [String], style: QYPageStyle) {
         
         self.titles = titles
         self.style = style
@@ -91,7 +91,7 @@ extension QYTitleView {
             titleLabel.text = title
             titleLabel.tag = i
             titleLabel.font = style.titleFont
-            titleLabel.textColor = i == 0 ? style.selectColor : style.normalColor
+            titleLabel.textColor = i == 0 ? style.selectColor: style.normalColor
             titleLabel.textAlignment = .center
             
             // 3.添加到父控件中
@@ -112,16 +112,16 @@ extension QYTitleView {
         
         for (i, label) in titleLabels.enumerated() {
             
-            var w : CGFloat = 0
-            let h : CGFloat = bounds.height
-            var x : CGFloat = 0
-            let y : CGFloat = 0
+            var w: CGFloat = 0
+            let h: CGFloat = bounds.height
+            var x: CGFloat = 0
+            let y: CGFloat = 0
             
             if !style.isScrollEnable {
                 w = bounds.width / CGFloat(count)
                 x = w * CGFloat(i)
             } else {
-                w = (titles[i] as NSString).boundingRect(with: CGSize(width : CGFloat.greatestFiniteMagnitude, height: 0), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : style.titleFont], context: nil).width
+                w = (titles[i] as NSString).boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: 0), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: style.titleFont], context: nil).width
                 if i == 0 {
                     x = style.titleMargin * 0.5
                 } else {
@@ -163,11 +163,11 @@ extension QYTitleView {
         scrollView.addSubview(coverView)
         
         // 3.设置frame
-        var coverW : CGFloat = titleLabels.first!.frame.width - 2 * style.coverMargin
+        var coverW: CGFloat = titleLabels.first!.frame.width - 2 * style.coverMargin
         if style.isScrollEnable {
             coverW = titleLabels.first!.frame.width + style.titleMargin * 0.5
         }
-        let coverH : CGFloat = style.coverHeight
+        let coverH: CGFloat = style.coverHeight
         coverView.bounds = CGRect(x: 0, y: 0, width: coverW, height: coverH)
         coverView.center = titleLabels.first!.center
         
@@ -180,7 +180,7 @@ extension QYTitleView {
 // MARK:- 事件处理函数
 extension QYTitleView {
     
-    @objc private func titleLabelClick(_ tapGes : UITapGestureRecognizer) {
+    @objc private func titleLabelClick(_ tapGes: UITapGestureRecognizer) {
         // 0.取出点击的Label
         guard let newLabel = tapGes.view as? UILabel else { return }
         
@@ -210,7 +210,7 @@ extension QYTitleView {
         
         // 6.调整coverView的位置
         if style.isShowCoverView {
-            let coverW = style.isScrollEnable ? (newLabel.frame.width + style.titleMargin) : (newLabel.frame.width - 2 * style.coverMargin)
+            let coverW = style.isScrollEnable ? (newLabel.frame.width + style.titleMargin): (newLabel.frame.width - 2 * style.coverMargin)
             coverView.frame.size.width = coverW
             coverView.center = newLabel.center
         }
@@ -218,7 +218,7 @@ extension QYTitleView {
 }
 
 // MARK: - QYContentViewDelegate
-extension QYTitleView : QYContentViewDelegate {
+extension QYTitleView: QYContentViewDelegate {
     
     func contentView(_ contentView: QYContentView, endScroll inIndex: Int) {
         // 1.取出两个Label
@@ -237,7 +237,7 @@ extension QYTitleView : QYContentViewDelegate {
     }
     
     
-    private func adjustPosition(_ newLabel : UILabel) {
+    private func adjustPosition(_ newLabel: UILabel) {
         guard style.isScrollEnable else { return }
         var offsetX = newLabel.center.x - scrollView.bounds.width * 0.5
         if offsetX < 0 {
@@ -282,8 +282,8 @@ extension QYTitleView : QYContentViewDelegate {
         // 5.调整coverView
         if style.isShowCoverView {
             
-            let oldW = style.isScrollEnable ? (oldLabel.frame.width + style.titleMargin) : (oldLabel.frame.width - 2 * style.coverMargin)
-            let newW = style.isScrollEnable ? (newLabel.frame.width + style.titleMargin) : (newLabel.frame.width - 2 * style.coverMargin)
+            let oldW = style.isScrollEnable ? (oldLabel.frame.width + style.titleMargin): (oldLabel.frame.width - 2 * style.coverMargin)
+            let newW = style.isScrollEnable ? (newLabel.frame.width + style.titleMargin): (newLabel.frame.width - 2 * style.coverMargin)
             let deltaW = newW - oldW
             let deltaX = newLabel.center.x - oldLabel.center.x
             coverView.frame.size.width = oldW + deltaW * progress
@@ -291,7 +291,7 @@ extension QYTitleView : QYContentViewDelegate {
         }
     }
     
-    private func getGRBValue(_ color : UIColor) -> (CGFloat, CGFloat, CGFloat) {
+    private func getGRBValue(_ color: UIColor) -> (CGFloat, CGFloat, CGFloat) {
         guard  let components = color.cgColor.components else {
             fatalError("文字颜色请按照RGB方式设置")
         }

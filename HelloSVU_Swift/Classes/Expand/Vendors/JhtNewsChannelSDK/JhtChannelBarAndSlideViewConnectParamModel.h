@@ -16,7 +16,7 @@
 #import "JhtChannelBarAndSlideViewSpaceAndFrameModel.h"
 
 /** JhtChannelBarAndSlideViewConnect_参数model */
-@interface JhtChannelBarAndSlideViewConnectParamModel : NSObject
+@interface JhtChannelBarAndSlideViewConnectParamModel: NSObject
 
 #pragma mark required
 /** 缓存的页数 */

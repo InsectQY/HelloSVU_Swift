@@ -114,7 +114,7 @@ extension WallPaperDetailViewController {
 }
 
 // MARK: - JFContextSheetDelegate
-extension WallPaperDetailViewController : JFContextSheetDelegate {
+extension WallPaperDetailViewController: JFContextSheetDelegate {
     
     func contextSheet(_ contextSheet: JFContextSheet, didSelectItemWithItemName itemName: String) {
         switch itemName {

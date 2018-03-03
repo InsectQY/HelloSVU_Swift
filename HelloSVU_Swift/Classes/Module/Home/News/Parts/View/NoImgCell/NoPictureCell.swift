@@ -14,7 +14,7 @@ class NoPictureCell: UITableViewCell, NibReusable {
     @IBOutlet private weak var sourceLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
     
-    var news : SingleNews? {
+    var news: SingleNews? {
         
         didSet {
             

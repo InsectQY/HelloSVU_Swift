@@ -27,7 +27,7 @@ typedef NS_ENUM(NSUInteger, NT_IsExist) {
 
 
 /** 频道栏和下边滚动View的结合体 */
-@interface JhtChannelBarAndSlideViewConnect : JhtTotalSlideView
+@interface JhtChannelBarAndSlideViewConnect: JhtTotalSlideView
 #pragma mark - property
 /** 缓存总数 */
 @property (nonatomic, assign) NSInteger cacheCount;

@@ -30,7 +30,7 @@ class TabBarController: UITabBarController {
             return
         }
         
-        guard let dictArray = anyObject as? [[String : AnyObject]] else {
+        guard let dictArray = anyObject as? [[String: AnyObject]] else {
             return
         }
         
@@ -50,15 +50,15 @@ class TabBarController: UITabBarController {
 extension TabBarController {
     
     private func seUpTabBarAttr() {
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.gray], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.darkGray], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.gray], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.darkGray], for: .selected)
     }
 }
 
 // MARK: - 设置子控制器
 extension TabBarController {
     
-    private func addChildVc(childVcName : String, title : String, normalImg : String, selImg : String) {
+    private func addChildVc(childVcName: String, title: String, normalImg: String, selImg: String) {
         
         let childVc = GetVc.getVcFromString(childVcName)
         

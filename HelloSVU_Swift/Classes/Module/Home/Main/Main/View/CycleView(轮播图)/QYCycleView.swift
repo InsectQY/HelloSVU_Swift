@@ -16,8 +16,8 @@ class QYCycleView: UIView {
     @IBOutlet private weak var pageControl: UIPageControl!
     @IBOutlet private weak var flowLayout: UICollectionViewFlowLayout!
     
-    var cycleTimer : Timer?
-    var cycleData : [String]? {
+    var cycleTimer: Timer?
+    var cycleData: [String]? {
         
         didSet {
             
@@ -51,7 +51,7 @@ extension QYCycleView {
 }
 
 // MARK: - UICollectionViewDataSource
-extension QYCycleView : UICollectionViewDataSource {
+extension QYCycleView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (cycleData?.count ?? 0) * 10000
@@ -66,7 +66,7 @@ extension QYCycleView : UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegate
-extension QYCycleView : UICollectionViewDelegate {
+extension QYCycleView: UICollectionViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         

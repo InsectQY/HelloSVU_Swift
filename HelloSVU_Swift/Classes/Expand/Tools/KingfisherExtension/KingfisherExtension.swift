@@ -11,7 +11,7 @@ import Kingfisher
 
 extension UIImageView {
     
-    func setImage(_ URLString : String?, _ placeHolderName : String? = nil,progress : ((_ receivedSize: Int64, _ totalSize: Int64) -> ())? = nil, completionHandler : ((_ image: Image?, _ error: NSError?, _ cacheType: CacheType, _ imageURL: URL?) -> ())? = nil) {
+    func setImage(_ URLString: String?, _ placeHolderName: String? = nil,progress: ((_ receivedSize: Int64, _ totalSize: Int64) -> ())? = nil, completionHandler: ((_ image: Image?, _ error: NSError?, _ cacheType: CacheType, _ imageURL: URL?) -> ())? = nil) {
         
         guard let URLString = URLString else {return}
         
@@ -34,7 +34,7 @@ extension UIImageView {
         }
     }
     
-    func setImage(_ URLString : String?, _ placeHolderName : String? = nil) {
+    func setImage(_ URLString: String?, _ placeHolderName: String? = nil) {
         
        setImage(URLString, placeHolderName, progress: nil, completionHandler: nil)
     }

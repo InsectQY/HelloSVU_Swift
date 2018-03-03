@@ -110,7 +110,7 @@ extension NormalNewsDetailViewController: UIWebViewDelegate {
     }
     
     // MARK: - 展示图片
-    private func showImage(_ imageUrl : String) {
+    private func showImage(_ imageUrl: String) {
         
         for (index,item) in allImages.enumerated() {
             if imageUrl == item {

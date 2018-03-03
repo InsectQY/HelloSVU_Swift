@@ -27,7 +27,7 @@ class TodayWeatherView: UIView ,NibLoadable{
     @IBOutlet weak var sportLabel: UILabel!
     @IBOutlet weak var comfortLabel: UILabel!
     
-    var weatherData : WeatherData? {
+    var weatherData: WeatherData? {
         
         didSet {
             

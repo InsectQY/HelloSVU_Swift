@@ -9,11 +9,11 @@
 import UIKit
 
 /// cell 之间间距
-private let kItemMargin : CGFloat = 5
+private let kItemMargin: CGFloat = 5
 /// 左右间距
-private let kEdge : CGFloat = 4
+private let kEdge: CGFloat = 4
 /// 每行最大列数
-private let kMaxCol : CGFloat = 3
+private let kMaxCol: CGFloat = 3
 /// cell 宽度
 private let kItemW = (ScreenW - (2 * kEdge) - ((kMaxCol - 1) * kItemMargin)) / kMaxCol
 /// cell 高度
@@ -76,8 +76,8 @@ extension WallperVerticalViewController {
     @objc private func loadNewVerticalData() {
         
         collectionView.mj_footer.endRefreshing()
-        let parameters : [String : Any] = ["limit" : 15,
-                                           "skip" : 0]
+        let parameters: [String: Any] = ["limit": 15,
+                                           "skip": 0]
         QYRequestTool.requestData(.GET, "\(imgCategoryURL)/\(id)/vertical", parameters, successComplete: {[weak self] (JSON) in
             
             if let data = [ImgVertical].deserialize(from:JSON["res"]["vertical"].description) {
@@ -95,8 +95,8 @@ extension WallperVerticalViewController {
     @objc private func loadMoreVerticalData() {
         
         collectionView.mj_header.endRefreshing()
-        let parameters : [String : Any] = ["limit" : 15,
-                                           "skip" : verticalData.count]
+        let parameters: [String: Any] = ["limit": 15,
+                                           "skip": verticalData.count]
         QYRequestTool.requestData(.GET, "\(imgCategoryURL)/\(id)/vertical", parameters, successComplete: {[weak self] (JSON) in
             
             if let data = [ImgVertical].deserialize(from:JSON["res"]["vertical"].description) {
@@ -113,7 +113,7 @@ extension WallperVerticalViewController {
 }
 
 // MARK: - UICollectionViewDataSource
-extension WallperVerticalViewController : UICollectionViewDataSource {
+extension WallperVerticalViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return verticalData.count
@@ -128,7 +128,7 @@ extension WallperVerticalViewController : UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegate
-extension WallperVerticalViewController : UICollectionViewDelegate {
+extension WallperVerticalViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         

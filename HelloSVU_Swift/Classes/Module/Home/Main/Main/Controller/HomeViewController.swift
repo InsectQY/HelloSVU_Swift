@@ -8,17 +8,17 @@
 
 import UIKit
 
-private let cycleViewH : CGFloat = (ScreenH - kTabBarH - kTabBarH) * 0.35
-private let notificationCellH : CGFloat = (ScreenH - kTabBarH - kTabBarH) * 0.25
+private let cycleViewH: CGFloat = (ScreenH - kTabBarH - kTabBarH) * 0.35
+private let notificationCellH: CGFloat = (ScreenH - kTabBarH - kTabBarH) * 0.25
 
-let toolCellH : CGFloat = (ScreenH - 113) * 0.4
+let toolCellH: CGFloat = (ScreenH - 113) * 0.4
 
 class HomeViewController: BaseViewController {
     
     // MARK: - LazyLoad
     private lazy var homeData: [Home] = [Home]()
     
-    private lazy var cycleView : QYCycleView = {
+    private lazy var cycleView: QYCycleView = {
         
         let cycleView = QYCycleView.viewFromXib()
         cycleView.frame = CGRect(x: 0, y: 0, width:ScreenW, height: cycleViewH)
@@ -60,7 +60,7 @@ extension HomeViewController {
     // MARK: - 设置轮播图
     private func setUpTableHeaderView() {
         
-        let cycleData : [String] = [cycleImage1,cycleImage2,cycleImage3,cycleImage4,cycleImage5]
+        let cycleData: [String] = [cycleImage1,cycleImage2,cycleImage3,cycleImage4,cycleImage5]
         
         cycleView.cycleData = cycleData
         tableView.tableHeaderView = cycleView
@@ -75,7 +75,7 @@ extension HomeViewController {
         if let path = Bundle.main.path(forResource: "Home.plist", ofType: nil), let home = NSArray(contentsOfFile: path) as? [[String: Any]] {
             
             for dict in home {
-                homeData.append(Home(dict :dict))
+                homeData.append(Home(dict:dict))
             }
         }
         tableView.reloadData()
@@ -83,7 +83,7 @@ extension HomeViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension HomeViewController : UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
@@ -105,13 +105,13 @@ extension HomeViewController : UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension HomeViewController : UITableViewDelegate {
+extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("------")
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? notificationCellH : toolCellH
+        return indexPath.row == 0 ? notificationCellH: toolCellH
     }
 }

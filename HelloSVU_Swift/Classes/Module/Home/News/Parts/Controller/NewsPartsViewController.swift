@@ -62,9 +62,9 @@ extension NewsPartsViewController {
 extension NewsPartsViewController {
     
     // MARK: - 请求参数
-    private func getParameters() -> [String : Any] {
+    private func getParameters() -> [String: Any] {
         
-        var parameters = [String : Any]()
+        var parameters = [String: Any]()
         parameters["proid"] = "ifengnewsvip"
         if channelID == "就是名字" {
             parameters["k"] = titleName
@@ -80,7 +80,7 @@ extension NewsPartsViewController {
         var parameters = getParameters()
         nowPage = 1
         parameters["page"] = nowPage
-        let NewsURL = channelID == "就是名字" ? News.normal : News.channelID
+        let NewsURL = channelID == "就是名字" ? News.normal: News.channelID
         QYRequestTool.requestData(.GET, NewsURL, parameters, successComplete: {[weak self] (JSON) in
 
             if let data = [SingleNews].deserialize(from: JSON[0]["item"].description) {
@@ -107,7 +107,7 @@ extension NewsPartsViewController {
         var parameters = getParameters()
         nowPage += 1
         parameters["page"] = nowPage
-        let NewsURL = channelID == "就是名字" ? News.normal : News.channelID
+        let NewsURL = channelID == "就是名字" ? News.normal: News.channelID
         QYRequestTool.requestData(.GET, NewsURL, parameters, successComplete: {[weak self] (JSON) in
 
             if let data = [SingleNews].deserialize(from: JSON[0]["item"].description) {
@@ -129,7 +129,7 @@ extension NewsPartsViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension NewsPartsViewController : UITableViewDataSource {
+extension NewsPartsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allNews.count

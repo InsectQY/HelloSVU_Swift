@@ -9,11 +9,11 @@
 import UIKit
 
 /// cell 之间间距
-private let kItemMargin : CGFloat = 20
+private let kItemMargin: CGFloat = 20
 /// 左右间距
-private let kEdge : CGFloat = 10
+private let kEdge: CGFloat = 10
 /// 每行最大列数
-private let kMaxCol : CGFloat = 3
+private let kMaxCol: CGFloat = 3
 /// cell 宽度
 private let kItemW = (ScreenW - (2 * kEdge) - ((kMaxCol - 1) * kItemMargin)) / kMaxCol
 /// cell 高度
@@ -85,7 +85,7 @@ extension WallPaperCategoryViewController {
 }
 
 // MARK: - UICollectionViewDataSource
-extension WallPaperCategoryViewController : UICollectionViewDataSource {
+extension WallPaperCategoryViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryData.count
@@ -100,7 +100,7 @@ extension WallPaperCategoryViewController : UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegate
-extension WallPaperCategoryViewController : UICollectionViewDelegate {
+extension WallPaperCategoryViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         

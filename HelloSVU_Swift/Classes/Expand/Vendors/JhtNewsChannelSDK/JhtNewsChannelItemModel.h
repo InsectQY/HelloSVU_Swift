@@ -17,7 +17,7 @@
 
 
 /** 频道Model */
-@interface JhtNewsChannelItemModel : NSObject
+@interface JhtNewsChannelItemModel: NSObject
 
 #pragma mark required
 /** title */

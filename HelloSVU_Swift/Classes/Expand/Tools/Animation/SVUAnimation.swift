@@ -15,7 +15,7 @@ class SVUAnimation: NSObject {
     static private var hudWindow = UIWindow()
     
     /// 只适用用于底部出现的view
-    class func showBottomView(_ showVc:UIViewController, viewHeight:CGFloat,animateDuration : TimeInterval = 1, completion:(() -> ())?) {
+    class func showBottomView(_ showVc:UIViewController, viewHeight:CGFloat,animateDuration: TimeInterval = 1, completion:(() -> ())?) {
         
         window.frame = CGRect(x: 0, y: ScreenH, width: ScreenW, height: viewHeight)
         window.windowLevel = UIWindowLevelNormal
@@ -41,7 +41,7 @@ class SVUAnimation: NSObject {
         })
     }
     
-    class func dismiss(animateDuration : TimeInterval = 1, completion:(() -> ())?) {
+    class func dismiss(animateDuration: TimeInterval = 1, completion:(() -> ())?) {
         
         UIView.animate(withDuration: animateDuration, animations: { ()->() in
             

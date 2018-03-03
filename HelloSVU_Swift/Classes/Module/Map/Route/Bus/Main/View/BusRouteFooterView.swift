@@ -12,7 +12,7 @@ class BusRouteFooterView: UIView ,NibLoadable {
 
     @IBOutlet weak var priceLabel: UILabel!
     
-    var route : AMapRoute? {
+    var route: AMapRoute? {
         
         didSet {
             

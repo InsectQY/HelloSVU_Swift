@@ -14,7 +14,7 @@ class AllBusLineCell: UITableViewCell,Reusable {
     @IBOutlet private weak var busLineNameLabel: UILabel!
     @IBOutlet private weak var busLineDetaiLabel: UILabel!
     
-    var busLine : AMapBusLine? {
+    var busLine: AMapBusLine? {
         
         didSet {
             

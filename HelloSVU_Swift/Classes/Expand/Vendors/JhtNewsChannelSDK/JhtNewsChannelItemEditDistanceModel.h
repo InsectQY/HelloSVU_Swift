@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 
 /** 排序界面_距离_参数model */
-@interface JhtNewsChannelItemEditDistanceModel : NSObject
+@interface JhtNewsChannelItemEditDistanceModel: NSObject
 
 #pragma mark optional
 /** 排序界面总高度

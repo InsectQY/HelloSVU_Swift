@@ -15,9 +15,9 @@ class BusRouteDetailViewController: BaseViewController {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
     /// 点击cell后底部弹出的位置信息窗口
-    private let window : UIWindow = UIWindow()
+    private let window: UIWindow = UIWindow()
     /// 窗口背后的黑色蒙版
-    private let hudWindow : UIWindow = UIWindow()
+    private let hudWindow: UIWindow = UIWindow()
     
     /// 公交路径规划方案
     var route = AMapRoute()
@@ -46,7 +46,7 @@ class BusRouteDetailViewController: BaseViewController {
         return headerView
     }()
     
-    private lazy var footerView : BusRouteDetailFooterView = {
+    private lazy var footerView: BusRouteDetailFooterView = {
         
         var footerView = BusRouteDetailFooterView.loadFromNib()
         return footerView
@@ -109,7 +109,7 @@ extension BusRouteDetailViewController {
 }
 
 // MARK: - UICollectionViewDataSource
-extension BusRouteDetailViewController : UICollectionViewDataSource {
+extension BusRouteDetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return route.transits.count
@@ -124,7 +124,7 @@ extension BusRouteDetailViewController : UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegate
-extension BusRouteDetailViewController : UICollectionViewDelegate {
+extension BusRouteDetailViewController: UICollectionViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
@@ -142,7 +142,7 @@ extension BusRouteDetailViewController : UICollectionViewDelegate {
 }
 
 // MARK: - UITableViewDataSource
-extension BusRouteDetailViewController : UITableViewDataSource {
+extension BusRouteDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         /// 最后一段 buslines 数组为空
@@ -166,7 +166,7 @@ extension BusRouteDetailViewController : UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension BusRouteDetailViewController : UITableViewDelegate {
+extension BusRouteDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 120
@@ -252,16 +252,16 @@ extension BusRouteDetailViewController {
 // MARK: - 展开关闭列表
 extension BusRouteDetailViewController {
     
-    private func openSection(_ section : Int) {
+    private func openSection(_ section: Int) {
         tableView.insertRows(at: getIndexData(section), with: .fade)
     }
     
-    private func closeSection(_ section : Int) {
+    private func closeSection(_ section: Int) {
         tableView.deleteRows(at: getIndexData(section), with: .fade)
     }
     
     /// 获得需要展开的数据
-    private func getIndexData(_ section : Int) -> [IndexPath] {
+    private func getIndexData(_ section: Int) -> [IndexPath] {
         
         var indexArray = [IndexPath]()
         for i in 0 ..< route.transits[selIndex].segments[section].buslines[selBusLineIndex].viaBusStops.count {
@@ -274,10 +274,10 @@ extension BusRouteDetailViewController {
 // MARK: - 显示底部控制器
 extension BusRouteDetailViewController {
 
-    private func showBottomView(_ viewController : AllBusLineViewController,_ selSegmentIndex : Int) {
+    private func showBottomView(_ viewController: AllBusLineViewController,_ selSegmentIndex: Int) {
         
         var contentH =  CGFloat(route.transits[selIndex].segments[selSegmentIndex].buslines.count * 60 + 90)
-        contentH = contentH >= ScreenH ? ScreenH : contentH
+        contentH = contentH >= ScreenH ? ScreenH: contentH
         SVUAnimation.showBottomView(viewController, viewHeight: contentH, animateDuration: 0.4, completion: nil)
     }
 }

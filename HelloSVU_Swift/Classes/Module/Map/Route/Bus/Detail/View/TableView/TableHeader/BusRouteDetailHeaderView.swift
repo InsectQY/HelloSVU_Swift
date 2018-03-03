@@ -14,7 +14,7 @@ class BusRouteDetailHeaderView: UIView,NibReusable {
     @IBOutlet private weak var durationLabel: UILabel!
     @IBOutlet private weak var walkNaviBtn: UIButton!
     
-    var walking : AMapWalking? {
+    var walking: AMapWalking? {
         
         didSet {
             

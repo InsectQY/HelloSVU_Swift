@@ -10,10 +10,10 @@ import UIKit
 
 extension UIBarButtonItem {
     
-    convenience init(normalImg : String, highlightedImg : String? = "",title : String? = nil ,size : CGSize? = CGSize.zero,target : Any,action:Selector) {
+    convenience init(normalImg: String, highlightedImg: String? = "",title: String? = nil ,size: CGSize? = CGSize.zero,target: Any,action:Selector) {
         
         let btn = UIButton(type: .custom)
-        btn.setImage(UIImage(named :normalImg ), for: .normal)
+        btn.setImage(UIImage(named:normalImg ), for: .normal)
         btn.setTitleColor(.black, for: .normal)
         btn.titleLabel?.font = PFM16Font
         btn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, -10)
@@ -21,7 +21,7 @@ extension UIBarButtonItem {
         
         if let highlightedImg = highlightedImg {
             
-            btn.setImage(UIImage(named :highlightedImg), for: .highlighted)
+            btn.setImage(UIImage(named:highlightedImg), for: .highlighted)
         }
         
         if let title = title {

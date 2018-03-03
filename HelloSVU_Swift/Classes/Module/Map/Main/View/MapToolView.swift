@@ -10,9 +10,9 @@ import UIKit
 
 class MapToolView: UIView {
     
-    var didClick : ((Int) -> ())?
+    var didClick: ((Int) -> ())?
     
-    convenience init(_ frame : CGRect ,  _ content : [String]) {
+    convenience init(_ frame: CGRect ,  _ content: [String]) {
 
         self.init(frame: frame)
         self.backgroundColor = UIColor.init(r: 255, g: 255, b: 255, a: 0.7)
@@ -31,7 +31,7 @@ class MapToolView: UIView {
     }
     
     // MARK: - 按钮点击事件
-    @objc private func toolBtnDidClick(_ button : UIButton ) {
+    @objc private func toolBtnDidClick(_ button: UIButton ) {
         
         if let didClick = didClick {
             didClick(button.tag)

@@ -14,7 +14,7 @@ class QYCycleCell: UICollectionViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var iconImage: UIImageView!
 
-    var cycleData : String? {
+    var cycleData: String? {
         
         didSet {
             

@@ -10,11 +10,11 @@ import UIKit
 
 import EZSwiftExtensions
 
-private let HomeToolContentY : CGFloat = 15
-private let HomeToolContentX : CGFloat = 40
-private let maxCol : CGFloat = 3
-private let HomeToolCellH : CGFloat = (toolCellH - HomeToolContentY) * 0.5
-private let HomeToolCellW : CGFloat = ScreenW / maxCol
+private let HomeToolContentY: CGFloat = 15
+private let HomeToolContentX: CGFloat = 40
+private let maxCol: CGFloat = 3
+private let HomeToolCellH: CGFloat = (toolCellH - HomeToolContentY) * 0.5
+private let HomeToolCellW: CGFloat = ScreenW / maxCol
 
 class HomeToolContentCell: UITableViewCell,NibReusable {
     
@@ -23,7 +23,7 @@ class HomeToolContentCell: UITableViewCell,NibReusable {
     
     private lazy var homeData: [Home] = [Home]()
     
-    var home : [Home]? {
+    var home: [Home]? {
         
         didSet {
             
@@ -47,7 +47,7 @@ class HomeToolContentCell: UITableViewCell,NibReusable {
 }
 
 // MARK: - UICollectionViewDataSource
-extension HomeToolContentCell : UICollectionViewDataSource {
+extension HomeToolContentCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return homeData.count
@@ -62,7 +62,7 @@ extension HomeToolContentCell : UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegate
-extension HomeToolContentCell : UICollectionViewDelegate {
+extension HomeToolContentCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         

@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 
 /** 频道栏&&sliderView_间距和坐标_参数model */
-@interface JhtChannelBarAndSlideViewSpaceAndFrameModel : NSObject
+@interface JhtChannelBarAndSlideViewSpaceAndFrameModel: NSObject
 
 #pragma mark optional
 /** 顶部频道栏的坐标 

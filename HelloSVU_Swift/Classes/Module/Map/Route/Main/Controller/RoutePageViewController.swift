@@ -8,7 +8,7 @@
 
 import UIKit
 
-let kTitleViewH : CGFloat = 30
+let kTitleViewH: CGFloat = 30
 
 class RoutePageViewController: BaseViewController {
     
@@ -31,7 +31,7 @@ class RoutePageViewController: BaseViewController {
         let vc = BusRouteViewController()
         childVcs.append(vc)
         
-        let routeType : [routePlanType] = [.Walking,.Riding,.Driving]
+        let routeType: [routePlanType] = [.Walking,.Riding,.Driving]
         for type in routeType {
             
             let vc = BasePlanViewController()
@@ -68,7 +68,7 @@ extension RoutePageViewController {
 }
 
 // MARK: - UITextFieldDelegate
-extension RoutePageViewController : UITextFieldDelegate {
+extension RoutePageViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         

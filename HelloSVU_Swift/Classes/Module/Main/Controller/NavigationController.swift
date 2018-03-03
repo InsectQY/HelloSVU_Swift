@@ -17,7 +17,7 @@ class NavigationController: UINavigationController {
         fd_fullscreenPopGestureRecognizer.isEnabled = true
         
         // 导航栏背景和文字设置
-        let naviBar : UINavigationBar = UINavigationBar.appearance()
+        let naviBar: UINavigationBar = UINavigationBar.appearance()
         naviBar.setBackgroundImage(#imageLiteral(resourceName: "navigationbarBackgroundWhite"), for: .default)
         naviBar.titleTextAttributes = {[
             NSAttributedStringKey.foregroundColor: UIColor.black,

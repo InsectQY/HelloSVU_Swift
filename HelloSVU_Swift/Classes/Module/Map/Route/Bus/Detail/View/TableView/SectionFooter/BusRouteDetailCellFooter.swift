@@ -17,9 +17,9 @@ class BusRouteDetailCellFooter: UITableViewHeaderFooterView,NibReusable {
     @IBOutlet private weak var durationLabel: UILabel!
     
     /// 包含是否展开，是否有多条busline 以及选择的是第几组的信息
-    var info : BusSegment?
+    var info: BusSegment?
     
-    var segment : AMapSegment? {
+    var segment: AMapSegment? {
     
         didSet {
             
@@ -32,7 +32,7 @@ class BusRouteDetailCellFooter: UITableViewHeaderFooterView,NibReusable {
         }
     }
     
-    var walking : AMapWalking? {
+    var walking: AMapWalking? {
         
         didSet {
             

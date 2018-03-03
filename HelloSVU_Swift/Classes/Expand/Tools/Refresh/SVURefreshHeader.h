@@ -8,6 +8,6 @@
 
 #import <MJRefresh/MJRefresh.h>
 
-@interface SVURefreshHeader : MJRefreshGifHeader
+@interface SVURefreshHeader: MJRefreshGifHeader
 
 @end

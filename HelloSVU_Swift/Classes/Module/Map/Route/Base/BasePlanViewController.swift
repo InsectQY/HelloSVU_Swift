@@ -31,7 +31,7 @@ class BasePlanViewController: BaseViewController {
     @IBOutlet private weak var collectionContentViewH: NSLayoutConstraint!
     @IBOutlet private weak var btnTopMargin: NSLayoutConstraint!
     
-    public var routePlanType : routePlanType = .Riding
+    public var routePlanType: routePlanType = .Riding
     
     // MARK: - LazyLoad
     private lazy var search: AMapSearchAPI = {
@@ -79,9 +79,9 @@ class BasePlanViewController: BaseViewController {
     }()
     
     /// 定位到的经纬度
-    private var nowCoordinate : CLLocationCoordinate2D?
+    private var nowCoordinate: CLLocationCoordinate2D?
     /// 路径规划方案
-    private var route : AMapRoute?
+    private var route: AMapRoute?
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -115,7 +115,7 @@ extension BasePlanViewController {
 }
 
 // MARK: - MAMapViewDelegate
-extension BasePlanViewController : MAMapViewDelegate {
+extension BasePlanViewController: MAMapViewDelegate {
     
     func mapView(_ mapView: MAMapView!, didUpdate userLocation: MAUserLocation!, updatingLocation: Bool) {
         
@@ -128,7 +128,7 @@ extension BasePlanViewController : MAMapViewDelegate {
 }
 
 // MARK: - AMapSearchDelegate
-extension BasePlanViewController : AMapSearchDelegate {
+extension BasePlanViewController: AMapSearchDelegate {
     
     func aMapSearchRequest(_ request: Any!, didFailWithError error: Error!) {
         SVUHUD.dismiss()

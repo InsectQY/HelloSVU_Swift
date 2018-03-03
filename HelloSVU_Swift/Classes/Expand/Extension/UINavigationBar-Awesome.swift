@@ -25,7 +25,7 @@ extension UINavigationBar {
 //    }
     
     // MARK: - 设置背景色
-    public func QYBackgroundColor(backgroundColor : UIColor) {
+    public func QYBackgroundColor(backgroundColor: UIColor) {
        
         setBackgroundImage(UIImage(), for: .default)
         shadowImage = UIImage()
@@ -48,14 +48,14 @@ extension UINavigationBar {
         
         let overLay = objc_getAssociatedObject(self, &runtimeKey) as? UIView
         overLay?.alpha = alpha
-//        if let leftViews : [UIView] =  value(forKey: "_leftViews") as? [UIView] {
+//        if let leftViews: [UIView] =  value(forKey: "_leftViews") as? [UIView] {
 //            
 //            for subViews in leftViews {
 //                subViews.alpha = alpha
 //            }
 //        }
 //        
-//        if let rightViews : [UIView] =  value(forKey: "_rightViews") as? [UIView] {
+//        if let rightViews: [UIView] =  value(forKey: "_rightViews") as? [UIView] {
 //            
 //            for subViews in rightViews {
 //                subViews.alpha = alpha

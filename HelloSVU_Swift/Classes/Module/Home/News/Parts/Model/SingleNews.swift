@@ -12,7 +12,7 @@ import HandyJSON
 struct SingleNews: HandyJSON {
     
     /// 图片类型
-    enum infoType : String {
+    enum infoType: String {
         
         case NoImg = "singletitle"
         case SignalImg = "titleimg"
@@ -28,14 +28,14 @@ struct SingleNews: HandyJSON {
     /// 更新时间
     var updateTime = ""
     /// cell 类型
-    var infoType : infoType {
+    var infoType: infoType {
         
         get {
             return SingleNews.infoType(rawValue: style.view) ?? .NoImg
         }
     }
     /// cell的高度
-    var rowHeight : CGFloat {
+    var rowHeight: CGFloat {
         
         get {
             
@@ -57,12 +57,12 @@ struct SingleNews: HandyJSON {
     
     /**
      详情页面展示类型
-     1.phvideo : 视频
-     2.doc : 普通
-     3.slide : 轮播
-     4.topic2 : 专题
-     5.text_live : 直播
-     6 web : 网页
+     1.phvideo: 视频
+     2.doc: 普通
+     3.slide: 轮播
+     4.topic2: 专题
+     5.text_live: 直播
+     6 web: 网页
      */
     var type = ""
     /// 新闻详情链接
@@ -80,15 +80,15 @@ struct Link: HandyJSON {
 struct Style: HandyJSON {
     
     /// 图片
-    var images : [String] = []
+    var images: [String] = []
     /// 轮播数量
     var slideCount = 0
     /**
      列表页面展示的 cell 类型
-     1.bigimg : 大图
-     2.titleimg : 标题图片(thumbnail)
-     3.slideimg : 三张图
-     4.singletitle : 只显示标题
+     1.bigimg: 大图
+     2.titleimg: 标题图片(thumbnail)
+     3.slideimg: 三张图
+     4.singletitle: 只显示标题
      */
     var view = ""
     /// 详情页的展示类型

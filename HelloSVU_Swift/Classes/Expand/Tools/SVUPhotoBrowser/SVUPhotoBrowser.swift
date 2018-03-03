@@ -12,7 +12,7 @@ import SKPhotoBrowser
 
 class SVUPhotoBrowser: NSObject {
 
-    class func browser(_ nowIndex : Int , _ allImageURL : [String]) -> SKPhotoBrowser {
+    class func browser(_ nowIndex: Int , _ allImageURL: [String]) -> SKPhotoBrowser {
         
         SKPhotoBrowserOptions.enableSingleTapDismiss = true
         SKPhotoBrowserOptions.bounceAnimation = true

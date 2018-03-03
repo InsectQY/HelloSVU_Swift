@@ -10,7 +10,7 @@ import UIKit
 
 class GetVc: NSObject {
     
-    class func getVcFromString(_ vcName : String) -> UIViewController {
+    class func getVcFromString(_ vcName: String) -> UIViewController {
         
         guard let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
             

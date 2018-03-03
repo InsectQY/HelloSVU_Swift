@@ -11,7 +11,7 @@ import UIKit
 import DOPDropDownMenu_Enhanced
 
 private let BusRouteCellID = "BusRouteCellID"
-private let kMapsDropDownMenuH : CGFloat = 40
+private let kMapsDropDownMenuH: CGFloat = 40
 
 class BusRouteViewController: BaseViewController {
     
@@ -26,7 +26,7 @@ class BusRouteViewController: BaseViewController {
     private let time = ["现在出发"]
     
     /// 公交路径规划方案
-    private var route : AMapRoute?
+    private var route: AMapRoute?
     
     private lazy var menu: DOPDropDownMenu = {
         
@@ -98,7 +98,7 @@ extension BusRouteViewController {
 // MARK: - 公交路径规划
 extension BusRouteViewController {
     
-    func searchRoutePlanningBus(_ strategy : Int,_ originPoint : AMapGeoPoint, _ destinationPoint : AMapGeoPoint,_ originLoc : String,_ destinationLoc : String) {
+    func searchRoutePlanningBus(_ strategy: Int,_ originPoint: AMapGeoPoint, _ destinationPoint: AMapGeoPoint,_ originLoc: String,_ destinationLoc: String) {
         
         SVUHUD.show(.black)
         self.originPoint = originPoint
@@ -113,7 +113,7 @@ extension BusRouteViewController {
 }
 
 // MARK: - AMapSearchDelegate
-extension BusRouteViewController : AMapSearchDelegate {
+extension BusRouteViewController: AMapSearchDelegate {
     
     func aMapSearchRequest(_ request: Any!, didFailWithError error: Error!) {
         SVUHUD.dismiss()
@@ -130,7 +130,7 @@ extension BusRouteViewController : AMapSearchDelegate {
 }
 
 // MARK: - UITableViewDataSource
-extension BusRouteViewController : UITableViewDataSource {
+extension BusRouteViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return route?.transits.count ?? 0
@@ -145,7 +145,7 @@ extension BusRouteViewController : UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension BusRouteViewController : UITableViewDelegate {
+extension BusRouteViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -166,23 +166,23 @@ extension BusRouteViewController : UITableViewDelegate {
 }
 
 // MARK: - DOPDropDownMenuDataSource
-extension BusRouteViewController : DOPDropDownMenuDataSource {
+extension BusRouteViewController: DOPDropDownMenuDataSource {
 
     func numberOfColumns(in menu: DOPDropDownMenu!) -> Int {
         return 2
     }
 
     func menu(_ menu: DOPDropDownMenu!, numberOfRowsInColumn column: Int) -> Int {
-        return column == 0 ? strategy.count : time.count
+        return column == 0 ? strategy.count: time.count
     }
     
     func menu(_ menu: DOPDropDownMenu!, titleForRowAt indexPath: DOPIndexPath!) -> String! {
-        return indexPath.column == 0 ? strategy[indexPath.row] : time[indexPath.row]
+        return indexPath.column == 0 ? strategy[indexPath.row]: time[indexPath.row]
     }
 }
 
 // MARK: - DOPDropDownMenuDelegate
-extension BusRouteViewController : DOPDropDownMenuDelegate {
+extension BusRouteViewController: DOPDropDownMenuDelegate {
     
     func menu(_ menu: DOPDropDownMenu!, didSelectRowAt indexPath: DOPIndexPath!) {
         

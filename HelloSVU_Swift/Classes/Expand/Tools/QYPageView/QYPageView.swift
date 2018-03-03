@@ -11,13 +11,13 @@ import UIKit
 class QYPageView: UIView {
     
     // MARK: 定义属性
-    private var titles : [String]
-    private var childVcs : [UIViewController]
-    private var parentVc : UIViewController
-    private var titleStyle : QYPageStyle
+    private var titles: [String]
+    private var childVcs: [UIViewController]
+    private var parentVc: UIViewController
+    private var titleStyle: QYPageStyle
     
     // MARK: 构造函数
-    init(frame : CGRect, titles : [String], titleStyle : QYPageStyle, childVcs : [UIViewController], parentVc : UIViewController) {
+    init(frame: CGRect, titles: [String], titleStyle: QYPageStyle, childVcs: [UIViewController], parentVc: UIViewController) {
         
         self.titles = titles
         self.childVcs = childVcs
@@ -40,7 +40,7 @@ extension QYPageView {
     private func setupUI() {
         // 1.添加titleView到pageView中
         let titleViewFrame = CGRect(x: 0, y: 0, width: bounds.width, height: titleStyle.titleViewHeight)
-        let titleView = QYTitleView(frame: titleViewFrame, titles: titles, style : titleStyle)
+        let titleView = QYTitleView(frame: titleViewFrame, titles: titles, style: titleStyle)
         addSubview(titleView)
         
         // 2.添加contentView到pageView中

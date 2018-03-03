@@ -10,22 +10,22 @@ import UIKit
 
 private let kContentCellID = "kContentCellID"
 
-protocol QYContentViewDelegate : class {
-    func contentView(_ contentView : QYContentView, targetIndex : Int, progress : CGFloat)
-    func contentView(_ contentView : QYContentView, endScroll inIndex : Int)
+protocol QYContentViewDelegate: class {
+    func contentView(_ contentView: QYContentView, targetIndex: Int, progress: CGFloat)
+    func contentView(_ contentView: QYContentView, endScroll inIndex: Int)
 }
 
 class QYContentView: UIView {
     
     // MARK: 定义属性
-    weak var delegate : QYContentViewDelegate?
+    weak var delegate: QYContentViewDelegate?
     
-    private var childVcs : [UIViewController]
-    private var parentVc : UIViewController
+    private var childVcs: [UIViewController]
+    private var parentVc: UIViewController
     
-    private lazy var startOffsetX : CGFloat = 0
-    private lazy var isForbidDelegate : Bool = false
-    private lazy var collectionView : UICollectionView = {
+    private lazy var startOffsetX: CGFloat = 0
+    private lazy var isForbidDelegate: Bool = false
+    private lazy var collectionView: UICollectionView = {
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = self.bounds.size
@@ -45,7 +45,7 @@ class QYContentView: UIView {
     }()
     
     // MARK: 构造函数
-    init(frame : CGRect, childVcs : [UIViewController], parentVc : UIViewController) {
+    init(frame: CGRect, childVcs: [UIViewController], parentVc: UIViewController) {
         
         self.childVcs = childVcs
         self.parentVc = parentVc
@@ -76,7 +76,7 @@ extension QYContentView {
 }
 
 // MARK:- UICollectionViewDataSource
-extension QYContentView : UICollectionViewDataSource {
+extension QYContentView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return childVcs.count
@@ -98,7 +98,7 @@ extension QYContentView : UICollectionViewDataSource {
 }
 
 // MARK:- UICollectionViewDelegate
-extension QYContentView : UICollectionViewDelegate {
+extension QYContentView: UICollectionViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         collectionViewEndScroll()
@@ -132,8 +132,8 @@ extension QYContentView : UICollectionViewDelegate {
         if scrollView.contentOffset.x == startOffsetX || isForbidDelegate { return }
         
         // 1.定义目标的index、进度
-        var targetIndex : Int = 0
-        var progress : CGFloat = 0
+        var targetIndex: Int = 0
+        var progress: CGFloat = 0
         
         // 2.判断用户是左滑还是右滑
         if scrollView.contentOffset.x > startOffsetX { // 左滑
@@ -156,7 +156,7 @@ extension QYContentView : UICollectionViewDelegate {
 }
 
 // MARK:- QYTitleViewDelegate
-extension QYContentView : QYTitleViewDeleate {
+extension QYContentView: QYTitleViewDeleate {
     func titleView(_ titleView: QYTitleView, didSelected currentIndex: Int) {
         
         isForbidDelegate = true

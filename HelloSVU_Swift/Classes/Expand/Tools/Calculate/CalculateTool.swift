@@ -11,7 +11,7 @@ import UIKit
 class CalculateTool: NSObject {
 
     // MARK: - 获得步行距离(传入单位 "米")
-    class func getWalkDistance(_ walkingDistance : CGFloat) -> String {
+    class func getWalkDistance(_ walkingDistance: CGFloat) -> String {
         
         if walkingDistance == 0 {
             return "同站换乘"
@@ -26,7 +26,7 @@ class CalculateTool: NSObject {
     }
     
     // MARK: - 获得所花费时间(传入单位 "秒")
-    class func getDuration(_ duration : Int) -> String {
+    class func getDuration(_ duration: Int) -> String {
         
         let duration = duration / 60
         if duration < 60 { //时间在一小时以内

@@ -8,6 +8,6 @@
 
 #import <MJRefresh/MJRefresh.h>
 
-@interface SVURefreshFooter : MJRefreshAutoNormalFooter
+@interface SVURefreshFooter: MJRefreshAutoNormalFooter
 
 @end

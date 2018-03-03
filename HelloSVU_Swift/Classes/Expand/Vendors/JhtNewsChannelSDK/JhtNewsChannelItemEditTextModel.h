@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 
 /** 排序界面_文字类_设置参数model */
-@interface JhtNewsChannelItemEditTextModel : NSObject
+@interface JhtNewsChannelItemEditTextModel: NSObject
 
 #pragma mark optional
 /** 频道栏编辑的时删除最后一个频道的提示语

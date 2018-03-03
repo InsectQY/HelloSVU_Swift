@@ -12,14 +12,14 @@ import CoreLocation
 
 private let ForecastCellID = "ForecastCellID"
 
-private let WeatherCellH : CGFloat = 44
-private let WeatherNaviColor : UIColor = UIColor(r: 24, g: 51, b: 91)
+private let WeatherCellH: CGFloat = 44
+private let WeatherNaviColor: UIColor = UIColor(r: 24, g: 51, b: 91)
 
 class WeatherViewController: BaseViewController {
     
     // MARK: - LazyLoad
-    private lazy var locations : CLLocation = CLLocation()
-    private lazy var weatherData : WeatherData = WeatherData()
+    private lazy var locations: CLLocation = CLLocation()
+    private lazy var weatherData: WeatherData = WeatherData()
     // MARK: - tableView
     private lazy var tableView: UITableView = {
         
@@ -93,7 +93,7 @@ class WeatherViewController: BaseViewController {
 }
 
 // MARK: - CLLocationManagerDelegate
-extension WeatherViewController : CLLocationManagerDelegate{
+extension WeatherViewController: CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -153,7 +153,7 @@ extension WeatherViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension WeatherViewController : UITableViewDataSource {
+extension WeatherViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -173,13 +173,13 @@ extension WeatherViewController : UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension WeatherViewController : UITableViewDelegate {
+extension WeatherViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         let alpha = scrollView.contentOffset.y / 400
         effectView.alpha = alpha
-        scrollView.contentOffset.y > 10 ? navigationController?.navigationBar.QYElementsAlpha(alpha: alpha) : navigationController?.navigationBar.QYElementsAlpha(alpha: 0)
+        scrollView.contentOffset.y > 10 ? navigationController?.navigationBar.QYElementsAlpha(alpha: alpha): navigationController?.navigationBar.QYElementsAlpha(alpha: 0)
     }
 }
 

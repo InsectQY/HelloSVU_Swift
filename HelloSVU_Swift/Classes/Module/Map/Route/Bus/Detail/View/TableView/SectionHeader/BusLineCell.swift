@@ -12,7 +12,7 @@ class BusLineCell: UICollectionViewCell {
 
     @IBOutlet private weak var busLineLabel: UILabel!
     
-    var busLine : String? {
+    var busLine: String? {
         
         didSet {
             busLineLabel.text = busLine

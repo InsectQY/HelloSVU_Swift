@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 
 /** 频道栏_颜色和字号类_参数model */
-@interface JhtChannelBarColorAndFontModel : NSObject
+@interface JhtChannelBarColorAndFontModel: NSObject
 
 #pragma mark optional
 /** 频道常规颜色 

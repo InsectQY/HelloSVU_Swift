@@ -13,14 +13,14 @@ private let AllBusLineCellID = "AllBusLineCellID"
 class AllBusLineViewController: UIViewController {
     
     /// 更换其他公交线路
-    var changeBusLine : ((_ selLineIndex : Int) -> ())?
+    var changeBusLine: ((_ selLineIndex: Int) -> ())?
     
     /// 公交路径规划方案
-    var segment : AMapSegment?
+    var segment: AMapSegment?
     /// 当前选择的公交线路
     var selBusLineIndex = 0
     
-    var lastCell : AllBusLineCell?
+    var lastCell: AllBusLineCell?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -58,7 +58,7 @@ extension AllBusLineViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension AllBusLineViewController : UITableViewDataSource {
+extension AllBusLineViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return segment?.buslines.count ?? 0
@@ -73,7 +73,7 @@ extension AllBusLineViewController : UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension AllBusLineViewController : UITableViewDelegate {
+extension AllBusLineViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

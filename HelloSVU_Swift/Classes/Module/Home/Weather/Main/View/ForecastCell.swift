@@ -16,7 +16,7 @@ class ForecastCell: UITableViewCell {
     @IBOutlet weak var temperatureMin: UILabel!
     @IBOutlet weak var temperatureMax: UILabel!
     
-    var forecast : DailyForecast? {
+    var forecast: DailyForecast? {
         
         didSet {
             

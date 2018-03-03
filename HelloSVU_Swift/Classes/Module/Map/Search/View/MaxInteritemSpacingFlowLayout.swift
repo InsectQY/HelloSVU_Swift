@@ -10,7 +10,7 @@ import UIKit
 
 class MaxInteritemSpacingFlowLayout: UICollectionViewFlowLayout {
 
-    var maximumInteritemSpacing : CGFloat = 8.0
+    var maximumInteritemSpacing: CGFloat = 8.0
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         

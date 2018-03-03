@@ -14,7 +14,7 @@ class MapSearchViewController: BaseViewController {
     
     var searchBarText = ""
     
-    var poiSuggestion : ((AMapPOI) -> ())?
+    var poiSuggestion: ((AMapPOI) -> ())?
     
     // MARK: - LazyLoad
     private lazy var tableView: UITableView = {
@@ -100,7 +100,7 @@ extension MapSearchViewController {
 }
 
 // MARK: - UISearchBarDelegate
-extension MapSearchViewController : UISearchBarDelegate {
+extension MapSearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
@@ -123,7 +123,7 @@ extension MapSearchViewController : UISearchBarDelegate {
     }
 }
 
-extension MapSearchViewController : AMapSearchDelegate {
+extension MapSearchViewController: AMapSearchDelegate {
     
     func onPOISearchDone(_ request: AMapPOISearchBaseRequest!, response: AMapPOISearchResponse!) {
         
@@ -137,7 +137,7 @@ extension MapSearchViewController : AMapSearchDelegate {
 }
 
 // MARK: - UITableViewDataSource
-extension MapSearchViewController : UITableViewDataSource {
+extension MapSearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return poisResponse.count
@@ -155,7 +155,7 @@ extension MapSearchViewController : UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension MapSearchViewController : UITableViewDelegate {
+extension MapSearchViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

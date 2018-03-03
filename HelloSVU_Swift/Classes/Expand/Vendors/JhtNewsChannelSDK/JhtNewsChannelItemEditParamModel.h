@@ -15,7 +15,7 @@
 #import "JhtNewsChannelItemEditBackgroundColorModel.h"
 
 /** 排序界面_参数model */
-@interface JhtNewsChannelItemEditParamModel : NSObject
+@interface JhtNewsChannelItemEditParamModel: NSObject
 
 #pragma mark required
 /** 是否存在删除btn（排序删除，或者只有排序没有删除） Yes：存在删除 */

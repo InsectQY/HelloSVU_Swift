@@ -14,7 +14,7 @@ class HomeToolCell: UICollectionViewCell,NibReusable {
     @IBOutlet private weak var toolTitleLabel: UILabel!
     
     // MARK: - LazyLoad
-    var home : Home? {
+    var home: Home? {
         
         didSet {
             

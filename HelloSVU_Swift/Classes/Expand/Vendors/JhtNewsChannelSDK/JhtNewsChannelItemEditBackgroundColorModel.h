@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 
 /** 排序界面_背景颜色_参数model */
-@interface JhtNewsChannelItemEditBackgroundColorModel : NSObject
+@interface JhtNewsChannelItemEditBackgroundColorModel: NSObject
 
 #pragma mark optional
 /** 频道栏 编辑背景颜色（整体背景） 

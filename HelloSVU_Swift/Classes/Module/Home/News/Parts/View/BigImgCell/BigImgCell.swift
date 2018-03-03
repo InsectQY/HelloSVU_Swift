@@ -14,7 +14,7 @@ class BigImgCell: UITableViewCell, NibReusable {
     @IBOutlet private weak var thumbNailImg: UIImageView!
     @IBOutlet private weak var sourceLabel: UILabel!
     
-    var news : SingleNews? {
+    var news: SingleNews? {
         
         didSet {
             

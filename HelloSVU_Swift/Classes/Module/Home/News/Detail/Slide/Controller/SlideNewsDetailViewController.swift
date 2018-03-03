@@ -11,7 +11,7 @@ import UIKit
 import EZSwiftExtensions
 import FDFullscreenPopGesture
 
-private let kScrollViewH : CGFloat = ScreenH - 200
+private let kScrollViewH: CGFloat = ScreenH - 200
 
 class SlideNewsDetailViewController: BaseViewController {
     
@@ -155,7 +155,7 @@ extension SlideNewsDetailViewController {
 }
 
 // MARK: - UIScrollViewDelegate
-extension SlideNewsDetailViewController : UIScrollViewDelegate {
+extension SlideNewsDetailViewController: UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         setAllContent()
@@ -176,14 +176,14 @@ extension SlideNewsDetailViewController {
         setNewsContent(index)
     }
     
-    private func setImageContent(_ index : Int) {
+    private func setImageContent(_ index: Int) {
         
         var image = UIImageView()
         image = scrollView.subviews[index] as! UIImageView
         image.setImage(slideNews[index]?.image, "placeholder")
     }
     
-    private func setNewsContent(_ index : Int) {
+    private func setNewsContent(_ index: Int) {
         
         contentTextView.text = slideNews[index]?.SVUDescription
         titleLabel.text = slideNews[index]?.title

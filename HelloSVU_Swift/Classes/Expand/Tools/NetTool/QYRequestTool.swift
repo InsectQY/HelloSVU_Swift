@@ -19,9 +19,9 @@ enum MethodType {
 
 class QYRequestTool {
     
-    class func requestData(_ method: MethodType, _ URL: String, _ parameters: [String: Any]? = nil, successComplete: ((_ result: JSON) -> ())?, failureComplete: ((_ error : Error) -> ())?) {
+    class func requestData(_ method: MethodType, _ URL: String, _ parameters: [String: Any]? = nil, successComplete: ((_ result: JSON) -> ())?, failureComplete: ((_ error: Error) -> ())?) {
         
-        let requestType = method == .GET ? HTTPMethod.get : HTTPMethod.post
+        let requestType = method == .GET ? HTTPMethod.get: HTTPMethod.post
         
         // 请求头
 //        let headers: HTTPHeaders = [
@@ -35,7 +35,7 @@ class QYRequestTool {
             
             switch(response.result) {
                 
-            case .success(let Value) :
+            case .success(let Value):
 
                 let json = JSON(Value)
                 successComplete?(json)
