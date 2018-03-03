@@ -12,12 +12,12 @@ import EZSwiftExtensions
 
 class MapTipsCell: UITableViewCell {
 
-    @IBOutlet fileprivate weak var stopLabel: UILabel!
-    @IBOutlet fileprivate weak var distanceLabel: UILabel!
-    @IBOutlet fileprivate weak var lineLabel: UILabel!
-    @IBOutlet fileprivate weak var nameLabel: UILabel!
-    @IBOutlet fileprivate weak var collectionView: UICollectionView!
-    @IBOutlet fileprivate weak var flowLayout: MaxInteritemSpacingFlowLayout!
+    @IBOutlet private weak var stopLabel: UILabel!
+    @IBOutlet private weak var distanceLabel: UILabel!
+    @IBOutlet private weak var lineLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var flowLayout: MaxInteritemSpacingFlowLayout!
     
     var keyWords = ""
     

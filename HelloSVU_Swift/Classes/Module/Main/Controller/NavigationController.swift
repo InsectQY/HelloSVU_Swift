@@ -26,7 +26,7 @@ class NavigationController: UINavigationController {
     }
     
     // MARK: - 全屏滑动返回
-    fileprivate func pop() {
+    private func pop() {
         
         // 1.获取系统的Pop手势
         guard let systemGes = interactivePopGestureRecognizer else { return }
@@ -65,7 +65,7 @@ class NavigationController: UINavigationController {
 // MARK: - 返回点击事件
 extension NavigationController {
     
-    @objc fileprivate func backBtnDidClick() {
+    @objc private func backBtnDidClick() {
         popViewController(animated: true)
     }
 }

@@ -10,12 +10,12 @@ import UIKit
 
 class MultiPicutresCell: UITableViewCell,ReuseInterface {
 
-    @IBOutlet fileprivate weak var timeLabel: UILabel!
-    @IBOutlet fileprivate weak var sourceLabel: UILabel!
-    @IBOutlet fileprivate weak var titleLabel: UILabel!
-    @IBOutlet fileprivate weak var firstImg: UIImageView!
-    @IBOutlet fileprivate weak var secondImg: UIImageView!
-    @IBOutlet fileprivate weak var thirdImg: UIImageView!
+    @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet private weak var sourceLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var firstImg: UIImageView!
+    @IBOutlet private weak var secondImg: UIImageView!
+    @IBOutlet private weak var thirdImg: UIImageView!
     
     var news : SingleNews? {
         

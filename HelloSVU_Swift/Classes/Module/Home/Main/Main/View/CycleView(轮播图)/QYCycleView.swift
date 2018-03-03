@@ -8,13 +8,13 @@
 
 import UIKit
 
-fileprivate let cycleID = "cycleID"
+private let cycleID = "cycleID"
 
 class QYCycleView: UIView {
 
-    @IBOutlet fileprivate weak var collectionView: UICollectionView!
-    @IBOutlet fileprivate weak var pageControl: UIPageControl!
-    @IBOutlet fileprivate weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var pageControl: UIPageControl!
+    @IBOutlet private weak var flowLayout: UICollectionViewFlowLayout!
     
     var cycleTimer : Timer?
     var cycleData : [String]? {
@@ -86,17 +86,17 @@ extension QYCycleView : UICollectionViewDelegate {
 // MARK: - 定时器方法
 extension QYCycleView {
     
-    fileprivate func addCycleTimer() {
+    private func addCycleTimer() {
         cycleTimer = Timer(timeInterval: 5.0, target: self, selector: #selector(self.scrollToNext), userInfo: nil, repeats: true)
         RunLoop.main.add(cycleTimer!, forMode: RunLoopMode.commonModes)
     }
     
-    fileprivate func removeCycleTimer() {
+    private func removeCycleTimer() {
         cycleTimer?.invalidate()
         cycleTimer = nil
     }
     
-    @objc fileprivate func scrollToNext() {
+    @objc private func scrollToNext() {
         let currentOffsetX = collectionView.contentOffset.x
         let offsetX = currentOffsetX + collectionView.bounds.width
         collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)

@@ -10,7 +10,7 @@ import UIKit
 
 class BusRouteDetailCell: UITableViewCell,ReuseInterface {
 
-    @IBOutlet fileprivate weak var viaStopLabel: UILabel!
+    @IBOutlet private weak var viaStopLabel: UILabel!
 
     var busStop : AMapBusStop? {
         

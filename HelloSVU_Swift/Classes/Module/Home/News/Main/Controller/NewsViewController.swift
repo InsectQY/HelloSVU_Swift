@@ -8,12 +8,12 @@
 
 import UIKit
 
-fileprivate let NewsAllChannels = "newsAllChannels"
-fileprivate let NewsCurrentChannels = "newsCurrentChannels"
+private let NewsAllChannels = "newsAllChannels"
+private let NewsCurrentChannels = "newsCurrentChannels"
 
 class NewsViewController: BaseViewController {
 
-    fileprivate lazy var channelsID: [String : String] = {
+    private lazy var channelsID: [String : String] = {
         
         if let path = Bundle.main.path(forResource: "News.plist", ofType: nil), let news = NSDictionary(contentsOfFile: path) as? [String: String] {
             return news
@@ -22,7 +22,7 @@ class NewsViewController: BaseViewController {
     }()
     
     // MARK: - 所有频道
-    fileprivate lazy var allChannels: [String] = {
+    private lazy var allChannels: [String] = {
         
         var channels = [String]()
         for (key, value) in channelsID {
@@ -32,7 +32,7 @@ class NewsViewController: BaseViewController {
     }()
     
     // MARK: - 当前选择频道
-    fileprivate lazy var currentChannels: [String] = {
+    private lazy var currentChannels: [String] = {
  
         if let currentChannels = UserDefaults.standard.array(forKey: NewsCurrentChannels) {
             return currentChannels as! [String]
@@ -40,7 +40,7 @@ class NewsViewController: BaseViewController {
         return ["头条","娱乐","军事","体育","游戏","暖新闻","社会","数码","NBA"]
     }()
     
-    fileprivate lazy var JhtCurrentChannels: [JhtNewsChannelItemModel] = {
+    private lazy var JhtCurrentChannels: [JhtNewsChannelItemModel] = {
         
         var tmpCurrentChannels = [JhtNewsChannelItemModel]()
         for channel in currentChannels {
@@ -53,7 +53,7 @@ class NewsViewController: BaseViewController {
     }()
     
     // MARK: - 选择剩下的频道
-    fileprivate lazy var remainChannels: [String] = {
+    private lazy var remainChannels: [String] = {
         
         var channels = [String]()
         channels += allChannels
@@ -64,7 +64,7 @@ class NewsViewController: BaseViewController {
     }()
     
     // MARK: - 待添加的频道
-    fileprivate lazy var JhtToAddChannels: [JhtNewsChannelItemModel] = {
+    private lazy var JhtToAddChannels: [JhtNewsChannelItemModel] = {
         
         var tmpCurrentChannels = [JhtNewsChannelItemModel]()
         for channel in remainChannels {
@@ -77,7 +77,7 @@ class NewsViewController: BaseViewController {
     }()
     
     // MARK: - LazyLoad
-    fileprivate lazy var itemEditModel: JhtNewsChannelItemEditParamModel = {
+    private lazy var itemEditModel: JhtNewsChannelItemEditParamModel = {
         
         let itemEditModel = JhtNewsChannelItemEditParamModel()
         // 是否存在删除（排序删除，或者只有排序没有删除）
@@ -86,7 +86,7 @@ class NewsViewController: BaseViewController {
     }()
     
     // MARK: - JhtChannelBarAndSlideViewConnect_参数mode
-    fileprivate lazy var barAndSlideModel: JhtChannelBarAndSlideViewConnectParamModel = {
+    private lazy var barAndSlideModel: JhtChannelBarAndSlideViewConnectParamModel = {
         
         let barAndSlideModel = JhtChannelBarAndSlideViewConnectParamModel()
         
@@ -117,7 +117,7 @@ class NewsViewController: BaseViewController {
         return barAndSlideModel
     }()
     
-    fileprivate lazy var slideView: JhtChannelBarAndSlideViewConnect = {
+    private lazy var slideView: JhtChannelBarAndSlideViewConnect = {
         
         var array : NSMutableArray = NSMutableArray.init(array: JhtCurrentChannels)
         let slideView = JhtChannelBarAndSlideViewConnect(slideViewAndItemEditViewWithBarAndSlideModel: barAndSlideModel, withNewsChannelItemEdit: itemEditModel, withIsExistNavOrTab: NT_IsExist.onlyHave_N, withChanelArray: array, withBaseViewController: self, withDelegte: self)
@@ -149,13 +149,13 @@ class NewsViewController: BaseViewController {
 // MARK: - 设置 UI 界面
 extension NewsViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         view.addSubview(slideView)
     }
     
     // MARK: - 数据持久化抽取
-    fileprivate func updateCurrentChannels(content : [String],key : String) {
+    private func updateCurrentChannels(content : [String],key : String) {
     
         UserDefaults.standard.set(content, forKey: key)
         UserDefaults.standard.synchronize()

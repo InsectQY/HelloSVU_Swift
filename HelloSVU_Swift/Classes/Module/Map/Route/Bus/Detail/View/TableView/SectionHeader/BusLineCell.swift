@@ -10,7 +10,7 @@ import UIKit
 
 class BusLineCell: UICollectionViewCell {
 
-    @IBOutlet fileprivate weak var busLineLabel: UILabel!
+    @IBOutlet private weak var busLineLabel: UILabel!
     
     var busLine : String? {
         

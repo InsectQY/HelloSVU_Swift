@@ -11,7 +11,7 @@ import UIKit
 class TipView: UIView {
     
     /// 透明遮罩
-    fileprivate lazy var bgView: UIView = {
+    private lazy var bgView: UIView = {
         
         let bgView = UIView(frame: UIScreen.main.bounds)
         bgView.backgroundColor = UIColor(white: 0, alpha: 0)
@@ -20,7 +20,7 @@ class TipView: UIView {
     }()
     
     // MARK: - 图片
-    fileprivate lazy var swipeImageView: UIImageView = {
+    private lazy var swipeImageView: UIImageView = {
         
         let swipeImageView = UIImageView(frame: CGRect(x: 100, y: ScreenH - 200, width: 50, height: 50))
         swipeImageView.image = #imageLiteral(resourceName: "swipe_down")
@@ -28,7 +28,7 @@ class TipView: UIView {
     }()
     
     // MARK: - 提示文字
-    fileprivate lazy var swipeLabel: UILabel = {
+    private lazy var swipeLabel: UILabel = {
         
         let swipeLabel = UILabel(frame: CGRect(x: 160, y: ScreenH - 180, width: ScreenW - 160, height: 30))
         swipeLabel.text = "可以下滑返回哦"
@@ -53,7 +53,7 @@ class TipView: UIView {
     }
     
     // MARK: - 下滑手势动画
-    fileprivate func showAnimation(_ count: Int) {
+    private func showAnimation(_ count: Int) {
         
         var animationCount = count
         
@@ -76,7 +76,7 @@ class TipView: UIView {
     }
     
     // MARK: - 透明背景遮罩触摸事件
-    @objc fileprivate func didTappedBgView(_ tap: UITapGestureRecognizer) {
+    @objc private func didTappedBgView(_ tap: UITapGestureRecognizer) {
         dismiss()
     }
     

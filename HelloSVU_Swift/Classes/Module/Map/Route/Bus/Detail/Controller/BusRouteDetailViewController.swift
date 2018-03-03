@@ -15,9 +15,9 @@ class BusRouteDetailViewController: BaseViewController {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
     /// 点击cell后底部弹出的位置信息窗口
-    fileprivate let window : UIWindow = UIWindow()
+    private let window : UIWindow = UIWindow()
     /// 窗口背后的黑色蒙版
-    fileprivate let hudWindow : UIWindow = UIWindow()
+    private let hudWindow : UIWindow = UIWindow()
     
     /// 公交路径规划方案
     var route = AMapRoute()
@@ -28,10 +28,10 @@ class BusRouteDetailViewController: BaseViewController {
     /// 终点
     var destinationLoc = ""
     /// 当前选择的公交线路
-    fileprivate var selBusLineIndex = 0
+    private var selBusLineIndex = 0
     
     // MARK: - LazyLoad
-    fileprivate lazy var busSegment: [BusSegment] = {
+    private lazy var busSegment: [BusSegment] = {
         
         var busSegment = [BusSegment]()
         for _ in 0 ..< route.transits[selIndex].segments.count {
@@ -40,13 +40,13 @@ class BusRouteDetailViewController: BaseViewController {
         return busSegment
     }()
     
-    fileprivate lazy var headerView: BusRouteDetailHeaderView = {
+    private lazy var headerView: BusRouteDetailHeaderView = {
         
         var headerView = BusRouteDetailHeaderView.loadFromNib()
         return headerView
     }()
     
-    fileprivate lazy var footerView : BusRouteDetailFooterView = {
+    private lazy var footerView : BusRouteDetailFooterView = {
         
         var footerView = BusRouteDetailFooterView.loadFromNib()
         return footerView
@@ -63,7 +63,7 @@ class BusRouteDetailViewController: BaseViewController {
 // MARK: - 设置 UI 界面
 extension BusRouteDetailViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         automaticallyAdjustsScrollViewInsets = false
         setUpCollectionView()
@@ -73,7 +73,7 @@ extension BusRouteDetailViewController {
     }
     
     // MARK: - 设置 collecitonView
-    fileprivate func setUpCollectionView() {
+    private func setUpCollectionView() {
         
         pageControl.numberOfPages = route.transits.count
         pageControl.currentPage = selIndex
@@ -90,7 +90,7 @@ extension BusRouteDetailViewController {
         collectionView.setContentOffset(offset, animated: false)
     }
     
-    fileprivate func setUpTableView() {
+    private func setUpTableView() {
         
         tableView.register(BusRouteDetailCell.Nib, forCellReuseIdentifier: BusRouteDetailCell.ID)
         tableView.register(BusRouteDetailCellHeader.Nib, forHeaderFooterViewReuseIdentifier: BusRouteDetailCellHeader.ID)
@@ -100,7 +100,7 @@ extension BusRouteDetailViewController {
     }
     
     // MARK: - 刷新界面所有数据
-    fileprivate func reloadAllData() {
+    private func reloadAllData() {
         
         setUpTableViewHeader()
         setUpTableViewFooter()
@@ -230,7 +230,7 @@ extension BusRouteDetailViewController : UITableViewDelegate {
 // MARK: - 设置UITableView头部尾部视图
 extension BusRouteDetailViewController {
     
-    fileprivate func setUpTableViewHeader() {
+    private func setUpTableViewHeader() {
         
         let contentHeader = UIView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 100))
         headerView.frame = contentHeader.bounds
@@ -240,7 +240,7 @@ extension BusRouteDetailViewController {
         headerView.walking = route.transits[selIndex].segments[0].walking
     }
     
-    fileprivate func setUpTableViewFooter() {
+    private func setUpTableViewFooter() {
         
         let contentFooter = UIView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 40))
         footerView.frame = contentFooter.bounds
@@ -252,16 +252,16 @@ extension BusRouteDetailViewController {
 // MARK: - 展开关闭列表
 extension BusRouteDetailViewController {
     
-    fileprivate func openSection(_ section : Int) {
+    private func openSection(_ section : Int) {
         tableView.insertRows(at: getIndexData(section), with: .fade)
     }
     
-    fileprivate func closeSection(_ section : Int) {
+    private func closeSection(_ section : Int) {
         tableView.deleteRows(at: getIndexData(section), with: .fade)
     }
     
     /// 获得需要展开的数据
-    fileprivate func getIndexData(_ section : Int) -> [IndexPath] {
+    private func getIndexData(_ section : Int) -> [IndexPath] {
         
         var indexArray = [IndexPath]()
         for i in 0 ..< route.transits[selIndex].segments[section].buslines[selBusLineIndex].viaBusStops.count {
@@ -274,7 +274,7 @@ extension BusRouteDetailViewController {
 // MARK: - 显示底部控制器
 extension BusRouteDetailViewController {
 
-    fileprivate func showBottomView(_ viewController : AllBusLineViewController,_ selSegmentIndex : Int) {
+    private func showBottomView(_ viewController : AllBusLineViewController,_ selSegmentIndex : Int) {
         
         var contentH =  CGFloat(route.transits[selIndex].segments[selSegmentIndex].buslines.count * 60 + 90)
         contentH = contentH >= ScreenH ? ScreenH : contentH

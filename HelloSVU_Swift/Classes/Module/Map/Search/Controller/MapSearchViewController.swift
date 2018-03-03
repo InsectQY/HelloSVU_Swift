@@ -10,7 +10,7 @@ import UIKit
 
 import CDAlertView
 
-fileprivate let MapTipsCellID = "MapTipsCellID"
+private let MapTipsCellID = "MapTipsCellID"
 
 class MapSearchViewController: BaseViewController {
     
@@ -19,7 +19,7 @@ class MapSearchViewController: BaseViewController {
     var poiSuggestion : ((AMapPOI) -> ())?
     
     // MARK: - LazyLoad
-    fileprivate lazy var tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         
         let tableView = UITableView(frame: UIScreen.main.bounds)
         tableView.contentInset = UIEdgeInsetsMake(kTopH, 0, 0, 0)
@@ -30,7 +30,7 @@ class MapSearchViewController: BaseViewController {
         return tableView
     }()
     
-    fileprivate lazy var searchBar: UISearchBar = {
+    private lazy var searchBar: UISearchBar = {
         
         let searchBar = UISearchBar()
         searchBar.backgroundImage = #imageLiteral(resourceName: "clearImage")
@@ -42,14 +42,14 @@ class MapSearchViewController: BaseViewController {
         return searchBar
     }()
     
-    fileprivate lazy var search: AMapSearchAPI = {
+    private lazy var search: AMapSearchAPI = {
         
         let search = AMapSearchAPI()
         search?.delegate = self
         return search!
     }()
     
-    fileprivate lazy var request: AMapPOIKeywordsSearchRequest = {
+    private lazy var request: AMapPOIKeywordsSearchRequest = {
         
         let request = AMapPOIKeywordsSearchRequest()
         request.cityLimit = true
@@ -59,7 +59,7 @@ class MapSearchViewController: BaseViewController {
         return request
     }()
     
-    fileprivate lazy var poisResponse = [AMapPOI]()
+    private lazy var poisResponse = [AMapPOI]()
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -77,14 +77,14 @@ class MapSearchViewController: BaseViewController {
 // MARK: - 设置 UI 界面
 extension MapSearchViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         automaticallyAdjustsScrollViewInsets = false
         view.addSubview(tableView)
         setUpNav()
     }
     
-    fileprivate func setUpNav() {
+    private func setUpNav() {
         
         let titleView = UIView(x: 0, y: 0, w: ScreenW - 64 - 32 - 10, h: 30)
         searchBar.frame = titleView.bounds
@@ -94,7 +94,7 @@ extension MapSearchViewController {
     }
     
     // MARK: - 语音识别
-    @objc fileprivate func speechRecognition() {
+    @objc private func speechRecognition() {
         
         searchBar.resignFirstResponder()
         searchBar.text = nil

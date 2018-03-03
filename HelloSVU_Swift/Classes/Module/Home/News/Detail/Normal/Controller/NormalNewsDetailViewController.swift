@@ -8,15 +8,15 @@
 
 import UIKit
 
-fileprivate let clickInfo = "myweb:imageClick:"
+private let clickInfo = "myweb:imageClick:"
 
 class NormalNewsDetailViewController: BaseViewController {
     
     var url = ""
-    fileprivate lazy var allImages = [String]()
+    private lazy var allImages = [String]()
     
     // MARK: - LazyLoad
-    fileprivate lazy var webView: UIWebView = {
+    private lazy var webView: UIWebView = {
         
         let webView = UIWebView(frame: UIScreen.main.bounds)
         webView.delegate = self
@@ -35,7 +35,7 @@ class NormalNewsDetailViewController: BaseViewController {
 // MARK: - 设置 UI 界面
 extension NormalNewsDetailViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         view.addSubview(webView)
     }
@@ -44,7 +44,7 @@ extension NormalNewsDetailViewController {
 // MARK: - 加载详情新闻数据
 extension NormalNewsDetailViewController {
     
-    fileprivate func loadDetailNews() {
+    private func loadDetailNews() {
         
         QYRequestTool.requestData(.GET, url, successComplete: {[weak self] (JSON) in
             
@@ -110,7 +110,7 @@ extension NormalNewsDetailViewController: UIWebViewDelegate {
     }
     
     // MARK: - 展示图片
-    fileprivate func showImage(_ imageUrl : String) {
+    private func showImage(_ imageUrl : String) {
         
         for (index,item) in allImages.enumerated() {
             if imageUrl == item {

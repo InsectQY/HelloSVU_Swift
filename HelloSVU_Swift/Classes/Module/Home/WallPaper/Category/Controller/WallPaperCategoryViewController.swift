@@ -9,22 +9,22 @@
 import UIKit
 
 /// cell 之间间距
-fileprivate let kItemMargin : CGFloat = 20
+private let kItemMargin : CGFloat = 20
 /// 左右间距
-fileprivate let kEdge : CGFloat = 10
+private let kEdge : CGFloat = 10
 /// 每行最大列数
-fileprivate let kMaxCol : CGFloat = 3
+private let kMaxCol : CGFloat = 3
 /// cell 宽度
-fileprivate let kItemW = (ScreenW - (2 * kEdge) - ((kMaxCol - 1) * kItemMargin)) / kMaxCol
+private let kItemW = (ScreenW - (2 * kEdge) - ((kMaxCol - 1) * kItemMargin)) / kMaxCol
 /// cell 高度
-fileprivate let kItemH = kItemW * 1.618
+private let kItemH = kItemW * 1.618
 
 class WallPaperCategoryViewController: BaseViewController {
     
     // MARK: - LazyLoad
-    fileprivate lazy var categoryData = [ImgCategory?]()
+    private lazy var categoryData = [ImgCategory?]()
     
-    fileprivate lazy var collectionView: UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: kItemW, height: kItemH)
@@ -52,13 +52,13 @@ class WallPaperCategoryViewController: BaseViewController {
 // MARK: - 设置 UI 界面
 extension WallPaperCategoryViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         view.addSubview(collectionView)
         automaticallyAdjustsScrollViewInsets = false
     }
     
-    fileprivate func setUpRefresh() {
+    private func setUpRefresh() {
         
         collectionView.mj_header = SVURefreshHeader(refreshingTarget: self, refreshingAction: #selector(loadCategoryData))
         collectionView.mj_header.beginRefreshing()
@@ -68,7 +68,7 @@ extension WallPaperCategoryViewController {
 // MARK: - 加载分类数据
 extension WallPaperCategoryViewController {
     
-    @objc fileprivate func loadCategoryData() {
+    @objc private func loadCategoryData() {
         
         QYRequestTool.requestData(.GET, imgCategoryURL, successComplete: {[weak self] (JSON) in
             

@@ -10,18 +10,18 @@ import UIKit
 
 import EZSwiftExtensions
 
-fileprivate let HomeToolContentY : CGFloat = 15
-fileprivate let HomeToolContentX : CGFloat = 40
-fileprivate let maxCol : CGFloat = 3
-fileprivate let HomeToolCellH : CGFloat = (toolCellH - HomeToolContentY) * 0.5
-fileprivate let HomeToolCellW : CGFloat = ScreenW / maxCol
+private let HomeToolContentY : CGFloat = 15
+private let HomeToolContentX : CGFloat = 40
+private let maxCol : CGFloat = 3
+private let HomeToolCellH : CGFloat = (toolCellH - HomeToolContentY) * 0.5
+private let HomeToolCellW : CGFloat = ScreenW / maxCol
 
 class HomeToolContentCell: UITableViewCell,ReuseInterface {
     
-    @IBOutlet fileprivate weak var collectionView: UICollectionView!
-    @IBOutlet fileprivate weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var flowLayout: UICollectionViewFlowLayout!
     
-    fileprivate lazy var homeData: [Home] = [Home]()
+    private lazy var homeData: [Home] = [Home]()
     
     var home : [Home]? {
         

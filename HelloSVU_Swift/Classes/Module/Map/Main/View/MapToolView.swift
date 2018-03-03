@@ -31,7 +31,7 @@ class MapToolView: UIView {
     }
     
     // MARK: - 按钮点击事件
-    @objc fileprivate func toolBtnDidClick(_ button : UIButton ) {
+    @objc private func toolBtnDidClick(_ button : UIButton ) {
         
         if let didClick = didClick {
             didClick(button.tag)

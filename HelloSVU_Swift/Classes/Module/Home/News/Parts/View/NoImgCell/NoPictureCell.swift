@@ -10,9 +10,9 @@ import UIKit
 
 class NoPictureCell: UITableViewCell,ReuseInterface {
 
-    @IBOutlet fileprivate weak var titleLabel: UILabel!
-    @IBOutlet fileprivate weak var sourceLabel: UILabel!
-    @IBOutlet fileprivate weak var timeLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var sourceLabel: UILabel!
+    @IBOutlet private weak var timeLabel: UILabel!
     
     var news : SingleNews? {
         

@@ -10,9 +10,9 @@ import UIKit
 
 class SVUAnimation: NSObject {
     
-    static fileprivate var window = UIWindow()
+    static private var window = UIWindow()
     
-    static fileprivate var hudWindow = UIWindow()
+    static private var hudWindow = UIWindow()
     
     /// 只适用用于底部出现的view
     class func showBottomView(_ showVc:UIViewController, viewHeight:CGFloat,animateDuration : TimeInterval = 1, completion:(() -> ())?) {
@@ -60,7 +60,7 @@ class SVUAnimation: NSObject {
 // MARK: - 点击事件
 extension SVUAnimation {
     
-    @objc fileprivate func hudDidClick() {
+    @objc private func hudDidClick() {
         print("132312313")
     }
 }

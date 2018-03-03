@@ -22,30 +22,30 @@ enum routePlanType {
 
 class BasePlanViewController: BaseViewController {
     
-    @IBOutlet fileprivate weak var mapContentView: UIView!
-    @IBOutlet fileprivate weak var durationLabel: UILabel!
-    @IBOutlet fileprivate weak var distanceLabel: UILabel!
-    @IBOutlet fileprivate weak var flowLayout: UICollectionViewFlowLayout!
-    @IBOutlet fileprivate weak var collectionView: UICollectionView!
-    @IBOutlet fileprivate weak var bottomViewH: NSLayoutConstraint!
-    @IBOutlet fileprivate weak var collectionContentViewH: NSLayoutConstraint!
-    @IBOutlet fileprivate weak var btnTopMargin: NSLayoutConstraint!
+    @IBOutlet private weak var mapContentView: UIView!
+    @IBOutlet private weak var durationLabel: UILabel!
+    @IBOutlet private weak var distanceLabel: UILabel!
+    @IBOutlet private weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var bottomViewH: NSLayoutConstraint!
+    @IBOutlet private weak var collectionContentViewH: NSLayoutConstraint!
+    @IBOutlet private weak var btnTopMargin: NSLayoutConstraint!
     
     public var routePlanType : routePlanType = .Riding
     
     // MARK: - LazyLoad
-    fileprivate lazy var search: AMapSearchAPI = {
+    private lazy var search: AMapSearchAPI = {
         
         let search = AMapSearchAPI()
         search?.delegate = self
         return search!
     }()
     /// 骑车
-    fileprivate lazy var ridingRouteRequest = AMapRidingRouteSearchRequest()
+    private lazy var ridingRouteRequest = AMapRidingRouteSearchRequest()
     /// 步行
-    fileprivate lazy var walkRouteRequest = AMapWalkingRouteSearchRequest()
+    private lazy var walkRouteRequest = AMapWalkingRouteSearchRequest()
     /// 驾车
-    fileprivate lazy var drivingRouteRequest: AMapDrivingRouteSearchRequest = {
+    private lazy var drivingRouteRequest: AMapDrivingRouteSearchRequest = {
         
         let drivingRouteRequest = AMapDrivingRouteSearchRequest()
         drivingRouteRequest.requireExtension = true
@@ -53,7 +53,7 @@ class BasePlanViewController: BaseViewController {
     }()
     
     /// 地图
-    fileprivate lazy var mapView: MAMapView = {
+    private lazy var mapView: MAMapView = {
         
         let mapView = MAMapView(frame: mapContentView.bounds)
         mapView.showsUserLocation = true
@@ -68,7 +68,7 @@ class BasePlanViewController: BaseViewController {
     }()
     
     /// 定位按钮
-    fileprivate lazy var locationBtn: UIButton = {
+    private lazy var locationBtn: UIButton = {
         
         let locationBtn = UIButton(type: .custom)
         locationBtn.backgroundColor = .white
@@ -79,9 +79,9 @@ class BasePlanViewController: BaseViewController {
     }()
     
     /// 定位到的经纬度
-    fileprivate var nowCoordinate : CLLocationCoordinate2D?
+    private var nowCoordinate : CLLocationCoordinate2D?
     /// 路径规划方案
-    fileprivate var route : AMapRoute?
+    private var route : AMapRoute?
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -94,14 +94,14 @@ class BasePlanViewController: BaseViewController {
 // MARK: - 设置 UI 界面
 extension BasePlanViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         mapContentView.addSubview(mapView)
         cheekIsDriveView()
     }
     
     // MARK: - 驾车界面时改变底部View显示
-    fileprivate func cheekIsDriveView() {
+    private func cheekIsDriveView() {
         
         guard routePlanType == .Driving else {
             return
@@ -152,7 +152,7 @@ extension BasePlanViewController : AMapSearchDelegate {
 extension BasePlanViewController {
 
     // MARK: - 定位按钮点击
-    @objc fileprivate func locatateNow() {
+    @objc private func locatateNow() {
         
         mapView.setZoomLevel(16.5, animated: true)
         if let nowCoordinate = nowCoordinate {
@@ -161,7 +161,7 @@ extension BasePlanViewController {
     }
     
     // MARK: - 开始导航点击
-    @IBAction fileprivate func startNavBtnDidClick(_ sender: Any) {
+    @IBAction private func startNavBtnDidClick(_ sender: Any) {
         print("点击了开始导航")
     }
 }

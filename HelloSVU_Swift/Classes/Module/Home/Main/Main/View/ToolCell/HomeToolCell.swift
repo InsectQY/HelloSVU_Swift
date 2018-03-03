@@ -10,8 +10,8 @@ import UIKit
 
 class HomeToolCell: UICollectionViewCell,ReuseInterface {
     
-    @IBOutlet fileprivate weak var toolImage: UIImageView!
-    @IBOutlet fileprivate weak var toolTitleLabel: UILabel!
+    @IBOutlet private weak var toolImage: UIImageView!
+    @IBOutlet private weak var toolTitleLabel: UILabel!
     
     // MARK: - LazyLoad
     var home : Home? {

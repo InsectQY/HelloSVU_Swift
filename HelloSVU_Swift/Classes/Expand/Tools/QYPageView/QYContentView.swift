@@ -20,12 +20,12 @@ class QYContentView: UIView {
     // MARK: 定义属性
     weak var delegate : QYContentViewDelegate?
     
-    fileprivate var childVcs : [UIViewController]
-    fileprivate var parentVc : UIViewController
+    private var childVcs : [UIViewController]
+    private var parentVc : UIViewController
     
-    fileprivate lazy var startOffsetX : CGFloat = 0
-    fileprivate lazy var isForbidDelegate : Bool = false
-    fileprivate lazy var collectionView : UICollectionView = {
+    private lazy var startOffsetX : CGFloat = 0
+    private lazy var isForbidDelegate : Bool = false
+    private lazy var collectionView : UICollectionView = {
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = self.bounds.size
@@ -64,7 +64,7 @@ class QYContentView: UIView {
 // MARK:- 设置UI界面
 extension QYContentView {
     
-    fileprivate func setupUI() {
+    private func setupUI() {
         // 1.将childVc添加到父控制器中
         for vc in childVcs {
             parentVc.addChildViewController(vc)

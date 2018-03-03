@@ -11,8 +11,8 @@ import Kingfisher
 
 class QYCycleCell: UICollectionViewCell {
 
-    @IBOutlet fileprivate weak var titleLabel: UILabel!
-    @IBOutlet fileprivate weak var iconImage: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var iconImage: UIImageView!
 
     var cycleData : String? {
         

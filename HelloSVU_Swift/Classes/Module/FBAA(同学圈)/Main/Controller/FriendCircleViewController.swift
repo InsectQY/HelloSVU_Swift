@@ -24,7 +24,7 @@ class FriendCircleViewController: UIViewController {
 // MARK: - 设置 UI 界面
 extension FriendCircleViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         view.backgroundColor = UIColor.random()
     }

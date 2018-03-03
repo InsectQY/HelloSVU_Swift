@@ -8,7 +8,7 @@
 
 import UIKit
 
-fileprivate let AllBusLineCellID = "AllBusLineCellID"
+private let AllBusLineCellID = "AllBusLineCellID"
 
 class AllBusLineViewController: UIViewController {
     
@@ -38,12 +38,12 @@ class AllBusLineViewController: UIViewController {
 // MARK: - 设置 UI 界面
 extension AllBusLineViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         setUpTableView()
     }
     
-    fileprivate func setUpTableView() {
+    private func setUpTableView() {
         
         tableView.register(UINib(nibName: "AllBusLineCell", bundle: nil), forCellReuseIdentifier: AllBusLineCellID)
         tableView.rowHeight = 60

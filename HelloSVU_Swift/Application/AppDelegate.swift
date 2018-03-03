@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     // MARK: - 设置根控制器
-    fileprivate func setUpRootViewController() {
+    private func setUpRootViewController() {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = AppDelegate.tabBarContoller
@@ -36,14 +36,14 @@ extension AppDelegate {
     }
     
     // MARK: - 设置高德地图 Key
-    fileprivate func setUpAmapKey() {
+    private func setUpAmapKey() {
         
         AMapServices.shared().apiKey = "d9aa67c1ca9645f044bc2842e5fa1464"
         AMapServices.shared().enableHTTPS = true
     }
     
     // MARK: - 适配 iOS 11
-    fileprivate func fitiOSEleven() {
+    private func fitiOSEleven() {
         if #available(iOS 11.0, *) {
             UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
         }

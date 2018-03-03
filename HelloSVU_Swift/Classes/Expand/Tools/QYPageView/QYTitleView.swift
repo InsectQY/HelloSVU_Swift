@@ -17,26 +17,26 @@ class QYTitleView: UIView {
     // MARK: 定义属性
     weak var delegate : QYTitleViewDeleate?
     
-    fileprivate var titles : [String]
-    fileprivate var style : QYPageStyle
+    private var titles : [String]
+    private var style : QYPageStyle
     
-    fileprivate lazy var currentIndex : Int = 0
-    fileprivate lazy var titleLabels : [UILabel] = [UILabel]()
-    fileprivate lazy var scrollView : UIScrollView = {
+    private lazy var currentIndex : Int = 0
+    private lazy var titleLabels : [UILabel] = [UILabel]()
+    private lazy var scrollView : UIScrollView = {
         
         let scrollView = UIScrollView(frame: self.bounds)
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.scrollsToTop = false
         return scrollView
     }()
-    fileprivate lazy var bottomLine : UIView = {
+    private lazy var bottomLine : UIView = {
         
         let bottomLine = UIView()
         bottomLine.backgroundColor = self.style.bottomLineColor
         bottomLine.frame.size.height = self.style.bottomLineHeight
         return bottomLine
     }()
-    fileprivate lazy var coverView : UIView = {
+    private lazy var coverView : UIView = {
         
         let coverView = UIView()
         coverView.backgroundColor = self.style.coverBgColor
@@ -64,7 +64,7 @@ class QYTitleView: UIView {
 // MARK:- 设置UI界面
 extension QYTitleView {
     
-    fileprivate func setupUI() {
+    private func setupUI() {
         // 1.添加滚动view
         addSubview(scrollView)
         
@@ -180,7 +180,7 @@ extension QYTitleView {
 // MARK:- 事件处理函数
 extension QYTitleView {
     
-    @objc fileprivate func titleLabelClick(_ tapGes : UITapGestureRecognizer) {
+    @objc private func titleLabelClick(_ tapGes : UITapGestureRecognizer) {
         // 0.取出点击的Label
         guard let newLabel = tapGes.view as? UILabel else { return }
         
@@ -237,7 +237,7 @@ extension QYTitleView : QYContentViewDelegate {
     }
     
     
-    fileprivate func adjustPosition(_ newLabel : UILabel) {
+    private func adjustPosition(_ newLabel : UILabel) {
         guard style.isScrollEnable else { return }
         var offsetX = newLabel.center.x - scrollView.bounds.width * 0.5
         if offsetX < 0 {

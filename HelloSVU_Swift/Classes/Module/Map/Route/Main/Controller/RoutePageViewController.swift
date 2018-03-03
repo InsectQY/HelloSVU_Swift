@@ -12,14 +12,14 @@ let kTitleViewH : CGFloat = 30
 
 class RoutePageViewController: BaseViewController {
     
-    @IBOutlet fileprivate weak var originField: UITextField!
-    @IBOutlet fileprivate weak var destinationField: UITextField!
+    @IBOutlet private weak var originField: UITextField!
+    @IBOutlet private weak var destinationField: UITextField!
     
-    fileprivate lazy var originPoint = AMapGeoPoint()
-    fileprivate lazy var destinationPoint = AMapGeoPoint()
+    private lazy var originPoint = AMapGeoPoint()
+    private lazy var destinationPoint = AMapGeoPoint()
     
     // MARK: - LazyLoad
-    fileprivate lazy var pageView: QYPageView = {
+    private lazy var pageView: QYPageView = {
         
         let style = QYPageStyle()
         style.normalColor = UIColor(r: 255, g: 255, b: 255)
@@ -55,7 +55,7 @@ class RoutePageViewController: BaseViewController {
 // MARK: - 设置 UI 界面
 extension RoutePageViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
 
         fd_prefersNavigationBarHidden = true
         view.addSubview(pageView)
@@ -105,13 +105,13 @@ extension RoutePageViewController : UITextFieldDelegate {
 // MARK: - 事件处理
 extension RoutePageViewController {
     
-    fileprivate func chooseNavType() {
+    private func chooseNavType() {
         
         if destinationField.text == "请输入终点" {return}
         startBusRoute()
     }
     
-    fileprivate func startBusRoute() {
+    private func startBusRoute() {
         
         let vc = childViewControllers[0] as! BusRouteViewController
         vc.searchRoutePlanningBus(0, originPoint, destinationPoint,(originField.text ?? ""),(destinationField.text ?? ""))

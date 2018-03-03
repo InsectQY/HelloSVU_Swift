@@ -17,14 +17,14 @@ class WallPaperDetailViewController: BaseViewController {
     }
     
     // MARK: - LazyLoad
-    fileprivate lazy var imageView: UIImageView = {
+    private lazy var imageView: UIImageView = {
         
         let imageView = UIImageView(frame: UIScreen.main.bounds)
         return imageView
     }()
     
     /// 触摸屏幕后弹出视图
-    fileprivate lazy var contextSheet: JFContextSheet = {
+    private lazy var contextSheet: JFContextSheet = {
         
         let contextItem1 = JFContextItem(itemName: "返回", itemIcon: "content_icon_back")
         let contextItem2 = JFContextItem(itemName: "预览", itemIcon: "content_icon_preview")
@@ -37,7 +37,7 @@ class WallPaperDetailViewController: BaseViewController {
     }()
     
     /// 预览滚动视图
-    fileprivate lazy var scrollView: UIScrollView = {
+    private lazy var scrollView: UIScrollView = {
         
         let scrollView = UIScrollView(frame: UIScreen.main.bounds)
         scrollView.backgroundColor = .clear
@@ -70,7 +70,7 @@ class WallPaperDetailViewController: BaseViewController {
 // MARK: - 添加手势
 extension WallPaperDetailViewController {
     
-    fileprivate func addGestureRecognizer() {
+    private func addGestureRecognizer() {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTappedView(_:)))
         view.addGestureRecognizer(tapGesture)
@@ -82,7 +82,7 @@ extension WallPaperDetailViewController {
     }
     
     // MARK: - 点击事件
-    @objc fileprivate func didTappedView(_ gestureRecognizer: UITapGestureRecognizer) {
+    @objc private func didTappedView(_ gestureRecognizer: UITapGestureRecognizer) {
         
         if contextSheet.isShow {
             contextSheet.dismiss()
@@ -92,7 +92,7 @@ extension WallPaperDetailViewController {
     }
     
     // MARK: - 下滑事件
-    @objc fileprivate func didDownSwipeView(_ gestureRecognizer: UISwipeGestureRecognizer) {
+    @objc private func didDownSwipeView(_ gestureRecognizer: UISwipeGestureRecognizer) {
         dismiss(animated: true, completion: nil)
     }
 }
@@ -100,7 +100,7 @@ extension WallPaperDetailViewController {
 // MARK: - 设置 UI 界面
 extension WallPaperDetailViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         view.addSubview(imageView)
         /// 添加第一次试用指引
@@ -113,7 +113,7 @@ extension WallPaperDetailViewController {
     }
     
     // MARK: - 显示提示
-    fileprivate func showTip() {
+    private func showTip() {
         
         // 只显示一次
         if !UserDefaults.standard.bool(forKey: "showTip") {

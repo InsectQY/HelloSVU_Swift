@@ -10,11 +10,11 @@ import UIKit
 
 class BusRouteDetailCellFooter: UITableViewHeaderFooterView,ReuseInterface {
 
-    @IBOutlet fileprivate weak var distanceLabel: UILabel!
-    @IBOutlet fileprivate weak var arrivalStopLabel: UILabel!
-    @IBOutlet fileprivate weak var exitNameBtn: UIButton!
-    @IBOutlet fileprivate weak var walkNaviBtn: UIButton!
-    @IBOutlet fileprivate weak var durationLabel: UILabel!
+    @IBOutlet private weak var distanceLabel: UILabel!
+    @IBOutlet private weak var arrivalStopLabel: UILabel!
+    @IBOutlet private weak var exitNameBtn: UIButton!
+    @IBOutlet private weak var walkNaviBtn: UIButton!
+    @IBOutlet private weak var durationLabel: UILabel!
     
     /// 包含是否展开，是否有多条busline 以及选择的是第几组的信息
     var info : BusSegment?
@@ -47,7 +47,7 @@ class BusRouteDetailCellFooter: UITableViewHeaderFooterView,ReuseInterface {
 extension BusRouteDetailCellFooter {
     
     // MARK: - 检查是否存在进站口和出站口
-    fileprivate func checkEnterAndExitName() {
+    private func checkEnterAndExitName() {
         
         exitNameBtn.isHidden = (segment?.exitName.length != nil)
         if segment?.exitName.length != nil {

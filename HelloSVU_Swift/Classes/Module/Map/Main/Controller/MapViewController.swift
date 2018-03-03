@@ -8,15 +8,15 @@
 
 import UIKit
 
-fileprivate let kToolViewH : CGFloat = 44
-fileprivate let kLocateBtnH : CGFloat = 36
+private let kToolViewH : CGFloat = 44
+private let kLocateBtnH : CGFloat = 36
 
 class MapViewController: BaseViewController {
     
     var coordinate : CLLocationCoordinate2D?
     
     // MARK: - LazyLoad
-    fileprivate lazy var mapView: MAMapView = {
+    private lazy var mapView: MAMapView = {
         
         let mapView = MAMapView(frame: UIScreen.main.bounds)
         mapView.showsUserLocation = true
@@ -29,13 +29,13 @@ class MapViewController: BaseViewController {
         return mapView
     }()
     
-    fileprivate lazy var toolView: MapToolView = {
+    private lazy var toolView: MapToolView = {
         
         let toolView = MapToolView(CGRect(x: 0, y: ScreenH - kToolViewH - kTabBarH, width: ScreenW, height: kToolViewH), ["线路站点","路线规划","一键返校"])
         return toolView
     }()
     
-    fileprivate lazy var locationBtn: UIButton = {
+    private lazy var locationBtn: UIButton = {
         
         let locationBtn = UIButton(type: .custom)
         locationBtn.frame = CGRect(x: 8, y: toolView.y - kLocateBtnH - 10 , w: kLocateBtnH, h: kLocateBtnH)
@@ -57,7 +57,7 @@ class MapViewController: BaseViewController {
 // MARK: - 设置 UI 界面
 extension MapViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         fd_prefersNavigationBarHidden = true
         view.addSubview(mapView)
@@ -70,7 +70,7 @@ extension MapViewController {
 extension MapViewController {
     
     // MARK: - toolView 点击事件
-    fileprivate func toolViewClick() {
+    private func toolViewClick() {
         
         toolView.didClick = {[weak self] (selInex : Int) in
             
@@ -93,7 +93,7 @@ extension MapViewController {
     }
     
     // MARK: - 定位按钮点击事件
-    @objc fileprivate func locateBtnDidClick() {
+    @objc private func locateBtnDidClick() {
         
         mapView.setZoomLevel(16.5, animated: true)
         if let coordinate = coordinate {

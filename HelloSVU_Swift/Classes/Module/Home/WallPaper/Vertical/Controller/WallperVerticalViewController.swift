@@ -9,26 +9,26 @@
 import UIKit
 
 /// cell 之间间距
-fileprivate let kItemMargin : CGFloat = 5
+private let kItemMargin : CGFloat = 5
 /// 左右间距
-fileprivate let kEdge : CGFloat = 4
+private let kEdge : CGFloat = 4
 /// 每行最大列数
-fileprivate let kMaxCol : CGFloat = 3
+private let kMaxCol : CGFloat = 3
 /// cell 宽度
-fileprivate let kItemW = (ScreenW - (2 * kEdge) - ((kMaxCol - 1) * kItemMargin)) / kMaxCol
+private let kItemW = (ScreenW - (2 * kEdge) - ((kMaxCol - 1) * kItemMargin)) / kMaxCol
 /// cell 高度
-fileprivate let kItemH = kItemW * 1.7
+private let kItemH = kItemW * 1.7
 
-fileprivate let ImgVerticalCellID = "ImgVerticalCellID"
+private let ImgVerticalCellID = "ImgVerticalCellID"
 
 class WallperVerticalViewController: BaseViewController {
     
     var id = ""
     
     // MARK: - LazyLoad
-    fileprivate lazy var verticalData = [ImgVertical?]()
+    private lazy var verticalData = [ImgVertical?]()
     
-    fileprivate lazy var collectionView: UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: kItemW, height: kItemH)
@@ -56,13 +56,13 @@ class WallperVerticalViewController: BaseViewController {
 // MARK: - 设置 UI 界面
 extension WallperVerticalViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         view.addSubview(collectionView)
         automaticallyAdjustsScrollViewInsets = false
     }
     
-    fileprivate func setUpRefresh() {
+    private func setUpRefresh() {
         
         collectionView.mj_header = SVURefreshHeader(refreshingTarget: self, refreshingAction: #selector(loadNewVerticalData))
         collectionView.mj_footer = SVURefreshFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreVerticalData))
@@ -73,7 +73,7 @@ extension WallperVerticalViewController {
 // MARK: - 加载数据
 extension WallperVerticalViewController {
     
-    @objc fileprivate func loadNewVerticalData() {
+    @objc private func loadNewVerticalData() {
         
         collectionView.mj_footer.endRefreshing()
         let parameters : [String : Any] = ["limit" : 15,
@@ -92,7 +92,7 @@ extension WallperVerticalViewController {
         }
     }
     
-    @objc fileprivate func loadMoreVerticalData() {
+    @objc private func loadMoreVerticalData() {
         
         collectionView.mj_header.endRefreshing()
         let parameters : [String : Any] = ["limit" : 15,

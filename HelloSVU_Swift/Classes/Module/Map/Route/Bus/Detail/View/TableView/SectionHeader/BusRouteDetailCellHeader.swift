@@ -9,7 +9,7 @@
 import UIKit
 import EZSwiftExtensions
 
-fileprivate let BusLineCellID = "BusLineCellID"
+private let BusLineCellID = "BusLineCellID"
 
 class BusRouteDetailCellHeader: UITableViewHeaderFooterView,ReuseInterface {
 
@@ -18,17 +18,17 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView,ReuseInterface {
     /// 其他公交路线点击回调
     var otherBusLineClick : (() -> ())?
     
-    @IBOutlet fileprivate weak var routeTypeImage: UIImageView!
-    @IBOutlet fileprivate weak var busLineLabel: UILabel!
-    @IBOutlet fileprivate weak var departureStopLabel: UILabel!
-    @IBOutlet fileprivate weak var viaBusStopsBtn: UIButton!
-    @IBOutlet fileprivate weak var enterNameBtn: UIButton!
-    @IBOutlet fileprivate weak var startTimeLabel: UILabel!
-    @IBOutlet fileprivate weak var endTimeLabel: UILabel!
-    @IBOutlet fileprivate weak var collectionView: UICollectionView!
-    @IBOutlet fileprivate weak var flowLayout: UICollectionViewFlowLayout!
-    @IBOutlet fileprivate weak var timeContentView: UIView!
-    @IBOutlet fileprivate weak var otherBusLineView: UIView!
+    @IBOutlet private weak var routeTypeImage: UIImageView!
+    @IBOutlet private weak var busLineLabel: UILabel!
+    @IBOutlet private weak var departureStopLabel: UILabel!
+    @IBOutlet private weak var viaBusStopsBtn: UIButton!
+    @IBOutlet private weak var enterNameBtn: UIButton!
+    @IBOutlet private weak var startTimeLabel: UILabel!
+    @IBOutlet private weak var endTimeLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet private weak var timeContentView: UIView!
+    @IBOutlet private weak var otherBusLineView: UIView!
     
     lazy var busLines: [AMapBusLine] = {
         
@@ -125,7 +125,7 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView,ReuseInterface {
 extension BusRouteDetailCellHeader {
     
     // MARK: - 检查是否存在进站口和出站口
-    fileprivate func checkEnterAndExitName() {
+    private func checkEnterAndExitName() {
         
         enterNameBtn.isHidden = (segment?.enterName.length != nil)
         if segment?.enterName.length != nil {
@@ -134,7 +134,7 @@ extension BusRouteDetailCellHeader {
     }
     
     // MARK: - 检查是否存在其他线路
-    fileprivate func checkOtherBusLines() {
+    private func checkOtherBusLines() {
         
         if let count = segment?.buslines.count {
             
@@ -146,7 +146,7 @@ extension BusRouteDetailCellHeader {
     }
     
     // MARK: - 设置 CollectionView
-    fileprivate func setUpCollectionView() {
+    private func setUpCollectionView() {
         
         flowLayout.minimumLineSpacing = 3
         collectionView.register(UINib(nibName: "BusLineCell", bundle: nil), forCellWithReuseIdentifier: BusLineCellID)

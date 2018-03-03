@@ -49,7 +49,7 @@ class TabBarController: UITabBarController {
 // MARK: - 设置 TabBar 属性
 extension TabBarController {
     
-    fileprivate func seUpTabBarAttr() {
+    private func seUpTabBarAttr() {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.gray], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.darkGray], for: .selected)
     }
@@ -58,7 +58,7 @@ extension TabBarController {
 // MARK: - 设置子控制器
 extension TabBarController {
     
-    fileprivate func addChildVc(childVcName : String, title : String, normalImg : String, selImg : String) {
+    private func addChildVc(childVcName : String, title : String, normalImg : String, selImg : String) {
         
         let childVc = GetVc.getVcFromString(childVcName)
         

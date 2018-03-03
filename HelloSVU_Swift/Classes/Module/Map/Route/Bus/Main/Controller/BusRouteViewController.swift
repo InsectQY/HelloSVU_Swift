@@ -10,25 +10,25 @@ import UIKit
 
 import DOPDropDownMenu_Enhanced
 
-fileprivate let BusRouteCellID = "BusRouteCellID"
-fileprivate let kMapsDropDownMenuH : CGFloat = 40
+private let BusRouteCellID = "BusRouteCellID"
+private let kMapsDropDownMenuH : CGFloat = 40
 
 class BusRouteViewController: BaseViewController {
     
     // MARK: - LazyLoad
-    fileprivate lazy var originPoint = AMapGeoPoint()
-    fileprivate lazy var destinationPoint = AMapGeoPoint()
+    private lazy var originPoint = AMapGeoPoint()
+    private lazy var destinationPoint = AMapGeoPoint()
     
-    fileprivate lazy var originLoc = ""
-    fileprivate lazy var destinationLoc = ""
+    private lazy var originLoc = ""
+    private lazy var destinationLoc = ""
     
-    fileprivate let strategy = ["最快捷" , "最经济" , "最少换乘" , "最少步行" , "最舒适" , "不乘地铁"]
-    fileprivate let time = ["现在出发"]
+    private let strategy = ["最快捷" , "最经济" , "最少换乘" , "最少步行" , "最舒适" , "不乘地铁"]
+    private let time = ["现在出发"]
     
     /// 公交路径规划方案
-    fileprivate var route : AMapRoute?
+    private var route : AMapRoute?
     
-    fileprivate lazy var menu: DOPDropDownMenu = {
+    private lazy var menu: DOPDropDownMenu = {
         
         let menu = DOPDropDownMenu(origin: CGPoint(x: 0, y: 0), andHeight: kMapsDropDownMenuH)
         // 创建menu 第一次显示 不会调用点击代理，可以用这个手动调用
@@ -38,7 +38,7 @@ class BusRouteViewController: BaseViewController {
         return menu!
     }()
     
-    fileprivate lazy var tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         
         let tableView = UITableView(frame: CGRect(x: 0, y: kMapsDropDownMenuH, w: ScreenW, h: view.frame.height - 115 - kMapsDropDownMenuH - kTitleViewH), style: .grouped)
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, w: ScreenW, h: .leastNormalMagnitude))
@@ -50,14 +50,14 @@ class BusRouteViewController: BaseViewController {
         return tableView
     }()
     
-    fileprivate lazy var search: AMapSearchAPI = {
+    private lazy var search: AMapSearchAPI = {
         
         let search = AMapSearchAPI()
         search?.delegate = self
         return search!
     }()
     
-    fileprivate lazy var busRouteRequest: AMapTransitRouteSearchRequest = {
+    private lazy var busRouteRequest: AMapTransitRouteSearchRequest = {
         
         let busRouteRequest = AMapTransitRouteSearchRequest()
         busRouteRequest.requireExtension = true
@@ -76,7 +76,7 @@ class BusRouteViewController: BaseViewController {
 // MARK: - 设置 UI 界面
 extension BusRouteViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         automaticallyAdjustsScrollViewInsets = false
         view.addSubview(menu)
@@ -84,7 +84,7 @@ extension BusRouteViewController {
     }
     
     // MARK: - 设置底部
-    fileprivate func setUpFooterView() {
+    private func setUpFooterView() {
         
         let contentView = UIView(frame: CGRect(x: 0, y: 0, w: ScreenW, h: 40))
         let footer = BusRouteFooterView.loadFromNib()

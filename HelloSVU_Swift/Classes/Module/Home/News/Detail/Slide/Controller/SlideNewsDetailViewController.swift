@@ -11,17 +11,17 @@ import UIKit
 import EZSwiftExtensions
 import FDFullscreenPopGesture
 
-fileprivate let kScrollViewH : CGFloat = ScreenH - 200
+private let kScrollViewH : CGFloat = ScreenH - 200
 
 class SlideNewsDetailViewController: BaseViewController {
     
     var url = ""
     
-    fileprivate lazy var slideNews = [SlideNews?]()
-    fileprivate lazy var allImages = [String]()
+    private lazy var slideNews = [SlideNews?]()
+    private lazy var allImages = [String]()
     
     // MARK: - LazyLoad
-    fileprivate lazy var scrollView: UIScrollView = {
+    private lazy var scrollView: UIScrollView = {
         
         let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, w: ScreenW, h: kScrollViewH))
         scrollView.backgroundColor = UIColor.black
@@ -33,7 +33,7 @@ class SlideNewsDetailViewController: BaseViewController {
     }()
     
     // MARK: - 返回按钮
-    fileprivate lazy var backBtn: UIButton = {
+    private lazy var backBtn: UIButton = {
         
         let backBtn = UIButton(type: .custom)
         backBtn.frame = CGRect(x: 10, y: 20, width: 54, height: 44)
@@ -43,7 +43,7 @@ class SlideNewsDetailViewController: BaseViewController {
     }()
     
     // MARK: - 新闻标题
-    fileprivate lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         
         let titleLabel = UILabel(frame: CGRect(x: 5, y: scrollView.bottom + 5 ,width: ScreenW - 55, height: 50))
         titleLabel.numberOfLines = 0
@@ -53,7 +53,7 @@ class SlideNewsDetailViewController: BaseViewController {
     }()
     
     // MARK: - 指示数量
-    fileprivate lazy var countLabel: UILabel = {
+    private lazy var countLabel: UILabel = {
         
         let countLabel = UILabel(frame: CGRect(x: ScreenW - 55, y: scrollView.bottom + 5 ,width: ScreenW - 55, height: 50))
         countLabel.textColor = .white
@@ -62,7 +62,7 @@ class SlideNewsDetailViewController: BaseViewController {
     }()
     
     // MARK: - 新闻内容
-    fileprivate lazy var contentTextView: UITextView = {
+    private lazy var contentTextView: UITextView = {
         
         let contentTextView = UITextView(frame: CGRect(x: 5, y: titleLabel.bottom ,width: ScreenW - 15, height: 100))
         contentTextView.isEditable = false
@@ -89,7 +89,7 @@ extension SlideNewsDetailViewController {
         return true
     }
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         fd_prefersNavigationBarHidden = true
         view.backgroundColor = .black
@@ -101,7 +101,7 @@ extension SlideNewsDetailViewController {
     }
     
     // MARK: - 设置轮播图片
-    fileprivate func addAllImageView() {
+    private func addAllImageView() {
 
         for (index,item) in slideNews.enumerated() {
             
@@ -119,14 +119,14 @@ extension SlideNewsDetailViewController {
     }
     
     // MARK: - 预览图片
-    @objc fileprivate func showImage() {
+    @objc private func showImage() {
         
         let index = Int(scrollView.contentOffset.x / ScreenW)
         present(SVUPhotoBrowser.browser(index, allImages), animated: true, completion: nil)
     }
     
     // MARK: - 返回
-    @objc fileprivate func back() {
+    @objc private func back() {
         
         navigationController?.popViewController(animated: true)
     }
@@ -135,7 +135,7 @@ extension SlideNewsDetailViewController {
 // MARK: - 加载新闻数据
 extension SlideNewsDetailViewController {
     
-    fileprivate func loadNewsData() {
+    private func loadNewsData() {
         
         QYRequestTool.requestData(.GET, url, successComplete: {[weak self] (JSON) in
             
@@ -169,21 +169,21 @@ extension SlideNewsDetailViewController : UIScrollViewDelegate {
 // MARK: - 往视图里添加内容
 extension SlideNewsDetailViewController {
     
-    fileprivate func setAllContent() {
+    private func setAllContent() {
         
         let index = Int(scrollView.contentOffset.x / ScreenW)
         setImageContent(index)
         setNewsContent(index)
     }
     
-    fileprivate func setImageContent(_ index : Int) {
+    private func setImageContent(_ index : Int) {
         
         var image = UIImageView()
         image = scrollView.subviews[index] as! UIImageView
         image.setImage(slideNews[index]?.image, "placeholder")
     }
     
-    fileprivate func setNewsContent(_ index : Int) {
+    private func setNewsContent(_ index : Int) {
         
         contentTextView.text = slideNews[index]?.SVUDescription
         titleLabel.text = slideNews[index]?.title

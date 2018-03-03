@@ -15,10 +15,10 @@ class NewsPartsViewController: BaseViewController {
     /// 当前页
     var nowPage = 1
     /// 所有新闻数据
-    fileprivate lazy var allNews = [SingleNews?]()
+    private lazy var allNews = [SingleNews?]()
     
     // MARK: - LazyLoad
-    fileprivate lazy var tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         
         let tableView = UITableView(frame: UIScreen.main.bounds)
         tableView.delegate = self
@@ -45,12 +45,12 @@ class NewsPartsViewController: BaseViewController {
 // MARK: - 设置 UI 界面
 extension NewsPartsViewController {
     
-    fileprivate func setUpUI() {
+    private func setUpUI() {
         
         view.addSubview(tableView)
     }
     
-    fileprivate func setUpRefresh() {
+    private func setUpRefresh() {
         
         tableView.mj_header = SVURefreshHeader(refreshingTarget: self, refreshingAction: #selector(loadNewInfosData))
         tableView.mj_footer = SVURefreshFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreInfosData))
@@ -62,7 +62,7 @@ extension NewsPartsViewController {
 extension NewsPartsViewController {
     
     // MARK: - 请求参数
-    fileprivate func getParameters() -> [String : Any] {
+    private func getParameters() -> [String : Any] {
         
         var parameters = [String : Any]()
         parameters["proid"] = "ifengnewsvip"
@@ -74,7 +74,7 @@ extension NewsPartsViewController {
         return parameters
     }
     
-    @objc fileprivate func loadNewInfosData() {
+    @objc private func loadNewInfosData() {
         
         tableView.mj_footer.endRefreshing()
         var parameters = getParameters()
@@ -101,7 +101,7 @@ extension NewsPartsViewController {
         }
     }
     
-    @objc fileprivate func loadMoreInfosData() {
+    @objc private func loadMoreInfosData() {
         
         tableView.mj_header.endRefreshing()
         var parameters = getParameters()
