@@ -9,15 +9,11 @@
 import UIKit
 import HandyJSON
 
-class ImgCategory: HandyJSON {
-    
+struct ImgCategory: HandyJSON {
     /// 图片 URL
     var cover = ""
     /// 分类名称
     var name = ""
     /// 分类id
     var id = ""
-    
-    required init() {}
 }
-

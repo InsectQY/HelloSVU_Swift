@@ -8,8 +8,8 @@
 
 import UIKit
 
-class BusSegment: NSObject {
-
+struct BusSegment {
+    
     /// 用于判断当前cell是否展开
     var isOpen = false
     /// 是否加载指定的公交线路（适用于同一策略有多条换乘时）

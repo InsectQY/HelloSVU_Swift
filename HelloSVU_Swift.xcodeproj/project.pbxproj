@@ -536,7 +536,6 @@
 			children = (
 				E53E47B71F906FB6006C7B81 /* Controller */,
 				E53E47B91F906FCD006C7B81 /* View */,
-				E53E47B81F906FC5006C7B81 /* Model */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -547,13 +546,6 @@
 				E53E47BA1F906FE7006C7B81 /* MapSearchViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		E53E47B81F906FC5006C7B81 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E53E47B91F906FCD006C7B81 /* View */ = {
@@ -606,7 +598,6 @@
 			isa = PBXGroup;
 			children = (
 				E5BC27191F82AF2F005BE425 /* Controller */,
-				E5BC271B1F82AF2F005BE425 /* Model */,
 				E5BC271D1F82AF2F005BE425 /* View */,
 			);
 			path = Main;
@@ -1037,13 +1028,6 @@
 				E5BC271F1F82AF96005BE425 /* BusRouteViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		E5BC271B1F82AF2F005BE425 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E5BC271D1F82AF2F005BE425 /* View */ = {

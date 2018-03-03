@@ -88,7 +88,6 @@ extension WallPaperCategoryViewController {
 extension WallPaperCategoryViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return categoryData.count
     }
     
