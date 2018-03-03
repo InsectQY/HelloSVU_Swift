@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 import DOPDropDownMenu_Enhanced
 
 private let BusRouteCellID = "BusRouteCellID"
@@ -44,7 +43,7 @@ class BusRouteViewController: BaseViewController {
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, w: ScreenW, h: .leastNormalMagnitude))
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: "BusRouteCell", bundle: nil), forCellReuseIdentifier: BusRouteCellID)
+        tableView.register(cellType: BusRouteCell.self)
         tableView.showsVerticalScrollIndicator = false
         tableView.rowHeight = 120
         return tableView
@@ -138,7 +137,7 @@ extension BusRouteViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: BusRouteCellID, for: indexPath) as! BusRouteCell
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: BusRouteCell.self)
         cell.transit = route?.transits[indexPath.row]
         return cell
     }

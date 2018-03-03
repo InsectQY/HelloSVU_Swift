@@ -50,47 +50,45 @@ class BusRouteDetailLineCell: UICollectionViewCell, NibReusable {
         
         get {
             
+            guard let segments = transit?.segments else { return "" }
+            
             var segment = [AMapSegment]()
-            if let segments =  transit?.segments {
-                
-                segment += segments
-                if (segment.last?.buslines.count ?? 0) <= 0 {
-                    segment.removeLast()
-                }
-                
-                var allSeg: String = ""
-                for i in 0 ..< segment.count { // 遍历所有换乘策略
-                    
-                    var busLine: String = ""
-                    for k in 0 ..< segment[i].buslines.count { // 遍历同一换乘策略中的所有公交线路
-                        
-                        var tmpName = (segment[i].buslines[k].name ?? "") as NSString
-                        if tmpName.contains("(") { // 去除括号里详细内容(始末站信息)
-                            
-                            let range = tmpName.range(of: "(")
-                            tmpName = tmpName.substring(to: range.location) as NSString
-                        }
-                        
-                        let tmpK = k
-                        if (tmpK + 1) != segment[i].buslines.count {
-                            //如果当前不是唯一公交线路则拼接 "/"
-                            busLine += "\(tmpName)/" as String
-                        }else {
-                            busLine += tmpName as String
-                        }
-                    }
-                    
-                    let tmpI = i
-                    if (tmpI + 1) != segment.count {
-                        //如果当前不是最后一条线路则拼接 "→"
-                        allSeg += "\(busLine)  →  "
-                    }else {
-                        allSeg += busLine
-                    }
-                }
-                return allSeg
+            segment += segments
+            if (segment.last?.buslines.count ?? 0) <= 0 {
+                segment.removeLast()
             }
-            return ""
+            
+            var allSeg: String = ""
+            for i in 0 ..< segment.count { // 遍历所有换乘策略
+                
+                var busLine: String = ""
+                for k in 0 ..< segment[i].buslines.count { // 遍历同一换乘策略中的所有公交线路
+                    
+                    var tmpName = (segment[i].buslines[k].name ?? "") as NSString
+                    if tmpName.contains("(") { // 去除括号里详细内容(始末站信息)
+                        
+                        let range = tmpName.range(of: "(")
+                        tmpName = tmpName.substring(to: range.location) as NSString
+                    }
+                    
+                    let tmpK = k
+                    if (tmpK + 1) != segment[i].buslines.count {
+                        //如果当前不是唯一公交线路则拼接 "/"
+                        busLine += "\(tmpName)/" as String
+                    }else {
+                        busLine += tmpName as String
+                    }
+                }
+                
+                let tmpI = i
+                if (tmpI + 1) != segment.count {
+                    //如果当前不是最后一条线路则拼接 "→"
+                    allSeg += "\(busLine)  →  "
+                }else {
+                    allSeg += busLine
+                }
+            }
+            return allSeg
         }
     }
 }

@@ -34,18 +34,19 @@ class BusRouteDetailCellHeader: UITableViewHeaderFooterView,NibReusable {
         
         var busLines = [AMapBusLine]()
         
-        if let allLine = segment?.buslines {
-            
-            for line in allLine {
-                
-                let name = line.name as NSString
-                if name.contains("(") { // 去除括号里的内容
-                    line.name = name.substring(to: name.range(of: "(").location)
-                }
-                busLines.append(line)
-            }
-            busLines.remove(at: info?.busLineIndex ?? 0)
+        guard let allLine = segment?.buslines else {
+            return busLines
         }
+        
+        for line in allLine {
+            
+            let name = line.name as NSString
+            if name.contains("(") { // 去除括号里的内容
+                line.name = name.substring(to: name.range(of: "(").location)
+            }
+            busLines.append(line)
+        }
+        busLines.remove(at: info?.busLineIndex ?? 0)
         return busLines
     }()
     

@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let MapTipsCellID = "MapTipsCellID"
-
 class MapSearchViewController: BaseViewController {
     
     var searchBarText = ""
@@ -24,7 +22,7 @@ class MapSearchViewController: BaseViewController {
         tableView.rowHeight = 70
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "MapTipsCell", bundle: nil), forCellReuseIdentifier: MapTipsCellID)
+        tableView.register(cellType: MapTipsCell.self)
         return tableView
     }()
     
@@ -104,15 +102,14 @@ extension MapSearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        if let key = searchBar.text {
+        guard let key = searchBar.text else {return}
+        
+        if key.count > 0 {
             
-            if key.count > 0 {
-                
-                request.keywords = searchText
-                search.aMapPOIKeywordsSearch(request)
-            }else {
-                poisResponse.removeAll()
-            }
+            request.keywords = searchText
+            search.aMapPOIKeywordsSearch(request)
+        }else {
+            poisResponse.removeAll()
         }
         
         tableView.reloadData()
@@ -145,7 +142,7 @@ extension MapSearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: MapTipsCellID, for: indexPath) as! MapTipsCell
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: MapTipsCell.self)
         if let key = searchBar.text {
             cell.keyWords = key
         }

@@ -10,7 +10,7 @@ import UIKit
 
 class BusRouteFooterView: UIView ,NibLoadable {
 
-    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
     
     var route: AMapRoute? {
         

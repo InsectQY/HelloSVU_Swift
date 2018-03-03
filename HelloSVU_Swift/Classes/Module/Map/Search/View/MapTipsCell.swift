@@ -10,7 +10,7 @@ import UIKit
 
 import EZSwiftExtensions
 
-class MapTipsCell: UITableViewCell {
+class MapTipsCell: UITableViewCell, NibReusable {
 
     @IBOutlet private weak var stopLabel: UILabel!
     @IBOutlet private weak var distanceLabel: UILabel!

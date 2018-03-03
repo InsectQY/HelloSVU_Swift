@@ -20,9 +20,9 @@ class AllBusLineViewController: UIViewController {
     /// 当前选择的公交线路
     var selBusLineIndex = 0
     
-    var lastCell: AllBusLineCell?
+    private var lastCell: AllBusLineCell?
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - LazyLoad
     

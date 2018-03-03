@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusRouteDetailFooterView: UIView , NibReusable {
+class BusRouteDetailFooterView: UIView, NibReusable {
 
     @IBOutlet private weak var destionLabel: UILabel!
     

@@ -10,10 +10,10 @@ import UIKit
 
 class BusRouteDetailViewController: BaseViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var pageControl: UIPageControl!
+    @IBOutlet private weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet private weak var collectionView: UICollectionView!
     /// 点击cell后底部弹出的位置信息窗口
     private let window: UIWindow = UIWindow()
     /// 窗口背后的黑色蒙版
@@ -117,7 +117,7 @@ extension BusRouteDetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BusRouteDetailLineCell.ID, for: indexPath) as! BusRouteDetailLineCell
+        let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: BusRouteDetailLineCell.self)
         cell.transit = route.transits[indexPath.item]
         return cell
     }
@@ -181,7 +181,7 @@ extension BusRouteDetailViewController: UITableViewDelegate {
         let segment = route.transits[selIndex].segments[section]
         let info = busSegment[section]
         
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BusRouteDetailCellHeader.ID) as! BusRouteDetailCellHeader
+        let headerView = tableView.dequeueReusableHeaderFooterView(BusRouteDetailCellHeader.self)
         headerView.info = info
         headerView.segment = segment
         
@@ -218,7 +218,7 @@ extension BusRouteDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
-        let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BusRouteDetailCellFooter.ID) as! BusRouteDetailCellFooter
+        let footerView = tableView.dequeueReusableHeaderFooterView(BusRouteDetailCellFooter.self)
         footerView.info = busSegment[section];
         footerView.segment = route.transits[selIndex].segments[section];
         // 加一是为了加载到最后一组只有步行路线的数据(默认不取最后一组)
