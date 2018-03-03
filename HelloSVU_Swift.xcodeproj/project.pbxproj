@@ -102,6 +102,7 @@
 		E57FCCD01ED43FA600FE5184 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57FCCCF1ED43FA600FE5184 /* AppConfig.swift */; };
 		E5889A391FAC9D5C00557639 /* CalculateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5889A381FAC9D5C00557639 /* CalculateTool.swift */; };
 		E5889A3C1FACA05100557639 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5889A3B1FACA05100557639 /* BaseViewController.swift */; };
+		E5943AE5204B186500C5C100 /* Moya+HandyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5943AE4204B186500C5C100 /* Moya+HandyJSON.swift */; };
 		E5A40CEE1F7E8A8C0091C407 /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A40CED1F7E8A8C0091C407 /* String-Extension.swift */; };
 		E5AD67C1204ABC1300C07156 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5AD67BA204ABC1300C07156 /* Kingfisher.framework */; };
 		E5AD67C2204ABC1300C07156 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5AD67BB204ABC1300C07156 /* Moya.framework */; };
@@ -266,6 +267,7 @@
 		E57FCCCF1ED43FA600FE5184 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E5889A381FAC9D5C00557639 /* CalculateTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTool.swift; sourceTree = "<group>"; };
 		E5889A3B1FACA05100557639 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E5943AE4204B186500C5C100 /* Moya+HandyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+HandyJSON.swift"; sourceTree = "<group>"; };
 		E5A40CED1F7E8A8C0091C407 /* String-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
 		E5AD67BA204ABC1300C07156 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		E5AD67BB204ABC1300C07156 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
@@ -927,6 +929,7 @@
 		E5762CF11EC4048100B422C7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E5943AE4204B186500C5C100 /* Moya+HandyJSON.swift */,
 				E5762CF41EC404FE00B422C7 /* UIBarButtonItem-Extension.swift */,
 				E5CCB76A1ED6CAC300195C0D /* UINavigationBar-Awesome.swift */,
 				E5A40CED1F7E8A8C0091C407 /* String-Extension.swift */,
@@ -1751,6 +1754,7 @@
 				E5539F491F7E6DDF00139E17 /* MultiPicutresCell.swift in Sources */,
 				E5FAEC541F7BBFA0006CC525 /* WallPaperCategoryViewController.swift in Sources */,
 				E5BC270B1F82A300005BE425 /* RoutePageViewController.swift in Sources */,
+				E5943AE5204B186500C5C100 /* Moya+HandyJSON.swift in Sources */,
 				E5BA14081EC42C8A002F4FF9 /* SVURefreshFooter.m in Sources */,
 				E5FFF28F1EDAC83B00594C03 /* Astro.swift in Sources */,
 				E57002FB1F7CFD8A006FC640 /* NewsPartsViewController.swift in Sources */,

@@ -21,7 +21,7 @@ class SVUHUD: NSObject {
         SVProgressHUD.dismiss()
     }
     
-    class func showInfoWithStatus(_ status: String, minimumDismissTimeInterval: TimeInterval = 1.0) {
+    class func showInfo(_ status: String, minimumDismissTimeInterval: TimeInterval = 1.0) {
         
         SVProgressHUD.showInfo(withStatus: status)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + minimumDismissTimeInterval) {
@@ -29,7 +29,7 @@ class SVUHUD: NSObject {
         }
     }
     
-    class func showSuccessWithStatus(_ status: String, minimumDismissTimeInterval: TimeInterval = 1.0) {
+    class func showSuccess(_ status: String, minimumDismissTimeInterval: TimeInterval = 1.0) {
         
         SVProgressHUD.showSuccess(withStatus: status)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + minimumDismissTimeInterval) {
@@ -37,7 +37,7 @@ class SVUHUD: NSObject {
         }
     }
     
-    class func showErrorWithStatus(_ status: String, minimumDismissTimeInterval: TimeInterval = 1.0) {
+    class func showError(_ status: String, minimumDismissTimeInterval: TimeInterval = 1.0) {
         
         SVProgressHUD.showError(withStatus: status)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + minimumDismissTimeInterval) {

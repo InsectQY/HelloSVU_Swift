@@ -142,9 +142,9 @@ extension WallPaperDetailViewController: JFContextSheetDelegate {
     // MARK: - 保存图片到相册回调
     @objc func image(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: AnyObject) {
         if error != nil {
-            SVUHUD.showInfoWithStatus("保存失败")
+            SVUHUD.showInfo("保存失败")
         } else {
-            SVUHUD.showSuccessWithStatus("保存成功")
+            SVUHUD.showSuccess("保存成功")
         }
     }
 }

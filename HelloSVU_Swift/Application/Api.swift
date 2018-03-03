@@ -7,25 +7,80 @@
 //
 
 import Foundation
+import Moya
 
-/// 天气 URL
-let Weather_BASE_URL = "https://free-api.heweather.com/v5/"
-
-enum Weather {
+let LoadingPlugin = NetworkActivityPlugin { (type, target) in
     
-    static let all = "\(Weather_BASE_URL)weather"
-    static let forecast = "\(Weather_BASE_URL)forecast"
-    static let now = "\(Weather_BASE_URL)now"
-    static let hourly = "\(Weather_BASE_URL)hourly"
-    static let suggestion = "\(Weather_BASE_URL)suggestion"
+    switch type {
+    case .began:
+        SVUHUD.show(.black)
+    case .ended:
+        SVUHUD.dismiss()
+    }
 }
 
-/// 图片分类
-let imgCategoryURL = "http://service.picasso.adesk.com/v1/lightwp/category"
-
-/// 新闻 URL
-enum News {
+let timeoutClosure = { (endpoint: Endpoint, closure: MoyaProvider<Api>.RequestResultClosure) -> Void in
     
-    static let normal = "http://api.3g.ifeng.com/clientChannelNewsSearch"
-    static let channelID = "http://api.iclient.ifeng.com/ClientNews"
+    if var urlRequest = try? endpoint.urlRequest() {
+        urlRequest.timeoutInterval = 15
+        closure(.success(urlRequest))
+    } else {
+        closure(.failure(MoyaError.requestMapping(endpoint.url)))
+    }
+}
+
+let ApiProvider = MoyaProvider<Api>(requestClosure: timeoutClosure)
+let ApiLoadingProvider = MoyaProvider<Api>(requestClosure: timeoutClosure, plugins: [LoadingPlugin])
+
+enum Api {
+    
+    case wallpaper
+    case wallpaperCategory(String, Int)
+}
+
+extension Api: TargetType {
+    
+    var baseURL: URL {
+        switch self {
+        case .wallpaper:
+            
+            return URL(string: "http://service.picasso.adesk.com/v1/lightwp/category")!
+        case .wallpaperCategory(_,_):
+            return URL(string: "http://service.picasso.adesk.com/v1/lightwp/category")!
+        }
+    }
+    
+    var path: String {
+        switch self {
+        case let .wallpaperCategory(_, id):
+            return "\(id)/vertical"
+        default:
+            return ""
+        }
+    }
+    
+    var method: Moya.Method {
+        switch self {
+        default:
+            return .get
+        }
+    }
+    
+    var sampleData: Data {
+        return "".data(using: String.Encoding.utf8)!
+    }
+    
+    var task: Task {
+        switch self {
+        case let .wallpaperCategory(_, skip):
+            return .requestParameters(parameters: ["limit": 15,
+                                                   "skip": skip], encoding: URLEncoding.default)
+        default:
+           return .requestPlain
+        }
+    }
+    
+    var headers: [String : String]? {
+        return nil
+    }
 }

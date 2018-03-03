@@ -17,3 +17,13 @@ struct ImgCategory: HandyJSON {
     /// 分类id
     var id = ""
 }
+
+struct test: HandyJSON {
+    
+    var msg = ""
+    var res: res?
+}
+
+struct res: HandyJSON {
+    var category = [ImgCategory]()
+}
