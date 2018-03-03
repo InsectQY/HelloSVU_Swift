@@ -81,7 +81,7 @@ extension BusRouteDetailViewController {
         flowLayout.itemSize = CGSize(width: ScreenW, height: 100)
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
-        collectionView.register(BusRouteDetailLineCell.Nib, forCellWithReuseIdentifier: BusRouteDetailLineCell.ID)
+        collectionView.register(cellType: BusRouteDetailLineCell.self)
         collectionView.reloadData()
         collectionView.layoutIfNeeded()
         
@@ -92,9 +92,9 @@ extension BusRouteDetailViewController {
     
     private func setUpTableView() {
         
-        tableView.register(BusRouteDetailCell.Nib, forCellReuseIdentifier: BusRouteDetailCell.ID)
-        tableView.register(BusRouteDetailCellHeader.Nib, forHeaderFooterViewReuseIdentifier: BusRouteDetailCellHeader.ID)
-        tableView.register(BusRouteDetailCellFooter.Nib, forHeaderFooterViewReuseIdentifier: BusRouteDetailCellFooter.ID)
+        tableView.register(cellType: BusRouteDetailCell.self)
+        tableView.register(headerFooterViewType: BusRouteDetailCellHeader.self)
+        tableView.register(headerFooterViewType: BusRouteDetailCellFooter.self)
         tableView.rowHeight = 25
         tableView.reloadData()
     }

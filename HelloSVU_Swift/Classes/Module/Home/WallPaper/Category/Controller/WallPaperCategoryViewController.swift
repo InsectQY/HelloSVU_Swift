@@ -35,7 +35,7 @@ class WallPaperCategoryViewController: BaseViewController {
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(ImgCategoryCell.Nib, forCellWithReuseIdentifier: ImgCategoryCell.ID)
+        collectionView.register(cellType: ImgCategoryCell.self)
         collectionView.contentInset = UIEdgeInsetsMake(kTopH, 0, 0, 0)
         return collectionView
     }()
@@ -93,7 +93,7 @@ extension WallPaperCategoryViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImgCategoryCell.ID, for: indexPath) as! ImgCategoryCell
+        let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: ImgCategoryCell.self)
         cell.category = categoryData[indexPath.item]
         return cell
     }

@@ -31,8 +31,8 @@ class HomeViewController: BaseViewController {
         tableView.dataSource = self
         tableView.delegate =  self
         tableView.isScrollEnabled = false
-        tableView.register(NotificationCell.Nib, forCellReuseIdentifier: NotificationCell.ID)
-        tableView.register(HomeToolContentCell.Nib, forCellReuseIdentifier: HomeToolContentCell.ID)
+        tableView.register(cellType: NotificationCell.self)
+        tableView.register(cellType: HomeToolContentCell.self)
         tableView.separatorStyle = .none
         tableView.contentInset = UIEdgeInsetsMake(kTopH, 0, 0, 0)
         self.view.addSubview(tableView)
@@ -93,11 +93,11 @@ extension HomeViewController : UITableViewDataSource {
         
         if indexPath.row == 0 {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: NotificationCell.ID, for: indexPath) as! NotificationCell
+            let cell = tableView.dequeueReusableCell(for: indexPath, cellType: NotificationCell.self)
             return cell
         }else {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: HomeToolContentCell.ID, for: indexPath) as! HomeToolContentCell
+            let cell = tableView.dequeueReusableCell(for: indexPath, cellType: HomeToolContentCell.self)
             cell.home = homeData
             return cell
         }

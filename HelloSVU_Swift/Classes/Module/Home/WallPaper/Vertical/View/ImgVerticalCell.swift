@@ -8,14 +8,13 @@
 
 import UIKit
 
-class ImgVerticalCell: UICollectionViewCell,ReuseInterface {
+class ImgVerticalCell: UICollectionViewCell, NibReusable {
 
     @IBOutlet private weak var imageView: UIImageView!
     // MARK: - LazyLoad
     var vertical : ImgVertical? {
         
-        didSet{
-            
+        didSet {
             imageView.setImage(vertical?.thumb, "placeholder")
         }
     }

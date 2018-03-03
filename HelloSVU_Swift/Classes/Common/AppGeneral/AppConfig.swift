@@ -8,6 +8,7 @@
 
 import UIKit
 
+//MARK:- 全局公用属性
 let kStatusBarH : CGFloat = UIApplication.shared.statusBarFrame.size.height
 let kNaviBarH : CGFloat = 44
 let kTabBarH : CGFloat = AppDelegate.tabBarContoller.tabBar.size.height
@@ -21,6 +22,7 @@ let cycleImage3 = "http://a3.qpic.cn/psb?/V149x6wS41NVrM/juQY8UxjztbgyMHuTZgwDcj
 let cycleImage4 = "http://a3.qpic.cn/psb?/V149x6wS41NVrM/wVORCsUiG0nmytd6tQQv*smhMddoBWZJIEbU7melO9M!/b/dI8AAAAAAAAA&bo=fwc4BHAQQAkFAE4!&rf=viewer_4"
 let cycleImage5 = "http://a3.qpic.cn/psb?/V149x6wS41NVrM/qtuuWcRWH9RndKwm8kWkXn17eV.SUi0RhF5sCYvl32o!/b/dI8AAAAAAAAA&bo=6gSkAeoEpAEFACM!&rf=viewer_4"
 
+//MARK:- 字体
 let PFM20Font : UIFont = UIFont(name: "PingFangSC-Medium", size: 20)!
 let PFM18Font : UIFont = UIFont(name: "PingFangSC-Medium", size: 18)!
 let PFM16Font : UIFont = UIFont(name: "PingFangSC-Medium", size: 16)!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusRouteDetailHeaderView: UIView,NibLoadable {
+class BusRouteDetailHeaderView: UIView,NibReusable {
 
     @IBOutlet private weak var distanceLabel: UILabel!
     @IBOutlet private weak var durationLabel: UILabel!

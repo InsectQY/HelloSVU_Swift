@@ -39,7 +39,7 @@ class WallperVerticalViewController: BaseViewController {
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UINib(nibName: "ImgVerticalCell", bundle: nil), forCellWithReuseIdentifier: ImgVerticalCellID)
+        collectionView.register(cellType: ImgVerticalCell.self)
         collectionView.contentInset = UIEdgeInsetsMake(kTopH, 0, 0, 0)
         return collectionView
     }()
@@ -121,7 +121,7 @@ extension WallperVerticalViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImgVerticalCellID, for: indexPath) as! ImgVerticalCell
+        let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: ImgVerticalCell.self)
         cell.vertical = verticalData[indexPath.item]
         return cell
     }

@@ -104,24 +104,12 @@ extension WallPaperDetailViewController {
         
         view.addSubview(imageView)
         /// 添加第一次试用指引
-        showTip()
+        TipView().show()
     }
     
     // MARK: - 隐藏状态栏
     override var prefersStatusBarHidden: Bool{
         return true
-    }
-    
-    // MARK: - 显示提示
-    private func showTip() {
-        
-        // 只显示一次
-        if !UserDefaults.standard.bool(forKey: "showTip") {
-            
-            TipView().show()
-            UserDefaults.standard.set(true, forKey: "showTip")
-        }
-        
     }
 }
 

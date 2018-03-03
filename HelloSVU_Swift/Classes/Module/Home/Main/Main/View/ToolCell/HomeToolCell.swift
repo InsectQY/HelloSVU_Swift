@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeToolCell: UICollectionViewCell,ReuseInterface {
+class HomeToolCell: UICollectionViewCell,NibReusable {
     
     @IBOutlet private weak var toolImage: UIImageView!
     @IBOutlet private weak var toolTitleLabel: UILabel!

@@ -6,11 +6,11 @@
 //  Copyright © 2017年 Insect. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import HandyJSON
 
-class SingleNews:  HandyJSON{
-
+struct SingleNews: HandyJSON {
+    
     /// 图片类型
     enum infoType : String {
         
@@ -67,6 +67,30 @@ class SingleNews:  HandyJSON{
     var type = ""
     /// 新闻详情链接
     var link = Link()
+}
+
+struct Link: HandyJSON {
     
-    required init() {}
+    /// 需要自己设置 JS 交互
+    var url = ""
+    /// 可直接加载的网页
+    var weburl = ""
+}
+
+struct Style: HandyJSON {
+    
+    /// 图片
+    var images : [String] = []
+    /// 轮播数量
+    var slideCount = 0
+    /**
+     列表页面展示的 cell 类型
+     1.bigimg : 大图
+     2.titleimg : 标题图片(thumbnail)
+     3.slideimg : 三张图
+     4.singletitle : 只显示标题
+     */
+    var view = ""
+    /// 详情页的展示类型
+    var type = ""
 }

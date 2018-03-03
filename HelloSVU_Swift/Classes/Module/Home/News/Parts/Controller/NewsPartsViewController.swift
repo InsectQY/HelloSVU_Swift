@@ -23,10 +23,10 @@ class NewsPartsViewController: BaseViewController {
         let tableView = UITableView(frame: UIScreen.main.bounds)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(NoPictureCell.Nib, forCellReuseIdentifier: NoPictureCell.ID)
-        tableView.register(OnePictureCell.Nib, forCellReuseIdentifier: OnePictureCell.ID)
-        tableView.register(MultiPicutresCell.Nib, forCellReuseIdentifier: MultiPicutresCell.ID)
-        tableView.register(BigImgCell.Nib, forCellReuseIdentifier: BigImgCell.ID)
+        tableView.register(cellType: NoPictureCell.self)
+        tableView.register(cellType: OnePictureCell.self)
+        tableView.register(cellType: MultiPicutresCell.self)
+        tableView.register(cellType: BigImgCell.self)
         tableView.contentInset = UIEdgeInsetsMake(0, 0, 109, 0)
         tableView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 109, 0)
         tableView.separatorStyle = .none
@@ -140,22 +140,23 @@ extension NewsPartsViewController : UITableViewDataSource {
         let news = allNews[indexPath.row]
         if news?.infoType == .SignalImg {
             
+//            let cell = tableView.dequeueReusableCell(for: indexPath, cellType: OnePictureCell.self)
             let cell = tableView.dequeueReusableCell(withIdentifier: OnePictureCell.ID, for: indexPath) as! OnePictureCell
             cell.news = news
             return cell
         }else if news?.infoType == .MultiImg {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: MultiPicutresCell.ID, for: indexPath) as! MultiPicutresCell
+            let cell = tableView.dequeueReusableCell(for: indexPath, cellType: MultiPicutresCell.self)
             cell.news = news
             return cell
         }else if news?.infoType == .BigImg {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: BigImgCell.ID, for: indexPath) as! BigImgCell
+            let cell = tableView.dequeueReusableCell(for: indexPath, cellType: BigImgCell.self)
             cell.news = news
             return cell
         }else {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: NoPictureCell.ID, for: indexPath) as! NoPictureCell
+            let cell = tableView.dequeueReusableCell(for: indexPath, cellType: NoPictureCell.self)
             cell.news = news
             return cell
         }

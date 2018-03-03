@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImgCategoryCell: UICollectionViewCell ,ReuseInterface {
+class ImgCategoryCell: UICollectionViewCell, NibReusable {
     
     // MARK: - LazyLoad
     @IBOutlet private weak var coverImg: UIImageView!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OnePictureCell: UITableViewCell,ReuseInterface {
+class OnePictureCell: UITableViewCell, NibReusable {
 
     @IBOutlet private weak var thumbNailImg: UIImageView!
     @IBOutlet private weak var timeLabel: UILabel!
@@ -24,5 +24,4 @@ class OnePictureCell: UITableViewCell,ReuseInterface {
             sourceLabel.text = news?.source
         }
     }
-
 }

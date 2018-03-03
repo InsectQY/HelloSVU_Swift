@@ -16,7 +16,7 @@ private let maxCol : CGFloat = 3
 private let HomeToolCellH : CGFloat = (toolCellH - HomeToolContentY) * 0.5
 private let HomeToolCellW : CGFloat = ScreenW / maxCol
 
-class HomeToolContentCell: UITableViewCell,ReuseInterface {
+class HomeToolContentCell: UITableViewCell,NibReusable {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var flowLayout: UICollectionViewFlowLayout!
@@ -27,11 +27,9 @@ class HomeToolContentCell: UITableViewCell,ReuseInterface {
         
         didSet {
             
-            if let home = home {
-                
-                homeData = home
-                collectionView.reloadData()
-            }
+            guard let home = home else {return}
+            homeData = home
+            collectionView.reloadData()
         }
     }
     
@@ -43,7 +41,7 @@ class HomeToolContentCell: UITableViewCell,ReuseInterface {
         flowLayout.minimumLineSpacing = 0
         flowLayout.itemSize = CGSize(width: HomeToolCellW, height: HomeToolCellH)
         collectionView.contentInset = UIEdgeInsetsMake(HomeToolContentY, 0, 0, 0)
-        collectionView.register(HomeToolCell.Nib, forCellWithReuseIdentifier: HomeToolCell.ID)
+        collectionView.register(cellType: HomeToolCell.self)
         collectionView.reloadData()
     }
 }
@@ -52,13 +50,12 @@ class HomeToolContentCell: UITableViewCell,ReuseInterface {
 extension HomeToolContentCell : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return homeData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeToolCell.ID, for: indexPath) as! HomeToolCell
+        let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: HomeToolCell.self)
         cell.home = homeData[indexPath.item]
         return cell
     }

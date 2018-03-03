@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MultiPicutresCell: UITableViewCell,ReuseInterface {
+class MultiPicutresCell: UITableViewCell, NibReusable {
 
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var sourceLabel: UILabel!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BigImgCell: UITableViewCell,ReuseInterface {
+class BigImgCell: UITableViewCell, NibReusable {
 
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var thumbNailImg: UIImageView!

@@ -40,16 +40,21 @@ class TipView: UIView {
     // MARK: - 弹出视图
     func show() {
         
-        UIApplication.shared.keyWindow?.addSubview(self)
-        UIApplication.shared.keyWindow?.addSubview(bgView)
-        UIApplication.shared.keyWindow?.addSubview(swipeImageView)
-        UIApplication.shared.keyWindow?.addSubview(swipeLabel)
-        
-        UIView.animate(withDuration: 0.25, animations: {
-            self.bgView.backgroundColor = UIColor(white: 0, alpha: 0.5)
-        }, completion: { (_) in
-            self.showAnimation(2)
-        })
+        // 只显示一次
+        if !UserDefaults.standard.bool(forKey: "showTip") {
+            
+            UIApplication.shared.keyWindow?.addSubview(self)
+            UIApplication.shared.keyWindow?.addSubview(bgView)
+            UIApplication.shared.keyWindow?.addSubview(swipeImageView)
+            UIApplication.shared.keyWindow?.addSubview(swipeLabel)
+            
+            UIView.animate(withDuration: 0.25, animations: {
+                self.bgView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+            }, completion: { (_) in
+                self.showAnimation(2)
+            })
+            UserDefaults.standard.set(true, forKey: "showTip")
+        }
     }
     
     // MARK: - 下滑手势动画
@@ -97,4 +102,3 @@ class TipView: UIView {
         })
     }
 }
-
