@@ -26,7 +26,7 @@ class WallperVerticalViewController: BaseViewController {
     var id = ""
     
     // MARK: - LazyLoad
-    private lazy var verticalData = [ImgVertical?]()
+    private lazy var verticalData = [ImgVertical]()
     
     private lazy var collectionView: UICollectionView = {
         
@@ -76,38 +76,26 @@ extension WallperVerticalViewController {
     @objc private func loadNewVerticalData() {
         
         collectionView.mj_footer.endRefreshing()
-        let parameters: [String: Any] = ["limit": 15,
-                                           "skip": 0]
-        QYRequestTool.requestData(.GET, "\(imgCategoryURL)/\(id)/vertical", parameters, successComplete: {[weak self] (JSON) in
+        ApiProvider.request(Api.wallpaperCategory(id, 0), arrayModel: ImgVertical.self, path: "res.vertical", success: {
             
-            if let data = [ImgVertical].deserialize(from:JSON["res"]["vertical"].description) {
-                self?.verticalData = data
-                self?.collectionView.reloadData()
-                self?.collectionView.mj_header.endRefreshing()
-                self?.collectionView.mj_footer.endRefreshing()
-            }
-        }) {[weak self] (Error) in
-            self?.collectionView.mj_header.endRefreshing()
-            self?.collectionView.mj_footer.endRefreshing()
+            self.verticalData = $0
+            self.collectionView.reloadData()
+            self.collectionView.mj_header.endRefreshing()
+        }) {
+            self.collectionView.mj_header.endRefreshing()
         }
     }
     
     @objc private func loadMoreVerticalData() {
         
         collectionView.mj_header.endRefreshing()
-        let parameters: [String: Any] = ["limit": 15,
-                                           "skip": verticalData.count]
-        QYRequestTool.requestData(.GET, "\(imgCategoryURL)/\(id)/vertical", parameters, successComplete: {[weak self] (JSON) in
+        ApiProvider.request(Api.wallpaperCategory(id, verticalData.count), arrayModel: ImgVertical.self, path: "res.vertical", success: {
             
-            if let data = [ImgVertical].deserialize(from:JSON["res"]["vertical"].description) {
-                self?.verticalData += data
-                self?.collectionView.reloadData()
-                self?.collectionView.mj_header.endRefreshing()
-                self?.collectionView.mj_footer.endRefreshing()
-            }
-        }) {[weak self] (Error) in
-            self?.collectionView.mj_header.endRefreshing()
-            self?.collectionView.mj_footer.endRefreshing()
+            self.verticalData += $0
+            self.collectionView.reloadData()
+            self.collectionView.mj_footer.endRefreshing()
+        }) {
+            self.collectionView.mj_footer.endRefreshing()
         }
     }
 }

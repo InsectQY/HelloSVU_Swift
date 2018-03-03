@@ -13,10 +13,10 @@ import SwiftyJSON
 
 extension MoyaProvider {
     
-    /// 请求数据（返回一个字典类型的模型）
+    /// 请求数据（返回一个对象模型）
     @discardableResult
     open func request<T: HandyJSON>(_ target: Target,
-                                    dictModel: T.Type,
+                                    objectModel: T.Type,
                                     path: String? = nil,
                                     success: ((_ returnData: T) -> ())?, failure: (() -> ())?) -> Cancellable? {
         
@@ -27,7 +27,7 @@ extension MoyaProvider {
                 return
             }
             
-            guard let returnData = try? $0.value?.mapDict(dictModel.self, path) else {
+            guard let returnData = try? $0.value?.mapDict(objectModel.self, path) else {
                 failure?()
                 return
             }
@@ -35,7 +35,7 @@ extension MoyaProvider {
         })
     }
     
-    /// 请求数据（返回一个数组类型的模型）
+    /// 请求数据（返回一个数组模型）
     @discardableResult
     open func request<T: HandyJSON>(_ target: Target,
                                     arrayModel: T.Type,
@@ -60,7 +60,7 @@ extension MoyaProvider {
 
 extension Response {
     
-    /// 转成字典模型
+    /// 转成对象模型
     ///
     /// - Parameters:
     ///   - type: 模型 Class

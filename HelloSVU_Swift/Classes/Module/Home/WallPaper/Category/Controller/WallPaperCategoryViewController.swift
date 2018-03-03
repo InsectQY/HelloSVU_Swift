@@ -70,28 +70,14 @@ extension WallPaperCategoryViewController {
     
     @objc private func loadCategoryData() {
         
-//        ApiProvider.request(.wallpaper, model: [ImgCategory].self, success: {
-//
-//            self.categoryData = $0
-//            self.collectionView.mj_header.endRefreshing()
-//            self.collectionView.reloadData()
-//        }) {
-//            self.collectionView.mj_header.endRefreshing()
-//        }
-        
-       
-//        QYRequestTool.requestData(.GET, imgCategoryURL, successComplete: {[weak self] (JSON) in
-//
-//            
-//            if let data = [ImgCategory].deserialize(from: JSON.description, designatedPath: "res.category") {
-//
-//                self?.categoryData = data
-//                self?.collectionView.reloadData()
-//                self?.collectionView.mj_header.endRefreshing()
-//            }
-//        }) {[weak self] (Error) in
-//            self?.collectionView.mj_header.endRefreshing()
-//        }
+        ApiProvider.request(.wallpaper, arrayModel: ImgCategory.self, path: "res.category", success: {
+            
+            self.categoryData = $0
+            self.collectionView.mj_header.endRefreshing()
+            self.collectionView.reloadData()
+        }) {
+            self.collectionView.mj_header.endRefreshing()
+        }
     }
 }
 

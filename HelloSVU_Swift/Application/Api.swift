@@ -52,7 +52,7 @@ extension Api: TargetType {
     
     var path: String {
         switch self {
-        case let .wallpaperCategory(_, id):
+        case let .wallpaperCategory(id, _):
             return "\(id)/vertical"
         default:
             return ""
